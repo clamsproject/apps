@@ -1,11 +1,11 @@
-# CLAMS Services
+# CLAMS Apps
 
-## Services in action 
+## Apps in action 
 
-| Service name | AnnotationType | Version | codebase | 
+| App name | AnnotationType | Version | codebase | 
 | ------------ | -------------- | ------- | -------- | 
-| A text service | someTextAnnType | 0.0.1 | somewhere | 
-| A video service | someVideoAnnType | 0.0.1 | elsewhere | 
+| A text app | someTextAnnType | 0.0.1 | somewhere | 
+| A video app | someVideoAnnType | 0.0.1 | elsewhere | 
 
 ## Repository naming convention
 
