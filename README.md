@@ -15,7 +15,7 @@
 
 ## Apps in action 
 
-| App name (link) | AnnotationType | Latest (link) | Based-on (clams-python) | Documentation (link) |
+| App name (link) | AnnotationType | Latest (link) | Based-on ([`clams-python`](https://sdk.clams.ai/target-versions.html)) | Documentation (link) |
 | --- | --- | :---: | :---: | --- |
 | [fastpunct](https://github.com/clamsproject/app-fastpunct) | text > text | [main](https://github.com/clamsproject/app-fastpunct/tree/02b2e01e7239162dceda86ad577507f0fc6b6ecf) | [0.5.0](https://github.com/clamsproject/app-fastpunct/blob/02b2e01e7239162dceda86ad577507f0fc6b6ecf/requirements.txt#L1) | [README](https://github.com/clamsproject/app-fastpunct/blob/02b2e01e7239162dceda86ad577507f0fc6b6ecf/README.md)
 | [spacy-nlp](https://github.com/clamsproject/app-spacy-nlp) | text > text | [0.0.6](https://github.com/clamsproject/app-spacy-nlp/tree/v0.0.6) | [0.2.4](https://github.com/clamsproject/app-spacy-nlp/blob/v0.0.6/requirements.txt#L1) | [README](https://github.com/clamsproject/app-spacy-nlp/blob/v0.0.6/README.md)
