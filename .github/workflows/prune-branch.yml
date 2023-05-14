@@ -1,0 +1,20 @@
+name: 'Branch Pruner: delete the app registration branch when PR is closed or merged'
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  prune-branch:
+    if: startsWith( github.head_ref, 'register/' )
+    name: 'Delete the head branch of app registration PR after PR is done'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Delete the branch
+        uses: octokit/request-action@v2.x
+        with:
+          route: DELETE /repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_CLAMSBOT_TOKEN }}

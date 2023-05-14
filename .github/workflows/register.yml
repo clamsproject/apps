@@ -1,0 +1,143 @@
+name: App Registration
+
+on:
+  workflow_call:
+    inputs:
+      repo:
+        required: true
+        type: string
+        description: 'Github repository of the app to register'
+      tag:
+        required: true
+        type: string
+        description: 'git tag of the app to register as its version'
+      container:
+        required: false
+        type: string
+        description: 'public container ID to include in the published app page'
+  workflow_dispatch:
+    inputs:
+      repo:
+        required: true
+        description: 'Github repository of the app to register'
+      tag:
+        required: true
+        description: 'git tag of the app to register as its version'
+      container:
+        required: false
+        description: 'public container ID to include in the published app page'
+  issues: 
+     types: [opened]
+
+env:
+  APP_DIR_REPO: 'clamsproject/apps'
+
+jobs:
+  generate:
+    name: 'pull metadata from app repo and generate json and html'
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./main
+        
+    steps:
+      - name: Check out publisher repository
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ env.APP_DIR_REPO }}
+          path: main
+          token: ${{ secrets.GH_CLAMSBOT_TOKEN }}
+          
+      - name: setup python
+        uses: actions/setup-python@v4
+        
+      - name: set repo address and tag from submitted issue
+        if: github.event_name == 'issues'
+        run: |
+          if [[ ${{ github.event.issue.title }} == "CLAMS App Submission" ]] ; then
+            echo "${{ github.event.issue.body }}" | python scripts/parse_issue.py
+            echo "appissue=${{ github.event.issue.number }}" >> $GITHUB_ENV
+          else
+            echo "wrong title ${{ github.event.issue.title }}"
+            exit 1
+          fi
+      
+      - name: set repo address and tag from dispatch input
+        if: github.event_name != 'issues'
+        run: |
+            echo "apprepo=$(echo ${{ inputs.repo }} | sed 's|^https://github.com/||g')" >> $GITHUB_ENV
+            echo "apptag=${{ inputs.tag }}" >> $GITHUB_ENV
+            echo "appcontainer=${{ inputs.container }}" >> $GITHUB_ENV
+            echo "appissue=0" >> $GITHUB_ENV
+        
+      - name: sanity check for repo variables
+        if: env.apprepo == '' || env.apptag == ''
+        run: |
+            echo "apprepo and apptag must be set"
+            exit 1
+        
+      - name: Check out target app repository
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ env.apprepo }}
+          ref: ${{ env.apptag }}
+          path: app
+        
+      - name: install clams sdk
+        working-directory: ./app
+        run: |
+          pip install $(grep clams-python requirements.* | sort -r | head -n1)
+          
+      - name: generate app metadata (dir = app repo -> metadata.json file)
+        working-directory: ./app
+        run: |
+          python ./metadata.py > ../main/metadata.json
+          
+      - name: prep envvar for shortname and version
+        id: appname
+        run: |
+          app_id=$( jq -r '.identifier' metadata.json )
+          echo "app_fullid=$app_id" >> $GITHUB_ENV
+          echo "app_shortname=$( echo $app_id | rev | cut -d'/' -f2 | rev )" >> $GITHUB_ENV
+          echo "app_version=$( echo $app_id | rev | cut -d'/' -f1 | rev )" >> $GITHUB_ENV
+          
+      - name: generate markdown of app metadata 
+        run: |
+          python scripts/metadata_markdown.py > index.md
+        
+      - name: copy md and json to proper location
+        run: |
+          dir="docs/${{ env.app_shortname }}/${{ env.app_version }}"
+          mkdir -p $dir
+          cp metadata.json index.md $dir/
+
+      - name: append app metadata to BIG json for API access
+        run: python scripts/index_page_data.py ${{ env.app_fullid }}
+        
+      - name: commit docs with generated metadata files
+        run: |
+          branch="${{ env.appissue }}-${{ env.app_shortname }}-${{ env.app_version }}"
+          git config --local user.email "admin@clams.ai"
+          git config --local user.name "clams-bot"
+          git checkout -b register/"$branch"
+          git add docs
+          git commit -m "adding metadata of $branch"
+          git push origin register/"$branch"
+          echo "appbranch=$branch" >> $GITHUB_ENV
+
+      - name: start a new pr
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/${{ env.APP_DIR_REPO }}/pulls
+          title: 'App Submitted - ${{ env.app_shortname }}/${{ env.app_version }}'
+          head: 'register/${{ env.appbranch }}'
+          base: main
+          body: |
+            ${{ env.appissue != 0 && format('( closes \#{0} .)', env.appissue) || '(no connected issue)' }} 
+
+            This PR registers the app ${{ env.app_shortname }}/${{ env.app_version }} from https://github.com/${{ env.apprepo }}. Carefully review the metadata
+            before merging. If something is wrong with the metadata, please close the PR and let the app developer know.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_CLAMSBOT_TOKEN }}
+
