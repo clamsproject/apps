@@ -1,0 +1,50 @@
+{
+  "name": "CLAMS wrapper for spaCy NLP",
+  "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+  "app_version": "v1",
+  "mmif_version": "0.5.0",
+  "analyzer_version": "3.1.2",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "MIT",
+  "identifier": "https://apps.clams.ai/spacy-wrapper/v1",
+  "url": "https://github.com/clamsproject/app-spacy-nlp",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token",
+      "required": false
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://vocab.lappsgrid.org/Token"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token#pos"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token#lemma"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/NounChunk"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Sentence"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/NamedEntity"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "pretokenized",
+      "description": "Boolean parameter to set the app to use existing tokenization, if available, for text documents for NLP processing. Useful to process ASR documents, for example.",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
