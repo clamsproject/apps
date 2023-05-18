@@ -88,6 +88,9 @@ jobs:
     name: '📝generate metadata json and html from chekcing out the app repo'
     needs: [trigger]
     if: needs.trigger.outputs.valid_trigger == 'true'
+    outputs:
+      appname: ${{ steps.create_branch.outputs.appname }}
+      appbranch: ${{ steps.create_branch.outputs.appbranch }}
     
     runs-on: ubuntu-latest
     
@@ -126,7 +129,6 @@ jobs:
           python ./metadata.py > ../main/metadata.json
           
       - name: prep envvar for shortname and version
-        id: appname
         run: |
           app_id=$( jq -r '.identifier' metadata.json )
           echo "app_fullid=$app_id" >> $GITHUB_ENV
@@ -147,28 +149,38 @@ jobs:
         run: python scripts/index_page_data.py ${{ env.app_fullid }}
         
       - name: commit docs with generated metadata files
+        id: create_branch
         run: |
-          branch="${{ needs.trigger.outputs.appissue }}-${{ env.app_shortname }}-${{ env.app_version }}"
+          app_name="${{ env.app_shortname }}.${{ env.app_version }}"
+          branch_name="register/${{ needs.trigger.outputs.appissue }}-$app_name"
           git config --local user.email "admin@clams.ai"
           git config --local user.name "clams-bot"
-          git checkout -b register/"$branch"
+          git checkout -b $branch_name
           git add docs
-          git commit -m "adding metadata of $branch"
-          git push origin register/"$branch"
-          echo "app_branch=$branch" >> $GITHUB_ENV
+          git commit -m "adding metadata of $app_name"
+          git push origin $branch_name
+          echo "appname=$app_name" >> $GITHUB_OUTPUT
+          echo "appbranch=$branch_name" >> $GITHUB_OUTPUT
 
+  send_pr:
+    name: '📦create PR to register the app'
+    runs-on: ubuntu-latest
+    needs: [trigger, generate]
+    steps:
       - name: start a new pr
         uses: octokit/request-action@v2.x
         with:
           route: POST /repos/${{ env.APP_DIR_REPO }}/pulls
-          title: 'App Submitted - ${{ env.app_shortname }}/${{ env.app_version }}'
-          head: 'register/${{ env.app_branch }}'
+          title: 'App Submitted - ${{ needs.generate.outputs.appname }}'
+          head: '${{ needs.generate.outputs.appbranch }}'
           base: main
           body: |
             ${{ needs.trigger.outputs.appissue != 0 && format('( closes \#{0} .)', needs.trigger.outputs.appissue) || '(no connected issue)' }} 
 
-            This PR registers the app ${{ env.app_shortname }}/${{ env.app_version }} from https://github.com/${{ needs.trigger.outputs.apprepo }}. Carefully review the metadata
-            before merging. If something is wrong with the metadata, please close the PR and let the app developer know.
+            This PR registers the app ${{ needs.generate.outputs.appname }} from 
+            https://github.com/${{ needs.trigger.outputs.apprepo }}/tree/${{ needs.trigger.outputs.apptag }}.
+            Carefully review the metadata before merging. If something is wrong with the metadata, please close the PR 
+            and let the app developer know.
         env:
           GITHUB_TOKEN: ${{ secrets.GH_CLAMSBOT_TOKEN }}
 
