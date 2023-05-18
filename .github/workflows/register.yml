@@ -47,7 +47,15 @@ jobs:
       - name: set repo address and tag from submitted issue
         if: github.event_name == 'issues' && github.event.issue.title == 'CLAMS App Submission'
         run: |
-          echo "${{ github.event.issue.body }}" | python scripts/parse_issue.py
+          while IFS= read l; do
+            if [[ "$l" = NAME:* ]]; then
+              echo "apprepo=$(echo "$l" | awk -F ':' '{print $2}' | awk '{$1=$1;print $1}' | sed 's|^https://github.com/||g')" >> $GITHUB_ENV
+            elif [[ "$l" = TAG:* ]]; then
+              echo "apptag=$(echo "$l" | awk -F ':' '{print $2}' | awk '{$1=$1;print $1}')" >> $GITHUB_ENV
+            elif [[ "$l" = CONTAINER:* ]]; then
+              echo "appcontainer=$(echo "$l" | awk -F ':' '{print $2}' | awk '{$1=$1;print $1}')" >> $GITHUB_ENV
+            fi
+          done <<< '${{ github.event.issue.body }}'
           echo "appissue=${{ github.event.issue.number }}" >> $GITHUB_ENV
 
       - name: set repo address and tag from dispatch input
@@ -60,10 +68,14 @@ jobs:
 
       - name: sanity check for repo variables
         id: set_repo
-        if: env.apprepo == '' || env.apptag == ''
         run: |
           if [ -z "${{ env.apprepo }}" ] || [ -z "${{ env.apptag }}" ]; then
-            echo "valid_trigger=false" >> $GITHUB_OUTPUT
+            if [ ${{ github.event_name }} = 'issues' ] || [ ${{ github.event.issue.title }} = 'CLAMS App Submission' ]; then 
+              echo "submitted issue is ill-formed" >&2
+              exit 1
+            else
+              echo "valid_trigger=false" >> $GITHUB_OUTPUT
+            fi
           else
             echo "valid_trigger=true" >> $GITHUB_OUTPUT
             echo "appcontainer=${{ env.appcontainer }}" >> $GITHUB_OUTPUT
@@ -99,8 +111,8 @@ jobs:
       - name: Check out target app repository
         uses: actions/checkout@v3
         with:
-          repository: ${{ env.apprepo }}
-          ref: ${{ env.apptag }}
+          repository: ${{ needs.trigger.outputs.apprepo }}
+          ref: ${{ needs.trigger.outputs.apptag }}
           path: app
         
       - name: install clams sdk
@@ -136,26 +148,26 @@ jobs:
         
       - name: commit docs with generated metadata files
         run: |
-          branch="${{ env.appissue }}-${{ env.app_shortname }}-${{ env.app_version }}"
+          branch="${{ needs.trigger.outputs.appissue }}-${{ env.app_shortname }}-${{ env.app_version }}"
           git config --local user.email "admin@clams.ai"
           git config --local user.name "clams-bot"
           git checkout -b register/"$branch"
           git add docs
           git commit -m "adding metadata of $branch"
           git push origin register/"$branch"
-          echo "appbranch=$branch" >> $GITHUB_ENV
+          echo "app_branch=$branch" >> $GITHUB_ENV
 
       - name: start a new pr
         uses: octokit/request-action@v2.x
         with:
           route: POST /repos/${{ env.APP_DIR_REPO }}/pulls
           title: 'App Submitted - ${{ env.app_shortname }}/${{ env.app_version }}'
-          head: 'register/${{ env.appbranch }}'
+          head: 'register/${{ env.app_branch }}'
           base: main
           body: |
-            ${{ env.appissue != 0 && format('( closes \#{0} .)', env.appissue) || '(no connected issue)' }} 
+            ${{ needs.trigger.outputs.appissue != 0 && format('( closes \#{0} .)', needs.trigger.outputs.appissue) || '(no connected issue)' }} 
 
-            This PR registers the app ${{ env.app_shortname }}/${{ env.app_version }} from https://github.com/${{ env.apprepo }}. Carefully review the metadata
+            This PR registers the app ${{ env.app_shortname }}/${{ env.app_version }} from https://github.com/${{ needs.trigger.outputs.apprepo }}. Carefully review the metadata
             before merging. If something is wrong with the metadata, please close the PR and let the app developer know.
         env:
           GITHUB_TOKEN: ${{ secrets.GH_CLAMSBOT_TOKEN }}
