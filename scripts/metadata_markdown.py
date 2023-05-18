@@ -1,15 +1,21 @@
 import io
 import json
 import string
-import os
 
-base_template = """
+app_template = """
 ### ${name} (${app_version}) [metadata.json](metadata.json)
 ###### ${description}
 
 * App ID: [${identifier}](${identifier})
 * App License: ${app_license}
-* Source Repository: [${url}](${url})
+* Source Repository: [${url}](${url}) ([source tree of the submitted version](${url}/tree/${app_version}))
+"""
+
+submission_template = """
+* Submitter: [${submitter}](https://github.com/${submitter})
+* Submission Time: ${time}
+* Prebuilt Container Image: [${image}](${image_webpage})
+
 """
 
 
@@ -17,11 +23,12 @@ def markdown_link(url):
     return f"[{url}]({url})"
 
 appmetadata = json.load(open('metadata.json'))
+submitmetadata = json.load(open('submission.json'))
 markdown = io.StringIO()
-markdown.write(string.Template(base_template).substitute(appmetadata))
+image_webpage = f'{appmetadata["url"]}/pkgs/container/{appmetadata["url"].rsplit("/",1)[-1]}/{appmetadata["app_version"]}'
+markdown.write(string.Template(submission_template).substitute(**submitmetadata, image_webpage=image_webpage))
+markdown.write(string.Template(app_template).substitute(appmetadata))
 
-if os.getenv('appcontainer', False):
-    markdown.write(f"* Prebuilt Container Image: {markdown_link(os.getenv('appcontainer'))}\n")
 if 'analyzer_version' in appmetadata and appmetadata['analyzer_version']:
     markdown.write(f"* Analyzer Version: {appmetadata['analyzer_version']}\n")
 if 'analyzer_license' in appmetadata and appmetadata['analyzer_license']:
