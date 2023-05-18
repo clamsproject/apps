@@ -33,8 +33,50 @@ env:
   APP_DIR_REPO: 'clamsproject/apps'
 
 jobs:
+  trigger:
+    name: '✅validate the trigger and set the variables for the next jobs'
+    runs-on: ubuntu-latest
+    outputs:
+      apprepo: ${{ steps.set_repo.outputs.apprepo }}
+      apptag: ${{ steps.set_repo.outputs.apptag }}
+      appcontainer: ${{ steps.set_repo.outputs.appcontainer }}
+      appissue: ${{ steps.set_repo.outputs.appissue }}
+      valid_trigger: ${{ steps.set_repo.outputs.valid_trigger }}
+    
+    steps:
+      - name: set repo address and tag from submitted issue
+        if: github.event_name == 'issues' && github.event.issue.title == 'CLAMS App Submission'
+        run: |
+          echo "${{ github.event.issue.body }}" | python scripts/parse_issue.py
+          echo "appissue=${{ github.event.issue.number }}" >> $GITHUB_ENV
+
+      - name: set repo address and tag from dispatch input
+        if: github.event_name != 'issues'
+        run: |
+          echo "apprepo=$(echo ${{ inputs.repo }} | sed 's|^https://github.com/||g')" >> $GITHUB_ENV
+          echo "apptag=${{ inputs.tag }}" >> $GITHUB_ENV
+          echo "appcontainer=${{ inputs.container }}" >> $GITHUB_ENV
+          echo "appissue=0" >> $GITHUB_ENV
+
+      - name: sanity check for repo variables
+        id: set_repo
+        if: env.apprepo == '' || env.apptag == ''
+        run: |
+          if [ -z "${{ env.apprepo }}" ] || [ -z "${{ env.apptag }}" ]; then
+            echo "valid_trigger=false" >> $GITHUB_OUTPUT
+          else
+            echo "valid_trigger=true" >> $GITHUB_OUTPUT
+            echo "appcontainer=${{ env.appcontainer }}" >> $GITHUB_OUTPUT
+            echo "apprepo=${{ env.apprepo }}" >> $GITHUB_OUTPUT
+            echo "apptag=${{ env.apptag }}" >> $GITHUB_OUTPUT
+            echo "appissue=${{ env.appissue }}" >> $GITHUB_OUTPUT
+          fi
+  
   generate:
-    name: 'pull metadata from app repo and generate json and html'
+    name: '📝generate metadata json and html from chekcing out the app repo'
+    needs: [trigger]
+    if: needs.trigger.outputs.valid_trigger == 'true'
+    
     runs-on: ubuntu-latest
     
     defaults:
@@ -51,32 +93,9 @@ jobs:
           
       - name: setup python
         uses: actions/setup-python@v4
-        
-      - name: set repo address and tag from submitted issue
-        if: github.event_name == 'issues'
-        run: |
-          if [[ ${{ github.event.issue.title }} == "CLAMS App Submission" ]] ; then
-            echo "${{ github.event.issue.body }}" | python scripts/parse_issue.py
-            echo "appissue=${{ github.event.issue.number }}" >> $GITHUB_ENV
-          else
-            echo "wrong title ${{ github.event.issue.title }}"
-            exit 1
-          fi
+        with:
+          python-version: '3.8'
       
-      - name: set repo address and tag from dispatch input
-        if: github.event_name != 'issues'
-        run: |
-            echo "apprepo=$(echo ${{ inputs.repo }} | sed 's|^https://github.com/||g')" >> $GITHUB_ENV
-            echo "apptag=${{ inputs.tag }}" >> $GITHUB_ENV
-            echo "appcontainer=${{ inputs.container }}" >> $GITHUB_ENV
-            echo "appissue=0" >> $GITHUB_ENV
-        
-      - name: sanity check for repo variables
-        if: env.apprepo == '' || env.apptag == ''
-        run: |
-            echo "apprepo and apptag must be set"
-            exit 1
-        
       - name: Check out target app repository
         uses: actions/checkout@v3
         with:
