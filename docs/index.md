@@ -2,7 +2,7 @@
 ## CLAMS App Directory prototype
 
 {% for app in site.data.app-index %}
-    {%- assign check = app[0] | split:'https://apps.clams.ai/' -%}
+    {%- assign check = app[0] | split:'http://apps.clams.ai/' -%}
     {% if check.size == 2 %}
 ### {{ check[1] }}
         {% for version in app[1] %}
