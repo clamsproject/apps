@@ -1,5 +1,8 @@
 {
   "https://apps.clams.ai/spacy-wrapper": [
     "v1"
+  ],
+  "http://apps.clams.ai/spacy-wrapper": [
+    "v1"
   ]
 }
