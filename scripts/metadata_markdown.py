@@ -1,6 +1,7 @@
 import io
 import json
 import string
+from pathlib import Path
 
 app_template = """
 ### ${name} (${app_version}) [metadata.json](metadata.json)
@@ -22,11 +23,12 @@ submission_template = """
 def markdown_link(url):
     return f"[{url}]({url})"
 
-appmetadata = json.load(open('metadata.json'))
-submitmetadata = json.load(open('submission.json'))
 markdown = io.StringIO()
-image_webpage = f'{appmetadata["url"]}/pkgs/container/{appmetadata["url"].rsplit("/",1)[-1]}/{appmetadata["app_version"]}'
-markdown.write(string.Template(submission_template).substitute(**submitmetadata, image_webpage=image_webpage))
+appmetadata = json.load(open('metadata.json'))
+if Path('submission.json').exists():
+    submitmetadata = json.load(open('submission.json'))
+    image_webpage = f'{appmetadata["url"]}/pkgs/container/{appmetadata["url"].rsplit("/",1)[-1]}/{appmetadata["app_version"]}'
+    markdown.write(string.Template(submission_template).substitute(**submitmetadata, image_webpage=image_webpage))
 markdown.write(string.Template(app_template).substitute(appmetadata))
 
 if 'analyzer_version' in appmetadata and appmetadata['analyzer_version']:
@@ -38,7 +40,7 @@ if 'more' in appmetadata and appmetadata['more']:
     
     
 def io_to_markdown(io_spec):
-    props = ', '.join(f'{k}={v}' for k, v in io_spec['properties']) \
+    props = ', '.join(f'{k}={v}' for k, v in io_spec['properties'].items()) \
         if 'properties' in io_spec and io_spec['properties'] \
         else ""
     return f"* {markdown_link(io_spec['@type'])} {'(required)' if 'required' in io_spec and io_spec['required'] else ''}\n###### {props if props else 'ANY'}\n"
