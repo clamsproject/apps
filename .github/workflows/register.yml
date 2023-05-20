@@ -1,4 +1,4 @@
-name: App Registration
+name: "♻️,💻 App Directory Registration"
 
 on:
   workflow_call:
@@ -34,7 +34,7 @@ env:
 
 jobs:
   trigger:
-    name: '✅validate the trigger and set the variables for the next jobs'
+    name: "✅ Validate the trigger and set the variables"
     runs-on: ubuntu-latest
     outputs:
       apprepo: ${{ steps.set_repo.outputs.apprepo }}
@@ -45,7 +45,7 @@ jobs:
       valid_trigger: ${{ steps.set_repo.outputs.valid_trigger }}
     
     steps:
-      - name: set repo address and tag from submitted issue
+      - name: "🏷 Set repo address and tag from submitted issue"
         if: github.event_name == 'issues' && github.event.issue.title == 'CLAMS App Submission'
         run: |
           while IFS= read l; do
@@ -59,7 +59,7 @@ jobs:
           done <<< '${{ github.event.issue.body }}'
           echo "app_issue=${{ github.event.issue.number }}" >> $GITHUB_ENV
 
-      - name: set repo address and tag from dispatch input
+      - name: "🏷 Set repo address and tag from dispatch input"
         if: github.event_name != 'issues'
         run: |
           echo "app_repo=$(echo ${{ inputs.repo }} | sed 's|^https://github.com/||g')" >> $GITHUB_ENV
@@ -67,7 +67,7 @@ jobs:
           echo "app_container=${{ inputs.container }}" >> $GITHUB_ENV
           echo "app_issue=0" >> $GITHUB_ENV
 
-      - name: sanity check for repo variables
+      - name: "🕵 Sanity check for repo variables"
         id: set_repo
         run: |
           if [ -z "${{ env.app_repo }}" ] || [ -z "${{ env.app_tag }}" ]; then
@@ -87,7 +87,7 @@ jobs:
           fi
   
   generate:
-    name: '📝generate metadata json and html from chekcing out the app repo'
+    name: "📝 Generate metadata files from app repo"
     needs: [trigger]
     if: needs.trigger.outputs.valid_trigger == 'true'
     outputs:
@@ -101,31 +101,31 @@ jobs:
         working-directory: ./main
         
     steps:
-      - name: Check out publisher repository
+      - name: "🛍 Checkout directory repository"
         uses: actions/checkout@v3
         with:
           repository: ${{ env.APP_DIR_REPO }}
           path: main
           token: ${{ secrets.GH_CLAMSBOT_TOKEN }}
           
-      - name: setup python
+      - name: "🐍 Setup Python"
         uses: actions/setup-python@v4
         with:
           python-version: '3.8'
-      
-      - name: Check out target app repository
+
+      - name: "🛍 Checkout app repository"
         uses: actions/checkout@v3
         with:
           repository: ${{ needs.trigger.outputs.apprepo }}
           ref: ${{ needs.trigger.outputs.apptag }}
           path: app
         
-      - name: install clams sdk
+      - name: "💉 Install clams sdk"
         working-directory: ./app
         run: |
           pip install $(grep clams-python requirements.* | sort -r | head -n1)
           
-      - name: generate app metadata
+      - name: "🏷 Generate app metadata"
         working-directory: ./app
         run: |
           python ./metadata.py > ../main/metadata.json
@@ -134,27 +134,22 @@ jobs:
             \"image\": \"${{ needs.trigger.outputs.appcontainer }}\"}" \
             | jq > ../main/submission.json
           
-      - name: prep envvar for shortname and version
+      - name: "🏷 Prep more variables"
         run: |
           app_id=$( jq -r '.identifier' metadata.json )
           echo "app_fullid=$app_id" >> $GITHUB_ENV
           echo "app_shortname=$( echo $app_id | rev | cut -d'/' -f2 | rev )" >> $GITHUB_ENV
           echo "app_version=$( echo $app_id | rev | cut -d'/' -f1 | rev )" >> $GITHUB_ENV
           
-      - name: generate markdown of app metadata 
+      - name: "🗞 Generate HTML and JSON publication"
         run: |
+          python scripts/index_page_data.py ${{ env.app_fullid }}
           python scripts/metadata_markdown.py > index.md
-        
-      - name: copy md and json to proper location
-        run: |
           dir="docs/${{ env.app_shortname }}/${{ env.app_version }}"
           mkdir -p $dir
           cp {metadata,submission}.json index.md $dir/
 
-      - name: append app metadata to BIG json for API access
-        run: python scripts/index_page_data.py ${{ env.app_fullid }}
-        
-      - name: commit docs with generated metadata files
+      - name: "🫙 Commit and push docs with generated files"
         id: create_branch
         run: |
           app_name="${{ env.app_shortname }}.${{ env.app_version }}"
@@ -162,18 +157,18 @@ jobs:
           git config --local user.email "admin@clams.ai"
           git config --local user.name "clams-bot"
           git checkout -b $branch_name
-          git add docs
+          git add -u docs
           git commit -m "adding metadata of $app_name"
           git push origin $branch_name
           echo "appname=$app_name" >> $GITHUB_OUTPUT
           echo "appbranch=$branch_name" >> $GITHUB_OUTPUT
 
   send_pr:
-    name: '📦create PR to register the app'
+    name: "📦 Create PR to register the app"
     runs-on: ubuntu-latest
     needs: [trigger, generate]
     steps:
-      - name: start a new pr
+      - name: "✍️ Start a new pr"
         uses: octokit/request-action@v2.x
         with:
           route: POST /repos/${{ env.APP_DIR_REPO }}/pulls
