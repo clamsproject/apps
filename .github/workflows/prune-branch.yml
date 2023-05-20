@@ -9,7 +9,6 @@ jobs:
   prune-branch:
     name: "🍂 Delete registration branch after PR is done"
     if: startsWith( github.head_ref, 'register/' )
-    name: 'Delete the head branch of app registration PR after PR is done'
     runs-on: ubuntu-latest
     
     steps:
