@@ -1,7 +1,7 @@
 
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-05-19T22:02:23+00:00
-* Prebuilt Container Image: [ghcr.io/clamsproject/app-spacy-wrapper:v1:v1](https://github.com/clamsproject/app-spacy-wrapper/pkgs/container/app-spacy-wrapper/v1)
+* Prebuilt Container Image: [ghcr.io/clamsproject/app-spacy-wrapper:v1](https://github.com/clamsproject/app-spacy-wrapper/pkgs/container/app-spacy-wrapper/v1)
 
 
 ### CLAMS wrapper for spaCy NLP (v1) [metadata.json](metadata.json)

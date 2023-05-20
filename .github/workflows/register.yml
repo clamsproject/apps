@@ -131,7 +131,7 @@ jobs:
           python ./metadata.py > ../main/metadata.json
           echo "{\"time\": \"$(date -Iseconds)\", \
             \"submitter\": \"${{ github.actor }}\", \
-            \"image\": \"${{ needs.trigger.outputs.appcontainer }}:${{ needs.trigger.outputs.apptag }}\"}" \
+            \"image\": \"${{ needs.trigger.outputs.appcontainer }}\"}" \
             | jq > ../main/submission.json
           
       - name: prep envvar for shortname and version
