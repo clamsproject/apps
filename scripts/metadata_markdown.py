@@ -49,7 +49,7 @@ def io_to_markdown(io_spec):
 markdown.write('\n\n#### Inputs\n')
 for input_ in appmetadata['input']:
     if isinstance(input_, list):
-        markdown.write('One of the following: [\n')
+        markdown.write('One of the following is required: [\n')
         markdown.write(''.join(io_to_markdown(i) for i in input_))
         markdown.write(']\n')
     else:
@@ -80,7 +80,7 @@ if 'parameters' in appmetadata and appmetadata['parameters']:
             cs = ['false', 'true']
         else:
             cs = []
-        choices = ', '.join(f'**`{c}`** (*)' if c == default_value else f'`{c}`' for c in cs)
+        choices = ', '.join(f'**_`{c}`_**' if c == default_value else f'`{c}`' for c in cs)
         markdown.write(f"|{param['name']}|{param['description']}|{param['type']}|{param['multivalued']}|{choices}|\n")
 else:
     markdown.write('##### N/A\n')
