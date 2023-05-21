@@ -6,7 +6,7 @@ label: ':bulb:A'
 ---
 * DO NOT CHANGE the title of this issue
 
-* Enter a public git repository address of the app below (after colon).
+* Enter a public GitHub repository  of the app in `owner/repository` format (DON'T include `https://github.com` part) below (after colon).
 NAME: 
 
 * Enter a git tag of the app version below (after colon).
