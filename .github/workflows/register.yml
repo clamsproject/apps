@@ -157,6 +157,7 @@ jobs:
           git config --local user.email "admin@clams.ai"
           git config --local user.name "clams-bot"
           git checkout -b $branch_name
+          git add docs
           git add -u docs
           git commit -m "adding metadata of $app_name"
           git push origin $branch_name
