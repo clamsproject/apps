@@ -71,7 +71,7 @@ jobs:
         id: set_repo
         run: |
           if [ -z "${{ env.app_repo }}" ] || [ -z "${{ env.app_tag }}" ]; then
-            if [ ${{ github.event_name }} = 'issues' ] || [ ${{ github.event.issue.title }} = 'CLAMS App Submission' ]; then 
+            if [ ${{ github.event_name }} = 'issues' ] && [ ${{ github.event.issue.title }} = 'CLAMS App Submission' ]; then 
               echo "submitted issue is ill-formed" >&2
               exit 1
             else
