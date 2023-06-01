@@ -3,6 +3,7 @@
     "v1"
   ],
   "http://apps.clams.ai/whisper-wrapper": [
-    "v1"
+    "v1",
+    "v2"
   ]
 }
