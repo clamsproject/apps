@@ -1,5 +1,9 @@
 
-## CLAMS App Directory prototype
+## How to use CLAMS apps 
+
+* [CLAMS App user manual](clamsapp)
+
+## App Directory
 
 {% for app in site.data.app-index %}
     {%- assign check = app[0] | split:'http://apps.clams.ai/' -%}
