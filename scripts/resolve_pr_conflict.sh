@@ -5,5 +5,8 @@ app_name=${app_name_ver%.*}
 git fetch --all 
 git merge origin/main --no-edit -X theirs
 python scripts/index_page_data.py docs/$app_name/$app_ver
+git add docs/_data
+git commit -m 'regenerated aggregated metadata json files after conflict resolution'
+
 
 
