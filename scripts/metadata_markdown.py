@@ -1,8 +1,15 @@
 import io
 import json
 import string
+import sys
 from pathlib import Path
 
+if len(sys.argv) > 1:
+    cwd = Path(sys.argv[1])
+    out_f = open(cwd / 'index.md', 'w')
+else:
+    cwd = Path.cwd()
+    out_f = sys.stdout
 app_template = """
 ### ${name} (${app_version}) [metadata.json](metadata.json)
 ###### ${description}
@@ -24,9 +31,9 @@ def markdown_link(url):
     return f"[{url}]({url})"
 
 markdown = io.StringIO()
-appmetadata = json.load(open('metadata.json'))
-if Path('submission.json').exists():
-    submitmetadata = json.load(open('submission.json'))
+appmetadata = json.load(open(cwd / 'metadata.json'))
+if (cwd / 'submission.json').exists():
+    submitmetadata = json.load(open(cwd / 'submission.json'))
     image_webpage = f'{appmetadata["url"]}/pkgs/container/{appmetadata["url"].rsplit("/",1)[-1]}/{appmetadata["app_version"]}'
     markdown.write(string.Template(submission_template).substitute(**submitmetadata, image_webpage=image_webpage))
 markdown.write(string.Template(app_template).substitute(appmetadata))
@@ -90,4 +97,5 @@ markdown.write('###### Note that not all output annotations are always generated
 for output in appmetadata['output']:
     markdown.write(io_to_markdown(output))
 
-print(markdown.getvalue())
+out_f.write(markdown.getvalue())
+out_f.close()

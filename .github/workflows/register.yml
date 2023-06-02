@@ -71,7 +71,7 @@ jobs:
         id: set_repo
         run: |
           if [ -z "${{ env.app_repo }}" ] || [ -z "${{ env.app_tag }}" ]; then
-            if [ ${{ github.event_name }} = 'issues' ] || [ ${{ github.event.issue.title }} = 'CLAMS App Submission' ]; then 
+            if [ ${{ github.event_name }} = 'issues' ] && [ ${{ github.event.issue.title }} = 'CLAMS App Submission' ]; then 
               echo "submitted issue is ill-formed" >&2
               exit 1
             else
@@ -184,7 +184,7 @@ jobs:
             Carefully review the metadata before merging. If something is wrong with the metadata, please close the PR 
             and let the app developer know.
             
-            (submitted by [${{ github.actor }}](https://github.com/${{ github.actor }}))
+            (submitted by @${{ github.actor }})
         env:
           GITHUB_TOKEN: ${{ secrets.GH_CLAMSBOT_TOKEN }}
 
