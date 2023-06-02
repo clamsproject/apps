@@ -3,7 +3,9 @@
     "v1"
   ],
   "http://apps.clams.ai/whisper-wrapper": [
-    "v1",
-    "v2"
+    "v1"
+  ],
+  "http://apps.clams.ai/aapb-pua-kaldi-wrapper": [
+    "v1"
   ]
 }
