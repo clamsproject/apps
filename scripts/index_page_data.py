@@ -1,25 +1,27 @@
 import json
 import sys
+from pathlib import Path
 
-fullid = sys.argv[1]
-shortid, version = fullid.rsplit('/', 1)
-
+if len(sys.argv) > 1:
+    metadata_json_f = Path(sys.argv[1]) / 'metadata.json'
+else:
+    metadata_json_f = Path('metadata.json')
+metadata = json.load(open(metadata_json_f))
+app_id = metadata['identifier']
+app_version = metadata['app_version']
+# shortid is `http...` minus version string
+shortid = app_id.rsplit('/', 1)[0]
 
 app_index_fname = 'docs/_data/app-index.json'
 apps_fname = 'docs/_data/apps.json'
 existing_index = json.load(open(app_index_fname))
 existing_apps = json.load(open(apps_fname))
 
-# this relies on the fact the GH actions that runs this script
-# places the metadata.json file in the current working directory
-# then copy it to the app specific directory later
-cur_app_metadata = json.load(open('metadata.json'))
-
 if shortid not in existing_index:
     existing_index[shortid] = []
-if version not in existing_index[shortid]:
-    existing_index[shortid].append(version)
-    existing_apps.append(cur_app_metadata)
+if app_version not in existing_index[shortid]:
+    existing_index[shortid].append(app_version)
+    existing_apps.append(metadata)
 
     with open(app_index_fname, 'w') as f:
         json.dump(existing_index, f, indent=2)
