@@ -8,5 +8,8 @@
   ],
   "http://apps.clams.ai/aapb-pua-kaldi-wrapper": [
     "v1"
+  ],
+  "http://apps.clams.ai/brandeis-acs-wrapper": [
+    "v1"
   ]
 }
