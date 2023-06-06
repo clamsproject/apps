@@ -143,11 +143,11 @@ jobs:
           
       - name: "🗞 Generate HTML and JSON publication"
         run: |
-          python scripts/index_page_data.py ${{ env.app_fullid }}
           python scripts/metadata_markdown.py > index.md
           dir="docs/${{ env.app_shortname }}/${{ env.app_version }}"
           mkdir -p $dir
           cp {metadata,submission}.json index.md $dir/
+          python scripts/index_page_data.py $dir
 
       - name: "🫙 Commit and push docs with generated files"
         id: create_branch
