@@ -14,5 +14,8 @@
   ],
   "http://apps.clams.ai/inaaudiosegmenter-wrapper": [
     "v1"
+  ],
+  "http://apps.clams.ai/tonesdetection": [
+    "v1.0"
   ]
 }
