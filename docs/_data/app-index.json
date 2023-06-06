@@ -11,5 +11,8 @@
   ],
   "http://apps.clams.ai/brandeis-acs-wrapper": [
     "v1"
+  ],
+  "http://apps.clams.ai/inaaudiosegmenter-wrapper": [
+    "v1"
   ]
 }
