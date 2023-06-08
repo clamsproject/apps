@@ -15,7 +15,7 @@ o = g.get_organization(ORG)
 app_repos = []
 app_json = json.loads(urllib.request.urlopen('https://raw.githubusercontent.com/clamsproject/apps/main/docs/_data/apps.json').read().decode('utf8'))
 registered_repos = set(app['url'] for app in app_json)
-sys.stdout.write('repo,status,branchname\n')
+sys.stdout.write('repo,status,main_branch,last_commit\n')
 for r in o.get_repos():
     if r.name.startswith('app-'):
         mainb = 'main'
@@ -38,4 +38,9 @@ for r in o.get_repos():
                             status = 'UPDATED'
                     else:
                         status = 'OUTDATED'
-        sys.stdout.write(f'https://github.com/clamsproject/{r.name},{status},{mainb}\n')
+
+            if r.get_commits()[0].commit.message == 'added GHA to auto add issues to apps GHP':
+                updated = r.get_commits()[1].commit.committer.date
+            else:
+                updated = r.get_commits()[0].commit.committer.date
+        sys.stdout.write(f'https://github.com/clamsproject/{r.name},{status},{mainb},{updated}\n')
