@@ -1,6 +1,8 @@
+import enum
 import json
 import sys
 import urllib.request
+from datetime import datetime
 
 import requests
 from github import Github
@@ -12,6 +14,35 @@ g = Github(CLAMS_BOT_PAT)
 o = g.get_organization(ORG)
 # model_labels = {l.name: l for l in o.get_repo('.github').get_labels()}
 
+
+class AppStatus(enum.Enum):
+    REGISTERED = 0
+    UPDATED = 1
+    OUTDATED = 2
+    DISCONTINUED = 3
+    
+
+class AppRepo(object):
+    name: str
+    status: AppStatus
+    main_branch: str
+    last_commit: datetime
+    
+    def __init__(self, n, s, b, time):
+        self.name = n
+        self.status = s
+        self.main_branch = b
+        self.last_commit = time
+    
+    def __lt__(self, other):
+        if self.status.value < other.status.value:
+            return True
+        elif self.status.value == other.status.value:
+            return self.last_commit > other.last_commit
+        else:
+            return False
+
+
 app_repos = []
 app_json = json.loads(urllib.request.urlopen('https://raw.githubusercontent.com/clamsproject/apps/main/docs/_data/apps.json').read().decode('utf8'))
 registered_repos = set(app['url'] for app in app_json)
@@ -20,7 +51,7 @@ for r in o.get_repos():
     if r.name.startswith('app-'):
         mainb = 'main'
         if r.archived:
-            status = 'DISCONTINUED'
+            status = AppStatus.DISCONTINUED
         else:
             res = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/main/requirements.txt')
             if res.status_code > 400:
@@ -33,14 +64,19 @@ for r in o.get_repos():
                 if 'clams-' in line:
                     if '1.0.' in line:
                         if r.html_url in registered_repos:
-                            status = 'REGISTERED'
+                            status = AppStatus.REGISTERED
                         else:
-                            status = 'UPDATED'
+                            status = AppStatus.UPDATED
                     else:
-                        status = 'OUTDATED'
+                        status = AppStatus.OUTDATED
 
-            if r.get_commits()[0].commit.message == 'added GHA to auto add issues to apps GHP':
-                updated = r.get_commits()[1].commit.committer.date
+            commits = r.get_commits()
+            
+            if commits[0].commit.message == 'added GHA to auto add issues to apps GHP':
+                most_relevant_commit = commits[1]
             else:
-                updated = r.get_commits()[0].commit.committer.date
-        sys.stdout.write(f'https://github.com/clamsproject/{r.name},{status},{mainb},{updated}\n')
+                most_relevant_commit = commits[0]
+            updated = most_relevant_commit.commit.committer.date
+        app_repos.append(AppRepo(r.name, status, mainb, updated))
+for app in sorted(app_repos):
+    sys.stdout.write(f'https://github.com/clamsproject/{app.name},{app.status},{app.main_branch},{app.last_commit}\n')
