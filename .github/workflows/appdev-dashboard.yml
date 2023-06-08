@@ -30,7 +30,7 @@ jobs:
           
       - name: "🗞 Generate HTML and JSON publication"
         run: |
-          python scripts/appdev-dashboard.py > clams-apps-repos.csv
+          python scripts/appdev-dashboard.py ${{ secrets.GH_CLAMSBOT_TOKEN }} > clams-apps-repos.csv
 
       - name: "🫙 Commit and push docs with generated files"
         run: |
