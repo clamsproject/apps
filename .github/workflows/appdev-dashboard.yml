@@ -1,0 +1,40 @@
+name: "📱App Development Dashboard Generation (6hr)"
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+env:
+  APP_DIR_REPO: 'clamsproject/apps'
+
+jobs:
+  generate:
+    name: "📝 Generate dashboard as a CSV file"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "🛍 Checkout repository"
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_CLAMSBOT_TOKEN }}
+          
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: "💉 Install pygithub library"
+        run: |
+          pip install PyGithub
+          
+      - name: "🗞 Generate HTML and JSON publication"
+        run: |
+          python scripts/appdev-dashboard.py > clams-apps-repos.csv
+
+      - name: "🫙 Commit and push docs with generated files"
+        run: |
+          git config --local user.email "admin@clams.ai"
+          git config --local user.name "clams-bot"
+          git add clams-apps-repos.csv
+          git commit -m "updating app development dashboard file" && git push origin $branch_name || echo 'nothing to commit'
