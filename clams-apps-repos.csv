@@ -18,7 +18,7 @@ https://github.com/clamsproject/app-tesseractocr-wrapper,AppStatus.OUTDATED,mast
 https://github.com/clamsproject/app-fastpunct,AppStatus.OUTDATED,main,2022-06-18 16:14:56
 https://github.com/clamsproject/app-nlp-example,AppStatus.OUTDATED,master,2022-06-15 17:00:52
 https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,AppStatus.OUTDATED,master,2022-04-27 20:11:42
-https://github.com/clamsproject/app-scenedetect,AppStatus.OUTDATED,master,2022-03-17 16:54:47
+https://github.com/clamsproject/app-pyscenedetect-wrapper,AppStatus.OUTDATED,master,2022-03-17 16:54:47
 https://github.com/clamsproject/app-pyRLSA,AppStatus.OUTDATED,master,2019-10-22 16:48:48
 https://github.com/clamsproject/app-tesseractocr-slatetext-wrapper,AppStatus.DISCONTINUED,main,2023-06-08 18:34:43
 https://github.com/clamsproject/app-demux,AppStatus.DISCONTINUED,main,2023-06-07 15:55:07
