@@ -2,7 +2,7 @@ name: "📱App Development Dashboard Generation (6hr)"
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '49 */6 * * *'
   workflow_dispatch:
 
 env:
@@ -28,11 +28,11 @@ jobs:
         run: |
           pip install PyGithub
           
-      - name: "🗞 Generate HTML and JSON publication"
+      - name: "🗞 Generate dashboard CSV"
         run: |
           python scripts/appdev-dashboard.py ${{ secrets.GH_CLAMSBOT_TOKEN }} > clams-apps-repos.csv
 
-      - name: "🫙 Commit and push docs with generated files"
+      - name: "🫙 Commit and push if CSV is changed"
         run: |
           git config --local user.email "admin@clams.ai"
           git config --local user.name "clams-bot"
