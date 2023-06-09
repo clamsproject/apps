@@ -2,7 +2,7 @@ name: "📱App Development Dashboard Generation (6hr)"
 
 on:
   schedule:
-    - cron: '49 */6 * * *'
+    - cron: "49 1,7,13,19 * * *"
   workflow_dispatch:
 
 env:
