@@ -19,9 +19,9 @@ minimal_mistakes_skin    : "air" # "", "aqua", "contrast", "dark", "dirt", "neon
 locale                   : "en-US"
 title                    : "CLAMS Apps Repository"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Version 1.0.0"
 name                     : "CLAMS"
-description              : "This repository is a comprehensive resource for CLAMS (Computational Linguistics Applications for Multimedia Services) applications. It contains a variety of specialized apps and their respective versions."
+description              : " This repository is a comprehensive resource for CLAMS (Computational Linguistics Applications for Multimedia Services) applications. It contains a variety of specialized apps and their respective versions."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -104,31 +104,31 @@ analytics:
 
 
 # Site Author
-author:
-  name             : "CLAMS"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "admin@clams.ai"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+# author:
+#   name             : "CLAMS"
+#   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+#   bio              : "I am an **amazing** person."
+#   location         : "Somewhere"
+#   email            :
+#   links:
+#     - label: "Email"
+#       icon: "fas fa-fw fa-envelope-square"
+#       # url: "mailto:your.name@email.com"
+#     - label: "Website"
+#       icon: "admin@clams.ai"
+#       url: "https://your-website.com"
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       # url: "https://twitter.com/"
+#     - label: "Facebook"
+#       icon: "fab fa-fw fa-facebook-square"
+#       # url: "https://facebook.com/"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       # url: "https://github.com/"
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       # url: "https://instagram.com/"
 
 # Site Footer
 footer:
@@ -151,6 +151,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "admin@clams.ai"
 
 
 # Reading Files
