@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "CLAMS official website"
+    url: https://clams.ai/
+  - title: "Our Github Page"
+    url: https://github.com/clamsproject
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
