@@ -17,6 +17,7 @@
     "v1"
   ],
   "http://apps.clams.ai/tonesdetection": [
-    "v1.0"
+    "v1.0",
+    "v1.1"
   ]
 }
