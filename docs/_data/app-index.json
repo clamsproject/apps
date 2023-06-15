@@ -19,5 +19,8 @@
   "http://apps.clams.ai/tonesdetection": [
     "v1.0",
     "v1.1"
+  ],
+  "http://apps.clams.ai/slatedetection": [
+    "v1.0"
   ]
 }
