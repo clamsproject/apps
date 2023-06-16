@@ -1,11 +1,8 @@
 ---
 layout: home
-author_profile: true
+sidebar:
+  nav: "home-sidebar"
 ---
-
-## How to use CLAMS apps 
-
-* [CLAMS App user manual](clamsapp)
 
 ## App Directory
 
