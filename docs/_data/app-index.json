@@ -22,5 +22,8 @@
   ],
   "http://apps.clams.ai/slatedetection": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/pyscenedetect-wrapper": [
+    "v1"
   ]
 }
