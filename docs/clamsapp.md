@@ -1,3 +1,10 @@
+---
+layout: posts
+permalink: /whisper-wrapper/clamsapp/
+sidebar:
+  nav: "page-sidebar"
+---
+
 ## Using CLAMS App
 
 This document provides general instructions for installing and using CLAMS Apps. 
