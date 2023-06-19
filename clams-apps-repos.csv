@@ -11,7 +11,7 @@ https://github.com/clamsproject/app-barsdetection,AppStatus.UPDATED,main,2023-06
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,master,2023-06-06 17:11:46
 https://github.com/clamsproject/app-dlib-facedetection-wrapper,AppStatus.OUTDATED,master,2023-06-08 12:04:00
 https://github.com/clamsproject/app-spacy-wrapper,AppStatus.OUTDATED,main,2023-05-19 22:00:05
-https://github.com/clamsproject/app-east-wrapper,AppStatus.OUTDATED,main,2023-03-22 04:15:35
+https://github.com/clamsproject/app-east-textdetection,AppStatus.OUTDATED,main,2023-03-22 04:15:35
 https://github.com/clamsproject/app-parseq,AppStatus.OUTDATED,main,2023-03-16 14:11:17
 https://github.com/clamsproject/app-slate-textdetection,AppStatus.OUTDATED,main,2023-03-01 02:33:56
 https://github.com/clamsproject/app-chyronrecognition,AppStatus.OUTDATED,main,2023-02-16 03:13:19
