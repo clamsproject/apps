@@ -19,5 +19,8 @@
   ],
   "http://apps.clams.ai/pyscenedetect-wrapper": [
     "v1"
+  ],
+  "http://apps.clams.ai/inaspeechsegmenter-wrapper": [
+    "v1.0"
   ]
 }
