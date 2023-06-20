@@ -1,7 +1,6 @@
-b=$(git branch 2>/dev/null | grep '\*' | cut -d ' ' -f 2)
-app_name_ver=${b#*-}
-app_ver=${app_name_ver#*.}
-app_name=${app_name_ver%%.*}
+app_name_ver=$(git show $(git --no-pager log --oneline --no-color  | grep "adding metadata" | head -n 1 | cut -d ' ' -f 1) --name-only | grep metadata.json)
+app_name=$(echo $app_name_ver | cut -d '/' -f 2)
+app_ver=$(echo $app_name_ver | cut -d '/' -f 3)
 git fetch --all 
 # bring all files from main branch
 git merge origin/main --no-commit --no-ff -X theirs
