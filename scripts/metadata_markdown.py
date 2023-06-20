@@ -6,7 +6,7 @@ from pathlib import Path
 
 if len(sys.argv) > 1:
     cwd = Path(sys.argv[1])
-    out_f = open(cwd / 'index.md', 'w')
+    out_f = open(cwd / 'index.html', 'w')
 else:
     cwd = Path.cwd()
     out_f = sys.stdout
