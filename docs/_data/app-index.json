@@ -7,12 +7,21 @@
     "v2"
   ],
   "http://apps.clams.ai/aapb-pua-kaldi-wrapper": [
-    "v1"
+    "v1",
+    "v2"
   ],
   "http://apps.clams.ai/brandeis-acs-wrapper": [
     "v1"
   ],
-  "http://apps.clams.ai/inaaudiosegmenter-wrapper": [
+  "http://apps.clams.ai/slatedetection": [
+    "v1.0",
+    "v1.1",
+    "v1.2"
+  ],
+  "http://apps.clams.ai/pyscenedetect-wrapper": [
     "v1"
+  ],
+  "http://apps.clams.ai/inaspeechsegmenter-wrapper": [
+    "v1.0"
   ]
 }

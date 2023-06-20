@@ -1,12 +1,12 @@
 {
   "name": "inaSpeechSegmenter Wrapper",
   "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
-  "app_version": "v1",
+  "app_version": "v1.0",
   "mmif_version": "1.0.0",
   "analyzer_version": "0.7.6",
   "app_license": "MIT",
   "analyzer_license": "MIT",
-  "identifier": "http://apps.clams.ai/inaaudiosegmenter-wrapper/v1",
+  "identifier": "http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.0",
   "url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper",
   "input": [
     [
@@ -26,6 +26,15 @@
       "properties": {
         "timeunit": "milliseconds"
       }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
     }
   ]
 }
