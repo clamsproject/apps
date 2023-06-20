@@ -1,1 +1,457 @@
-[{"name": "CLAMS wrapper for spaCy NLP", "description": "Apply spaCy NLP to all text documents in a MMIF file.", "app_version": "v1", "mmif_version": "0.5.0", "analyzer_version": "3.1.2", "app_license": "Apache 2.0", "analyzer_license": "MIT", "identifier": "http://apps.clams.ai/spacy-wrapper/v1", "url": "https://github.com/clamsproject/app-spacy-wrapper", "input": [{"@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1", "required": true}, {"@type": "http://vocab.lappsgrid.org/Token", "required": false}], "output": [{"@type": "http://vocab.lappsgrid.org/Token"}, {"@type": "http://vocab.lappsgrid.org/Token#pos"}, {"@type": "http://vocab.lappsgrid.org/Token#lemma"}, {"@type": "http://vocab.lappsgrid.org/NounChunk"}, {"@type": "http://vocab.lappsgrid.org/Sentence"}, {"@type": "http://vocab.lappsgrid.org/NamedEntity"}], "parameters": [{"name": "pretokenized", "description": "Boolean parameter to set the app to use existing tokenization, if available, for text documents for NLP processing. Useful to process ASR documents, for example.", "type": "boolean", "default": 0, "multivalued": false}]}, {"name": "Whisper Wrapper", "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.", "app_version": "v1", "mmif_version": "1.0.0", "analyzer_version": "20230314", "app_license": "Apache 2.0", "analyzer_license": "MIT", "identifier": "http://apps.clams.ai/whisper-wrapper/v1", "url": "https://github.com/clamsproject/app-whisper-wrapper", "input": [{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"}, {"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"timeUnit": "seconds"}}, {"@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"}, {"@type": "http://vocab.lappsgrid.org/Token"}]}, {"name": "AAPB-PUA Kaldi Wrapper", "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ", "app_version": "v1", "mmif_version": "0.5.0", "analyzer_version": "v4", "app_license": "Apache 2.0", "analyzer_license": "UNKNOWN", "identifier": "http://apps.clams.ai/aapb-pua-kaldi-wrapper/v1", "url": "https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper", "input": [{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"}, {"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"timeUnit": "milliseconds"}}, {"@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"}, {"@type": "http://vocab.lappsgrid.org/Token"}], "parameters": [{"name": "use_speech_segmentation", "description": "When true, the app looks for existing TimeFrame { \"frameType\": \"speech\" } annotations, and runs ASR only on those frames, instead of entire audio files.", "type": "boolean", "default": true, "multivalued": false}]}, {"name": "Whisper Wrapper", "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.", "app_version": "v2", "mmif_version": "1.0.0", "analyzer_version": "20230314", "app_license": "Apache 2.0", "analyzer_license": "MIT", "identifier": "http://apps.clams.ai/whisper-wrapper/v2", "url": "https://github.com/clamsproject/app-whisper-wrapper", "input": [[{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}, {"@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1", "required": true}]], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"}, {"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"timeUnit": "seconds"}}, {"@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"}, {"@type": "http://vocab.lappsgrid.org/Token"}]}, {"name": "Brandeis ACS Wrapper", "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .", "app_version": "v1", "mmif_version": "1.0.0", "analyzer_version": "1.11", "app_license": "Apache2.0", "analyzer_license": "Apache2.0", "identifier": "http://apps.clams.ai/brandeis-acs-wrapper/v1", "url": "https://github.com/clamsproject/app-brandeis-acs-wrapper", "input": [{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"timeunit": "milliseconds"}}]}, {"name": "inaSpeechSegmenter Wrapper", "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .", "app_version": "v1", "mmif_version": "1.0.0", "analyzer_version": "0.7.6", "app_license": "MIT", "analyzer_license": "MIT", "identifier": "http://apps.clams.ai/inaaudiosegmenter-wrapper/v1", "url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper", "input": [[{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}, {"@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1", "required": true}]], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"timeunit": "milliseconds"}}]}, {"name": "Tone_Detector", "description": "Detects spans of monotonic audio within an audio file", "app_version": "v1.0", "mmif_version": "1.0.0", "analyzer_version": "0.4.9", "app_license": "Apache 2.0", "analyzer_license": "GPLv3", "identifier": "http://apps.clams.ai/tonesdetection/v1.0", "url": "http://mmif.clams.ai/apps/tonesdetection/v1", "input": [{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1"}], "parameters": [{"name": "time_unit", "description": "the unit for annotation output", "type": "string", "choices": ["seconds", "milliseconds"], "default": "seconds", "multivalued": false}, {"name": "length_threshold", "description": "minimum length threshold (in ms)", "type": "integer", "default": 2000, "multivalued": false}, {"name": "sample_size", "description": "length for each segment of samples to be compared", "type": "integer", "default": 512, "multivalued": false}, {"name": "stop_at", "description": "stop point for audio processing (in ms). Defaults to the length of the file", "type": "integer", "default": "None", "multivalued": false}, {"name": "tolerance", "description": "threshold value for a \"match\" within audio processing", "type": "number", "default": 1, "multivalued": false}]}, {"name": "AAPB-PUA Kaldi Wrapper", "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ", "app_version": "v2", "mmif_version": "1.0.0", "analyzer_version": "v4", "app_license": "Apache 2.0", "analyzer_license": "UNKNOWN", "identifier": "http://apps.clams.ai/aapb-pua-kaldi-wrapper/v2", "url": "https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper", "input": [[{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}, {"@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1", "required": true}]], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"}, {"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"timeUnit": "milliseconds"}}, {"@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"}, {"@type": "http://vocab.lappsgrid.org/Token"}], "parameters": [{"name": "use_speech_segmentation", "description": "When true, the app looks for existing TimeFrame { \"frameType\": \"speech\" } annotations, and runs ASR only on those frames, instead of entire audio files.", "type": "boolean", "default": true, "multivalued": false}]}, {"name": "Tone_Detector", "description": "Detects spans of monotonic audio within an audio file", "app_version": "v1.1", "mmif_version": "1.0.0", "app_license": "Apache 2.0", "identifier": "http://apps.clams.ai/tonesdetection/v1.1", "url": "https://github.com/clamsproject/app-tonedetection", "input": [{"@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1"}], "parameters": [{"name": "time_unit", "description": "the unit for annotation output", "type": "string", "choices": ["seconds", "milliseconds"], "default": "seconds", "multivalued": false}, {"name": "length_threshold", "description": "minimum length threshold (in ms)", "type": "integer", "default": 2000, "multivalued": false}, {"name": "sample_size", "description": "length for each segment of samples to be compared", "type": "integer", "default": 512, "multivalued": false}, {"name": "stop_at", "description": "stop point for audio processing (in ms). Defaults to the length of the file", "type": "integer", "default": "None", "multivalued": false}, {"name": "tolerance", "description": "threshold value for a \"match\" within audio processing", "type": "number", "default": 1, "multivalued": false}]}, {"name": "Slate Detection", "description": "This tool detects slates.", "app_version": "v1.0", "mmif_version": "1.0.0", "app_license": "MIT", "identifier": "http://apps.clams.ai/slatedetection/v1.0", "url": "https://github.com/clams-project/app-slatedetection", "input": [{"@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"properties": {"frameType": "string"}}}], "parameters": [{"name": "timeUnit", "description": "Unit for output typeframe", "type": "string", "choices": ["frames", "milliseconds"], "default": "frames", "multivalued": false}, {"name": "sampleRatio", "description": "Frequency to sample frames.", "type": "integer", "default": 30, "multivalued": false}, {"name": "stopAt", "description": "Frame number to stop processing", "type": "integer", "default": 540000, "multivalued": false}, {"name": "stopAfterOne", "description": "When True, processing stops after first timeframe is found", "type": "boolean", "default": 1, "multivalued": false}, {"name": "minFrameCount", "description": "Minimum number of frames required for a timeframe to be included in the output", "type": "integer", "default": 10, "multivalued": false}, {"name": "threshold", "description": "Threshold from 0-1, lower accepts more potential slates.", "type": "number", "default": 0, "multivalued": false}, {"name": "pretty", "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation", "type": "boolean", "default": 0, "multivalued": false}]}, {"name": "Pyscenedetect Wrapper", "description": "", "app_version": "v1", "mmif_version": "1.0.0", "analyzer_version": "0.6.1", "app_license": "Apache2", "analyzer_license": "BSD-3", "identifier": "http://apps.clams.ai/pyscenedetect-wrapper/v1", "url": "https://github.com/clamsproject/app-pyscenedetect-wrapper", "input": [{"@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"frameType": "shot", "timeUnit": "frame"}}], "parameters": [{"name": "mode", "description": "pick a scene detector algorithm, see http://scenedetect.com/projects/Manual/en/latest/cli/detectors.html", "type": "string", "choices": ["content", "threshold", "adaptive"], "default": "content", "multivalued": false}, {"name": "threshold", "description": "threshold value to use in the detection algorithm. Note that the meaning of this numerical value differs for different detector algorithms.", "type": "number", "default": 27, "multivalued": false}, {"name": "pretty", "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation", "type": "boolean", "default": 0, "multivalued": false}]}, {"name": "Slate Detection", "description": "This tool detects slates.", "app_version": "v1.1", "mmif_version": "1.0.0", "app_license": "MIT", "identifier": "http://apps.clams.ai/slatedetection/v1.1", "url": "https://github.com/clamsproject/app-slatedetection", "input": [{"@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"properties": {"frameType": "string"}}}], "parameters": [{"name": "timeUnit", "description": "Unit for output typeframe", "type": "string", "choices": ["frames", "milliseconds"], "default": "frames", "multivalued": false}, {"name": "sampleRatio", "description": "Frequency to sample frames.", "type": "integer", "default": 30, "multivalued": false}, {"name": "stopAt", "description": "Frame number to stop processing", "type": "integer", "default": 540000, "multivalued": false}, {"name": "stopAfterOne", "description": "When True, processing stops after first timeframe is found", "type": "boolean", "default": 1, "multivalued": false}, {"name": "minFrameCount", "description": "Minimum number of frames required for a timeframe to be included in the output", "type": "integer", "default": 10, "multivalued": false}, {"name": "threshold", "description": "Threshold from 0-1, lower accepts more potential slates.", "type": "number", "default": 0, "multivalued": false}, {"name": "pretty", "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation", "type": "boolean", "default": 0, "multivalued": false}]}, {"name": "Slate Detection", "description": "This tool detects slates.", "app_version": "v1.2", "mmif_version": "1.0.0", "app_license": "MIT", "identifier": "http://apps.clams.ai/slatedetection/v1.2", "url": "https://github.com/clamsproject/app-slatedetection", "input": [{"@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1", "required": true}], "output": [{"@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1", "properties": {"properties": {"frameType": "string"}}}], "parameters": [{"name": "timeUnit", "description": "Unit for output typeframe", "type": "string", "choices": ["frames", "milliseconds"], "default": "frames", "multivalued": false}, {"name": "sampleRatio", "description": "Frequency to sample frames.", "type": "integer", "default": 30, "multivalued": false}, {"name": "stopAt", "description": "Frame number to stop processing", "type": "integer", "default": 540000, "multivalued": false}, {"name": "stopAfterOne", "description": "When True, processing stops after first timeframe is found", "type": "boolean", "default": 1, "multivalued": false}, {"name": "minFrameCount", "description": "Minimum number of frames required for a timeframe to be included in the output", "type": "integer", "default": 10, "multivalued": false}, {"name": "threshold", "description": "Threshold from 0-1, lower accepts more potential slates.", "type": "number", "default": 0, "multivalued": false}, {"name": "pretty", "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation", "type": "boolean", "default": 0, "multivalued": false}]}]
+[
+  {
+    "name": "CLAMS wrapper for spaCy NLP",
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "app_version": "v1",
+    "mmif_version": "0.5.0",
+    "analyzer_version": "3.1.2",
+    "app_license": "Apache 2.0",
+    "analyzer_license": "MIT",
+    "identifier": "http://apps.clams.ai/spacy-wrapper/v1",
+    "url": "https://github.com/clamsproject/app-spacy-wrapper",
+    "input": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Token",
+        "required": false
+      }
+    ],
+    "output": [
+      {
+        "@type": "http://vocab.lappsgrid.org/Token"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Token#pos"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Token#lemma"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/NounChunk"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Sentence"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/NamedEntity"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "pretokenized",
+        "description": "Boolean parameter to set the app to use existing tokenization, if available, for text documents for NLP processing. Useful to process ASR documents, for example.",
+        "type": "boolean",
+        "default": 0,
+        "multivalued": false
+      }
+    ]
+  },
+  {
+    "name": "Whisper Wrapper",
+    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
+    "app_version": "v1",
+    "mmif_version": "1.0.0",
+    "analyzer_version": "20230314",
+    "app_license": "Apache 2.0",
+    "analyzer_license": "MIT",
+    "identifier": "http://apps.clams.ai/whisper-wrapper/v1",
+    "url": "https://github.com/clamsproject/app-whisper-wrapper",
+    "input": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      }
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "timeUnit": "seconds"
+        }
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Token"
+      }
+    ]
+  },
+  {
+    "name": "AAPB-PUA Kaldi Wrapper",
+    "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ",
+    "app_version": "v1",
+    "mmif_version": "0.5.0",
+    "analyzer_version": "v4",
+    "app_license": "Apache 2.0",
+    "analyzer_license": "UNKNOWN",
+    "identifier": "http://apps.clams.ai/aapb-pua-kaldi-wrapper/v1",
+    "url": "https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper",
+    "input": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      }
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "timeUnit": "milliseconds"
+        }
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Token"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "use_speech_segmentation",
+        "description": "When true, the app looks for existing TimeFrame { \"frameType\": \"speech\" } annotations, and runs ASR only on those frames, instead of entire audio files.",
+        "type": "boolean",
+        "default": true,
+        "multivalued": false
+      }
+    ]
+  },
+  {
+    "name": "Whisper Wrapper",
+    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
+    "app_version": "v2",
+    "mmif_version": "1.0.0",
+    "analyzer_version": "20230314",
+    "app_license": "Apache 2.0",
+    "analyzer_license": "MIT",
+    "identifier": "http://apps.clams.ai/whisper-wrapper/v2",
+    "url": "https://github.com/clamsproject/app-whisper-wrapper",
+    "input": [
+      [
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+          "required": true
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+          "required": true
+        }
+      ]
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "timeUnit": "seconds"
+        }
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Token"
+      }
+    ]
+  },
+  {
+    "name": "Brandeis ACS Wrapper",
+    "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
+    "app_version": "v1",
+    "mmif_version": "1.0.0",
+    "analyzer_version": "1.11",
+    "app_license": "Apache2.0",
+    "analyzer_license": "Apache2.0",
+    "identifier": "http://apps.clams.ai/brandeis-acs-wrapper/v1",
+    "url": "https://github.com/clamsproject/app-brandeis-acs-wrapper",
+    "input": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      }
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "timeunit": "milliseconds"
+        }
+      }
+    ]
+  },
+  {
+    "name": "AAPB-PUA Kaldi Wrapper",
+    "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ",
+    "app_version": "v2",
+    "mmif_version": "1.0.0",
+    "analyzer_version": "v4",
+    "app_license": "Apache 2.0",
+    "analyzer_license": "UNKNOWN",
+    "identifier": "http://apps.clams.ai/aapb-pua-kaldi-wrapper/v2",
+    "url": "https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper",
+    "input": [
+      [
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+          "required": true
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+          "required": true
+        }
+      ]
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "timeUnit": "milliseconds"
+        }
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+      },
+      {
+        "@type": "http://vocab.lappsgrid.org/Token"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "use_speech_segmentation",
+        "description": "When true, the app looks for existing TimeFrame { \"frameType\": \"speech\" } annotations, and runs ASR only on those frames, instead of entire audio files.",
+        "type": "boolean",
+        "default": true,
+        "multivalued": false
+      }
+    ]
+  },
+  {
+    "name": "Slate Detection",
+    "description": "This tool detects slates.",
+    "app_version": "v1.0",
+    "mmif_version": "1.0.0",
+    "app_license": "MIT",
+    "identifier": "http://apps.clams.ai/slatedetection/v1.0",
+    "url": "https://github.com/clams-project/app-slatedetection",
+    "input": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "properties": {
+            "frameType": "string"
+          }
+        }
+      }
+    ],
+    "parameters": [
+      {
+        "name": "timeUnit",
+        "description": "Unit for output typeframe",
+        "type": "string",
+        "choices": [
+          "frames",
+          "milliseconds"
+        ],
+        "default": "frames",
+        "multivalued": false
+      },
+      {
+        "name": "sampleRatio",
+        "description": "Frequency to sample frames.",
+        "type": "integer",
+        "default": 30,
+        "multivalued": false
+      },
+      {
+        "name": "stopAt",
+        "description": "Frame number to stop processing",
+        "type": "integer",
+        "default": 540000,
+        "multivalued": false
+      },
+      {
+        "name": "stopAfterOne",
+        "description": "When True, processing stops after first timeframe is found",
+        "type": "boolean",
+        "default": 1,
+        "multivalued": false
+      },
+      {
+        "name": "minFrameCount",
+        "description": "Minimum number of frames required for a timeframe to be included in the output",
+        "type": "integer",
+        "default": 10,
+        "multivalued": false
+      },
+      {
+        "name": "threshold",
+        "description": "Threshold from 0-1, lower accepts more potential slates.",
+        "type": "number",
+        "default": 0,
+        "multivalued": false
+      },
+      {
+        "name": "pretty",
+        "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+        "type": "boolean",
+        "default": 0,
+        "multivalued": false
+      }
+    ]
+  },
+  {
+    "name": "Pyscenedetect Wrapper",
+    "description": "",
+    "app_version": "v1",
+    "mmif_version": "1.0.0",
+    "analyzer_version": "0.6.1",
+    "app_license": "Apache2",
+    "analyzer_license": "BSD-3",
+    "identifier": "http://apps.clams.ai/pyscenedetect-wrapper/v1",
+    "url": "https://github.com/clamsproject/app-pyscenedetect-wrapper",
+    "input": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "frameType": "shot",
+          "timeUnit": "frame"
+        }
+      }
+    ],
+    "parameters": [
+      {
+        "name": "mode",
+        "description": "pick a scene detector algorithm, see http://scenedetect.com/projects/Manual/en/latest/cli/detectors.html",
+        "type": "string",
+        "choices": [
+          "content",
+          "threshold",
+          "adaptive"
+        ],
+        "default": "content",
+        "multivalued": false
+      },
+      {
+        "name": "threshold",
+        "description": "threshold value to use in the detection algorithm. Note that the meaning of this numerical value differs for different detector algorithms.",
+        "type": "number",
+        "default": 27,
+        "multivalued": false
+      },
+      {
+        "name": "pretty",
+        "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+        "type": "boolean",
+        "default": 0,
+        "multivalued": false
+      }
+    ]
+  },
+  {
+    "name": "Slate Detection",
+    "description": "This tool detects slates.",
+    "app_version": "v1.1",
+    "mmif_version": "1.0.0",
+    "app_license": "MIT",
+    "identifier": "http://apps.clams.ai/slatedetection/v1.1",
+    "url": "https://github.com/clamsproject/app-slatedetection",
+    "input": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ],
+    "output": [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+        "properties": {
+          "properties": {
+            "frameType": "string"
+          }
+        }
+      }
+    ],
+    "parameters": [
+      {
+        "name": "timeUnit",
+        "description": "Unit for output typeframe",
+        "type": "string",
+        "choices": [
+          "frames",
+          "milliseconds"
+        ],
+        "default": "frames",
+        "multivalued": false
+      },
+      {
+        "name": "sampleRatio",
+        "description": "Frequency to sample frames.",
+        "type": "integer",
+        "default": 30,
+        "multivalued": false
+      },
+      {
+        "name": "stopAt",
+        "description": "Frame number to stop processing",
+        "type": "integer",
+        "default": 540000,
+        "multivalued": false
+      },
+      {
+        "name": "stopAfterOne",
+        "description": "When True, processing stops after first timeframe is found",
+        "type": "boolean",
+        "default": 1,
+        "multivalued": false
+      },
+      {
+        "name": "minFrameCount",
+        "description": "Minimum number of frames required for a timeframe to be included in the output",
+        "type": "integer",
+        "default": 10,
+        "multivalued": false
+      },
+      {
+        "name": "threshold",
+        "description": "Threshold from 0-1, lower accepts more potential slates.",
+        "type": "number",
+        "default": 0,
+        "multivalued": false
+      },
+      {
+        "name": "pretty",
+        "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+        "type": "boolean",
+        "default": 0,
+        "multivalued": false
+      }
+    ]
+  }
+]
