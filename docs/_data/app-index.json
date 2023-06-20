@@ -13,13 +13,6 @@
   "http://apps.clams.ai/brandeis-acs-wrapper": [
     "v1"
   ],
-  "http://apps.clams.ai/inaaudiosegmenter-wrapper": [
-    "v1"
-  ],
-  "http://apps.clams.ai/tonesdetection": [
-    "v1.0",
-    "v1.1"
-  ],
   "http://apps.clams.ai/slatedetection": [
     "v1.0",
     "v1.1"
