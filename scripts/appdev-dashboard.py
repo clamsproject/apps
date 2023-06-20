@@ -52,9 +52,11 @@ for r in o.get_repos():
         mainb = 'main'
         if r.archived:
             status = AppStatus.DISCONTINUED
+            mainb = 'N/A'
+            updated = 'N/A'
         else:
             res = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/main/requirements.txt')
-            if res.status_code > 400:
+            if res.status_code >= 400:
                 res = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/master/requirements.txt')
                 mainb = 'master'
             req = res.text
