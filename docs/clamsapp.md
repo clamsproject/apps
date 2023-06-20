@@ -1,8 +1,9 @@
 ---
-layout: posts
+layout: single
 permalink: /whisper-wrapper/clamsapp/
 sidebar:
   nav: "page-sidebar"
+toc: true
 ---
 
 ## Using CLAMS App
