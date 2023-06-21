@@ -1,12 +1,12 @@
 repo,status,main_branch,last_commit
+https://github.com/clamsproject/app-slatedetection,AppStatus.REGISTERED,main,2023-06-21 19:33:34
 https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,AppStatus.REGISTERED,main,2023-06-20 02:28:20
-https://github.com/clamsproject/app-slatedetection,AppStatus.REGISTERED,main,2023-06-17 11:15:51
 https://github.com/clamsproject/app-pyscenedetect-wrapper,AppStatus.REGISTERED,main,2023-06-16 02:55:59
 https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper,AppStatus.REGISTERED,main,2023-06-14 00:31:48
 https://github.com/clamsproject/app-brandeis-acs-wrapper,AppStatus.REGISTERED,main,2023-06-05 20:48:23
 https://github.com/clamsproject/app-whisper-wrapper,AppStatus.REGISTERED,main,2023-06-01 23:37:05
-https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.UPDATED,main,2023-06-20 20:06:42
-https://github.com/clamsproject/app-tonedetection,AppStatus.UPDATED,main,2023-06-20 02:34:50
+https://github.com/clamsproject/app-tonedetection,AppStatus.UPDATED,main,2023-06-21 19:26:24
+https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.UPDATED,main,2023-06-21 18:38:27
 https://github.com/clamsproject/app-barsdetection,AppStatus.UPDATED,main,2023-06-07 15:55:07
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,master,2023-06-06 17:11:46
 https://github.com/clamsproject/app-dlib-facedetection-wrapper,AppStatus.OUTDATED,master,2023-06-08 12:04:00
