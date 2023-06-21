@@ -1,0 +1,68 @@
+{
+  "name": "Tone_Detector",
+  "description": "Detects spans of monotonic audio within an audio file",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/tonedetection/v1.0",
+  "url": "https://github.com/clamsproject/app-tonedetection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "time_unit",
+      "description": "the unit for annotation output",
+      "type": "string",
+      "choices": [
+        "seconds",
+        "milliseconds"
+      ],
+      "default": "seconds",
+      "multivalued": false
+    },
+    {
+      "name": "length_threshold",
+      "description": "minimum length threshold (in ms)",
+      "type": "integer",
+      "default": 2000,
+      "multivalued": false
+    },
+    {
+      "name": "sample_size",
+      "description": "length for each segment of samples to be compared",
+      "type": "integer",
+      "default": 512,
+      "multivalued": false
+    },
+    {
+      "name": "stop_at",
+      "description": "stop point for audio processing (in ms). Defaults to the length of the file",
+      "type": "integer",
+      "default": "None",
+      "multivalued": false
+    },
+    {
+      "name": "tolerance",
+      "description": "threshold value for a \"match\" within audio processing",
+      "type": "number",
+      "default": 1,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
