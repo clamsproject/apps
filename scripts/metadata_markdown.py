@@ -26,12 +26,20 @@ submission_template = """
 
 """
 
+frontmatter_template = """
+---
+layout: single
+title: "${name}-${app_version}"
+collection: apps
+permalink: ${apps_link}
+---"""
 
 def markdown_link(url):
     return f"[{url}]({url})"
 
 markdown = io.StringIO()
 appmetadata = json.load(open(cwd / 'metadata.json'))
+markdown.write(string.Template(frontmatter_template).substitute(appmetadata, apps_link=appmetadata["identifier"].rsplit("/")[-2]))
 if (cwd / 'submission.json').exists():
     submitmetadata = json.load(open(cwd / 'submission.json'))
     image_webpage = f'{appmetadata["url"]}/pkgs/container/{appmetadata["url"].rsplit("/",1)[-1]}/{appmetadata["app_version"]}'
