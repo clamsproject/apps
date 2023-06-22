@@ -1,8 +1,10 @@
 ---
 layout: single
-permalink: /whisper-wrapper/clamsapp/
+title:  "How to use CLAMS App"
+collection: documentation
+permalink: /documentation/clamsapp/
 sidebar:
-  nav: "page-sidebar"
+    nav: "documentation"
 toc: true
 ---
 

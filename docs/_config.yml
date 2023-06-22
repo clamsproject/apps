@@ -4,13 +4,13 @@ minimal_mistakes_skin    : "air" # "", "aqua", "contrast", "dark", "dirt", "neon
 
 # Site Settings
 locale                   : "en-US"
-title                    : "CLAMS Apps Repository"
+title                    : "CLAMS App Repository"
 title_separator          : "-"
 # subtitle                 : "Version 1.0.0"
 name                     : "CLAMS"
 description              : " This repository is a comprehensive resource for CLAMS (Computational Linguistics Applications for Multimedia Services) applications. It contains a variety of specialized apps and their respective versions."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : #"/home"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -282,3 +282,10 @@ compress_html:
 #      share: true
 #      related: true
 
+collections:
+  apps:
+    output: true
+    permalink: /:collection/:path/
+  documentation:
+    output: true
+    permalink: /:collection/:path/
