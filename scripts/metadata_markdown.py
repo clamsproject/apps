@@ -20,8 +20,8 @@ submission_template = """
 
 """
 
-frontmatter_template = """
----
+# it's important to have no empty lines at the beginning of the frontmatter template
+frontmatter_template = """---
 layout: single
 title: "${name} (${app_version})"
 collection: apps
