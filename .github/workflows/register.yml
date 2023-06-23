@@ -144,7 +144,7 @@ jobs:
       - name: "🗞 Generate HTML and JSON publication"
         run: |
           python scripts/metadata_markdown.py > index.md
-          dir="docs/${{ env.app_shortname }}/${{ env.app_version }}"
+          dir="docs/_apps/${{ env.app_shortname }}/${{ env.app_version }}"
           mkdir -p $dir
           cp {metadata,submission}.json index.md $dir/
           python scripts/index_page_data.py $dir

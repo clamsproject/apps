@@ -2,6 +2,8 @@ import os
 import shutil
 from pathlib import Path
 import sys
+import metadata_markdown
+
 
 def migration(directory):
     #iterate over the whole docs file
@@ -19,7 +21,7 @@ def migration(directory):
                 if not os.path.isdir(destination_dir):
                     os.makedirs(destination_dir)
                 destination_dir = Path(destination_dir) / full_dir_path.relative_to(directory)
-                shutil.copytree(full_dir_path, destination_dir)
+                shutil.move(full_dir_path, destination_dir)
         destination_dir = os.path.join(directory, '_apps')
     #in the updated _apps folder, for those files end with .mds, add frontmatter looks like
 # ---
@@ -30,23 +32,12 @@ def migration(directory):
 # ---
     for root, _, files in os.walk(destination_dir):
         for file in files:
-            if file.endswith('.md'):
-                file_path = os.path.join(root, file)
-                path = Path(file_path)
-                file_name = path.parts[-3]
-                version = path.parts[-2]
-                frontmatter = f"""---
-layout: single
-title: "{file_name}-{version}"
-collection: apps
-permalink: /{file_name}/{version}/
----"""
-                with open(file_path, 'r') as f:
-                    filedata = f.read()
-                filedata = frontmatter + filedata
-                with open(file_path, 'w') as f:
-                    f.write(filedata)
+            if file == 'metadata.json':
+                metadata_markdown.main(root)
 
 if __name__ == "__main__":
-    directory = Path(sys.argv[1])
+    if len(sys.argv) > 1:
+        directory = Path(sys.argv[1])
+    else: 
+        directory = Path(__file__).parent.parent / 'docs'
     migration(directory)
