@@ -13,7 +13,7 @@ https://github.com/clamsproject/app-east-textdetection,AppStatus.UPDATED,main,20
 https://github.com/clamsproject/app-chyron-text-recognition,AppStatus.UPDATED,main,2023-06-22 22:55:31
 https://github.com/clamsproject/app-tonedetection,AppStatus.UPDATED,main,2023-06-21 19:26:24
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,master,2023-06-06 17:11:46
-https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,AppStatus.OUTDATED,main,2023-07-01 13:10:29
+https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,AppStatus.OUTDATED,main,2023-07-04 12:59:00
 https://github.com/clamsproject/app-dlib-facedetection-wrapper,AppStatus.OUTDATED,master,2023-06-08 12:04:00
 https://github.com/clamsproject/app-spacy-wrapper,AppStatus.OUTDATED,main,2023-05-19 22:00:05
 https://github.com/clamsproject/app-slate-textdetection,AppStatus.OUTDATED,main,2023-03-01 02:33:56
