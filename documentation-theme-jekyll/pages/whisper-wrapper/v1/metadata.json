@@ -1,0 +1,34 @@
+{
+  "name": "Whisper Wrapper",
+  "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
+  "app_version": "v1",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "20230314",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/whisper-wrapper/v1",
+  "url": "https://github.com/clamsproject/app-whisper-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "timeUnit": "seconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token"
+    }
+  ]
+}

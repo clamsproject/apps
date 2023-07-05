@@ -1,0 +1,49 @@
+{
+  "name": "AAPB-PUA Kaldi Wrapper",
+  "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ",
+  "app_version": "v2",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "v4",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "UNKNOWN",
+  "identifier": "http://apps.clams.ai/aapb-pua-kaldi-wrapper/v2",
+  "url": "https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "use_speech_segmentation",
+      "description": "When true, the app looks for existing TimeFrame { \"frameType\": \"speech\" } annotations, and runs ASR only on those frames, instead of entire audio files.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    }
+  ]
+}
