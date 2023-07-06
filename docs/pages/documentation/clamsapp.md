@@ -1,8 +1,7 @@
 ---
-title: Using CLAMS App
-sidebar: using_clams
+title: "Using CLAMS App"
+sidebar: using_clams_sidebar
 permalink: clamsapp.html
-# folder: aapb-pua-kaldi-wrapper
 keywords: documentation, using, running
 ---
 ## Using CLAMS App

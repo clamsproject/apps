@@ -1,0 +1,71 @@
+entries:
+- title: sidebar
+  product: CLAMS App Documentation
+  version: 1.0
+  folders:
+  - title: Using CLAMS App
+    output: web, pdf
+    folderitems:
+    - title: Requirements
+      url: /clamsapp.html#requirements
+      output: web, pdf
+    - title: Installation
+      url: /clamsapp.html#installation
+      output: web, pdf
+      subfolders:
+      - title: Build image from source code
+        output: web, pdf
+        subfolderitems:
+        - title: Build image from source code
+          url: /clamsapp.html#build-image-from-source-code
+          output: web, pdf
+      - title: Download prebuilt image
+        output: web, pdf
+        subfolderitems:
+        - title: Download prebuilt image
+          url: /clamsapp.html#download-prebuilt-image
+          output: web, pdf
+    - title: Running CLAMS App
+      url: /clamsapp.html#running-clams-app
+      output: web, pdf
+      subfolders:
+      - title: Running as a container
+        output: web, pdf
+        subfolderitems:
+        - title: Running as a container
+          url: /clamsapp.html#running-as-a-container
+          output: web, pdf
+      - title: Running as a local HTTP server
+        output: web, pdf
+        subfolderitems:
+        - title: Running as a local HTTP server
+          url: /clamsapp.html#running-as-a-local-http-server
+          output: web, pdf
+      - title: Running as a CLI program
+        output: web, pdf
+        subfolderitems:
+        - title: Running as a CLI program
+          url: /clamsapp.html#running-as-a-cli-program
+          output: web, pdf
+    - title: Invoking the app server
+      url: /clamsapp.html#invoking-the-app-server
+      output: web, pdf
+      subfolders:
+      - title: App metadata
+        output: web, pdf
+        subfolderitems:
+        - title: App metadata
+          url: /clamsapp.html#app-metadata
+          output: web, pdf
+      - title: Processing input media
+        output: web, pdf
+        subfolderitems:
+        - title: Processing input media
+          url: /clamsapp.html#processing-input-media
+          output: web, pdf
+      - title: Configuring the app
+        output: web, pdf
+        subfolderitems:
+        - title: Configuring the app
+          url: /clamsapp.html#configuring-the-app
+          output: web, pdf
