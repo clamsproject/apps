@@ -8,9 +8,9 @@ entries:
 
   - title: Overview
     output: web, pdf
-    fodleritems:
+    folderitems:
     
-    - title: Using CLAMS App
+    - title: App Directory
       url: /index.html
       output: web, pdf
       type: homepage
