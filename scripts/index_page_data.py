@@ -100,7 +100,7 @@ apps_fname = 'docs/_data/apps.json'
 
 entries = {"entries": [sidebar_entry]}
 
-app_sidebar_fname = 'docs/_data/sidebars/apps_sidebar_script.yml'   # TODO Replace with apps_sidebar.yml when done
+app_sidebar_fname = 'docs/_data/sidebars/apps_sidebar.yml'
 
 with open(app_sidebar_fname, 'w') as f:
     yaml.dump(entries, f, default_flow_style=False)

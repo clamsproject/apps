@@ -1,7 +1,7 @@
 ---
-title: inaspeechsegmenter-wrapper/v1
+title: inaspeechsegmenter-wrapper/v1.0
 sidebar: apps_sidebar
-permalink: inaspeechsegmenter-wrapper-v1.html
+permalink: inaspeechsegmenter-wrapper-v1.0.html
 folder: inaspeechsegmenter-wrapper
 ---
 * Submitter: [keighrim](https://github.com/keighrim)
