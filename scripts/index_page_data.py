@@ -64,8 +64,6 @@ sidebar_entry = OrderedDict([
     ("folders", folders)
 ])
 
-entries = {"entries": [sidebar_entry]}
-
 '''
 Example sidebar
 
@@ -97,18 +95,15 @@ entries:
       output: web, pdf
 '''
 
-sidebar = yaml.dump(entries)
-
-print(sidebar)
-
 
 apps_fname = 'docs/_data/apps.json'
-app_sidebar_fname = 'docs/_data/sidebars/apps_sidebar_script.yml'
+
+entries = {"entries": [sidebar_entry]}
+
+app_sidebar_fname = 'docs/_data/sidebars/apps_sidebar_script.yml'   # TODO Replace with apps_sidebar.yml when done
 
 with open(app_sidebar_fname, 'w') as f:
-    yaml.dump(sidebar)
-
-
+    yaml.dump(entries, f, default_flow_style=False)
 
 # existing_sidebar = yaml.load(open(app_sidebar_fname))
 # existing_apps = json.load(open(apps_fname))
