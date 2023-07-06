@@ -1,0 +1,90 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: App Directory
+  version: 1.0
+  folders:
+
+  - title: Overview
+    output: web, pdf
+    fodleritems:
+    
+    - title: Using CLAMS App
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+  - title: aapb-pua-kaldi-wrapper
+    output: web, pdf
+    folderitems:
+
+    - title: v1
+      url: /app-aapb-pua-kaldi-wrapper-v1.html
+      output: web, pdf
+
+    - title: v2
+      url: /app-aapb-pua-kaldi-wrapper-v2.html
+      output: web, pdf
+
+  - title: brandeis-acs-wrapper
+    output: web, pdf
+    folderitems:
+
+    - title: v1
+      url: /brandeis-acs-wrapper-v1.html
+      output: web, pdf
+
+  - title: inaspeechsegmenter-wrapper
+    output: web, pdf
+    folderitems:
+
+    - title: v1
+      url: /inaspeechsegmenter-wrapper-v1.html
+      output: web, pdf
+  
+  - title: pyscenedetect-wrapper
+    output: web, pdf
+    folderitems:
+
+    - title: v1
+      url: /pyscenedetect-wrapper-v1.html
+      output: web, pdf
+
+  - title: slatedetection
+    output: web, pdf
+    folderitems:
+
+    - title: v1.0
+      url: /slatedetection-v1.0.html
+      output: web, pdf
+
+    - title: v1.1
+      url: /slatedetection-v1.1.html
+      output: web, pdf
+
+    - title: v1.2
+      url: /slatedetection-v1.2.html
+      output: web, pdf
+
+  - title: spacy-wrapper
+    output: web, pdf
+    folderitems:
+
+    - title: v1
+      url: /spacy-wrapper-v1.html
+      output: web, pdf
+
+  - title: whisper-wrapper
+    output: web, pdf
+    folderitems:
+
+    - title: v1
+      url: /whisper-wrapper-v1.html
+      output: web, pdf
+
+    - title: v2
+      url: /whisper-wrapper-v2.html
+      output: web, pdf
+
+  
