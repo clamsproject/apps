@@ -51,6 +51,16 @@ def migration(directory):
     # keywords: AudioDocument, TimeFrame
     # ---
 
+    # Rename index.md files to appname-version.md
+    for root, _, files in os.walk(destination_dir):
+        for file in files:
+            if file == 'index.md':
+                dir_path = os.path.dirname(os.path.join(root, file))
+                app_name, version = os.path.basename(dir_path).split('-v')
+                new_file_name = f"{app_name}-{version}.md"
+                new_file_path = os.path.join(dir_path, new_file_name)
+                os.rename(os.path.join(root, file), new_file_path)
+
     for root, _, files in os.walk(destination_dir):
         for file in files:
             if file.endswith('.md'):
