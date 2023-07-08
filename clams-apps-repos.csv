@@ -1,21 +1,21 @@
 repo,status,main_branch,last_commit
+https://github.com/clamsproject/app-pyscenedetect-wrapper,AppStatus.REGISTERED,main,2023-07-08 17:46:55
 https://github.com/clamsproject/app-slatedetection,AppStatus.REGISTERED,main,2023-06-21 19:33:34
 https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,AppStatus.REGISTERED,main,2023-06-20 02:28:20
-https://github.com/clamsproject/app-pyscenedetect-wrapper,AppStatus.REGISTERED,main,2023-06-16 02:55:59
 https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper,AppStatus.REGISTERED,main,2023-06-14 00:31:48
 https://github.com/clamsproject/app-brandeis-acs-wrapper,AppStatus.REGISTERED,main,2023-06-05 20:48:23
 https://github.com/clamsproject/app-whisper-wrapper,AppStatus.REGISTERED,main,2023-06-01 23:37:05
+https://github.com/clamsproject/app-chyron-text-recognition,AppStatus.UPDATED,main,2023-07-08 17:47:12
 https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,master,2023-07-05 19:56:04
 https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.UPDATED,main,2023-06-28 20:33:19
 https://github.com/clamsproject/app-parseq,AppStatus.UPDATED,main,2023-06-23 23:58:54
 https://github.com/clamsproject/app-barsdetection,AppStatus.UPDATED,main,2023-06-23 18:54:40
 https://github.com/clamsproject/app-east-textdetection,AppStatus.UPDATED,main,2023-06-23 14:50:40
-https://github.com/clamsproject/app-chyron-text-recognition,AppStatus.UPDATED,main,2023-06-22 22:55:31
 https://github.com/clamsproject/app-tonedetection,AppStatus.UPDATED,main,2023-06-21 19:26:24
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,master,2023-06-06 17:11:46
+https://github.com/clamsproject/app-spacy-wrapper,AppStatus.OUTDATED,main,2023-07-08 18:05:41
 https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,AppStatus.OUTDATED,main,2023-07-04 12:59:00
 https://github.com/clamsproject/app-dlib-facedetection-wrapper,AppStatus.OUTDATED,master,2023-06-08 12:04:00
-https://github.com/clamsproject/app-spacy-wrapper,AppStatus.OUTDATED,main,2023-05-19 22:00:05
 https://github.com/clamsproject/app-slate-textdetection,AppStatus.OUTDATED,main,2023-03-01 02:33:56
 https://github.com/clamsproject/app-insightface,AppStatus.OUTDATED,main,2023-01-17 05:47:05
 https://github.com/clamsproject/app-tesseractocr-wrapper,AppStatus.OUTDATED,main,2022-06-21 20:55:35
