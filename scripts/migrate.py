@@ -28,12 +28,12 @@ def migration(directory):
     # find all the subdirectories contains another subdirectories which start with v under the docs directory
     # copy everything from there to the apps directory, if 'apps' is not existing, create one
     for root, dirs, _ in os.walk(directory):
-        for dir in dirs:
+        for d in dirs:
             if '_site' in dirs:
                 dirs.remove('_site')
             if 'apps' in dirs:
                 dirs.remove('apps')
-            full_dir_path = Path(root) / dir
+            full_dir_path = Path(root) / d
             if any(subdir.name.startswith('v') for subdir in full_dir_path.iterdir() if subdir.is_dir()):
                 destination_dir = os.path.join(directory, 'apps')
                 if not os.path.isdir(destination_dir):
@@ -44,22 +44,23 @@ def migration(directory):
 
     apps_dir = os.path.join(directory, 'apps')
 
-    # Fill new md for new apps
-    for root, _, files in os.walk(apps_dir):
-        for file in files:
-            if file == 'metadata.json':
-                metadata_markdown.main(root)
+    # For each version for each app, use metadata_markdown with the metadata.json to create a new md file
+    for root, dirs, _ in os.walk(apps_dir):
+        for d in dirs:
+            full_dir_path = Path(root) / d
+            if any(subdir.name.startswith('v') for subdir in full_dir_path.iterdir() if subdir.is_dir()):
+                for subdir in full_dir_path.iterdir():
+                    if subdir.is_dir():
+                        if subdir.name.startswith('v'):
+                            metadata_markdown.main(subdir)
 
     # Rename index.md files to appname-version.md
     for root, _, files in os.walk(apps_dir):
         for file in files:
             if file == 'index.md':
                 dir_path = os.path.dirname(os.path.join(root, file))
-                print(f"dir_path: {dir_path}")
                 app_name, version = (dir_path.rsplit('/', 2)[1], dir_path.rsplit('/', 2)[2])
-                print(f"app_name, version: {app_name, version}")
                 new_file_name = f"{app_name}-{version}.md"
-                print(f"new_file_name: {new_file_name}")
                 new_file_path = os.path.join(dir_path, new_file_name)
                 os.rename(os.path.join(root, file), new_file_path)
 
