@@ -66,9 +66,9 @@ def migration(directory):
 
     # in the updated apps folder, for those files end with .mds, add frontmatter looks like
     # ---
-    # title: app-aapb-pua-kaldi-wrapper/v1
+    # title: aapb-pua-kaldi-wrapper/v1
     # sidebar: apps_sidebar
-    # permalink: app-aapb-pua-kaldi-wrapper-v1.html
+    # permalink: aapb-pua-kaldi-wrapper-v1.html
     # folder: aapb-pua-kaldi-wrapper
     # keywords: AudioDocument, TimeFrame
     # ---
@@ -80,9 +80,9 @@ def migration(directory):
                 file_path = os.path.join(root, file)
                 # Provide the values for front matter
                 app_name, version = os.path.splitext(file)[0].split('-v')
-                title = f"app-{app_name}/{version}"
+                title = f"{app_name}/{version}"
                 sidebar = 'apps_sidebar'
-                permalink = f"app-{app_name}-v{version}.html"
+                permalink = f"{app_name}-v{version}.html"
                 folder = app_name
                 keywords = 'AudioDocument, TimeFrame'
                 # Add front matter to the file
