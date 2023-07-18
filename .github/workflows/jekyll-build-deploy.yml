@@ -25,10 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - run: echo "building from ${{inputs.branch-name}}"
+      - run: echo "building from ${{ github.event.inputs.branch-name }}"
 
       - name: Checkout
         uses: actions/checkout@v3
+        with: 
+          ref: ${{ github.event.inputs.branch-name }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
