@@ -5,10 +5,10 @@ https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,AppStatus.REGISTE
 https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper,AppStatus.REGISTERED,main,2023-06-14 00:31:48
 https://github.com/clamsproject/app-brandeis-acs-wrapper,AppStatus.REGISTERED,main,2023-06-05 20:48:23
 https://github.com/clamsproject/app-whisper-wrapper,AppStatus.REGISTERED,main,2023-06-01 23:37:05
-https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.UPDATED,main,2023-07-19 06:01:50
-https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,master,2023-07-18 21:07:39
+https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,master,2023-07-19 19:10:07
+https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.UPDATED,main,2023-07-19 18:56:59
+https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,main,2023-07-19 15:24:15
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,main,2023-07-17 18:15:53
-https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,main,2023-07-16 20:31:14
 https://github.com/clamsproject/app-tonedetection,AppStatus.UPDATED,main,2023-07-12 15:02:19
 https://github.com/clamsproject/app-chyron-text-recognition,AppStatus.UPDATED,main,2023-07-08 17:47:12
 https://github.com/clamsproject/app-parseq,AppStatus.UPDATED,main,2023-06-23 23:58:54
