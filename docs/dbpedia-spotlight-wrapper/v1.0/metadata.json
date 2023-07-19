@@ -1,0 +1,55 @@
+{
+  "name": "Dbpedia Spotlight Wrapper",
+  "description": "Apply named entity linking to all text documents in a MMIF file.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "version_1.0",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/dbpedia-spotlight-wrapper/v1.0",
+  "url": "https://github.com/clamsproject/app-dbpedia-spotlight-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://vocab.lappsgrid.org/NamedEntity"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "confidence",
+      "description": "disambiguation confidence score for linking",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "support",
+      "description": "resource prominence, i.e. number of in-links in Wikipedia (lower bound)",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "types",
+      "description": "types filter",
+      "type": "string",
+      "multivalued": false
+    },
+    {
+      "name": "policy",
+      "description": "(whitelist) selects all entities of the same type; (blacklist) selects all entities not of the same type",
+      "type": "string",
+      "choices": [
+        "whitelist",
+        "blacklist"
+      ],
+      "default": "whitelist",
+      "multivalued": false
+    }
+  ]
+}
