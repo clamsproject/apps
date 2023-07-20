@@ -1,11 +1,11 @@
 repo,status,main_branch,last_commit
-https://github.com/clamsproject/app-slatedetection,AppStatus.REGISTERED,main,2023-07-19 07:21:27
+https://github.com/clamsproject/app-slatedetection,AppStatus.REGISTERED,main,2023-07-19 21:16:12
 https://github.com/clamsproject/app-pyscenedetect-wrapper,AppStatus.REGISTERED,main,2023-07-08 17:46:55
 https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,AppStatus.REGISTERED,main,2023-06-20 02:28:20
 https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper,AppStatus.REGISTERED,main,2023-06-14 00:31:48
 https://github.com/clamsproject/app-brandeis-acs-wrapper,AppStatus.REGISTERED,main,2023-06-05 20:48:23
 https://github.com/clamsproject/app-whisper-wrapper,AppStatus.REGISTERED,main,2023-06-01 23:37:05
-https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,master,2023-07-19 19:10:07
+https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,master,2023-07-19 20:22:38
 https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.UPDATED,main,2023-07-19 18:56:59
 https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,main,2023-07-19 15:24:15
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,main,2023-07-17 18:15:53
