@@ -16,15 +16,13 @@
   "http://apps.clams.ai/slatedetection": [
     "v1.0",
     "v1.1",
-    "v1.2"
+    "v1.2",
+    "v2.0"
   ],
   "http://apps.clams.ai/pyscenedetect-wrapper": [
     "v1"
   ],
   "http://apps.clams.ai/inaspeechsegmenter-wrapper": [
-    "v1.0"
-  ],
-  "http://apps.clams.ai/bars-detection": [
     "v1.0"
   ]
 }
