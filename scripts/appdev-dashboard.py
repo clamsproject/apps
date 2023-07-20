@@ -1,3 +1,4 @@
+import re
 import enum
 import json
 import sys
@@ -27,12 +28,14 @@ class AppRepo(object):
     status: AppStatus
     main_branch: str
     last_commit: datetime
+    clams_version: str
     
-    def __init__(self, n, s, b, time):
+    def __init__(self, n, s, b, time, ver):
         self.name = n
         self.status = s
         self.main_branch = b
         self.last_commit = time
+        self.clams_version = ver
     
     def __lt__(self, other):
         if self.status.value < other.status.value:
@@ -63,7 +66,12 @@ for r in o.get_repos():
             # print(req)
             for line in req.split('\n'):
                 # print(line)
-                if 'clams-' in line:
+                if 'clams-python' in line:
+                    ver_m = re.search(r'\d+\.\d+\.\d+$', line)
+                    if ver_m is None:
+                        ver = 'UNKNOWN'
+                    else:
+                        ver = ver_m.group(0)
                     if '1.0.' in line:
                         if r.html_url in registered_repos:
                             status = AppStatus.REGISTERED
@@ -79,6 +87,6 @@ for r in o.get_repos():
             else:
                 most_relevant_commit = commits[0]
             updated = most_relevant_commit.commit.committer.date
-        app_repos.append(AppRepo(r.name, status, mainb, updated))
+        app_repos.append(AppRepo(r.name, status, SDK-ver, mainb, updated, ver))
 for app in sorted(app_repos):
-    sys.stdout.write(f'https://github.com/clamsproject/{app.name},{app.status},{app.main_branch},{app.last_commit}\n')
+    sys.stdout.write(f'https://github.com/clamsproject/{app.name},{app.status},{app.clams_version},{app.main_branch},{app.last_commit}\n')
