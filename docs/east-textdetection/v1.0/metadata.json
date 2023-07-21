@@ -1,0 +1,81 @@
+{
+  "name": "EAST Text Detection",
+  "description": "OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/east-textdetection/v1.0",
+  "url": "https://github.com/clamsproject/app-east-textdetection",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/ImageDocument/v1",
+        "required": true
+      }
+    ],
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "required": false
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/BoundingBox/v1",
+      "properties": {
+        "bboxtype": "text"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "timeUnit",
+      "description": "Unit for time points in the output. Only works with VideoDocument input.",
+      "type": "string",
+      "choices": [
+        "frames",
+        "seconds",
+        "milliseconds"
+      ],
+      "default": "frames",
+      "multivalued": false
+    },
+    {
+      "name": "frameType",
+      "description": "Segments of video to run on. Only works with VideoDocument input and TimeFrame input. Empty value means run on the every frame types.",
+      "type": "string",
+      "choices": [
+        "",
+        "slate",
+        "chyron",
+        "rolling-credit"
+      ],
+      "default": "",
+      "multivalued": true
+    },
+    {
+      "name": "sampleRatio",
+      "description": "Frequency to sample frames. Only works with VideoDocument input, and without TimeFrame input. (when `TimeFrame` annotation is found, this parameter is ignored.)",
+      "type": "integer",
+      "default": 30,
+      "multivalued": false
+    },
+    {
+      "name": "stopAt",
+      "description": "Frame number to stop running. Only works with VideoDocument input. The default is roughly 2 hours of video at 30fps.",
+      "type": "integer",
+      "default": "2 * 60 * 60 * 30",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}

@@ -24,5 +24,8 @@
   ],
   "http://apps.clams.ai/inaspeechsegmenter-wrapper": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/east-textdetection": [
+    "v1.0"
   ]
 }
