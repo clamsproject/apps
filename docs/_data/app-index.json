@@ -42,5 +42,8 @@
   ],
   "http://apps.clams.ai/dbpedia-spotlight-wrapper": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/tonedetection": [
+    "v1.0"
   ]
 }
