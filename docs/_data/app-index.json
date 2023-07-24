@@ -45,5 +45,8 @@
   ],
   "http://apps.clams.ai/tonedetection": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/gentle-forced-aligner-wrapper": [
+    "v1.0"
   ]
 }
