@@ -69,6 +69,13 @@
       "type": "number",
       "default": 0.7,
       "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
     }
   ]
 }

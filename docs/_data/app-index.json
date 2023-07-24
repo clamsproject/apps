@@ -31,5 +31,8 @@
   ],
   "http://apps.clams.ai/east-textdetection": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/bars-detection": [
+    "v1.0"
   ]
 }
