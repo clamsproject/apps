@@ -1,0 +1,67 @@
+{
+  "name": "Chyron Detection",
+  "description": "This tool detects chyrons, generates time segments.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "app_license": "MIT",
+  "identifier": "http://apps.clams.ai/chyron-detection/v1.0",
+  "url": "https://github.com/clamsproject/app-chyron-detection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "properties": {
+          "frameType": "chyron"
+        }
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "timeUnit",
+      "description": "unit for output timeframe",
+      "type": "string",
+      "choices": [
+        "frames",
+        "seconds",
+        "milliseconds"
+      ],
+      "default": "frames",
+      "multivalued": false
+    },
+    {
+      "name": "sampleRatio",
+      "description": "Frequency to sample frames",
+      "type": "integer",
+      "default": 5,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "Minimum number of frames required for a timeframe to be included",
+      "type": "integer",
+      "default": 10,
+      "multivalued": false
+    },
+    {
+      "name": "threshold",
+      "description": "Threshold from 0-1, lower accepts more potential chyrons",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
