@@ -38,5 +38,8 @@
   "http://apps.clams.ai/parseq-wrapper": [
     "v1.0",
     "v1.1"
+  ],
+  "http://apps.clams.ai/dbpedia-spotlight-wrapper": [
+    "v1.0"
   ]
 }
