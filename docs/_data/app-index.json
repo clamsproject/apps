@@ -48,5 +48,8 @@
   ],
   "http://apps.clams.ai/gentle-forced-aligner-wrapper": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/chyron-detection": [
+    "v1.0"
   ]
 }
