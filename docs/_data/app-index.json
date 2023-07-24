@@ -34,5 +34,8 @@
   ],
   "http://apps.clams.ai/bars-detection": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/parseq-wrapper": [
+    "v1.0"
   ]
 }

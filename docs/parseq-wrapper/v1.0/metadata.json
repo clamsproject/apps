@@ -1,0 +1,41 @@
+{
+  "name": "Parseq OCR Wrapper",
+  "description": "This tool applies Parseq OCR to a video or image and generates text boxes and OCR results.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "bc8d95cd",
+  "app_license": "MIT",
+  "analyzer_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/parseq-wrapper/v1.0",
+  "url": "https://github.com/clamsproject/app-parseqocr-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/BoundingBox/v1",
+      "properties": {
+        "boxType": "text"
+      },
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
