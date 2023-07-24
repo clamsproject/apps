@@ -1,6 +1,7 @@
 {
   "http://apps.clams.ai/spacy-wrapper": [
-    "v1"
+    "v1",
+    "v1.1"
   ],
   "http://apps.clams.ai/whisper-wrapper": [
     "v1",
