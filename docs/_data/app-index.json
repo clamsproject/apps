@@ -23,6 +23,7 @@
     "v1"
   ],
   "http://apps.clams.ai/inaspeechsegmenter-wrapper": [
-    "v1.0"
+    "v1.0",
+    "v1.1"
   ]
 }
