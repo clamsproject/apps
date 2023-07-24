@@ -1,7 +1,9 @@
 repo,status,SDK-ver,main_branch,last_commit
+https://github.com/clamsproject/app-chyron-detection,AppStatus.REGISTERED,1.0.9,main,2023-07-24 21:43:09
+https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 21:14:28
+https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 19:13:14
 https://github.com/clamsproject/app-spacy-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 17:37:08
 https://github.com/clamsproject/app-parseqocr-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 16:49:45
-https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 15:41:29
 https://github.com/clamsproject/app-barsdetection,AppStatus.REGISTERED,1.0.9,main,2023-07-24 08:23:52
 https://github.com/clamsproject/app-east-textdetection,AppStatus.REGISTERED,1.0.9,main,2023-07-24 07:45:04
 https://github.com/clamsproject/app-tonedetection,AppStatus.REGISTERED,1.0.9,main,2023-07-24 07:24:07
@@ -12,12 +14,10 @@ https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper,AppStatus.REGISTERED,
 https://github.com/clamsproject/app-slatedetection,AppStatus.REGISTERED,1.0.9,main,2023-07-24 04:45:55
 https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,AppStatus.REGISTERED,1.0.3,main,2023-06-20 02:28:20
 https://github.com/clamsproject/app-easyocr-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-24 19:48:25
-https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,AppStatus.UPDATED,1.0.9,main,2023-07-24 19:13:14
 https://github.com/clamsproject/app-pix2struct-chyrons,AppStatus.UPDATED,UNKNOWN,master,2023-07-24 17:24:50
 https://github.com/clamsproject/app-pix2struct-slates,AppStatus.UPDATED,1.0.9,main,2023-07-24 17:20:48
 https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-24 14:29:22
 https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,1.0.7,main,2023-07-20 19:50:12
-https://github.com/clamsproject/app-chyron-text-recognition,AppStatus.UPDATED,1.0.7,main,2023-07-20 16:14:34
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,1.0.3,main,2023-07-17 18:15:53
 https://github.com/clamsproject/app-dlib-facedetection-wrapper,AppStatus.OUTDATED,UNKNOWN,master,2023-06-08 12:04:00
 https://github.com/clamsproject/app-slate-textdetection,AppStatus.OUTDATED,0.5.1,main,2023-03-01 02:33:56
