@@ -1,7 +1,7 @@
 
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-07-24T14:33:55+00:00
-* Prebuilt Container Image: [ghcr.io/clamsproject/app-parseq:v1.0](https://github.com/clamsproject/app-parseqocr-wrapper/pkgs/container/app-parseqocr-wrapper/v1.0)
+* Prebuilt Container Image: [ghcr.io/clamsproject/app-parseqocr-wrapper:v1.0](https://github.com/clamsproject/app-parseqocr-wrapper/pkgs/container/app-parseqocr-wrapper/v1.0)
 
 
 ### Parseq OCR Wrapper (v1.0) [metadata.json](metadata.json)
