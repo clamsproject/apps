@@ -5,7 +5,7 @@
   "mmif_version": "1.0.0",
   "app_license": "MIT",
   "identifier": "http://apps.clams.ai/slatedetection/v1.0",
-  "url": "https://github.com/clams-project/app-slatedetection",
+  "url": "https://github.com/clamsproject/app-slatedetection",
   "input": [
     {
       "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",

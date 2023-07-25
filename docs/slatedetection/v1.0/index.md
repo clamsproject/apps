@@ -1,7 +1,7 @@
 
 * Submitter: [kelleyl](https://github.com/kelleyl)
 * Submission Time: 2023-06-15T03:53:26+00:00
-* Prebuilt Container Image: [ghcr.io/clamsproject/app-slatedetection:v1.0](https://github.com/clams-project/app-slatedetection/pkgs/container/app-slatedetection/v1.0)
+* Prebuilt Container Image: [ghcr.io/clamsproject/app-slatedetection:v1.0](https://github.com/clamsproject/app-slatedetection/pkgs/container/app-slatedetection/v1.0)
 
 
 ### Slate Detection (v1.0) [metadata.json](metadata.json)
@@ -9,7 +9,7 @@
 
 * App ID: [http://apps.clams.ai/slatedetection/v1.0](http://apps.clams.ai/slatedetection/v1.0)
 * App License: MIT
-* Source Repository: [https://github.com/clams-project/app-slatedetection](https://github.com/clams-project/app-slatedetection) ([source tree of the submitted version](https://github.com/clams-project/app-slatedetection/tree/v1.0))
+* Source Repository: [https://github.com/clamsproject/app-slatedetection](https://github.com/clamsproject/app-slatedetection) ([source tree of the submitted version](https://github.com/clamsproject/app-slatedetection/tree/v1.0))
 
 
 #### Inputs
