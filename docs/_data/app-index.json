@@ -33,13 +33,6 @@
   "http://apps.clams.ai/east-textdetection": [
     "v1.0"
   ],
-  "http://apps.clams.ai/bars-detection": [
-    "v1.0"
-  ],
-  "http://apps.clams.ai/parseq-wrapper": [
-    "v1.0",
-    "v1.1"
-  ],
   "http://apps.clams.ai/dbpedia-spotlight-wrapper": [
     "v1.0",
     "v1.1"
@@ -51,9 +44,6 @@
     "v1.0"
   ],
   "http://apps.clams.ai/chyron-detection": [
-    "v1.0"
-  ],
-  "http://apps.clams.ai/tesseract": [
     "v1.0"
   ]
 }
