@@ -30,15 +30,16 @@ class AppRepo(object):
     last_commit: datetime
     clams_version: str
     
-    def __init__(self, n, s, b, time, ver):
+    def __init__(self, n, s, b, ctime, mtime, ver):
         self.name = n
         self.status = s
         self.main_branch = b
-        self.last_commit = time
+        self.creation = ctime
+        self.last_commit = mtime
         self.clams_version = ver
     
     def __repr__(self):
-        return f'https://github.com/clamsproject/{self.name},{self.status},{self.clams_version},{self.main_branch},{self.last_commit}'
+        return f'https://github.com/clamsproject/{self.name},{self.status},{self.clams_version},{self.main_branch},{self.last_commit},{self.creation}'
     
     def __lt__(self, other):
         if self.status.value < other.status.value:
@@ -54,7 +55,7 @@ class AppRepo(object):
 app_repos = []
 app_json = json.loads(urllib.request.urlopen('https://raw.githubusercontent.com/clamsproject/apps/main/docs/_data/apps.json').read().decode('utf8'))
 registered_repos = set(app['url'] for app in app_json)
-sys.stdout.write('repo,status,SDK-ver,main_branch,last_commit\n')
+sys.stdout.write('repo,status,SDK-ver,main_branch,last_commit,start_date\n')
 for r in o.get_repos():
     if r.name.startswith('app-'):
         res = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/main/requirements.txt')
@@ -92,6 +93,6 @@ for r in o.get_repos():
         else:
             most_relevant_commit = commits[0]
         updated = 'N/A' if r.archived else most_relevant_commit.commit.committer.date
-        app_repos.append(AppRepo(r.name, status, mainb, updated, ver))
+        app_repos.append(AppRepo(r.name, status, mainb, r.created_at, updated, ver))
 for app in sorted(app_repos):
     sys.stdout.write(f'{app}\n')
