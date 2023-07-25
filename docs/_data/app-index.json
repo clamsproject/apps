@@ -52,5 +52,8 @@
   ],
   "http://apps.clams.ai/chyron-detection": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/tesseract": [
+    "v1.0"
   ]
 }
