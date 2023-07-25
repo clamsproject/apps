@@ -1,6 +1,6 @@
 repo,status,SDK-ver,main_branch,last_commit
+https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-25 00:57:27
 https://github.com/clamsproject/app-chyron-detection,AppStatus.REGISTERED,1.0.9,main,2023-07-24 21:43:09
-https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 21:14:28
 https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 19:13:14
 https://github.com/clamsproject/app-spacy-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 17:37:08
 https://github.com/clamsproject/app-parseqocr-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 16:49:45
