@@ -51,5 +51,8 @@
   ],
   "http://apps.clams.ai/barsdetection": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/parseqocr-wrapper": [
+    "v1.0"
   ]
 }
