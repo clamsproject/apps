@@ -46,7 +46,10 @@
   "http://apps.clams.ai/chyron-detection": [
     "v1.0"
   ],
-  "http://apps.clams.ai/parseqocr-wrapper": [
+  "http://apps.clams.ai/tesseractocr-wrapper": [
+    "v1.0"
+  ],
+  "http://apps.clams.ai/barsdetection": [
     "v1.0"
   ]
 }
