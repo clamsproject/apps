@@ -14,9 +14,9 @@ https://github.com/clamsproject/app-brandeis-acs-wrapper,AppStatus.REGISTERED,1.
 https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-24 05:24:23,2020-10-02 13:45:49
 https://github.com/clamsproject/app-slatedetection,AppStatus.REGISTERED,1.0.9,main,2023-07-24 04:45:55,2019-05-30 19:12:45
 https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,AppStatus.REGISTERED,1.0.3,main,2023-06-20 02:28:20,2020-12-24 04:01:51
-https://github.com/clamsproject/app-easyocr-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-26 19:17:00,2023-07-24 19:12:12
-https://github.com/clamsproject/app-pix2struct-chyrons,AppStatus.UPDATED,UNKNOWN,master,2023-07-26 16:20:08,2023-07-24 17:25:15
-https://github.com/clamsproject/app-pix2struct-slates,AppStatus.UPDATED,1.0.9,main,2023-07-24 17:20:48,2023-07-24 17:05:31
+https://github.com/clamsproject/app-pix2struct-chyrons,AppStatus.UPDATED,UNKNOWN,master,2023-07-27 18:49:50,2023-07-24 17:25:15
+https://github.com/clamsproject/app-pix2struct-slates,AppStatus.UPDATED,1.0.9,main,2023-07-27 18:49:23,2023-07-24 17:05:31
+https://github.com/clamsproject/app-easyocr-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-27 17:54:04,2023-07-24 19:12:12
 https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-24 14:29:22,2023-07-13 19:10:27
 https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,1.0.7,main,2023-07-20 19:50:12,2023-06-28 14:21:15
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.UPDATED,1.0.3,main,2023-07-17 18:15:53,2023-06-07 16:00:38
