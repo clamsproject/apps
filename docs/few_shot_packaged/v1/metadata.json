@@ -1,0 +1,57 @@
+{
+  "name": "Few Shot Packaged",
+  "description": "This tool uses a vision model to classify video segments by comparing them to examples included in the tool.",
+  "app_version": "v1",
+  "mmif_version": "1.0.0",
+  "app_license": "MIT",
+  "identifier": "http://apps.clams.ai/few_shot_packaged/v1",
+  "url": "https://github.com/clamsproject/app-fewshot-packaged",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "frameType": "string"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "timeUnit",
+      "description": "Unit for output timeframe",
+      "type": "string",
+      "choices": [
+        "frames",
+        "milliseconds"
+      ],
+      "default": "milliseconds",
+      "multivalued": false
+    },
+    {
+      "name": "sampleRatio",
+      "description": "Frequency to sample frames.",
+      "type": "integer",
+      "default": 10,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "Minimum number of frames required for a timeframe to be included in the outputwith a minimum value of 1",
+      "type": "integer",
+      "default": 10,
+      "multivalued": false
+    },
+    {
+      "name": "threshold",
+      "description": "Threshold from 0-1, lower accepts more potential labels.",
+      "type": "number",
+      "default": 0.8,
+      "multivalued": false
+    }
+  ]
+}
