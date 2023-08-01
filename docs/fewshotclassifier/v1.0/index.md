@@ -28,11 +28,7 @@
 |sampleRatio|Frequency to sample frames.|integer|N|30||
 |minFrameCount|Minimum number of frames required for a timeframe to be included in the output with a minimum value of 1|integer|N|60||
 |threshold|Threshold from 0-1, lower accepts more potential labels.|number|N|0.8||
-|finetunedFrameType|Name of fine-tuned model to use. All pre-installed models are named after the frame type they were fine-tuned for.
-
-If an empty value is passed, the app will look for fewshots.csv file in the same directory as the app.py and create a new fine-tuned model based on the examples in that file.
-
-At the moment, a model fine-tuned on "chyron" frame type is shipped as pre-installed.|string|N|chyron||
+|finetunedFrameType|Name of fine-tuned model to use. All pre-installed models are named after the frame type they were fine-tuned for.<br/><br/>If an empty value is passed, the app will look for fewshots.csv file in the same directory as the app.py and create a new fine-tuned model based on the examples in that file.<br/><br/>At the moment, a model fine-tuned on "chyron" frame type is shipped as pre-installed.|string|N|chyron||
 |pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
