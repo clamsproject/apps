@@ -26,9 +26,9 @@ One of the following is required: [
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

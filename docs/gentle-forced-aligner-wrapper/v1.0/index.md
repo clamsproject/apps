@@ -28,11 +28,11 @@
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|use_speech_segmentation|When set true, use exising "speech"-typed ``TimeFrame`` annotations and run aligner only on those frames, instead of entire audio files.|boolean|False|`false`, **_`true`_**|
-|use_tokenization|When set true, ``Alignment`` annotation output will honor existing latest tokenization (``Token`` annotations). Due to a limitation of the way Kaldi reads in English tokens, existing tokens must not contain whitespaces. |boolean|False|`false`, **_`true`_**|
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|use_speech_segmentation|When set true, use exising "speech"-typed ``TimeFrame`` annotations and run aligner only on those frames, instead of entire audio files.|boolean|N|true|`false`, **_`true`_**|
+|use_tokenization|When set true, ``Alignment`` annotation output will honor existing latest tokenization (``Token`` annotations). Due to a limitation of the way Kaldi reads in English tokens, existing tokens must not contain whitespaces. |boolean|N|true|`false`, **_`true`_**|
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

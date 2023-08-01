@@ -22,13 +22,13 @@
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|confidence|disambiguation confidence score for linking|number|False||
-|support|resource prominence, i.e. number of in-links in Wikipedia (lower bound)|integer|False||
-|types|types filter|string|False||
-|policy|(whitelist) selects all entities of the same type; (blacklist) selects all entities not of the same type|string|False|**_`whitelist`_**, `blacklist`|
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|confidence|disambiguation confidence score for linking|number|N|0.5||
+|support|resource prominence, i.e. number of in-links in Wikipedia (lower bound)|integer|N|0||
+|types|types filter|string|N|||
+|policy|(whitelist) selects all entities of the same type; (blacklist) selects all entities not of the same type|string|N|whitelist|**_`whitelist`_**, `blacklist`|
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

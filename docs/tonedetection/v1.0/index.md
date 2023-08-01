@@ -20,14 +20,14 @@
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|timeUnit|the unit for annotation output|string|False|**_`seconds`_**, **_`seconds`_**, `milliseconds`|
-|lengthThreshold|minimum length threshold (in ms)|integer|False||
-|sampleSize|length for each segment of samples to be compared|integer|False||
-|stopAt|stop point for audio processing (in ms). Defaults to the length of the file|integer|False||
-|tolerance|threshold value for a "match" within audio processing|number|False||
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|timeUnit|the unit for annotation output|string|N|seconds|**_`seconds`_**, **_`seconds`_**, `milliseconds`|
+|lengthThreshold|minimum length threshold (in ms)|integer|N|2000||
+|sampleSize|length for each segment of samples to be compared|integer|N|512||
+|stopAt|stop point for audio processing (in ms). Defaults to the length of the file|integer|N|None||
+|tolerance|threshold value for a "match" within audio processing|number|N|1.0||
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

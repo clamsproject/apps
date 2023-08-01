@@ -26,12 +26,12 @@
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|frameType|Use this to specify TimeFrame to use for filtering "text"-typed BoundingBox annotations. Can be "slate", "chyron", "speech", etc.. If not set, the app won't use TimeFrames for filtering.|string|True||
-|threshold|Use this value between 0 and 1 to filter out low-confidence text boxes.|number|False||
-|psm|Tesseract Page Segmentation Modes. See https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html#page-segmentation-method|integer|False|**_`0`_**, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`|
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|frameType|Use this to specify TimeFrame to use for filtering "text"-typed BoundingBox annotations. Can be "slate", "chyron", "speech", etc.. If not set, the app won't use TimeFrames for filtering.|string|Y|||
+|threshold|Use this value between 0 and 1 to filter out low-confidence text boxes.|number|N|0.9||
+|psm|Tesseract Page Segmentation Modes. See https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html#page-segmentation-method|integer|N|0|**_`0`_**, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`|
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

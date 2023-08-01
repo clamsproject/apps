@@ -5,7 +5,7 @@
 
 
 ### Pyscenedetect Wrapper (v1) [metadata.json](metadata.json)
-###### 
+###### (no description provided by the developer)
 
 * App ID: [http://apps.clams.ai/pyscenedetect-wrapper/v1](http://apps.clams.ai/pyscenedetect-wrapper/v1)
 * App License: Apache2
@@ -22,11 +22,11 @@
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|mode|pick a scene detector algorithm, see http://scenedetect.com/projects/Manual/en/latest/cli/detectors.html|string|False|**_`content`_**, `threshold`, `adaptive`|
-|threshold|threshold value to use in the detection algorithm. Note that the meaning of this numerical value differs for different detector algorithms.|number|False||
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|mode|pick a scene detector algorithm, see http://scenedetect.com/projects/Manual/en/latest/cli/detectors.html|string|N|content|**_`content`_**, `threshold`, `adaptive`|
+|threshold|threshold value to use in the detection algorithm. Note that the meaning of this numerical value differs for different detector algorithms.|number|N|27||
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

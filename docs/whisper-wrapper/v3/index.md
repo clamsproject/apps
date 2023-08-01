@@ -26,10 +26,10 @@ One of the following is required: [
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|modelSize|The size of the model to use. Can be "tiny", "base", "small", "medium", or "large".|string|False|**_`tiny`_**, `base`, `small`, `medium`, `large`|
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|modelSize|The size of the model to use. Can be "tiny", "base", "small", "medium", or "large".|string|N|tiny|**_`tiny`_**, `base`, `small`, `medium`, `large`|
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

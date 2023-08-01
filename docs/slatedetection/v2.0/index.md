@@ -20,15 +20,15 @@
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|timeUnit|Unit of time to use in output.|string|False|**_`frames`_**, `seconds`, `milliseconds`|
-|sampleRatio|Frequency to sample frames.|integer|False||
-|stopAt|Frame number to stop processing|integer|False||
-|stopAfterOne|When True, processing stops after first timeframe is found|boolean|False|`false`, **_`true`_**|
-|minFrameCount|Minimum number of frames required for a timeframe to be included in the output|integer|False||
-|threshold|Threshold from 0-1, lower accepts more potential slates.|number|False||
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|timeUnit|Unit of time to use in output.|string|N|frames|**_`frames`_**, `seconds`, `milliseconds`|
+|sampleRatio|Frequency to sample frames.|integer|N|30||
+|stopAt|Frame number to stop processing|integer|N|9000||
+|stopAfterOne|When True, processing stops after first timeframe is found|boolean|N|true|`false`, **_`true`_**|
+|minFrameCount|Minimum number of frames required for a timeframe to be included in the output|integer|N|10||
+|threshold|Threshold from 0-1, lower accepts more potential slates.|number|N|0.7||
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs

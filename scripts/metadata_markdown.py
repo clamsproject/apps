@@ -6,6 +6,9 @@ from pathlib import Path
 
 if len(sys.argv) > 1:
     cwd = Path(sys.argv[1])
+    if not cwd.exists():
+        print(f'Path {cwd} does not exist.')
+        sys.exit(1)
     out_f = open(cwd / 'index.md', 'w')
 else:
     cwd = Path.cwd()
@@ -32,6 +35,8 @@ def markdown_link(url):
 
 markdown = io.StringIO()
 appmetadata = json.load(open(cwd / 'metadata.json'))
+if not appmetadata['description']:
+    appmetadata['description'] = '(no description provided by the developer)'
 if (cwd / 'submission.json').exists():
     submitmetadata = json.load(open(cwd / 'submission.json'))
     image_webpage = f'{appmetadata["url"]}/pkgs/container/{appmetadata["url"].rsplit("/",1)[-1]}/{appmetadata["app_version"]}'
@@ -66,8 +71,8 @@ markdown.write('\n\n#### Configurable Parameters\n')
 markdown.write('###### Multivalued parameters can have two or more values.\n\n')
 
 if 'parameters' in appmetadata and appmetadata['parameters']:
-    markdown.write('|Name|Description|Type|Multivalued|Choices|\n')
-    markdown.write('|----|-----------|----|-----------|-------|\n')
+    markdown.write('|Name|Description|Type|Multivalued|Default|Choices|\n')
+    markdown.write('|----|-----------|----|-----------|-------|-------|\n')
     for param in appmetadata['parameters']:
         if 'default' in param:
             if param['type'] == 'boolean':
@@ -88,7 +93,7 @@ if 'parameters' in appmetadata and appmetadata['parameters']:
         else:
             cs = []
         choices = ', '.join(f'**_`{c}`_**' if c == default_value else f'`{c}`' for c in cs)
-        markdown.write(f"|{param['name']}|{param['description']}|{param['type']}|{param['multivalued']}|{choices}|\n")
+        markdown.write(f"|{param['name']}|{param['description']}|{param['type']}|{'Y' if param['multivalued'] else 'N'}|{default_value}|{choices}|\n")
 else:
     markdown.write('##### N/A\n')
     

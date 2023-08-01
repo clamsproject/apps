@@ -26,13 +26,13 @@ One of the following is required: [
 #### Configurable Parameters
 ###### Multivalued parameters can have two or more values.
 
-|Name|Description|Type|Multivalued|Choices|
-|----|-----------|----|-----------|-------|
-|timeUnit|Unit for time points in the output. Only works with VideoDocument input.|string|False|**_`frames`_**, `seconds`, `milliseconds`|
-|frameType|Segments of video to run on. Only works with VideoDocument input and TimeFrame input. Empty value means run on the every frame types.|string|True|**_``_**, `slate`, `chyron`, `rolling-credit`|
-|sampleRatio|Frequency to sample frames. Only works with VideoDocument input, and without TimeFrame input. (when `TimeFrame` annotation is found, this parameter is ignored.)|integer|False||
-|stopAt|Frame number to stop running. Only works with VideoDocument input. The default is roughly 2 hours of video at 30fps.|integer|False||
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|False|**_`false`_**, `true`|
+|Name|Description|Type|Multivalued|Default|Choices|
+|----|-----------|----|-----------|-------|-------|
+|timeUnit|Unit for time points in the output. Only works with VideoDocument input.|string|N|frames|**_`frames`_**, `seconds`, `milliseconds`|
+|frameType|Segments of video to run on. Only works with VideoDocument input and TimeFrame input. Empty value means run on the every frame types.|string|Y||**_``_**, `slate`, `chyron`, `rolling-credit`|
+|sampleRatio|Frequency to sample frames. Only works with VideoDocument input, and without TimeFrame input. (when `TimeFrame` annotation is found, this parameter is ignored.)|integer|N|30||
+|stopAt|Frame number to stop running. Only works with VideoDocument input. The default is roughly 2 hours of video at 30fps.|integer|N|2 * 60 * 60 * 30||
+|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
 
 
 #### Outputs
