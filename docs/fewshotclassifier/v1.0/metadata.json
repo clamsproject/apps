@@ -1,0 +1,73 @@
+{
+  "name": "Few Shot Classifier",
+  "description": "This tool uses a vision model to classify video segments. Currenly supports \"chyron\" frame type.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "1.0",
+  "app_license": "MIT",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/fewshotclassifier/v1.0",
+  "url": "https://github.com/clamsproject/app-fewshotclassifier",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "frameType": "string"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "timeUnit",
+      "description": "Unit for output timeframe",
+      "type": "string",
+      "choices": [
+        "frames",
+        "milliseconds"
+      ],
+      "default": "frames",
+      "multivalued": false
+    },
+    {
+      "name": "sampleRatio",
+      "description": "Frequency to sample frames.",
+      "type": "integer",
+      "default": 30,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "Minimum number of frames required for a timeframe to be included in the output with a minimum value of 1",
+      "type": "integer",
+      "default": 60,
+      "multivalued": false
+    },
+    {
+      "name": "threshold",
+      "description": "Threshold from 0-1, lower accepts more potential labels.",
+      "type": "number",
+      "default": 0.8,
+      "multivalued": false
+    },
+    {
+      "name": "finetunedFrameType",
+      "description": "Name of fine-tuned model to use. All pre-installed models are named after the frame type they were fine-tuned for.\n\nIf an empty value is passed, the app will look for fewshots.csv file in the same directory as the app.py and create a new fine-tuned model based on the examples in that file.\n\nAt the moment, a model fine-tuned on \"chyron\" frame type is shipped as pre-installed.",
+      "type": "string",
+      "default": "chyron",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
