@@ -1,7 +1,7 @@
 repo,status,SDK-ver,main_branch,last_commit,start_date
+https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-08-07 15:18:08,2023-05-31 21:27:29
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.REGISTERED,1.0.9,main,2023-08-01 22:35:56,2023-06-07 16:00:38
 https://github.com/clamsproject/app-barsdetection,AppStatus.REGISTERED,1.0.9,main,2023-07-31 23:28:11,2019-05-30 18:51:00
-https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-31 20:14:13,2023-05-31 21:27:29
 https://github.com/clamsproject/app-east-textdetection,AppStatus.REGISTERED,1.0.9,main,2023-07-26 19:03:34,2019-05-30 19:12:16
 https://github.com/clamsproject/app-parseqocr-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-25 23:56:57,2023-03-08 19:06:52
 https://github.com/clamsproject/app-pyscenedetect-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-25 20:54:53,2019-08-21 01:24:46
