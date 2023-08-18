@@ -1,0 +1,34 @@
+{
+  "name": "Pix2struct Slates",
+  "description": "Run Pix2Struct slate queries on input timeframes",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "1",
+  "app_license": "MIT",
+  "analyzer_license": "Apache-2.0",
+  "identifier": "http://apps.clams.ai/pix2struct-slates/v1.0",
+  "url": "https://github.com/clamsproject/app-pix2struct-slates",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
