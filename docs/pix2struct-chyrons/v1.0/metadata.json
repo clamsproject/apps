@@ -1,0 +1,31 @@
+{
+  "name": "Pix2struct Chyrons",
+  "description": "extracts text from input timeframes based on chyron queries using the pix2struct Doc-VQA model",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "1",
+  "app_license": "MIT",
+  "analyzer_license": "apache-2.0",
+  "identifier": "http://apps.clams.ai/pix2struct-chyrons/v1.0",
+  "url": "https://github.com/clamsproject/app-pix2struct-docvqa-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "properties": {
+        "description": "extracted text from input timeframes based on chyron queries using the pix2struct Doc-VQA model"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1",
+      "properties": {
+        "description": "alignment between text document and timeframes"
+      }
+    }
+  ]
+}
