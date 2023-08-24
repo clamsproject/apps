@@ -1,0 +1,41 @@
+{
+  "name": "Easyocr Wrapper",
+  "description": "Using EasyOCR to extract text from timeframes",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "1.7.0",
+  "app_license": "MIT",
+  "analyzer_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/easyocr-wrapper/v1.0",
+  "url": "https://github.com/clamsproject/app-easyocr-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "sampleFrames",
+      "description": "Number of frames to sample from timeframe",
+      "type": "integer",
+      "default": 1,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
