@@ -60,5 +60,8 @@
   ],
   "http://apps.clams.ai/fewshotclassifier": [
     "v1.0"
+  ],
+  "http://apps.clams.ai/swt-detection": [
+    "v1.0"
   ]
 }
