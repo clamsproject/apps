@@ -1,6 +1,7 @@
 ---
 permalink: /
-layout: default
+layout: single
+author_profile: true
 ---
 
 ## How to use CLAMS apps 
