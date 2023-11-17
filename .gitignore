@@ -68,3 +68,7 @@ gdrive_shared*/
 # ctag generated file
 tags
 .tags
+
+# jekyll stuff
+docs/_site
+docs/Gemfile.lock
