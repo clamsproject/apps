@@ -290,3 +290,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+
+collections:
+  apps:
+    output: true
+  manuals:
+    output: true
+    permalink: /:name/

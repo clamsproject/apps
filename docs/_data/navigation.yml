@@ -2,6 +2,10 @@
 main:
   - title: "About"
     url: about
+  - title: "User Manual"
+    url: clamsapp
+  - title: "MMIF viewer"
+    url: "https://github.com/clamsproject/mmif-visualizer"
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

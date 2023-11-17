@@ -1,3 +1,10 @@
+---
+layout: single 
+author_profile: true
+toc: true
+toc_sticky: true
+---
+
 ## Using CLAMS App
 
 This document provides general instructions for installing and using CLAMS Apps. 
