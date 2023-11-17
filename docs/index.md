@@ -1,3 +1,7 @@
+---
+permalink: /
+layout: default
+---
 
 ## How to use CLAMS apps 
 
