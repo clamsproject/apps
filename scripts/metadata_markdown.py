@@ -30,12 +30,17 @@ submission_template = """
 
 """
 
+frontmatter_template = """---
+layout: single
+title: "${name}:${app_version}"
+---"""
 
 def markdown_link(url):
     return f"[{url}]({url})"
 
 markdown = io.StringIO()
 appmetadata = json.load(open(cwd / 'metadata.json'))
+markdown.write(string.Template(frontmatter_template).substitute(appmetadata))
 if not appmetadata['description']:
     appmetadata['description'] = '(no description provided by the developer)'
 else:
