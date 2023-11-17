@@ -1,0 +1,70 @@
+{
+  "name": "Gentle Forced Aligner Wrapper",
+  "description": "This CLAMS app aligns transcript and audio track using Gentle. Gentle is a robust yet lenient forced aligner built on Kaldi.This app only works when Gentle is already installed locally.Unfortunately, Gentle is not distributed as a Python package distribution.To get Gentle installation instruction, see https://lowerquality.com/gentle/ Make sure install Gentle from the git commit specified in ``analyzer_version`` in this metadata.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "analyzer_version": "f29245a",
+  "app_license": "MIT",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/gentle-forced-aligner-wrapper/v1.0",
+  "url": "https://github.com/clamsproject/app-gentle-forced-aligner-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "frameType": "speech"
+      },
+      "required": false
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token",
+      "required": false
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://vocab.lappsgrid.org/Token"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "frameType": "speech",
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "use_speech_segmentation",
+      "description": "When set true, use exising \"speech\"-typed ``TimeFrame`` annotations and run aligner only on those frames, instead of entire audio files.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "use_tokenization",
+      "description": "When set true, ``Alignment`` annotation output will honor existing latest tokenization (``Token`` annotations). Due to a limitation of the way Kaldi reads in English tokens, existing tokens must not contain whitespaces. ",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}

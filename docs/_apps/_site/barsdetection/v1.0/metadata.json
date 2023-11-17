@@ -1,0 +1,81 @@
+{
+  "name": "Bars Detection",
+  "description": "This tool detects SMPTE color bars.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "app_license": "MIT",
+  "identifier": "http://apps.clams.ai/barsdetection/v1.0",
+  "url": "https://github.com/clamsproject/app-barsdetection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1",
+      "properties": {
+        "typeSpecificProperty": {
+          "frameType": "bars"
+        }
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "timeUnit",
+      "description": "Unit for output typeframe.",
+      "type": "string",
+      "choices": [
+        "frames",
+        "seconds",
+        "milliseconds"
+      ],
+      "default": "frames",
+      "multivalued": false
+    },
+    {
+      "name": "sampleRatio",
+      "description": "Frequency to sample frames.",
+      "type": "integer",
+      "default": 30,
+      "multivalued": false
+    },
+    {
+      "name": "stopAt",
+      "description": "Frame number to stop processing.",
+      "type": "integer",
+      "default": 9000,
+      "multivalued": false
+    },
+    {
+      "name": "stopAfterOne",
+      "description": "When True, processing stops after first timeframe is found.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "minimum number of frames required for a timeframe to be included in the output.",
+      "type": "integer",
+      "default": 10,
+      "multivalued": false
+    },
+    {
+      "name": "threshold",
+      "description": "Threshold from 0-1, lower accepts more potential slates.",
+      "type": "number",
+      "default": 0.7,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
