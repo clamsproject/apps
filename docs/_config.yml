@@ -295,6 +295,7 @@ defaults:
 collections:
   apps:
     output: true
+    permalink: /:path:output_ext  # this config should be fine and individual app pages don't need to have permalinks set in the front matter
   manuals:
     output: true
     permalink: /:name/
