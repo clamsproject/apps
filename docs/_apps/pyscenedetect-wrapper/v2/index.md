@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Pyscenedetect Wrapper (v2)"
 ---
 * Submitter: [keighrim](https://github.com/keighrim)

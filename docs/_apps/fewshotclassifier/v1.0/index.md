@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Few Shot Classifier (v1.0)"
 ---
 * Submitter: [keighrim](https://github.com/keighrim)

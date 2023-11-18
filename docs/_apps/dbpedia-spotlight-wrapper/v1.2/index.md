@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Dbpedia Spotlight Wrapper (v1.2)"
 ---
 * Submitter: [wricketts](https://github.com/wricketts)

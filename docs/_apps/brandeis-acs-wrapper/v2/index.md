@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Brandeis ACS Wrapper (v2)"
 ---
 * Submitter: [keighrim](https://github.com/keighrim)

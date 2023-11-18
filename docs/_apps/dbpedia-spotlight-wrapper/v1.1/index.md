@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Dbpedia Spotlight Wrapper (v1.1)"
 ---
 * Submitter: [keighrim](https://github.com/keighrim)

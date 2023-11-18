@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Slate Detection (v1.0)"
 ---
 * Submitter: [kelleyl](https://github.com/kelleyl)

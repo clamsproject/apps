@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "CLAMS wrapper for spaCy NLP (v1.1)"
 ---
 * Submitter: [keighrim](https://github.com/keighrim)

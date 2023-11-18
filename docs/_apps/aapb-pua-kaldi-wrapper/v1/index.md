@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "AAPB-PUA Kaldi Wrapper (v1)"
 ---
 * Submitter: [keighrim](https://github.com/keighrim)

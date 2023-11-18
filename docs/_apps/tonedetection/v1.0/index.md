@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 title: "Tone_Detector (v1.0)"
 ---
 * Submitter: [MrSqually](https://github.com/MrSqually)
