@@ -32,6 +32,7 @@ submission_template = """
 
 frontmatter_template = """---
 layout: single
+classes: wide
 title: "${name} (${app_version})"
 ---"""
 
