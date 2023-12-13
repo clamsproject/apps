@@ -1,12 +1,11 @@
 ---
 permalink: /
+title: CLAMS App Directory 
 layout: single
 author_profile: true
 toc: true
 toc_sticky: true
 ---
-
-# CLAMS App Directory 
 
 ## How to use CLAMS apps 
 
