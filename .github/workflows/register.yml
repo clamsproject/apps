@@ -41,7 +41,6 @@ jobs:
       apptag: ${{ steps.set_repo.outputs.apptag }}
       appcontainer: ${{ steps.set_repo.outputs.appcontainer }}
       appissue: ${{ steps.set_repo.outputs.appissue }}
-      appsubmitter: ${{ steps.set_repo.outputs.appsubmitter }}
       valid_trigger: ${{ steps.set_repo.outputs.valid_trigger }}
     
     steps:
@@ -82,7 +81,7 @@ jobs:
             echo "apprepo=${{ env.app_repo }}" >> $GITHUB_OUTPUT
             echo "apptag=${{ env.app_tag }}" >> $GITHUB_OUTPUT
             echo "appcontainer=${{ env.app_container }}" >> $GITHUB_OUTPUT
-            echo "appsubmitter=${{ env.app_submitter }}" >> $GITHUB_OUTPUT
+            echo "appsubmitter=${{ github.actor }}" >> $GITHUB_OUTPUT
             echo "appissue=${{ env.app_issue }}" >> $GITHUB_OUTPUT
           fi
   
@@ -187,4 +186,3 @@ jobs:
             (submitted by @${{ github.actor }})
         env:
           GITHUB_TOKEN: ${{ secrets.GH_CLAMSBOT_TOKEN }}
-
