@@ -21,9 +21,13 @@ concurrency:
 
 jobs:
   build:
+    name: "📝 Build the Jekyll site"
     runs-on: ubuntu-latest
     steps:
 
+      - name: Log trigger
+        run: echo "${{ toJSON(github.event) }}"
+        
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -48,6 +52,7 @@ jobs:
           path: ./docs/_site
 
   deploy:
+    name: "📦 Upload the Jekyll site to GitHub Pages"
     runs-on: ubuntu-latest
     needs: build
     steps:
