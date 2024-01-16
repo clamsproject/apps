@@ -63,6 +63,7 @@
     "v1.0"
   ],
   "http://apps.clams.ai/swt-detection": [
-    "v1.0"
+    "v1.0",
+    "v2.0"
   ]
 }
