@@ -26,7 +26,7 @@ jobs:
     steps:
 
       - name: Log trigger
-        run: echo "${{ toJSON(github.event) }}"
+        run: echo '${{ toJSON(github.event) }}'
         
       - name: Checkout
         uses: actions/checkout@v4
