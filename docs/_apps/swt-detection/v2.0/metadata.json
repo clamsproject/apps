@@ -1,0 +1,57 @@
+{
+  "name": "Scenes-with-text Detection",
+  "description": "Detects scenes with text, like slates, chyrons and credits.",
+  "app_version": "v2.0",
+  "mmif_version": "1.0.0",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/swt-detection/v2.0",
+  "url": "https://github.com/clamsproject/app-swt-detection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "sampleRate",
+      "description": "Milliseconds between sampled frames",
+      "type": "integer",
+      "default": 1000,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameScore",
+      "description": "Minimum score for a still frame to be included in a TimeFrame",
+      "type": "number",
+      "default": 0.01,
+      "multivalued": false
+    },
+    {
+      "name": "minTimeframeScore",
+      "description": "Minimum score for a TimeFrame",
+      "type": "number",
+      "default": 0.25,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "Minimum number of sampled frames required for a TimeFrame",
+      "type": "integer",
+      "default": 2,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
