@@ -1,6 +1,6 @@
 import io
-import re
 import json
+import re
 import string
 import sys
 from pathlib import Path
@@ -15,8 +15,9 @@ else:
     cwd = Path.cwd()
     out_f = sys.stdout
 app_template = """
-### ${name} (${app_version}) [metadata.json](metadata.json)
-###### ${description}
+## About this app (See raw [metadata.json](metadata.json))
+
+**${description}**
 
 * App ID: [${identifier}](${identifier})
 * App License: ${app_license}
@@ -24,10 +25,12 @@ app_template = """
 """
 
 submission_template = """
+## About this version
+
 * Submitter: [${submitter}](https://github.com/${submitter})
 * Submission Time: ${time}
 * Prebuilt Container Image: [${image}](${image_webpage})
-
+* Release Notes
 """
 
 frontmatter_template = """---
@@ -50,7 +53,12 @@ def convert_to_markdown(app_metadata, submission_metadata):
         
     if submission_metadata:
         image_webpage = f'{app_metadata["url"]}/pkgs/container/{app_metadata["url"].rsplit("/",1)[-1]}/{app_metadata["app_version"]}'
+        notes = '    (no notes provided by the developer)'
+        if 'releasenotes' in submission_metadata and submission_metadata['releasenotes']:
+            # print(submission_metadata['releasenotes'])
+            notes = '  \n'.join([f'    > {line}' for line in submission_metadata['releasenotes'].split('\n') if line])
         markdown.write(string.Template(submission_template).substitute(**submission_metadata, image_webpage=image_webpage))
+        markdown.write(f'\n{notes}\n')
     markdown.write(string.Template(app_template).substitute(app_metadata))
 
     if 'analyzer_version' in app_metadata and app_metadata['analyzer_version']:
@@ -60,25 +68,35 @@ def convert_to_markdown(app_metadata, submission_metadata):
     if 'more' in app_metadata and app_metadata['more']:
         markdown.write(f"* More Info: {app_metadata['more']}\n")
     
-    
     def io_to_markdown(io_spec):
-        props = ', '.join(f'{k}={v}' for k, v in io_spec['properties'].items()) \
-            if 'properties' in io_spec and io_spec['properties'] \
-            else ""
-        return f"* {markdown_link(io_spec['@type'])} {'(required)' if 'required' in io_spec and io_spec['required'] else ''}\n###### {props if props else 'ANY'}\n"
-
+        uri = markdown_link(io_spec['@type'])
+        req = ' (required)' if 'required' in io_spec and io_spec['required'] else ''
+        props = []
+        if 'properties' in io_spec and io_spec['properties']:
+            for k, v in io_spec['properties'].items():
+                if isinstance(v, list):
+                    v = ', '.join(f'"{e}"' for e in v)
+                    props.append(f'    * _{k}_ is one-of [{v}]')
+                else:
+                    props.append(f'    * _{k}_ = "{v}"')
+        if props:
+            props = '\n'.join(props)
+        else:
+            props = '(any properties)'
+            
+        return f"* {uri} {req}\n{props}\n"
 
     markdown.write('\n\n#### Inputs\n')
     for input_ in app_metadata['input']:
         if isinstance(input_, list):
             markdown.write('One of the following is required: [\n')
             markdown.write(''.join(io_to_markdown(i) for i in input_))
-            markdown.write(']\n')
+            markdown.write('\n\n]\n')
         else:
             markdown.write(io_to_markdown(input_))
 
     markdown.write('\n\n#### Configurable Parameters\n')
-    markdown.write('###### Multivalued parameters can have two or more values.\n\n')
+    markdown.write('**(_Multivalued_ means the parameter can have one or more values.)**\n\n')
 
     if 'parameters' in app_metadata and app_metadata['parameters']:
         markdown.write('|Name|Description|Type|Multivalued|Default|Choices|\n')
@@ -109,7 +127,7 @@ def convert_to_markdown(app_metadata, submission_metadata):
         markdown.write('##### N/A\n')
     
     markdown.write('\n\n#### Outputs\n')
-    markdown.write('###### Note that not all output annotations are always generated.\n')
+    markdown.write('**(Note that not all output annotations are always generated.)**\n')
     for output in app_metadata['output']:
         markdown.write(io_to_markdown(output))
         
