@@ -9,7 +9,7 @@ label: ':bulb:A'
 * Enter a public GitHub repository  of the app in `owner/repository` format (DON'T include `https://github.com` part) below (after colon).
 NAME: 
 
-* Enter a git tag of the app version below (after colon).
+* Enter a git tag of the app version below (after colon). If the tag is annotated one, the tag message will be used as the "patch notes" of this version.
 TAG: 
 
 * If the app container image is publicly available, enter the image address below (after colon).
