@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "inaSpeechSegmenter Wrapper (v1.0)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-06-20T02:49:35+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.0](https://github.com/clamsproject/app-inaspeechsegmenter-wrapper/pkgs/container/app-inaspeechsegmenter-wrapper/v1.0)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### inaSpeechSegmenter Wrapper (v1.0) [metadata.json](metadata.json)
-###### inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .
+## About this app (See raw [metadata.json](metadata.json))
+
+**inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .**
 
 * App ID: [http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.0](http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.0)
 * App License: MIT
@@ -20,15 +25,17 @@ title: "inaSpeechSegmenter Wrapper (v1.0)"
 
 #### Inputs
 One of the following is required: [
-* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-###### ANY
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1)  (required)
+(any properties)
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
+
+
 ]
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -36,6 +43,6 @@ One of the following is required: [
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### timeunit=milliseconds
+    * _timeunit_ = "milliseconds"

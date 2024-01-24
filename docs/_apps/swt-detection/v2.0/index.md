@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Scenes-with-text Detection (v2.0)"
 ---
+## About this version
+
 * Submitter: [marcverhagen](https://github.com/marcverhagen)
 * Submission Time: 2024-01-16T17:15:09+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-swt-detection:v2.0](https://github.com/clamsproject/app-swt-detection/pkgs/container/app-swt-detection/v2.0)
+* Release Notes
 
+    > Version 2.1
 
-### Scenes-with-text Detection (v2.0) [metadata.json](metadata.json)
-###### Detects scenes with text, like slates, chyrons and credits.
+## About this app (See raw [metadata.json](metadata.json))
+
+**Detects scenes with text, like slates, chyrons and credits.**
 
 * App ID: [http://apps.clams.ai/swt-detection/v2.0](http://apps.clams.ai/swt-detection/v2.0)
 * App License: Apache 2.0
@@ -17,12 +22,12 @@ title: "Scenes-with-text Detection (v2.0)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -34,6 +39,6 @@ title: "Scenes-with-text Detection (v2.0)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### ANY
+(any properties)

@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Bars Detection (v1.1)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-07-31T23:31:12+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-barsdetection:v1.1](https://github.com/clamsproject/app-barsdetection/pkgs/container/app-barsdetection/v1.1)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Bars Detection (v1.1) [metadata.json](metadata.json)
-###### This tool detects SMPTE color bars.
+## About this app (See raw [metadata.json](metadata.json))
+
+**This tool detects SMPTE color bars.**
 
 * App ID: [http://apps.clams.ai/barsdetection/v1.1](http://apps.clams.ai/barsdetection/v1.1)
 * App License: MIT
@@ -17,12 +22,12 @@ title: "Bars Detection (v1.1)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -36,6 +41,6 @@ title: "Bars Detection (v1.1)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### typeSpecificProperty={'frameType': 'bars'}
+    * _typeSpecificProperty_ = "{'frameType': 'bars'}"

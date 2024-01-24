@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Dbpedia Spotlight Wrapper (v1.0)"
 ---
+## About this version
+
 * Submitter: [wricketts](https://github.com/wricketts)
 * Submission Time: 2023-07-24T17:07:36+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-dbpedia-spotlight-wrapper:v1.0](https://github.com/clamsproject/app-dbpedia-spotlight-wrapper/pkgs/container/app-dbpedia-spotlight-wrapper/v1.0)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Dbpedia Spotlight Wrapper (v1.0) [metadata.json](metadata.json)
-###### Apply named entity linking to all text documents in a MMIF file.
+## About this app (See raw [metadata.json](metadata.json))
+
+**Apply named entity linking to all text documents in a MMIF file.**
 
 * App ID: [http://apps.clams.ai/dbpedia-spotlight-wrapper/v1.0](http://apps.clams.ai/dbpedia-spotlight-wrapper/v1.0)
 * App License: Apache 2.0
@@ -19,12 +24,12 @@ title: "Dbpedia Spotlight Wrapper (v1.0)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -36,6 +41,6 @@ title: "Dbpedia Spotlight Wrapper (v1.0)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://vocab.lappsgrid.org/NamedEntity](http://vocab.lappsgrid.org/NamedEntity) 
-###### ANY
+(any properties)

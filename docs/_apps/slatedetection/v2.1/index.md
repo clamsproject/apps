@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Slate Detection (v2.1)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-08-03T17:56:59+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-slatedetection:v2.1](https://github.com/clamsproject/app-slatedetection/pkgs/container/app-slatedetection/v2.1)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Slate Detection (v2.1) [metadata.json](metadata.json)
-###### This tool detects slates.
+## About this app (See raw [metadata.json](metadata.json))
+
+**This tool detects slates.**
 
 * App ID: [http://apps.clams.ai/slatedetection/v2.1](http://apps.clams.ai/slatedetection/v2.1)
 * App License: MIT
@@ -17,12 +22,12 @@ title: "Slate Detection (v2.1)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -36,6 +41,6 @@ title: "Slate Detection (v2.1)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### properties={'frameType': 'slate'}
+    * _properties_ = "{'frameType': 'slate'}"

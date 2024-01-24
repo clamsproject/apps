@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Gentle Forced Aligner Wrapper (v1.0)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-07-24T20:01:10+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-gentle-forced-aligner-wrapper:v1.0](https://github.com/clamsproject/app-gentle-forced-aligner-wrapper/pkgs/container/app-gentle-forced-aligner-wrapper/v1.0)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Gentle Forced Aligner Wrapper (v1.0) [metadata.json](metadata.json)
-###### This CLAMS app aligns transcript and audio track using Gentle. Gentle is a robust yet lenient forced aligner built on Kaldi.This app only works when Gentle is already installed locally.Unfortunately, Gentle is not distributed as a Python package distribution.To get Gentle installation instruction, see https://lowerquality.com/gentle/ Make sure install Gentle from the git commit specified in ``analyzer_version`` in this metadata.
+## About this app (See raw [metadata.json](metadata.json))
+
+**This CLAMS app aligns transcript and audio track using Gentle. Gentle is a robust yet lenient forced aligner built on Kaldi.This app only works when Gentle is already installed locally.Unfortunately, Gentle is not distributed as a Python package distribution.To get Gentle installation instruction, see https://lowerquality.com/gentle/ Make sure install Gentle from the git commit specified in ``analyzer_version`` in this metadata.**
 
 * App ID: [http://apps.clams.ai/gentle-forced-aligner-wrapper/v1.0](http://apps.clams.ai/gentle-forced-aligner-wrapper/v1.0)
 * App License: MIT
@@ -19,18 +24,18 @@ title: "Gentle Forced Aligner Wrapper (v1.0)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) (required)
-###### ANY
-* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1)  (required)
+(any properties)
+* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1)  (required)
+(any properties)
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### frameType=speech
+    * _frameType_ = "speech"
 * [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token) 
-###### ANY
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -40,10 +45,11 @@ title: "Gentle Forced Aligner Wrapper (v1.0)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token) 
-###### ANY
+(any properties)
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### frameType=speech, timeUnit=milliseconds
+    * _frameType_ = "speech"
+    * _timeUnit_ = "milliseconds"
 * [http://mmif.clams.ai/vocabulary/Alignment/v1](http://mmif.clams.ai/vocabulary/Alignment/v1) 
-###### ANY
+(any properties)

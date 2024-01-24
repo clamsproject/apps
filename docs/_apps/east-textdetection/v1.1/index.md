@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "EAST Text Detection (v1.1)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-07-26T19:06:10+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-east-textdetection:v1.1](https://github.com/clamsproject/app-east-textdetection/pkgs/container/app-east-textdetection/v1.1)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### EAST Text Detection (v1.1) [metadata.json](metadata.json)
-###### OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.
+## About this app (See raw [metadata.json](metadata.json))
+
+**OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.**
 
 * App ID: [http://apps.clams.ai/east-textdetection/v1.1](http://apps.clams.ai/east-textdetection/v1.1)
 * App License: Apache 2.0
@@ -18,17 +23,19 @@ title: "EAST Text Detection (v1.1)"
 
 #### Inputs
 One of the following is required: [
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
-* [http://mmif.clams.ai/vocabulary/ImageDocument/v1](http://mmif.clams.ai/vocabulary/ImageDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
+* [http://mmif.clams.ai/vocabulary/ImageDocument/v1](http://mmif.clams.ai/vocabulary/ImageDocument/v1)  (required)
+(any properties)
+
+
 ]
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### ANY
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -40,6 +47,6 @@ One of the following is required: [
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/BoundingBox/v1](http://mmif.clams.ai/vocabulary/BoundingBox/v1) 
-###### bboxtype=text
+    * _bboxtype_ = "text"

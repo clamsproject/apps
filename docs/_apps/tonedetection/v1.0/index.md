@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Tone_Detector (v1.0)"
 ---
+## About this version
+
 * Submitter: [MrSqually](https://github.com/MrSqually)
 * Submission Time: 2023-07-24T17:50:36+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-tonedetection:v1.0](https://github.com/clamsproject/app-tonedetection/pkgs/container/app-tonedetection/v1.0)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Tone_Detector (v1.0) [metadata.json](metadata.json)
-###### Detects spans of monotonic audio within an audio file
+## About this app (See raw [metadata.json](metadata.json))
+
+**Detects spans of monotonic audio within an audio file**
 
 * App ID: [http://apps.clams.ai/tonedetection/v1.0](http://apps.clams.ai/tonedetection/v1.0)
 * App License: Apache 2.0
@@ -17,12 +22,12 @@ title: "Tone_Detector (v1.0)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -35,6 +40,6 @@ title: "Tone_Detector (v1.0)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### frameType=tone
+    * _frameType_ = "tone"

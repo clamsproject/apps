@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Parseq OCR Wrapper (v1.0)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-07-26T00:04:08+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-parseqocr-wrapper:v1.0](https://github.com/clamsproject/app-parseqocr-wrapper/pkgs/container/app-parseqocr-wrapper/v1.0)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Parseq OCR Wrapper (v1.0) [metadata.json](metadata.json)
-###### This tool applies Parseq OCR to a video or image and generates text boxes and OCR results.
+## About this app (See raw [metadata.json](metadata.json))
+
+**This tool applies Parseq OCR to a video or image and generates text boxes and OCR results.**
 
 * App ID: [http://apps.clams.ai/parseqocr-wrapper/v1.0](http://apps.clams.ai/parseqocr-wrapper/v1.0)
 * App License: MIT
@@ -19,14 +24,14 @@ title: "Parseq OCR Wrapper (v1.0)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
-* [http://mmif.clams.ai/vocabulary/BoundingBox/v1](http://mmif.clams.ai/vocabulary/BoundingBox/v1) (required)
-###### boxType=text
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
+* [http://mmif.clams.ai/vocabulary/BoundingBox/v1](http://mmif.clams.ai/vocabulary/BoundingBox/v1)  (required)
+    * _boxType_ = "text"
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -34,8 +39,8 @@ title: "Parseq OCR Wrapper (v1.0)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) 
-###### ANY
+(any properties)
 * [http://mmif.clams.ai/vocabulary/Alignment/v1](http://mmif.clams.ai/vocabulary/Alignment/v1) 
-###### ANY
+(any properties)

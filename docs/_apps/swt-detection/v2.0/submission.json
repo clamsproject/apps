@@ -1,5 +1,6 @@
 {
   "time": "2024-01-16T17:15:09+00:00",
   "submitter": "marcverhagen",
-  "image": "ghcr.io/clamsproject/app-swt-detection:v2.0"
+  "image": "ghcr.io/clamsproject/app-swt-detection:v2.0",
+  "releasenotes": "Version 2.1\n"
 }

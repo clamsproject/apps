@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Chyron Detection (v1.0)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-07-24T21:50:08+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-chyron-detection:v1.0](https://github.com/clamsproject/app-chyron-detection/pkgs/container/app-chyron-detection/v1.0)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Chyron Detection (v1.0) [metadata.json](metadata.json)
-###### This tool detects chyrons, generates time segments.
+## About this app (See raw [metadata.json](metadata.json))
+
+**This tool detects chyrons, generates time segments.**
 
 * App ID: [http://apps.clams.ai/chyron-detection/v1.0](http://apps.clams.ai/chyron-detection/v1.0)
 * App License: MIT
@@ -17,12 +22,12 @@ title: "Chyron Detection (v1.0)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -34,6 +39,6 @@ title: "Chyron Detection (v1.0)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### properties={'frameType': 'chyron'}
+    * _properties_ = "{'frameType': 'chyron'}"

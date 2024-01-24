@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Few Shot Classifier (v1.0)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-08-01T22:57:12+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-fewshotclassifier:v1.0](https://github.com/clamsproject/app-fewshotclassifier/pkgs/container/app-fewshotclassifier/v1.0)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Few Shot Classifier (v1.0) [metadata.json](metadata.json)
-###### This tool uses a vision model to classify video segments. Currenly supports "chyron" frame type.
+## About this app (See raw [metadata.json](metadata.json))
+
+**This tool uses a vision model to classify video segments. Currenly supports "chyron" frame type.**
 
 * App ID: [http://apps.clams.ai/fewshotclassifier/v1.0](http://apps.clams.ai/fewshotclassifier/v1.0)
 * App License: MIT
@@ -19,12 +24,12 @@ title: "Few Shot Classifier (v1.0)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -37,6 +42,6 @@ title: "Few Shot Classifier (v1.0)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### frameType=string
+    * _frameType_ = "string"

@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Pyscenedetect Wrapper (v2)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-07-24T07:50:09+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-pyscenedetect-wrapper:v2](https://github.com/clamsproject/app-pyscenedetect-wrapper/pkgs/container/app-pyscenedetect-wrapper/v2)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Pyscenedetect Wrapper (v2) [metadata.json](metadata.json)
-###### (no description provided by the developer)
+## About this app (See raw [metadata.json](metadata.json))
+
+**(no description provided by the developer)**
 
 * App ID: [http://apps.clams.ai/pyscenedetect-wrapper/v2](http://apps.clams.ai/pyscenedetect-wrapper/v2)
 * App License: Apache2
@@ -19,12 +24,12 @@ title: "Pyscenedetect Wrapper (v2)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -34,6 +39,7 @@ title: "Pyscenedetect Wrapper (v2)"
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### frameType=shot, timeUnit=frame
+    * _frameType_ = "shot"
+    * _timeUnit_ = "frame"

@@ -3,13 +3,18 @@ layout: single
 classes: wide
 title: "Brandeis ACS Wrapper (v1)"
 ---
+## About this version
+
 * Submitter: [keighrim](https://github.com/keighrim)
 * Submission Time: 2023-06-06T00:30:33+00:00
 * Prebuilt Container Image: [ghcr.io/clamsproject/app-brandeis-acs-wrapper:v1](https://github.com/clamsproject/app-brandeis-acs-wrapper/pkgs/container/app-brandeis-acs-wrapper/v1)
+* Release Notes
 
+    (no notes provided by the developer)
 
-### Brandeis ACS Wrapper (v1) [metadata.json](metadata.json)
-###### Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .
+## About this app (See raw [metadata.json](metadata.json))
+
+**Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .**
 
 * App ID: [http://apps.clams.ai/brandeis-acs-wrapper/v1](http://apps.clams.ai/brandeis-acs-wrapper/v1)
 * App License: Apache2.0
@@ -19,17 +24,17 @@ title: "Brandeis ACS Wrapper (v1)"
 
 
 #### Inputs
-* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-###### ANY
+* [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1)  (required)
+(any properties)
 
 
 #### Configurable Parameters
-###### Multivalued parameters can have two or more values.
+**(_Multivalued_ means the parameter can have one or more values.)**
 
 ##### N/A
 
 
 #### Outputs
-###### Note that not all output annotations are always generated.
+**(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-###### timeunit=milliseconds
+    * _timeunit_ = "milliseconds"
