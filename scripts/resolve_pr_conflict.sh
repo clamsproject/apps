@@ -13,7 +13,7 @@ git checkout origin/main -- docs/_data
 # make an intermediate commit with semi-"merge" with main
 git commit --no-edit
 # regenerate submission files
-python scripts/index_page_data.py docs/$app_name/$app_ver
+python3 scripts/index_page_data.py docs/_apps/$app_name_ver
 git add docs/_data
 git commit -m 'regenerated aggregated metadata json files after conflict resolution'
 

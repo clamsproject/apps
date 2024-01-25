@@ -65,6 +65,10 @@
   ],
   "http://apps.clams.ai/swt-detection": [
     "v1.0",
-    "v2.0"
+    "v2.0",
+    "v2.1"
+  ],
+  "http://apps.clams.ai/easyocr-wrapper": [
+    "v1.0"
   ]
 }
