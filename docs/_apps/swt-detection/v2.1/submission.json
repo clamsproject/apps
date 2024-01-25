@@ -1,0 +1,6 @@
+{
+  "time": "2024-01-25T20:44:45+00:00",
+  "submitter": "marcverhagen",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v2.1",
+  "releasenotes": "Fixed fatal error in 2.0 and added timeUnit\n\n"
+}
