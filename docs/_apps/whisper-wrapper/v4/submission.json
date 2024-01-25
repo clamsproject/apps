@@ -1,0 +1,6 @@
+{
+  "time": "2024-01-24T05:40:09+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v4",
+  "releasenotes": "* updated to the latest whisper models\n* now ouputs `Sentence` annotations based on whisper's segmentation\n\n"
+}
