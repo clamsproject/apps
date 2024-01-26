@@ -21,7 +21,6 @@ def migrate_app_index():
     all_apps = json.load(open(Path('docs') / '_data' / 'apps.json'))
     app_index = {}
     for metadata in all_apps:
-        print(metadata['identifier'])
         app_id = metadata['identifier']
         app_version = metadata['app_version']
         shortid = app_id.rsplit('/', 1)[0]
@@ -38,10 +37,11 @@ def migrate_app_index():
         if new_time > app_index[shortid]['latest_update']:
             app_index[shortid]['latest_update'] = new_time
 
+    new_app_index = {}
     for k, v in sorted(app_index.items(), key=lambda item: item[1]['latest_update'], reverse=True):
         v['latest_update'] = v['latest_update'].isoformat()
         v['versions'].sort(reverse=True)
-    new_app_index = {k: v for k, v in app_index.items()}
+        new_app_index[k] = v
     with open(Path('docs') / '_data' / 'app-index.json', 'w') as f:
         json.dump(new_app_index, f, indent=2)
 

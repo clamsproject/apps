@@ -1,15 +1,29 @@
 {
-  "http://apps.clams.ai/spacy-wrapper": {
-    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
-    "latest_update": "2023-07-24T17:39:56+00:00",
+  "http://apps.clams.ai/swt-detection": {
+    "description": "Detects scenes with text, like slates, chyrons and credits.",
+    "latest_update": "2024-01-25T20:44:45+00:00",
     "versions": [
       [
-        "v1.1",
-        "keighrim"
+        "v2.1",
+        "marcverhagen"
       ],
       [
-        "v1",
-        "keighrim"
+        "v2.0",
+        "marcverhagen"
+      ],
+      [
+        "v1.0",
+        "marcverhagen"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/easyocr-wrapper": {
+    "description": "Using EasyOCR to extract text from timeframes",
+    "latest_update": "2024-01-25T18:44:59+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "snewman-aa"
       ]
     ]
   },
@@ -35,31 +49,21 @@
       ]
     ]
   },
-  "http://apps.clams.ai/aapb-pua-kaldi-wrapper": {
-    "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ",
-    "latest_update": "2023-06-14T00:42:26+00:00",
+  "http://apps.clams.ai/dbpedia-spotlight-wrapper": {
+    "description": "Apply named entity linking to all text documents in a MMIF file.",
+    "latest_update": "2023-08-24T15:51:13+00:00",
     "versions": [
       [
-        "v2",
+        "v1.2",
+        "wricketts"
+      ],
+      [
+        "v1.1",
         "keighrim"
       ],
       [
-        "v1",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/brandeis-acs-wrapper": {
-    "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
-    "latest_update": "2023-07-24T05:42:05+00:00",
-    "versions": [
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
+        "v1.0",
+        "wricketts"
       ]
     ]
   },
@@ -89,23 +93,19 @@
       ]
     ]
   },
-  "http://apps.clams.ai/pyscenedetect-wrapper": {
-    "description": "",
-    "latest_update": "2023-07-24T07:50:09+00:00",
+  "http://apps.clams.ai/fewshotclassifier": {
+    "description": "This tool uses a vision model to classify video segments. Currenly supports \"chyron\" frame type.",
+    "latest_update": "2023-08-01T22:57:12+00:00",
     "versions": [
       [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
+        "v1.0",
         "keighrim"
       ]
     ]
   },
-  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
-    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
-    "latest_update": "2023-07-24T05:31:08+00:00",
+  "http://apps.clams.ai/barsdetection": {
+    "description": "This tool detects SMPTE color bars.",
+    "latest_update": "2023-07-31T23:31:12+00:00",
     "versions": [
       [
         "v1.1",
@@ -131,47 +131,9 @@
       ]
     ]
   },
-  "http://apps.clams.ai/dbpedia-spotlight-wrapper": {
-    "description": "Apply named entity linking to all text documents in a MMIF file.",
-    "latest_update": "2023-08-24T15:51:13+00:00",
-    "versions": [
-      [
-        "v1.2",
-        "wricketts"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "wricketts"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/tonedetection": {
-    "description": "Detects spans of monotonic audio within an audio file",
-    "latest_update": "2023-07-24T17:50:36+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "MrSqually"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/gentle-forced-aligner-wrapper": {
-    "description": "This CLAMS app aligns transcript and audio track using Gentle. Gentle is a robust yet lenient forced aligner built on Kaldi.This app only works when Gentle is already installed locally.Unfortunately, Gentle is not distributed as a Python package distribution.To get Gentle installation instruction, see https://lowerquality.com/gentle/ Make sure install Gentle from the git commit specified in ``analyzer_version`` in this metadata.",
-    "latest_update": "2023-07-24T20:01:10+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/chyron-detection": {
-    "description": "This tool detects chyrons, generates time segments.",
-    "latest_update": "2023-07-24T21:50:08+00:00",
+  "http://apps.clams.ai/parseqocr-wrapper": {
+    "description": "This tool applies Parseq OCR to a video or image and generates text boxes and OCR results.",
+    "latest_update": "2023-07-26T00:04:08+00:00",
     "versions": [
       [
         "v1.0",
@@ -189,9 +151,81 @@
       ]
     ]
   },
-  "http://apps.clams.ai/barsdetection": {
-    "description": "This tool detects SMPTE color bars.",
-    "latest_update": "2023-07-31T23:31:12+00:00",
+  "http://apps.clams.ai/chyron-detection": {
+    "description": "This tool detects chyrons, generates time segments.",
+    "latest_update": "2023-07-24T21:50:08+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/gentle-forced-aligner-wrapper": {
+    "description": "This CLAMS app aligns transcript and audio track using Gentle. Gentle is a robust yet lenient forced aligner built on Kaldi.This app only works when Gentle is already installed locally.Unfortunately, Gentle is not distributed as a Python package distribution.To get Gentle installation instruction, see https://lowerquality.com/gentle/ Make sure install Gentle from the git commit specified in ``analyzer_version`` in this metadata.",
+    "latest_update": "2023-07-24T20:01:10+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/tonedetection": {
+    "description": "Detects spans of monotonic audio within an audio file",
+    "latest_update": "2023-07-24T17:50:36+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "MrSqually"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/spacy-wrapper": {
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "latest_update": "2023-07-24T17:39:56+00:00",
+    "versions": [
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/pyscenedetect-wrapper": {
+    "description": "",
+    "latest_update": "2023-07-24T07:50:09+00:00",
+    "versions": [
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/brandeis-acs-wrapper": {
+    "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
+    "latest_update": "2023-07-24T05:42:05+00:00",
+    "versions": [
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
+    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
+    "latest_update": "2023-07-24T05:31:08+00:00",
     "versions": [
       [
         "v1.1",
@@ -203,51 +237,17 @@
       ]
     ]
   },
-  "http://apps.clams.ai/parseqocr-wrapper": {
-    "description": "This tool applies Parseq OCR to a video or image and generates text boxes and OCR results.",
-    "latest_update": "2023-07-26T00:04:08+00:00",
+  "http://apps.clams.ai/aapb-pua-kaldi-wrapper": {
+    "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ",
+    "latest_update": "2023-06-14T00:42:26+00:00",
     "versions": [
       [
-        "v1.0",
+        "v2",
         "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/fewshotclassifier": {
-    "description": "This tool uses a vision model to classify video segments. Currenly supports \"chyron\" frame type.",
-    "latest_update": "2023-08-01T22:57:12+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/swt-detection": {
-    "description": "Detects scenes with text, like slates, chyrons and credits.",
-    "latest_update": "2024-01-25T20:44:45+00:00",
-    "versions": [
-      [
-        "v2.1",
-        "marcverhagen"
       ],
       [
-        "v2.0",
-        "marcverhagen"
-      ],
-      [
-        "v1.0",
-        "marcverhagen"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/easyocr-wrapper": {
-    "description": "Using EasyOCR to extract text from timeframes",
-    "latest_update": "2024-01-25T18:44:59+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "snewman-aa"
+        "v1",
+        "keighrim"
       ]
     ]
   }
