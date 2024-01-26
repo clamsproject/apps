@@ -18,8 +18,9 @@ toc_sticky: true
     {%- assign check = app[0] | split:'http://apps.clams.ai/' -%}
     {% if check.size == 2 %}
 ### {{ check[1] }}
-        {% for version in app[1] %}
-[{{ version }}]({{ check[1] }}/{{ version }})
+{{ app[1]["description"] }}
+        {% for version in app[1]["versions"] %}
+* [{{ version[0] }}]({{ check[1] }}/{{ version[0] }}) ([`@{{ version[1] }}`](https://github.com/{{ version[1] }}))
         {% endfor %}
     {% else %}
 ### {{ app[0] }}
