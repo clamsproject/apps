@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Whisper Wrapper (v2)"
+date: 2023-06-01T23:46:46+00:00
 ---
 ## About this version
 

@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Slate Detection (v2.1)"
+date: 2023-08-03T17:56:59+00:00
 ---
 ## About this version
 

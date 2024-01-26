@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Parseq OCR Wrapper (v1.0)"
+date: 2023-07-26T00:04:08+00:00
 ---
 ## About this version
 

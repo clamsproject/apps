@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Easyocr Wrapper (v1.0)"
+date: 2024-01-25T18:44:59+00:00
 ---
 ## About this version
 

@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "CLAMS wrapper for spaCy NLP (v1.1)"
+date: 2023-07-24T17:39:56+00:00
 ---
 ## About this version
 

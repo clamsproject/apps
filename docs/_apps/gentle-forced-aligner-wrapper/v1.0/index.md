@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Gentle Forced Aligner Wrapper (v1.0)"
+date: 2023-07-24T20:01:10+00:00
 ---
 ## About this version
 

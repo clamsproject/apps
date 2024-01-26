@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Bars Detection (v1.0)"
+date: 2023-07-26T00:07:49+00:00
 ---
 ## About this version
 

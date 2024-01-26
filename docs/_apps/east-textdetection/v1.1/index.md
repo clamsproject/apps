@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "EAST Text Detection (v1.1)"
+date: 2023-07-26T19:06:10+00:00
 ---
 ## About this version
 

@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Dbpedia Spotlight Wrapper (v1.1)"
+date: 2023-07-25T01:22:48+00:00
 ---
 ## About this version
 

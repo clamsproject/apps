@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Chyron Detection (v1.0)"
+date: 2023-07-24T21:50:08+00:00
 ---
 ## About this version
 

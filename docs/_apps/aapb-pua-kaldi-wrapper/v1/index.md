@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "AAPB-PUA Kaldi Wrapper (v1)"
+date: 2023-05-21T01:20:38+00:00
 ---
 ## About this version
 

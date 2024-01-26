@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Tesseract OCR Wrapper (v1.0)"
+date: 2023-07-26T00:03:43+00:00
 ---
 ## About this version
 

@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Scene-with-text Detection (v1.0)"
+date: 2023-11-22T15:13:53+00:00
 ---
 ## About this version
 

@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Tone_Detector (v1.0)"
+date: 2023-07-24T17:50:36+00:00
 ---
 ## About this version
 

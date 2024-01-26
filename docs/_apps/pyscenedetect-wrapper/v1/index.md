@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Pyscenedetect Wrapper (v1)"
+date: 2023-06-16T06:50:24+00:00
 ---
 ## About this version
 

@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "inaSpeechSegmenter Wrapper (v1.0)"
+date: 2023-06-20T02:49:35+00:00
 ---
 ## About this version
 

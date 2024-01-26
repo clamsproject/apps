@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Few Shot Classifier (v1.0)"
+date: 2023-08-01T22:57:12+00:00
 ---
 ## About this version
 

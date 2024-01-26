@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: posts
 classes: wide
 title: "Brandeis ACS Wrapper (v2)"
+date: 2023-07-24T05:42:05+00:00
 ---
 ## About this version
 

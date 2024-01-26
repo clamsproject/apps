@@ -34,9 +34,10 @@ submission_template = """
 """
 
 frontmatter_template = """---
-layout: single
+layout: posts
 classes: wide
 title: "${name} (${app_version})"
+date: ${time}
 ---"""
 
 
@@ -45,7 +46,7 @@ def convert_to_markdown(app_metadata, submission_metadata):
         return f"[{url}]({url})"
 
     markdown = io.StringIO()
-    markdown.write(string.Template(frontmatter_template).substitute(app_metadata))
+    markdown.write(string.Template(frontmatter_template).substitute(**app_metadata, **submission_metadata))
     if not app_metadata['description']:
         app_metadata['description'] = '(no description provided by the developer)'
     else:
