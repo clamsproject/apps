@@ -1,4 +1,18 @@
 {
+  "http://apps.clams.ai/easyocr-wrapper": {
+    "description": "Using EasyOCR to extract text from timeframes",
+    "latest_update": "2024-01-30T19:59:06+00:00",
+    "versions": [
+      [
+        "v1.1",
+        "snewman-aa"
+      ],
+      [
+        "v1.0",
+        "snewman-aa"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
     "latest_update": "2024-01-25T20:44:45+00:00",
@@ -14,16 +28,6 @@
       [
         "v1.0",
         "marcverhagen"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/easyocr-wrapper": {
-    "description": "Using EasyOCR to extract text from timeframes",
-    "latest_update": "2024-01-25T18:44:59+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "snewman-aa"
       ]
     ]
   },
