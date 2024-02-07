@@ -1,0 +1,6 @@
+{
+  "time": "2024-02-07T21:18:36+00:00",
+  "submitter": "marcverhagen",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v3.0",
+  "releasenotes": "New model, improved MMIF output and various fixes\n\n"
+}
