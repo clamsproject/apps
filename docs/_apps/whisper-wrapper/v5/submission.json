@@ -1,0 +1,6 @@
+{
+  "time": "2024-02-09T12:28:02+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v5",
+  "releasenotes": "This version include addition of `modelLang` param and many other changes\n\n* **(BIG CHANGE)** timeunit is now millisecond (integer)\n* `modelLang` parameter is added for selecting language to instruct Whisper to use, Whisper will run in language detection mode if this parameter is not given.\n* When `modelLang` is set to `en`, load english only models instead of multilingual ones for speed and performance\n* skips empty segments from whisper when generating output MMIF\n* updated to clams-python 1.1.1\n\n"
+}

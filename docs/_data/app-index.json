@@ -1,4 +1,30 @@
 {
+  "http://apps.clams.ai/whisper-wrapper": {
+    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
+    "latest_update": "2024-02-09T12:28:02+00:00",
+    "versions": [
+      [
+        "v5",
+        "keighrim"
+      ],
+      [
+        "v4",
+        "keighrim"
+      ],
+      [
+        "v3",
+        "keighrim"
+      ],
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
     "latest_update": "2024-02-07T21:18:36+00:00",
@@ -32,28 +58,6 @@
       [
         "v1.0",
         "snewman-aa"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/whisper-wrapper": {
-    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
-    "latest_update": "2024-01-24T05:40:09+00:00",
-    "versions": [
-      [
-        "v4",
-        "keighrim"
-      ],
-      [
-        "v3",
-        "keighrim"
-      ],
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
       ]
     ]
   },
