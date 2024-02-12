@@ -1,5 +1,4 @@
 repo,status,SDK-ver,main_branch,last_commit,start_date
-https://github.com/clamsproject/app-whisper-wrapper,AppStatus.REGISTERED,1.0.9,main,2024-02-09 12:06:31+00:00,2022-10-27 14:49:15+00:00
 https://github.com/clamsproject/app-easyocr-wrapper,AppStatus.REGISTERED,1.0.9,main,2024-01-31 19:51:08+00:00,2023-07-24 19:12:12+00:00
 https://github.com/clamsproject/app-east-textdetection,AppStatus.REGISTERED,1.0.9,main,2023-09-19 18:14:13+00:00,2019-05-30 19:12:16+00:00
 https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-08-23 15:00:41+00:00,2023-05-31 21:27:29+00:00
@@ -23,6 +22,7 @@ https://github.com/clamsproject/app-role-filler-binder,AppStatus.UPDATED,UNKNOWN
 https://github.com/clamsproject/app-fewshot-packaged,AppStatus.UPDATED,1.0.3,main,2023-07-31 22:01:01+00:00,2023-07-31 21:02:02+00:00
 https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-24 14:29:22+00:00,2023-07-13 19:10:27+00:00
 https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,1.0.7,main,2023-07-20 19:50:12+00:00,2023-06-28 14:21:15+00:00
+https://github.com/clamsproject/app-whisper-wrapper,AppStatus.OUTDATED,1.1.2,main,2024-02-12 19:34:12+00:00,2022-10-27 14:49:15+00:00
 https://github.com/clamsproject/app-swt-detection,AppStatus.OUTDATED,1.1.0,main,2024-02-07 21:08:13+00:00,2023-09-21 12:39:30+00:00
 https://github.com/clamsproject/app-doctr-wrapper,AppStatus.OUTDATED,UNKNOWN,master,2024-02-01 22:01:14+00:00,2024-02-01 21:59:43+00:00
 https://github.com/clamsproject/app-boundingbox-concatenation,AppStatus.OUTDATED,UNKNOWN,master,2023-10-05 05:13:07+00:00,2023-09-26 19:02:03+00:00
