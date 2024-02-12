@@ -1,0 +1,6 @@
+{
+  "time": "2024-02-12T19:47:39+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v6",
+  "releasenotes": "v6 fixes a bug running en-only large models since there is no en-only large model\n\n"
+}
