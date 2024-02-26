@@ -1,0 +1,102 @@
+{
+  "name": "Scenes-with-text Detection",
+  "description": "Detects scenes with text, like slates, chyrons and credits.",
+  "app_version": "v4.0",
+  "mmif_version": "1.1.0",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/swt-detection/v4.0",
+  "url": "https://github.com/clamsproject/app-swt-detection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v2",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "frameType": "bars"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v2",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "frameType": "slate"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v2",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "frameType": "chyron"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v2",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "frameType": "credits"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimePoint/v1",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "startAt",
+      "description": "Number of milliseconds into the video to start processing",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "stopAt",
+      "description": "Number of milliseconds into the video to stop processing",
+      "type": "integer",
+      "default": 10000000,
+      "multivalued": false
+    },
+    {
+      "name": "sampleRate",
+      "description": "Milliseconds between sampled frames",
+      "type": "integer",
+      "default": 1000,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameScore",
+      "description": "Minimum score for a still frame to be included in a TimeFrame",
+      "type": "number",
+      "default": 0.01,
+      "multivalued": false
+    },
+    {
+      "name": "minTimeframeScore",
+      "description": "Minimum score for a TimeFrame",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "Minimum number of sampled frames required for a TimeFrame",
+      "type": "integer",
+      "default": 2,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
