@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/easyocr-wrapper": {
+    "description": "Using EasyOCR to extract text from timeframes",
+    "latest_update": "2024-02-28T18:17:27+00:00",
+    "versions": [
+      [
+        "v2.0",
+        "snewman-aa"
+      ],
+      [
+        "v1.1",
+        "snewman-aa"
+      ],
+      [
+        "v1.0",
+        "snewman-aa"
+      ]
+    ]
+  },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
     "latest_update": "2024-02-12T19:47:39+00:00",
@@ -48,20 +66,6 @@
       [
         "v1.0",
         "marcverhagen"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/easyocr-wrapper": {
-    "description": "Using EasyOCR to extract text from timeframes",
-    "latest_update": "2024-01-30T19:59:06+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "snewman-aa"
-      ],
-      [
-        "v1.0",
-        "snewman-aa"
       ]
     ]
   },
