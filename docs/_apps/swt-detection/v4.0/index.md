@@ -45,7 +45,7 @@ date: 2024-02-27T21:53:26+00:00
 **(Note that not all output annotations are always generated.)**
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v2](http://mmif.clams.ai/vocabulary/TimeFrame/v2) 
     * _timeUnit_ = "milliseconds"
-    * _labelset_ is one-of ["bars", "slate", "chyron", "credits", "NEG"]
+    * _labelset_ = a list of ["bars", "slate", "chyron", "credits", "NEG"]
 * [http://mmif.clams.ai/vocabulary/TimePoint/v1](http://mmif.clams.ai/vocabulary/TimePoint/v1) 
     * _timeUnit_ = "milliseconds"
-    * _labelset_ is one-of ["bars", "slate", "chyron", "credits", "NEG"]
+    * _labelset_ = a list of ["bars", "slate", "chyron", "credits", "NEG"]

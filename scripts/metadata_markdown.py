@@ -40,6 +40,8 @@ title: "${name} (${app_version})"
 date: ${time}
 ---"""
 
+indentation = '    '
+
 
 def convert_to_markdown(app_metadata, submission_metadata):
     def markdown_link(url):
@@ -54,10 +56,10 @@ def convert_to_markdown(app_metadata, submission_metadata):
         
     if submission_metadata:
         image_webpage = f'{app_metadata["url"]}/pkgs/container/{app_metadata["url"].rsplit("/",1)[-1]}/{app_metadata["app_version"]}'
-        notes = '    (no notes provided by the developer)'
+        notes = f'{indentation}(no notes provided by the developer)'
         if 'releasenotes' in submission_metadata and submission_metadata['releasenotes']:
             # print(submission_metadata['releasenotes'])
-            notes = '  \n'.join([f'    > {line}' for line in submission_metadata['releasenotes'].split('\n') if line])
+            notes = '  \n'.join([f'{indentation}> {line}' for line in submission_metadata['releasenotes'].split('\n') if line])
         markdown.write(string.Template(submission_template).substitute(**submission_metadata, image_webpage=image_webpage))
         markdown.write(f'\n{notes}\n')
     markdown.write(string.Template(app_template).substitute(app_metadata))
@@ -76,8 +78,11 @@ def convert_to_markdown(app_metadata, submission_metadata):
         if 'properties' in io_spec and io_spec['properties']:
             for k, v in io_spec['properties'].items():
                 if isinstance(v, list):
-                    v = ', '.join(f'"{e}"' for e in v)
-                    props.append(f'    * _{k}_ is one-of [{v}]')
+                    props.append(f'{indentation}* _{k}_ = a list of {json.dumps(v)}')
+                elif isinstance(v, dict):
+                    props.append(f'{indentation}* _{k}_ = a complex object with the following keys:')
+                    for k_in, v_in in v.items():
+                        props.append(f'{indentation*2}* _{k_in}_ = {json.dumps(v_in)}')
                 else:
                     props.append(f'    * _{k}_ = "{v}"')
         if props:
