@@ -1,0 +1,6 @@
+{
+  "time": "2024-02-29T17:24:13+00:00",
+  "submitter": "marcverhagen",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v4.0",
+  "releasenotes": "Uses a new classification regime with a dictionary of labels and scores\n\n"
+}
