@@ -122,7 +122,7 @@ jobs:
       - name: "💉 Install clams sdk"
         working-directory: ./app
         run: |
-          pip install $(grep clams-python requirements.* | sort -r | head -n1)
+          for f in requirements.*; do pip install -r ${f}; done 
           
       - name: "🏷 Generate app metadata"
         working-directory: ./app
