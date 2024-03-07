@@ -1,0 +1,6 @@
+{
+  "time": "2024-03-07T03:29:41+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v4.1",
+  "releasenotes": "This version includes many bugfixes and clarification for the previous version.\n\n* more informative, consistent, and flask-friendly debug-level logging for future development\n* two additional pretrained models, including one based on convnext_tiny backbone for quicker annotation\n* `TimePoint` annotations is re-worked\n    * classification-related props in TP anns are now all based on the \"RAW\" labels from classifier\n    * all images classification results are now recorded as TP annotations regardless of TF annotations\n* added two runtime parameter\n    * `useStitcher` - when `\"false\"`, app will only generate `TimePoint` annotations, not stitching them into `TimeFrame` annotations\n    * `modelName` - to pick a model between pre-built classifiers (by default, app will use the best performing model from training experiments)\n* updated to the latest `mmif-python` and `clams-python`, and thus no longer generates MMIFs with a non-existing version\n\n"
+}
