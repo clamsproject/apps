@@ -1,0 +1,6 @@
+{
+  "time": "2024-03-11T16:26:00+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v4.2",
+  "releasenotes": "Includes bugfix and performance optimization\n\n* fixed bug startAt/stopAt params were not honored\n* faster video iteration for still image extraction\n\n"
+}

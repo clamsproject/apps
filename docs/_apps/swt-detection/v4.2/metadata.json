@@ -1,0 +1,123 @@
+{
+  "name": "Scenes-with-text Detection",
+  "description": "Detects scenes with text, like slates, chyrons and credits.",
+  "app_version": "v4.2",
+  "mmif_version": "1.0.2",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/swt-detection/v4.2",
+  "url": "https://github.com/clamsproject/app-swt-detection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v3",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimePoint/v2",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "labelset": [
+          "B",
+          "S",
+          "S:H",
+          "S:C",
+          "S:D",
+          "S:B",
+          "S:G",
+          "W",
+          "L",
+          "O",
+          "M",
+          "I",
+          "N",
+          "E",
+          "P",
+          "Y",
+          "K",
+          "G",
+          "T",
+          "F",
+          "C",
+          "R"
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "startAt",
+      "description": "Number of milliseconds into the video to start processing",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "stopAt",
+      "description": "Number of milliseconds into the video to stop processing",
+      "type": "integer",
+      "default": 10000000,
+      "multivalued": false
+    },
+    {
+      "name": "sampleRate",
+      "description": "Milliseconds between sampled frames",
+      "type": "integer",
+      "default": 1000,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameScore",
+      "description": "Minimum score for a still frame to be included in a TimeFrame",
+      "type": "number",
+      "default": 0.01,
+      "multivalued": false
+    },
+    {
+      "name": "minTimeframeScore",
+      "description": "Minimum score for a TimeFrame",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "Minimum number of sampled frames required for a TimeFrame",
+      "type": "integer",
+      "default": 2,
+      "multivalued": false
+    },
+    {
+      "name": "modelName",
+      "description": "model name to use for classification",
+      "type": "string",
+      "choices": [
+        "20240126-180026.convnext_lg.kfold_000",
+        "20240212-132306.convnext_lg.kfold_000",
+        "20240212-131937.convnext_tiny.kfold_000"
+      ],
+      "default": "20240126-180026.convnext_lg.kfold_000",
+      "multivalued": false
+    },
+    {
+      "name": "useStitcher",
+      "description": "Use the stitcher after classifying the TimePoints",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}
