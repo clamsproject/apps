@@ -1,0 +1,54 @@
+{
+  "name": "Pyscenedetect Wrapper",
+  "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
+  "app_version": "v3",
+  "mmif_version": "1.0.2",
+  "analyzer_version": "0.6.1",
+  "app_license": "Apache2",
+  "analyzer_license": "BSD-3",
+  "identifier": "http://apps.clams.ai/pyscenedetect-wrapper/v3",
+  "url": "https://github.com/clamsproject/app-pyscenedetect-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v3",
+      "properties": {
+        "frameType": "shot",
+        "timeUnit": "frame"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "mode",
+      "description": "pick a scene detector algorithm, see http://scenedetect.com/projects/Manual/en/latest/cli/detectors.html",
+      "type": "string",
+      "choices": [
+        "content",
+        "threshold",
+        "adaptive"
+      ],
+      "default": "content",
+      "multivalued": false
+    },
+    {
+      "name": "threshold",
+      "description": "threshold value to use in the detection algorithm. Note that the meaning of this numerical value differs for different detector algorithms.",
+      "type": "number",
+      "default": 27.0,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": 0,
+      "multivalued": false
+    }
+  ]
+}

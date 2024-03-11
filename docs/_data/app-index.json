@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/pyscenedetect-wrapper": {
+    "description": "",
+    "latest_update": "2024-03-11T17:30:59+00:00",
+    "versions": [
+      [
+        "v3",
+        "kelleyl"
+      ],
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
     "latest_update": "2024-03-11T16:26:00+00:00",
@@ -215,20 +233,6 @@
     "versions": [
       [
         "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/pyscenedetect-wrapper": {
-    "description": "",
-    "latest_update": "2023-07-24T07:50:09+00:00",
-    "versions": [
-      [
-        "v2",
         "keighrim"
       ],
       [
