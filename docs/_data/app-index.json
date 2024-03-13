@@ -1,4 +1,18 @@
 {
+  "http://apps.clams.ai/doctr-wrapper": {
+    "description": "End to end OCR for extracting text from timeframes",
+    "latest_update": "2024-03-13T17:23:33+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "snewman-aa"
+      ],
+      [
+        "v1.0",
+        "snewman-aa"
+      ]
+    ]
+  },
   "http://apps.clams.ai/pyscenedetect-wrapper": {
     "description": "",
     "latest_update": "2024-03-11T17:42:55+00:00",
