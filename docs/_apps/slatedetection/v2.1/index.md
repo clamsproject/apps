@@ -23,12 +23,14 @@ date: 2023-08-03T17:56:59+00:00
 
 
 #### Inputs
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
 * [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
 (any properties)
 
 
 #### Configurable Parameters
-**(_Multivalued_ means the parameter can have one or more values.)**
+(**Note**: _Multivalued_ means the parameter can have one or more values.)
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -42,6 +44,10 @@ date: 2023-08-03T17:56:59+00:00
 
 
 #### Outputs
-**(Note that not all output annotations are always generated.)**
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
+(**Note**: Not all output annotations are always generated.)
+
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-    * _properties_ = "{'frameType': 'slate'}"
+    * _properties_ = a complex object with the following keys:
+        * _frameType_ = "slate"

@@ -25,12 +25,14 @@ date: 2024-03-11T17:42:55+00:00
 
 
 #### Inputs
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
 * [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
 (any properties)
 
 
 #### Configurable Parameters
-**(_Multivalued_ means the parameter can have one or more values.)**
+(**Note**: _Multivalued_ means the parameter can have one or more values.)
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -40,7 +42,10 @@ date: 2024-03-11T17:42:55+00:00
 
 
 #### Outputs
-**(Note that not all output annotations are always generated.)**
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
+(**Note**: Not all output annotations are always generated.)
+
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v3](http://mmif.clams.ai/vocabulary/TimeFrame/v3) 
     * _label_ = "shot"
     * _timeUnit_ = "frame"

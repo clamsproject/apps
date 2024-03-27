@@ -25,17 +25,22 @@ date: 2023-06-06T00:30:33+00:00
 
 
 #### Inputs
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
 * [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1)  (required)
 (any properties)
 
 
 #### Configurable Parameters
-**(_Multivalued_ means the parameter can have one or more values.)**
+(**Note**: _Multivalued_ means the parameter can have one or more values.)
 
 ##### N/A
 
 
 #### Outputs
-**(Note that not all output annotations are always generated.)**
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
+(**Note**: Not all output annotations are always generated.)
+
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
     * _timeunit_ = "milliseconds"

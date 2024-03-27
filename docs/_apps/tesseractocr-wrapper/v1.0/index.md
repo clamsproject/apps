@@ -25,6 +25,8 @@ date: 2023-07-26T00:03:43+00:00
 
 
 #### Inputs
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
 * [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
 (any properties)
 * [http://mmif.clams.ai/vocabulary/BoundingBox/v1](http://mmif.clams.ai/vocabulary/BoundingBox/v1)  (required)
@@ -34,7 +36,7 @@ date: 2023-07-26T00:03:43+00:00
 
 
 #### Configurable Parameters
-**(_Multivalued_ means the parameter can have one or more values.)**
+(**Note**: _Multivalued_ means the parameter can have one or more values.)
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -45,7 +47,10 @@ date: 2023-07-26T00:03:43+00:00
 
 
 #### Outputs
-**(Note that not all output annotations are always generated.)**
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
+(**Note**: Not all output annotations are always generated.)
+
 * [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) 
 (any properties)
 * [http://mmif.clams.ai/vocabulary/Alignment/v1](http://mmif.clams.ai/vocabulary/Alignment/v1) 

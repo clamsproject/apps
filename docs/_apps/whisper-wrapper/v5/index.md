@@ -30,6 +30,8 @@ date: 2024-02-09T12:28:02+00:00
 
 
 #### Inputs
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
 One of the following is required: [
 * [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1)  (required)
 (any properties)
@@ -41,7 +43,7 @@ One of the following is required: [
 
 
 #### Configurable Parameters
-**(_Multivalued_ means the parameter can have one or more values.)**
+(**Note**: _Multivalued_ means the parameter can have one or more values.)
 
 |Name|Description|Type|Multivalued|Default|Choices|
 |----|-----------|----|-----------|-------|-------|
@@ -51,7 +53,10 @@ One of the following is required: [
 
 
 #### Outputs
-**(Note that not all output annotations are always generated.)**
+(**Note**: "*" as a property value means that the property is required but can be any value.)
+
+(**Note**: Not all output annotations are always generated.)
+
 * [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) 
 (any properties)
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 

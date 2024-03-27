@@ -14,6 +14,9 @@ if len(sys.argv) > 1:
 else:
     cwd = Path.cwd()
     out_f = sys.stdout
+
+asterisk_note = '"*" as a property value means that the property is required but can be any value.'
+multivalued_note = "_Multivalued_ means the parameter can have one or more values."
 app_template = """
 ## About this app (See raw [metadata.json](metadata.json))
 
@@ -44,10 +47,14 @@ indentation = '    '
 
 
 def convert_to_markdown(app_metadata, submission_metadata):
+    markdown = io.StringIO()
+
     def markdown_link(url):
         return f"[{url}]({url})"
 
-    markdown = io.StringIO()
+    def add_note(note):
+        markdown.write(f"(**Note**: {note})\n\n")
+
     markdown.write(string.Template(frontmatter_template).substitute(**app_metadata, **submission_metadata))
     if not app_metadata['description']:
         app_metadata['description'] = '(no description provided by the developer)'
@@ -93,6 +100,8 @@ def convert_to_markdown(app_metadata, submission_metadata):
         return f"* {uri} {req}\n{props}\n"
 
     markdown.write('\n\n#### Inputs\n')
+    add_note(asterisk_note)
+
     for input_ in app_metadata['input']:
         if isinstance(input_, list):
             markdown.write('One of the following is required: [\n')
@@ -102,7 +111,7 @@ def convert_to_markdown(app_metadata, submission_metadata):
             markdown.write(io_to_markdown(input_))
 
     markdown.write('\n\n#### Configurable Parameters\n')
-    markdown.write('**(_Multivalued_ means the parameter can have one or more values.)**\n\n')
+    add_note(multivalued_note)
 
     if 'parameters' in app_metadata and app_metadata['parameters']:
         markdown.write('|Name|Description|Type|Multivalued|Default|Choices|\n')
@@ -133,7 +142,9 @@ def convert_to_markdown(app_metadata, submission_metadata):
         markdown.write('##### N/A\n')
     
     markdown.write('\n\n#### Outputs\n')
-    markdown.write('**(Note that not all output annotations are always generated.)**\n')
+    add_note(asterisk_note)
+    add_note("Not all output annotations are always generated.")
+
     for output in app_metadata['output']:
         markdown.write(io_to_markdown(output))
         
