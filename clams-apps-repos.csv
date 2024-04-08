@@ -21,7 +21,7 @@ https://github.com/clamsproject/app-role-filler-binder,AppStatus.UPDATED,UNKNOWN
 https://github.com/clamsproject/app-fewshot-packaged,AppStatus.UPDATED,1.0.3,main,2023-07-31 22:01:01+00:00,2023-07-31 21:02:02+00:00
 https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-24 14:29:22+00:00,2023-07-13 19:10:27+00:00
 https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,1.0.7,main,2023-07-20 19:50:12+00:00,2023-06-28 14:21:15+00:00
-https://github.com/clamsproject/app-swt-detection,AppStatus.OUTDATED,1.1.6,main,2024-04-02 20:36:51+00:00,2023-09-21 12:39:30+00:00
+https://github.com/clamsproject/app-swt-detection,AppStatus.OUTDATED,1.1.6,main,2024-04-08 01:55:36+00:00,2023-09-21 12:39:30+00:00
 https://github.com/clamsproject/app-simple-timepoints-stitcher,AppStatus.OUTDATED,1.1.6,main,2024-04-02 20:17:54+00:00,2024-04-01 01:34:24+00:00
 https://github.com/clamsproject/app-doctr-wrapper,AppStatus.OUTDATED,1.1.3,main,2024-03-18 18:52:06+00:00,2024-02-01 21:59:43+00:00
 https://github.com/clamsproject/app-instructblip-captioner,AppStatus.OUTDATED,1.1.3,main,2024-03-12 23:12:12+00:00,2024-03-12 23:10:00+00:00
