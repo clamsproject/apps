@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/simple-timepoints-stitcher": {
     "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
-    "latest_update": "2024-04-01T11:53:34+00:00",
+    "latest_update": "2024-04-02T20:20:44+00:00",
     "versions": [
+      [
+        "v1.1",
+        "keighrim"
+      ],
       [
         "v1.0",
         "keighrim"
