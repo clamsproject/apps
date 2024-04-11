@@ -1,0 +1,6 @@
+{
+  "time": "2024-04-11T21:49:21+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v4.3",
+  "releasenotes": "This version brings many bug fixes and new models\n\n- fixed missing `NEG`  label score in the `classification` property in `TimePoint` annotations (#87), and app metadata is updated accordingly\n- fixed sampling rate disparity (#90)\n- fixed sinusoidal positional features were not actually used (#47), and newly trained models with the fix are included\n- miscellaneous code clean-up\n\n"
+}
