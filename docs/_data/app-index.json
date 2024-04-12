@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
-    "latest_update": "2024-04-11T21:49:21+00:00",
+    "latest_update": "2024-04-12T15:25:19+00:00",
     "versions": [
+      [
+        "v4.4",
+        "keighrim"
+      ],
       [
         "v4.3",
         "keighrim"

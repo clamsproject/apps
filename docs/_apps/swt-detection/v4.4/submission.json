@@ -1,0 +1,6 @@
+{
+  "time": "2024-04-12T15:25:19+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v4.4",
+  "releasenotes": "This version is re-release of v4.3 from the right commit.\n\n"
+}
