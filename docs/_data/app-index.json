@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/simple-timepoints-stitcher": {
+    "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
+    "latest_update": "2024-04-12T15:54:40+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "keighrim"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
     "latest_update": "2024-04-12T15:25:19+00:00",
@@ -38,20 +56,6 @@
       [
         "v1.0",
         "marcverhagen"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/simple-timepoints-stitcher": {
-    "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
-    "latest_update": "2024-04-02T20:20:44+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
       ]
     ]
   },
