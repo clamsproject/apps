@@ -1,0 +1,78 @@
+{
+  "name": "Simple Timepoints Stitcher",
+  "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
+  "app_version": "v1.2",
+  "mmif_version": "1.0.4",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/simple-timepoints-stitcher/v1.2",
+  "url": "https://github.com/clamsproject/app-simple-timepoints-stitcher",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ],
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimePoint/v4",
+      "description": "TimePoint annotations to be stitched. Must be \"exhaustive\" in that it should cover an entire single time period in the input document, with a uniform sample rate.",
+      "properties": {
+        "timePoint": "*",
+        "classification": "*"
+      },
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "description": "Stitched TimeFrame annotations. Each TimeFrame annotation represents a continuous segment of timepoints and its `label` property is determined by the `labelMap` parameter (see `parameters` section). The `representatives` is a singleton list of the TimePoint annotation that has the highest score in the TimeFrame.",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "label": "*",
+        "representatives": "*"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "labelMap",
+      "description": "mapping of labels in the input annotations to new labels. Must be formatted as \"IN_LABEL:OUT_LABEL\" (with a colon). To pass multiple mappings, use this parameter multiple times. By default, all the input labels are passed as is, including any \"negative\" labels (with default value being no remapping at all). However, when at least one label is remapped, all the other \"unset\" labels are discarded asa negative label(\"-\").",
+      "type": "map",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "minTFDuration",
+      "description": "minimum duration of a TimeFrame in milliseconds",
+      "type": "integer",
+      "default": 1000,
+      "multivalued": false
+    },
+    {
+      "name": "minTPScore",
+      "description": "minimum score of a TimePoint to be considered as positive",
+      "type": "number",
+      "default": 0.1,
+      "multivalued": false
+    },
+    {
+      "name": "minTFScore",
+      "description": "minimum average score of TimePoints in a TimeFrame to be considered as positive",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
