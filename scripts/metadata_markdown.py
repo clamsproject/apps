@@ -80,6 +80,7 @@ def convert_to_markdown(app_metadata, submission_metadata):
     
     def io_to_markdown(io_spec):
         uri = markdown_link(io_spec['@type'])
+        desc = f'\n    > {io_spec["description"]}' if 'description' in io_spec else ''
         req = ' (required)' if 'required' in io_spec and io_spec['required'] else ''
         props = []
         if 'properties' in io_spec and io_spec['properties']:
@@ -97,7 +98,7 @@ def convert_to_markdown(app_metadata, submission_metadata):
         else:
             props = '(any properties)'
             
-        return f"* {uri} {req}\n{props}\n"
+        return f"* {uri} {req}{desc}\n{props}\n"
 
     markdown.write('\n\n#### Inputs\n')
     add_note(asterisk_note)

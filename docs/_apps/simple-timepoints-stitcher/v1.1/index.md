@@ -34,6 +34,7 @@ One of the following is required: [
 
 ]
 * [http://mmif.clams.ai/vocabulary/TimePoint/v4](http://mmif.clams.ai/vocabulary/TimePoint/v4)  (required)
+    > TimePoint annotations to be stitched. Must be "exhaustive" in that it should cover an entire single time period in the input document, with a uniform sample rate.
     * _timePoint_ = "*"
     * _classification_ = "*"
 
@@ -56,6 +57,7 @@ One of the following is required: [
 (**Note**: Not all output annotations are always generated.)
 
 * [http://mmif.clams.ai/vocabulary/TimeFrame/v5](http://mmif.clams.ai/vocabulary/TimeFrame/v5) 
+    > Stitched TimeFrame annotations. Each TimeFrame annotation represents a continuous segment of timepoints and its `label` property is determined by the `labelMap` parameter (see `parameters` section). The `representatives` is a singleton list of the TimePoint annotation that has the highest score in the TimeFrame.
     * _timeUnit_ = "milliseconds"
     * _label_ = "*"
     * _representatives_ = "*"
