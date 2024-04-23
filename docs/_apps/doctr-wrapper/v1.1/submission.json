@@ -1,0 +1,6 @@
+{
+  "time": "2024-04-23T20:49:23+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.1",
+  "releasenotes": "Minor update with various fixes\n\n* updated SDK version\n* fixed container image dependency problem\n* updated app metadata and made app description less verbose\n\n"
+}
