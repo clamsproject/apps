@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/doctr-wrapper": {
     "description": "CLAMS app wraps the docTR, End-to-End OCR model, available at https://pypi.org/project/python-doctr . The model is capable of detecting text regions in the input image and recognizing text in the regions. The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents, then aligns them to `BoundingBox` annotations that represent the detected geometries. This hierarchical structure is also represented in the `TextDocument` annotation output as two newlines (`\\n\\n`) between \"paragraphs\", one newline (`\\n`) between the \"lines\", and one space (\" \") between the \"words\". For the text recognition, the model is internally configured to use the \"parseq\" recognition model, and only works with English text at the moment.",
-    "latest_update": "2024-04-22T18:46:07+00:00",
+    "latest_update": "2024-04-23T20:49:23+00:00",
     "versions": [
+      [
+        "v1.1",
+        "keighrim"
+      ],
       [
         "v1.0",
         "keighrim"
