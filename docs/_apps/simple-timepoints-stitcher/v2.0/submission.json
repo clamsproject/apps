@@ -1,0 +1,6 @@
+{
+  "time": "2024-05-06T16:13:55+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.0",
+  "releasenotes": "Major update to add\n\n- experimental CLI. CLI shares the same parameters specified in the app metadata. Try `python cli.py --help`!\n- added presets for complex labelMap parameter. Find out about labelMapPreset parameter in the metadata.\n\n"
+}

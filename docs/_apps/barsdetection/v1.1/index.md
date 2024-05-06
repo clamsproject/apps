@@ -6,10 +6,10 @@ date: 2023-07-31T23:31:12+00:00
 ---
 ## About this version
 
-* Submitter: [keighrim](https://github.com/keighrim)
-* Submission Time: 2023-07-31T23:31:12+00:00
-* Prebuilt Container Image: [ghcr.io/clamsproject/app-barsdetection:v1.1](https://github.com/clamsproject/app-barsdetection/pkgs/container/app-barsdetection/v1.1)
-* Release Notes
+- Submitter: [keighrim](https://github.com/keighrim)
+- Submission Time: 2023-07-31T23:31:12+00:00
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-barsdetection:v1.1](https://github.com/clamsproject/app-barsdetection/pkgs/container/app-barsdetection/v1.1)
+- Release Notes
 
     (no notes provided by the developer)
 
@@ -17,30 +17,75 @@ date: 2023-07-31T23:31:12+00:00
 
 **This tool detects SMPTE color bars.**
 
-* App ID: [http://apps.clams.ai/barsdetection/v1.1](http://apps.clams.ai/barsdetection/v1.1)
-* App License: MIT
-* Source Repository: [https://github.com/clamsproject/app-barsdetection](https://github.com/clamsproject/app-barsdetection) ([source tree of the submitted version](https://github.com/clamsproject/app-barsdetection/tree/v1.1))
+- App ID: [http://apps.clams.ai/barsdetection/v1.1](http://apps.clams.ai/barsdetection/v1.1)
+- App License: MIT
+- Source Repository: [https://github.com/clamsproject/app-barsdetection](https://github.com/clamsproject/app-barsdetection) ([source tree of the submitted version](https://github.com/clamsproject/app-barsdetection/tree/v1.1))
 
 
 #### Inputs
 (**Note**: "*" as a property value means that the property is required but can be any value.)
 
-* [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1)  (required)
-(any properties)
+- [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
+
+ (any properties)
+
 
 
 #### Configurable Parameters
 (**Note**: _Multivalued_ means the parameter can have one or more values.)
 
-|Name|Description|Type|Multivalued|Default|Choices|
-|----|-----------|----|-----------|-------|-------|
-|timeUnit|Unit for output typeframe.|string|N|frames|**_`frames`_**, `seconds`, `milliseconds`|
-|sampleRatio|Frequency to sample frames.|integer|N|30||
-|stopAt|Frame number to stop processing.|integer|N|9000||
-|stopAfterOne|When True, processing stops after first timeframe is found.|boolean|N|true|`false`, **_`true`_**|
-|minFrameCount|minimum number of frames required for a timeframe to be included in the output.|integer|N|10||
-|threshold|Threshold from 0-1, lower accepts more potential slates.|number|N|0.7||
-|pretty|The JSON body of the HTTP response will be re-formatted with 2-space indentation|boolean|N|false|**_`false`_**, `true`|
+- `timeUnit`: optional, defaults to `frames`
+
+    - Type: string
+    - Multivalued: False
+    - Choices: **_`frames`_**, `seconds`, `milliseconds`
+
+
+    > Unit for output typeframe.
+- `sampleRatio`: optional, defaults to `30`
+
+    - Type: integer
+    - Multivalued: False
+
+
+    > Frequency to sample frames.
+- `stopAt`: optional, defaults to `9000`
+
+    - Type: integer
+    - Multivalued: False
+
+
+    > Frame number to stop processing.
+- `stopAfterOne`: optional, defaults to `true`
+
+    - Type: boolean
+    - Multivalued: False
+    - Choices: `false`, **_`true`_**
+
+
+    > When True, processing stops after first timeframe is found.
+- `minFrameCount`: optional, defaults to `10`
+
+    - Type: integer
+    - Multivalued: False
+
+
+    > minimum number of frames required for a timeframe to be included in the output.
+- `threshold`: optional, defaults to `0.7`
+
+    - Type: number
+    - Multivalued: False
+
+
+    > Threshold from 0-1, lower accepts more potential slates.
+- `pretty`: optional, defaults to `false`
+
+    - Type: boolean
+    - Multivalued: False
+    - Choices: **_`false`_**, `true`
+
+
+    > The JSON body of the HTTP response will be re-formatted with 2-space indentation
 
 
 #### Outputs
@@ -48,6 +93,7 @@ date: 2023-07-31T23:31:12+00:00
 
 (**Note**: Not all output annotations are always generated.)
 
-* [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1) 
-    * _typeSpecificProperty_ = a complex object with the following keys:
-        * _frameType_ = "bars"
+- [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1)
+    - _typeSpecificProperty_ = a complex object with the following keys:
+        - _frameType_ = "bars"
+

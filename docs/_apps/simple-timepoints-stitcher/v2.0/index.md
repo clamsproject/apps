@@ -1,25 +1,27 @@
 ---
 layout: posts
 classes: wide
-title: "Simple Timepoints Stitcher (v1.1)"
-date: 2024-04-02T20:20:44+00:00
+title: "Simple Timepoints Stitcher (v2.0)"
+date: 2024-05-06T16:13:55+00:00
 ---
 ## About this version
 
 - Submitter: [keighrim](https://github.com/keighrim)
-- Submission Time: 2024-04-02T20:20:44+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-simple-timepoints-stitcher:v1.1](https://github.com/clamsproject/app-simple-timepoints-stitcher/pkgs/container/app-simple-timepoints-stitcher/v1.1)
+- Submission Time: 2024-05-06T16:13:55+00:00
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.0](https://github.com/clamsproject/app-simple-timepoints-stitcher/pkgs/container/app-simple-timepoints-stitcher/v2.0)
 - Release Notes
 
-    (no notes provided by the developer)
+    > Major update to add  
+    > - experimental CLI. CLI shares the same parameters specified in the app metadata. Try `python cli.py --help`!  
+    > - added presets for complex labelMap parameter. Find out about labelMapPreset parameter in the metadata.
 
 ## About this app (See raw [metadata.json](metadata.json))
 
 **Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.**
 
-- App ID: [http://apps.clams.ai/simple-timepoints-stitcher/v1.1](http://apps.clams.ai/simple-timepoints-stitcher/v1.1)
+- App ID: [http://apps.clams.ai/simple-timepoints-stitcher/v2.0](http://apps.clams.ai/simple-timepoints-stitcher/v2.0)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-simple-timepoints-stitcher](https://github.com/clamsproject/app-simple-timepoints-stitcher) ([source tree of the submitted version](https://github.com/clamsproject/app-simple-timepoints-stitcher/tree/v1.1))
+- Source Repository: [https://github.com/clamsproject/app-simple-timepoints-stitcher](https://github.com/clamsproject/app-simple-timepoints-stitcher) ([source tree of the submitted version](https://github.com/clamsproject/app-simple-timepoints-stitcher/tree/v2.0))
 
 
 #### Inputs
@@ -27,12 +29,10 @@ date: 2024-04-02T20:20:44+00:00
 
 One of the following is required: [
 - [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 
 
@@ -53,7 +53,7 @@ One of the following is required: [
     - Multivalued: True
 
 
-    > mapping of labels in the input annotations to new labels. Must be formatted as "IN_LABEL:OUT_LABEL" (with a colon). To pass multiple mappings, use this parameter multiple times. By default, all the input labels are passed as is, including any "negative" labels (with default value being no remapping at all). However, when at least one label is remapped, all the other "unset" labels are discarded asa negative label("-").
+    > mapping of labels in the input annotations to new labels. Must be formatted as "IN_LABEL:OUT_LABEL" (with a colon). To pass multiple mappings, use this parameter multiple times. By default, all the input labels are passed as is, including any "negative" labels (with default value being no remapping at all). However, when at least one label is remapped, all the other "unset" labels are discarded as the negative label("-").
 - `minTFDuration`: optional, defaults to `1000`
 
     - Type: integer
@@ -75,6 +75,14 @@ One of the following is required: [
 
 
     > minimum average score of TimePoints in a TimeFrame to be considered as positive
+- `labelMapPreset`: optional, defaults to `null`
+
+    - Type: string
+    - Multivalued: False
+    - Choices: **_`null`_**, `swt-v4-4way`, `swt-v4-6way`
+
+
+    > preset of label mappings. If not `null`, this parameter will override the `labelMap` parameter. Available presets are:<br/>- `null`: `None`<br/>- `swt-v4-4way`: `['B:bars', 'S:slate', 'S-H:slate', 'S-C:slate', 'S-D:slate', 'S-G:slate', 'I:chyron', 'N:chyron', 'Y:chyron', 'C:credit', 'R:credit']`<br/>- `swt-v4-6way`: `['B:bars', 'S:slate', 'S-H:slate', 'S-C:slate', 'S-D:slate', 'S-G:slate', 'I:chyron', 'N:chyron', 'Y:chyron', 'C:credit', 'R:credit', 'E:other_text', 'K:other_text', 'G:other_text', 'T:other_text', 'F:other_text', 'W:other_opening', 'L:other_opening', 'O:other_opening', 'M:other_opening']`
 - `pretty`: optional, defaults to `false`
 
     - Type: boolean
