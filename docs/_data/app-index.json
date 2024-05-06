@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
+    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
+    "latest_update": "2024-05-06T17:53:34+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "keighrim"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/simple-timepoints-stitcher": {
     "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
     "latest_update": "2024-05-06T16:13:55+00:00",
@@ -299,20 +317,6 @@
       ],
       [
         "v1",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
-    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
-    "latest_update": "2023-07-24T05:31:08+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
         "keighrim"
       ]
     ]

@@ -1,0 +1,6 @@
+{
+  "time": "2024-05-06T17:53:34+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.2",
+  "releasenotes": "SDK update, added experimental cli.py\n\n"
+}
