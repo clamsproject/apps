@@ -22,18 +22,18 @@ app_template = """
 
 **${description}**
 
-* App ID: [${identifier}](${identifier})
-* App License: ${app_license}
-* Source Repository: [${url}](${url}) ([source tree of the submitted version](${url}/tree/${app_version}))
+- App ID: [${identifier}](${identifier})
+- App License: ${app_license}
+- Source Repository: [${url}](${url}) ([source tree of the submitted version](${url}/tree/${app_version}))
 """
 
 submission_template = """
 ## About this version
 
-* Submitter: [${submitter}](https://github.com/${submitter})
-* Submission Time: ${time}
-* Prebuilt Container Image: [${image}](${image_webpage})
-* Release Notes
+- Submitter: [${submitter}](https://github.com/${submitter})
+- Submission Time: ${time}
+- Prebuilt Container Image: [${image}](${image_webpage})
+- Release Notes
 """
 
 frontmatter_template = """---
@@ -72,33 +72,64 @@ def convert_to_markdown(app_metadata, submission_metadata):
     markdown.write(string.Template(app_template).substitute(app_metadata))
 
     if 'analyzer_version' in app_metadata and app_metadata['analyzer_version']:
-        markdown.write(f"* Analyzer Version: {app_metadata['analyzer_version']}\n")
+        markdown.write(f"- Analyzer Version: {app_metadata['analyzer_version']}\n")
     if 'analyzer_license' in app_metadata and app_metadata['analyzer_license']:
-        markdown.write(f"* Analyzer License: {app_metadata['analyzer_license']}\n")
+        markdown.write(f"- Analyzer License: {app_metadata['analyzer_license']}\n")
     if 'more' in app_metadata and app_metadata['more']:
-        markdown.write(f"* More Info: {app_metadata['more']}\n")
+        markdown.write(f"- More Info: {app_metadata['more']}\n")
     
     def io_to_markdown(io_spec):
-        uri = markdown_link(io_spec['@type'])
+        heading = f"- {markdown_link(io_spec['@type'])}{' (required)' if 'required' in io_spec and io_spec['required'] else ''}"
         desc = f'\n    > {io_spec["description"]}' if 'description' in io_spec else ''
-        req = ' (required)' if 'required' in io_spec and io_spec['required'] else ''
         props = []
         if 'properties' in io_spec and io_spec['properties']:
             for k, v in io_spec['properties'].items():
                 if isinstance(v, list):
-                    props.append(f'{indentation}* _{k}_ = a list of {json.dumps(v)}')
+                    props.append(f'{indentation}- _{k}_ = a list of {json.dumps(v)}')
                 elif isinstance(v, dict):
-                    props.append(f'{indentation}* _{k}_ = a complex object with the following keys:')
+                    props.append(f'{indentation}- _{k}_ = a complex object with the following keys:')
                     for k_in, v_in in v.items():
-                        props.append(f'{indentation*2}* _{k_in}_ = {json.dumps(v_in)}')
+                        props.append(f'{indentation*2}- _{k_in}_ = {json.dumps(v_in)}')
                 else:
-                    props.append(f'    * _{k}_ = "{v}"')
+                    props.append(f'    - _{k}_ = "{v}"')
         if props:
             props = '\n'.join(props)
         else:
-            props = '(any properties)'
+            props = '(of any properties)'
             
-        return f"* {uri} {req}{desc}\n{props}\n"
+        return f"{heading}\n{props}\n{desc}\n"
+
+    def param_to_markdown(param_spec):
+
+        if 'default' in param_spec:
+            if param_spec['type'] == 'boolean':
+                if param_spec['default'] == 0:
+                    default_value = 'false'
+                elif param_spec['default'] in (True, False):
+                    default_value = str(param_spec['default']).lower()
+                else:
+                    default_value = 'true'
+            else:
+                default_value = param_spec['default']
+        else:
+            default_value = ''
+            
+        if 'choices' in param_spec:
+            cs = param_spec['choices']
+        elif param_spec['type'] == 'boolean':
+            cs = ['false', 'true']
+        else:
+            cs = []
+        choices = ', '.join(f'**_`{c}`_**' if c == default_value else f'`{c}`' for c in cs)
+        req_or_def = 'required' if len(str(default_value)) == 0 else f"optional, defaults to `{default_value}`"
+        heading = f"- `{param_spec['name']}`: {req_or_def}"
+        safe_desc = re.sub(r"\n", "<br/>", param_spec["description"]) if 'description' in param_spec else ''
+        desc = f'\n    > {safe_desc}'
+        specs = f'\n    - Type: {param_spec["type"]}\n    - Multivalued: {param_spec["multivalued"]}\n'
+        if choices:
+            specs += f'    - Choices: {choices}\n'
+
+        return f"{heading}\n{specs}\n{desc}\n"
 
     markdown.write('\n\n#### Inputs\n')
     add_note(asterisk_note)
@@ -115,30 +146,8 @@ def convert_to_markdown(app_metadata, submission_metadata):
     add_note(multivalued_note)
 
     if 'parameters' in app_metadata and app_metadata['parameters']:
-        markdown.write('|Name|Description|Type|Multivalued|Default|Choices|\n')
-        markdown.write('|----|-----------|----|-----------|-------|-------|\n')
         for param in app_metadata['parameters']:
-            if 'default' in param:
-                if param['type'] == 'boolean':
-                    if param['default'] == 0:
-                        default_value = 'false'
-                    elif param['default'] in (True, False):
-                        default_value = str(param['default']).lower()
-                    else:
-                        default_value = 'true'
-                else:
-                    default_value = param['default']
-            else:
-                default_value = ''
-            if 'choices' in param:
-                cs = param['choices']
-            elif param['type'] == 'boolean':
-                cs = ['false', 'true']
-            else:
-                cs = []
-            choices = ', '.join(f'**_`{c}`_**' if c == default_value else f'`{c}`' for c in cs)
-            desc = re.sub(r'\n', '<br/>', param['description'])
-            markdown.write(f"|{param['name']}|{desc}|{param['type']}|{'Y' if param['multivalued'] else 'N'}|{default_value}|{choices}|\n")
+            markdown.write(param_to_markdown(param))
     else:
         markdown.write('##### N/A\n')
     
