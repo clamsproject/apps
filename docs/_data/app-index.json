@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
     "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
-    "latest_update": "2024-05-06T17:53:34+00:00",
+    "latest_update": "2024-05-07T03:45:14+00:00",
     "versions": [
+      [
+        "v2.0",
+        "keighrim"
+      ],
       [
         "v1.2",
         "keighrim"
