@@ -1,0 +1,6 @@
+{
+  "time": "2024-05-07T03:45:14+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.0",
+  "releasenotes": "Major update\n\n- `TimeFrame` properties are updated to match new CLAMS vocab specification\n- `noEnergy` label from INA segmenter is stored as `silence` in MMIF for clarity\n- added parameter `silenceRatio` to configure silence detection threshold\n- renamed `minDuration` parameter to `minTFDuration` for clarity\n- bugfixes in cli.py\n\n"
+}
