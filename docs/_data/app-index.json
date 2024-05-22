@@ -1,4 +1,50 @@
 {
+  "http://apps.clams.ai/swt-detection": {
+    "description": "Detects scenes with text, like slates, chyrons and credits.",
+    "latest_update": "2024-05-22T14:32:58+00:00",
+    "versions": [
+      [
+        "v5.0",
+        "marcverhagen"
+      ],
+      [
+        "v4.4",
+        "keighrim"
+      ],
+      [
+        "v4.3",
+        "keighrim"
+      ],
+      [
+        "v4.2",
+        "keighrim"
+      ],
+      [
+        "v4.1",
+        "keighrim"
+      ],
+      [
+        "v4.0",
+        "marcverhagen"
+      ],
+      [
+        "v3.0",
+        "marcverhagen"
+      ],
+      [
+        "v2.1",
+        "marcverhagen"
+      ],
+      [
+        "v2.0",
+        "marcverhagen"
+      ],
+      [
+        "v1.0",
+        "marcverhagen"
+      ]
+    ]
+  },
   "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
     "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
     "latest_update": "2024-05-07T03:45:14+00:00",
@@ -58,48 +104,6 @@
       [
         "v1.0",
         "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/swt-detection": {
-    "description": "Detects scenes with text, like slates, chyrons and credits.",
-    "latest_update": "2024-04-12T15:25:19+00:00",
-    "versions": [
-      [
-        "v4.4",
-        "keighrim"
-      ],
-      [
-        "v4.3",
-        "keighrim"
-      ],
-      [
-        "v4.2",
-        "keighrim"
-      ],
-      [
-        "v4.1",
-        "keighrim"
-      ],
-      [
-        "v4.0",
-        "marcverhagen"
-      ],
-      [
-        "v3.0",
-        "marcverhagen"
-      ],
-      [
-        "v2.1",
-        "marcverhagen"
-      ],
-      [
-        "v2.0",
-        "marcverhagen"
-      ],
-      [
-        "v1.0",
-        "marcverhagen"
       ]
     ]
   },

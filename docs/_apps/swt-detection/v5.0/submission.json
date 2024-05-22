@@ -1,0 +1,6 @@
+{
+  "time": "2024-05-22T14:32:58+00:00",
+  "submitter": "marcverhagen",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v5.0",
+  "releasenotes": "This release adds a script to run a server-less app from the command line, adds and fixes parameters, and updates dependencies.\n\n- Added CLI capabilities\n- Added allowOverlap parameter\n- Added map parameter for postbin mapping\n- Updated to clams-python 1.2.2\n- Updated base container to clams-python-opencv4-torch2:1.2.2\n- Simplified model names\n- Documentation updates\n\n"
+}

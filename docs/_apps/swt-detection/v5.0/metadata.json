@@ -1,0 +1,160 @@
+{
+  "name": "Scenes-with-text Detection",
+  "description": "Detects scenes with text, like slates, chyrons and credits.",
+  "app_version": "v5.0",
+  "mmif_version": "1.0.4",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/swt-detection/v5.0",
+  "url": "https://github.com/clamsproject/app-swt-detection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimePoint/v4",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "labelset": [
+          "B",
+          "S",
+          "S:H",
+          "S:C",
+          "S:D",
+          "S:B",
+          "S:G",
+          "W",
+          "L",
+          "O",
+          "M",
+          "I",
+          "N",
+          "E",
+          "P",
+          "Y",
+          "K",
+          "G",
+          "T",
+          "F",
+          "C",
+          "R"
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "startAt",
+      "description": "Number of milliseconds into the video to start processing",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "stopAt",
+      "description": "Number of milliseconds into the video to stop processing",
+      "type": "integer",
+      "default": 9223372036854775807,
+      "multivalued": false
+    },
+    {
+      "name": "sampleRate",
+      "description": "Milliseconds between sampled frames",
+      "type": "integer",
+      "default": 1000,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameScore",
+      "description": "Minimum score for a still frame to be included in a TimeFrame",
+      "type": "number",
+      "default": 0.01,
+      "multivalued": false
+    },
+    {
+      "name": "minTimeframeScore",
+      "description": "Minimum score for a TimeFrame",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "minFrameCount",
+      "description": "Minimum number of sampled frames required for a TimeFrame",
+      "type": "integer",
+      "default": 2,
+      "multivalued": false
+    },
+    {
+      "name": "modelName",
+      "description": "model name to use for classification",
+      "type": "string",
+      "choices": [
+        "20240212-132306.convnext_lg",
+        "20240409-093229.convnext_tiny",
+        "20240409-091401.convnext_lg",
+        "20240126-180026.convnext_lg",
+        "20240212-131937.convnext_tiny"
+      ],
+      "default": "20240409-091401.convnext_lg",
+      "multivalued": false
+    },
+    {
+      "name": "useStitcher",
+      "description": "Use the stitcher after classifying the TimePoints",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "allowOverlap",
+      "description": "Allow overlapping time frames",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "map",
+      "description": "Mapping of a label in the input annotations to a new label. Must be formatted as IN_LABEL:OUT_LABEL (with a colon). To pass multiple mappings, use this parameter multiple times. By default, all the input labels are passed as is, including any negative labels (with default value being no remapping at all). However, when at least one label is remapped, all the other \"unset\" labels are discarded as a negative label.",
+      "type": "map",
+      "default": [
+        "B:bars",
+        "S:slate",
+        "S-H:slate",
+        "S-C:slate",
+        "S-D:slate",
+        "S-G:slate",
+        "W:other_opening",
+        "L:other_opening",
+        "O:other_opening",
+        "M:other_opening",
+        "I:chyron",
+        "N:chyron",
+        "Y:chyron",
+        "C:credit",
+        "R:credit",
+        "E:other_text",
+        "K:other_text",
+        "G:other_text",
+        "T:other_text",
+        "F:other_text"
+      ],
+      "multivalued": true
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
