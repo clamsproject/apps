@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/llava-captioner": {
     "description": "Applies llava to video frames.",
-    "latest_update": "2024-05-23T19:26:17+00:00",
+    "latest_update": "2024-05-23T19:38:32+00:00",
     "versions": [
+      [
+        "v1.1",
+        "kelleyl"
+      ],
       [
         "v1.0",
         "kelleyl"

@@ -1,0 +1,50 @@
+{
+  "name": "Llava Captioner",
+  "description": "Applies llava to video frames.",
+  "app_version": "v1.1",
+  "mmif_version": "1.0.4",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/llava-captioner/v1.1",
+  "url": "https://github.com/clamsproject/app-llava-captioner",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "defaultPrompt",
+      "description": "default prompt to use for timeframes not specified in the promptMap. If set to `-`, timeframes not specified in the promptMap will be skipped.",
+      "type": "string",
+      "default": "What is shown in this video frame?",
+      "multivalued": false
+    },
+    {
+      "name": "promptMap",
+      "description": "mapping of labels of the input timeframe annotations to new prompts. Must be formatted as \"IN_LABEL:PROMPT\" (with a colon). To pass multiple mappings, use this parameter multiple times. By default, any timeframe labels not mapped to a prompt will be used with the defaultprompt. In order to skip timeframes with a particular label, pass `-` as the prompt value.in order to skip all timeframes not specified in the promptMap, set the defaultPromptparameter to `-`",
+      "type": "map",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
