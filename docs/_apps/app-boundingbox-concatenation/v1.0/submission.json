@@ -1,0 +1,6 @@
+{
+  "time": "2024-06-07T15:41:38+00:00",
+  "submitter": "MrSqually",
+  "image": "ghcr.io/clamsproject/app-boundingbox-concatenation:v1.0",
+  "releasenotes": "initial public release of bbox-concat\n\n"
+}

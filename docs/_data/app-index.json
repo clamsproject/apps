@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/app-boundingbox-concatenation": {
+    "description": "Converts a series of bounding-boxes at a given timepoint into a single bounding box.",
+    "latest_update": "2024-06-07T15:41:38+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "MrSqually"
+      ]
+    ]
+  },
   "http://apps.clams.ai/llava-captioner": {
     "description": "Applies llava to video frames.",
     "latest_update": "2024-05-23T19:38:32+00:00",

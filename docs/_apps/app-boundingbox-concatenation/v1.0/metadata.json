@@ -1,0 +1,49 @@
+{
+  "name": "BoundingBox Concatenation",
+  "description": "Converts a series of bounding-boxes at a given timepoint into a single bounding box.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.0",
+  "app_license": "MIT",
+  "identifier": "http://apps.clams.ai/app-boundingbox-concatenation/v1.0",
+  "url": "https://github.com/clamsproject/app-boundingbox-concatenation",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Document/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/BoundingBox/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/BoundingBox/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "timeUnit",
+      "description": "the division of time processing",
+      "type": "string",
+      "choices": [
+        "frames",
+        "seconds",
+        "milliseconds"
+      ],
+      "default": "frames",
+      "multivalued": false
+    },
+    {
+      "name": "boxType",
+      "description": "the type of boxes that are being concatenated",
+      "type": "string",
+      "default": "text",
+      "multivalued": false
+    }
+  ]
+}
