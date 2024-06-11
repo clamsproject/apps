@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/spacy-wrapper": {
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "latest_update": "2024-06-11T12:30:19+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "marcverhagen"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/llava-captioner": {
     "description": "Applies llava to video frames.",
     "latest_update": "2024-05-23T19:38:32+00:00",
@@ -312,20 +330,6 @@
       [
         "v1.0",
         "MrSqually"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spacy-wrapper": {
-    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
-    "latest_update": "2023-07-24T17:39:56+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
       ]
     ]
   },

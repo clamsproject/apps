@@ -1,0 +1,6 @@
+{
+  "time": "2024-06-11T12:30:19+00:00",
+  "submitter": "marcverhagen",
+  "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1.2",
+  "releasenotes": "Bumping Python SDK version, bug fixes and documentation updates\n\n- Updated to clams-python 1.2.2\n- Fixed token length (issue #30)\n- Fixed problems with the pretokenized parameter (issue #32)\n- Various documentation fixes.\n\n"
+}
