@@ -19,6 +19,7 @@ https://github.com/clamsproject/app-wav2vec-forced-aligner,AppStatus.UPDATED,UNK
 https://github.com/clamsproject/app-fewshot-packaged,AppStatus.UPDATED,1.0.3,main,2023-07-31 22:01:01+00:00,2023-07-31 21:02:02+00:00
 https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,AppStatus.UPDATED,UNKNOWN,master,2023-07-24 14:29:22+00:00,2023-07-13 19:10:27+00:00
 https://github.com/clamsproject/app-clipsearch,AppStatus.UPDATED,1.0.7,main,2023-07-20 19:50:12+00:00,2023-06-28 14:21:15+00:00
+https://github.com/clamsproject/app-text-slicer,AppStatus.OUTDATED,1.2.3,main,2024-06-14 02:51:49+00:00,2024-06-14 02:51:08+00:00
 https://github.com/clamsproject/app-boundingbox-concatenation,AppStatus.OUTDATED,1.2.3,main,2024-06-13 13:08:40+00:00,2023-09-26 19:02:03+00:00
 https://github.com/clamsproject/app-role-filler-binder-new,AppStatus.OUTDATED,UNKNOWN,main,2024-06-13 11:18:19+00:00,2024-06-04 14:39:02+00:00
 https://github.com/clamsproject/app-paddleocr-wrapper,AppStatus.OUTDATED,1.2.2,master,2024-06-12 15:22:29+00:00,2024-06-12 15:21:42+00:00
