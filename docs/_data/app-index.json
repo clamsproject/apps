@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/east-textdetection": {
+    "description": "OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.",
+    "latest_update": "2024-06-24T13:52:29+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "MrSqually"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/spacy-wrapper": {
     "description": "Apply spaCy NLP to all text documents in a MMIF file.",
     "latest_update": "2024-06-11T12:30:19+00:00",
@@ -258,20 +276,6 @@
   "http://apps.clams.ai/barsdetection": {
     "description": "This tool detects SMPTE color bars.",
     "latest_update": "2023-07-31T23:31:12+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/east-textdetection": {
-    "description": "OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.",
-    "latest_update": "2023-07-26T19:06:10+00:00",
     "versions": [
       [
         "v1.1",
