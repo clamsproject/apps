@@ -13,12 +13,12 @@ The CLAMS App Directory is a public registry for free and open CLAMS apps, avail
 
 ## What apps can be submitted?
 
-The App Directory accepts submissions of CLAMS apps. The submitted apps don't have to be free and/or open-source (although the CLAMS team prefers them to be, and encourages open-source software development), but they must follow the CLAMS app interface specification.
+The App Directory accepts submissions of CLAMS apps. All submitted apps must follow the CLAMS app interface specification.
 In a nutshell, at the minimum, 
 
-1. The app should be released as a pre-built container image, at a public container registry (e.g., Docker Hub, GitHub Container Registry, etc.)
+1. The app should be released as a pre-built container image, at a public container registry (e.g., Docker Hub, GitHub Container Registry, etc.).
 2. The app should expose an HTTP API that follows [the CLAMS app interface specification](https://clamsproject.github.io/clams-python).
-3. The app developer should provide correct and up-to-date app metadata to be published on the CLAMS App Directory.
+3. The app developer should provide correct and up-to-date app metadata - the app metadata will be the front page for your app. 
 4. The app developer should maintain an issue tracking system on their own. The CLAMS App Directory does not provide issue tracking for the individual apps.
 
 ## How to submit an app?
@@ -54,9 +54,12 @@ More on the git tag.
 
 ### If you are an external contributor (using your own GitHub organization)
 
-If you are an external contributor, you can submit an app to the directory by opening an issue on the App Directory repository.
-Follow the steps above to create a git tag and push it to your app code repository (you can use git commit hash, although it is not recommended for readability).
-Then, open an issue on the App Directory repository. Pick an issue template for app submission, and fill out the form.
+If you are an external contributor, you can submit an app to the directory by manually opening an issue on the App Directory repository.
+
+1. Prepare a git-based reference point for the following step. This reference will be used to _download_ your app code. Your code must provide `metadata.py` script in the project root that generates app metadata JSON string when directly run (`python metadata.py`). 
+   1. Recommended way is to follow the same steps above to create a git tag (annotated tag to include a release note) and push it to your app code repository. 
+   2. Alternative, you can use the git commit hash. This way, you're losing a way to provide a release note. Regardless, it is highly recommended to maintain an external changelog in the app repository.
+2. Then, open an issue on the App Directory repository. **Pick an issue template for app submission**, and fill out the form. ([direct link to the app submission form](https://github.com/clamsproject/apps/issues/new?template=app_submission.md&title=CLAMS+App+Submission))
 
 ## What happens after the submission?
 
