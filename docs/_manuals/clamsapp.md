@@ -1,6 +1,6 @@
 ---
 layout: single 
-title : CLAMS App User Manual
+title: CLAMS App User Manual
 author_profile: true
 toc: true
 toc_sticky: true
