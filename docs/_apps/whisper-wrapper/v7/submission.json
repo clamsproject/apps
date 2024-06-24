@@ -1,0 +1,6 @@
+{
+  "time": "2024-06-24T20:24:22+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v7",
+  "releasenotes": "- Fixed minor typos in parameters\n- Updated to clams-python 1.2.4, and added `cli.py` interface\n\n"
+}

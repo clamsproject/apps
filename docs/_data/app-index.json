@@ -1,4 +1,38 @@
 {
+  "http://apps.clams.ai/whisper-wrapper": {
+    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
+    "latest_update": "2024-06-24T20:24:22+00:00",
+    "versions": [
+      [
+        "v7",
+        "keighrim"
+      ],
+      [
+        "v6",
+        "keighrim"
+      ],
+      [
+        "v5",
+        "keighrim"
+      ],
+      [
+        "v4",
+        "keighrim"
+      ],
+      [
+        "v3",
+        "keighrim"
+      ],
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/east-textdetection": {
     "description": "OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.",
     "latest_update": "2024-06-24T13:52:29+00:00",
@@ -164,36 +198,6 @@
       [
         "v3",
         "kelleyl"
-      ],
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/whisper-wrapper": {
-    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
-    "latest_update": "2024-02-12T19:47:39+00:00",
-    "versions": [
-      [
-        "v6",
-        "keighrim"
-      ],
-      [
-        "v5",
-        "keighrim"
-      ],
-      [
-        "v4",
-        "keighrim"
-      ],
-      [
-        "v3",
-        "keighrim"
       ],
       [
         "v2",
