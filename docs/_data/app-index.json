@@ -1,4 +1,34 @@
 {
+  "http://apps.clams.ai/simple-timepoints-stitcher": {
+    "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
+    "latest_update": "2024-06-26T14:40:00+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.3",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "keighrim"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
     "latest_update": "2024-06-24T20:24:22+00:00",
@@ -135,32 +165,6 @@
     "versions": [
       [
         "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/simple-timepoints-stitcher": {
-    "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
-    "latest_update": "2024-05-06T16:13:55+00:00",
-    "versions": [
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.3",
         "keighrim"
       ],
       [
