@@ -1,0 +1,6 @@
+{
+  "time": "2024-06-26T14:40:00+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.1",
+  "releasenotes": "Minor release with updated SDK version and updated label mapping for compatibility with RFB and newer SWT.\n\n"
+}
