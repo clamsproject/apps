@@ -122,12 +122,13 @@ jobs:
       - name: "💉 Install clams sdk"
         working-directory: ./app
         run: |
-          for f in requirements.*; do pip install -r ${f}; done 
+          pip install $(grep clams-python requirements.* | sort -r | head -n1)
           
       - name: "🏷 Generate app metadata"
         working-directory: ./app
         run: |
-          python ./metadata.py > ../main/metadata.json
+          # echo first try to run metadata.py without full dependency install, then install the full dependencies when it fails
+          python ./metadata.py > ../main/metadata.json || for f in requirements.*; do pip install -r ${f}; done && python ./metadata.py > ../main/metadata.json
           echo "{\"time\": \"$(date -Iseconds)\", \
             \"submitter\": \"${{ github.actor }}\", \
             \"image\": \"${{ needs.trigger.outputs.appcontainer }}\", \
