@@ -76,7 +76,7 @@ for r in o.get_repos():
                 #  print(r.name, line, ver_m)
                 if ver_m is not None:
                     ver = ver_m.group(0)
-                if '1.0.' in line:
+                if '==1.' in line:
                     if r.html_url in registered_repos:
                         status = AppStatus.REGISTERED
                     else:
