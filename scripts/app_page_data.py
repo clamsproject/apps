@@ -1,15 +1,17 @@
 import os
 import json
+import datetime
 
-directory = '../docs/_apps'
+app_par_dir = os.path.join(os.path.dirname(__file__), '..', 'docs', '_apps')
 
-apps = [app for app in os.listdir(directory) if os.path.isdir(os.path.join(directory, app)) and not app.startswith('_')]
+apps = [app for app in os.listdir(app_par_dir) if os.path.isdir(os.path.join(app_par_dir, app)) and not app.startswith('_')]
 
 for app in apps:
-    app_dir = os.path.join(directory, app)
+    app_dir = os.path.join(app_par_dir, app)
     app_vers = [app_ver for app_ver in os.listdir(app_dir) if os.path.isdir(os.path.join(app_dir, app_ver))]
-    sorted_app_info = sorted([app_ver.lstrip('v') for app_ver in app_vers], reverse=True)  # sort versions from latest to earliest
-    app_info_dict = {'v' + app_ver: tuple() for app_ver in sorted_app_info}
+    app_submitters = dict()
+    app_descriptions = {app_ver: tuple() for app_ver in app_vers}
+    app_vers_sorted = list()
     for app_ver in app_vers:
         app_ver_dir = os.path.join(app_dir, app_ver)
         json_files = [json_file for json_file in os.listdir(app_ver_dir) if json_file[-5:] == '.json']
@@ -18,31 +20,36 @@ for app in apps:
             if json_file == 'metadata.json':
                 with open(json_file_path) as metadata_file:
                     metadata = json.load(metadata_file)
-                    title = metadata['name']
+                    app_title = metadata['name']
                     ver_num = metadata['app_version']
-                    if ver_num.lstrip('v') == sorted_app_info[0]:
-                        description = metadata['description']  # get description for the latest app version
+                    app_descriptions[app_ver] = metadata['description']
             elif json_file == 'submission.json':
                 with open(json_file_path) as submission_file:
-                    submission = json.load(submission_file)
-                    submitter = submission['submitter']
+                    app_submission = json.load(submission_file)
+                    app_submitter = app_submission['submitter']
+                    submission_time = app_submission['time']
+                    app_submitters[app_ver] = app_submitter
+                    app_vers_sorted.append({'app_ver': app_ver, 'submission_time': submission_time})
 
-        app_info_dict[app_ver] = (ver_num, submitter)
+    app_vers_sorted.sort(key=lambda x: x['submission_time'], reverse=True)
+    app_description = app_descriptions[app_vers_sorted[0]['app_ver']]
 
-    file_name = os.path.join(directory, app, 'index.md')
+    file_name = os.path.join(app_par_dir, app, 'index.md')
 
     f = open(file_name, "w")
 
     f.write('---\n')
     f.write("layout: posts\n")
     f.write("classes: wide\n")
-    f.write(f"title: {title}\n")
+    f.write(f"title: {app_title}\n")
     f.write("---\n")
-    f.write(f"{description}\n")
+    f.write(f"{app_description}\n")
 
-    for app_info in app_info_dict:
-        ver_num = app_info_dict[app_info][0]
-        submitter = app_info_dict[app_info][1]
-        f.write(f"- [{ver_num}](http://apps.clams.ai/{app}/{ver_num}) ([`{submitter}`](https://github.com/{submitter}))\n")
+    clams_url = "{{ url }}"
+
+    for app_ver in app_vers_sorted:
+        ver_num = app_ver['app_ver']
+        app_submitter = app_submitters[ver_num]
+        f.write(f"- [{ver_num}]({clams_url}/{app}/{ver_num}) ([`{app_submitter}`](https://github.com/{app_submitter}))\n")
 
     f.close()
