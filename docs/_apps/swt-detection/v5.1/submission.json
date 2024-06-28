@@ -1,0 +1,6 @@
+{
+  "time": "2024-06-28T02:03:53+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v5.1",
+  "releasenotes": "Fixed [subtype-label bug](https://github.com/clamsproject/app-swt-detection/issues/102) and ...\n\n- updating to clams-python 1.2.5,\n- replaced cli.py with the one in the SDK to ensure consistency with other CLAMS apps\n- added \"full train\" mode for trainer script to use all available data for training, without any validation at the train time\n- refactor to declutter inter-dependency between app.py, Classifier, and Stitcher classes\n- removed CLI in classifier.py, since app.py and cli.py can complete replace its functionality\n\n"
+}
