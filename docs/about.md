@@ -1,9 +1,10 @@
 ---
 layout: single
-author_profile: true
 title: About
+author_profile: true
+toc: true
+toc_sticky: true
 permalink: /about/
 ---
 
-CLAMS App Directory is a public registry for free and open CLAMS apps.
-
+{% remote_include https://raw.githubusercontent.com/clamsproject/apps/main/README.md %}
