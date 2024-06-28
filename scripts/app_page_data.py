@@ -1,6 +1,5 @@
 import os
 import json
-import datetime
 
 app_par_dir = os.path.join(os.path.dirname(__file__), '..', 'docs', '_apps')
 
