@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/text-slicer": {
+    "description": "Slice text snippets from a provided text document given time frames",
+    "latest_update": "2024-07-02T01:30:06+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "bohJiang12"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
     "latest_update": "2024-06-28T02:03:53+00:00",

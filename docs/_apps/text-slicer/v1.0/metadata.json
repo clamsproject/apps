@@ -1,0 +1,42 @@
+{
+  "name": "Text Slicer",
+  "description": "Slice text snippets from a provided text document given time frames",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.5",
+  "app_license": "Apache2",
+  "identifier": "http://apps.clams.ai/text-slicer/v1.0",
+  "url": "https://github.com/clamsproject/app-text-slicer",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "containLabel",
+      "description": "A list of labels that user expect TimeFrames contain.\nLabels can be chosen from but not limited to:\n['bars', 'tones', 'bars-and-tones','speech','noise',\n 'music', 'slate', 'chyron', 'lower-third', 'credits']\nUsers are required to select at least one label. Otherwise, errors would be thrown instead",
+      "type": "string",
+      "multivalued": true
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
