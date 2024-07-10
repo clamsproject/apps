@@ -1,6 +1,6 @@
 repo,status,SDK-ver,main_branch,last_commit,start_date
+https://github.com/clamsproject/app-swt-detection,AppStatus.REGISTERED,1.2.5,main,2024-07-10 18:22:28+00:00,2023-09-21 12:39:30+00:00
 https://github.com/clamsproject/app-llava-captioner,AppStatus.REGISTERED,1.2.2,main,2024-07-08 18:29:54+00:00,2024-05-21 14:51:24+00:00
-https://github.com/clamsproject/app-swt-detection,AppStatus.REGISTERED,1.2.5,main,2024-07-03 23:32:19+00:00,2023-09-21 12:39:30+00:00
 https://github.com/clamsproject/app-text-slicer,AppStatus.REGISTERED,1.2.5,main,2024-07-01 16:22:38+00:00,2024-06-14 02:51:08+00:00
 https://github.com/clamsproject/app-east-textdetection,AppStatus.REGISTERED,1.2.5,main,2024-06-28 17:13:54+00:00,2019-05-30 19:12:16+00:00
 https://github.com/clamsproject/app-whisper-wrapper,AppStatus.REGISTERED,1.2.4,main,2024-06-24 20:19:23+00:00,2022-10-27 14:49:15+00:00
