@@ -1,4 +1,26 @@
 {
+  "http://apps.clams.ai/spacy-wrapper": {
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "latest_update": "2024-07-16T16:49:38+00:00",
+    "versions": [
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "marcverhagen"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/text-slicer": {
     "description": "Slice text snippets from a provided text document given time frames",
     "latest_update": "2024-07-02T01:30:06+00:00",
@@ -137,24 +159,6 @@
       ],
       [
         "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spacy-wrapper": {
-    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
-    "latest_update": "2024-06-11T12:30:19+00:00",
-    "versions": [
-      [
-        "v1.2",
-        "marcverhagen"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1",
         "keighrim"
       ]
     ]
