@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/easyocr-wrapper": {
+    "description": "Using EasyOCR to extract text from timeframes",
+    "latest_update": "2024-07-16T20:47:12+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "kelleyl"
+      ],
+      [
+        "v1.1",
+        "snewman-aa"
+      ],
+      [
+        "v1.0",
+        "snewman-aa"
+      ]
+    ]
+  },
   "http://apps.clams.ai/spacy-wrapper": {
     "description": "Apply spaCy NLP to all text documents in a MMIF file.",
     "latest_update": "2024-07-16T16:49:38+00:00",
@@ -228,20 +246,6 @@
       [
         "v1",
         "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/easyocr-wrapper": {
-    "description": "Using EasyOCR to extract text from timeframes",
-    "latest_update": "2024-01-30T19:59:06+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "snewman-aa"
-      ],
-      [
-        "v1.0",
-        "snewman-aa"
       ]
     ]
   },
