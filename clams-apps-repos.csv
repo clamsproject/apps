@@ -1,4 +1,5 @@
 repo,status,SDK-ver,main_branch,last_commit,start_date
+https://github.com/clamsproject/app-easyocr-wrapper,AppStatus.REGISTERED,1.2.6,main,2024-07-16 20:40:12+00:00,2023-07-24 19:12:12+00:00
 https://github.com/clamsproject/app-spacy-wrapper,AppStatus.REGISTERED,1.2.6,main,2024-07-16 16:46:52+00:00,2019-12-04 19:41:41+00:00
 https://github.com/clamsproject/app-swt-detection,AppStatus.REGISTERED,1.2.5,main,2024-07-13 21:54:39+00:00,2023-09-21 12:39:30+00:00
 https://github.com/clamsproject/app-llava-captioner,AppStatus.REGISTERED,1.2.2,main,2024-07-08 18:29:54+00:00,2024-05-21 14:51:24+00:00
@@ -10,7 +11,6 @@ https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,AppStatus.REGISTE
 https://github.com/clamsproject/app-simple-timepoints-stitcher,AppStatus.REGISTERED,1.2.1,main,2024-05-06 16:04:34+00:00,2024-04-01 01:34:24+00:00
 https://github.com/clamsproject/app-doctr-wrapper,AppStatus.REGISTERED,1.2.1,main,2024-04-23 15:49:27+00:00,2024-02-01 21:59:43+00:00
 https://github.com/clamsproject/app-pyscenedetect-wrapper,AppStatus.REGISTERED,1.1.3,main,2024-03-11 17:36:14+00:00,2019-08-21 01:24:46+00:00
-https://github.com/clamsproject/app-easyocr-wrapper,AppStatus.REGISTERED,1.0.9,main,2024-02-27 19:44:46+00:00,2023-07-24 19:12:12+00:00
 https://github.com/clamsproject/app-fewshotclassifier,AppStatus.REGISTERED,1.0.9,main,2023-08-01 22:35:56+00:00,2023-06-07 16:00:38+00:00
 https://github.com/clamsproject/app-barsdetection,AppStatus.REGISTERED,1.0.9,main,2023-07-31 23:28:11+00:00,2019-05-30 18:51:00+00:00
 https://github.com/clamsproject/app-parseqocr-wrapper,AppStatus.REGISTERED,1.0.9,main,2023-07-25 23:56:57+00:00,2023-03-08 19:06:52+00:00
