@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/distil-whisper-wrapper": {
+    "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
+    "latest_update": "2024-07-17T22:27:16+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "1192119703jzx"
+      ]
+    ]
+  },
   "http://apps.clams.ai/spacy-wrapper": {
     "description": "Apply spaCy NLP to all text documents in a MMIF file.",
     "latest_update": "2024-07-16T16:49:38+00:00",
