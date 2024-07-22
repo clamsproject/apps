@@ -1,4 +1,18 @@
 {
+  "http://apps.clams.ai/distil-whisper-wrapper": {
+    "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
+    "latest_update": "2024-07-22T21:52:47+00:00",
+    "versions": [
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "1192119703jzx"
+      ]
+    ]
+  },
   "http://apps.clams.ai/tfidf-keywordextractor": {
     "description": "extract keywords of a text document according to TF-IDF values. IDF values and all features come from related pickle files in the current directory.App can either take a simple text document or take a MMIF file generated from the text slicer app.",
     "latest_update": "2024-07-19T14:07:21+00:00",
@@ -6,16 +20,6 @@
       [
         "v1.0",
         "selenasong"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/distil-whisper-wrapper": {
-    "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
-    "latest_update": "2024-07-18T19:15:59+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "1192119703jzx"
       ]
     ]
   },
