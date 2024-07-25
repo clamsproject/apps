@@ -1,0 +1,6 @@
+{
+  "time": "2024-07-25T16:11:42+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v6.0",
+  "releasenotes": "- updated to the latest SDK (adding some runtime recording params)\n- added `usePosModel` param to toggle positional encoding\n- general re-implementation and bugfix for positional encoding\n\n"
+}
