@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
-    "latest_update": "2024-06-28T02:03:53+00:00",
+    "latest_update": "2024-07-25T16:11:42+00:00",
     "versions": [
+      [
+        "v6.0",
+        "keighrim"
+      ],
       [
         "v5.1",
         "keighrim"
@@ -49,40 +53,14 @@
       ]
     ]
   },
-  "http://apps.clams.ai/simple-timepoints-stitcher": {
-    "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
-    "latest_update": "2024-06-26T14:40:00+00:00",
-    "versions": [
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.3",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
-    "latest_update": "2024-06-24T20:24:22+00:00",
+    "latest_update": "2024-07-22T21:53:49+00:00",
     "versions": [
+      [
+        "v8",
+        "keighrim"
+      ],
       [
         "v7",
         "keighrim"
@@ -113,6 +91,92 @@
       ]
     ]
   },
+  "http://apps.clams.ai/distil-whisper-wrapper": {
+    "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
+    "latest_update": "2024-07-22T21:52:47+00:00",
+    "versions": [
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "1192119703jzx"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/tfidf-keywordextractor": {
+    "description": "extract keywords of a text document according to TF-IDF values. IDF values and all features come from related pickle files in the current directory.App can either take a simple text document or take a MMIF file generated from the text slicer app.",
+    "latest_update": "2024-07-19T14:07:21+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "selenasong"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/spacy-wrapper": {
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "latest_update": "2024-07-16T16:49:38+00:00",
+    "versions": [
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "marcverhagen"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/text-slicer": {
+    "description": "Slice text snippets from a provided text document given time frames",
+    "latest_update": "2024-07-02T01:30:06+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "bohJiang12"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/simple-timepoints-stitcher": {
+    "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
+    "latest_update": "2024-06-26T14:40:00+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.3",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "keighrim"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/east-textdetection": {
     "description": "OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.",
     "latest_update": "2024-06-24T13:52:29+00:00",
@@ -127,24 +191,6 @@
       ],
       [
         "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spacy-wrapper": {
-    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
-    "latest_update": "2024-06-11T12:30:19+00:00",
-    "versions": [
-      [
-        "v1.2",
-        "marcverhagen"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1",
         "keighrim"
       ]
     ]

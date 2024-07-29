@@ -1,0 +1,76 @@
+{
+  "name": "Distil Whisper Wrapper",
+  "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.4",
+  "analyzer_version": "1.0",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/distil-whisper-wrapper/v1.0",
+  "url": "https://github.com/clamsproject/app-distil-whisper-wrapper",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "description": "Fully serialized text content of the recognized text in the input audio/video.",
+      "properties": {
+        "@lang": "en"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1",
+      "description": "Alignments between 1) `TimeFrame` <-> `SENTENCE`, 2) `audio/video document` <-> `TextDocument`"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Sentence",
+      "description": "The smallest recognized unit of distil-whisper. Normally a complete sentence."
+    }
+  ],
+  "parameters": [
+    {
+      "name": "modelSize",
+      "description": "The size of the model to use. There are four size of model to use distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. You can also enter the abbreviation of the model as parameter. 'small' and 's' for distil-small.en; 'medium' and  'm' for distil-medium.en; 'large-v2' and 'l2' for distil-large-v2; 'large-v3' and 'l3' for distil-large-v3. The default model is distil-medium.en.)",
+      "type": "string",
+      "choices": [
+        "distil-large-v3",
+        "distil-large-v2",
+        "distil-medium.en",
+        "distil-small.en",
+        "small",
+        "s",
+        "medium",
+        "m",
+        "large-v2",
+        "l2",
+        "large-v3",
+        "l3"
+      ],
+      "default": "distil-small.en",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}

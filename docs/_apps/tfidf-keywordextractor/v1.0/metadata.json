@@ -1,0 +1,46 @@
+{
+  "name": "Tfidf Keywordextractor",
+  "description": "extract keywords of a text document according to TF-IDF values. IDF values and all features come from related pickle files in the current directory.App can either take a simple text document or take a MMIF file generated from the text slicer app.",
+  "app_version": "v1.0",
+  "mmif_version": "1.0.5",
+  "analyzer_version": "",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "",
+  "identifier": "http://apps.clams.ai/tfidf-keywordextractor/v1.0",
+  "url": "https://github.com/clamsproject/app-tfidf-keywordextractor",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "description": "Default property 'text' stores the extracted keywords (string). Added property 'scores' stores keywords' TF-IDF values (float).",
+      "properties": {
+        "text": "keywords",
+        "scores": "tfidf scores"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "topN",
+      "description": "top n keywords to extract from the current textfile.",
+      "type": "integer",
+      "default": 10,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
