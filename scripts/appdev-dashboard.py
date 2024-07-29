@@ -56,6 +56,10 @@ app_repos = []
 app_json = json.loads(urllib.request.urlopen('https://raw.githubusercontent.com/clamsproject/apps/main/docs/_data/apps.json').read().decode('utf8'))
 registered_repos = set(app['url'] for app in app_json)
 sys.stdout.write('repo,status,SDK-ver,main_branch,last_commit,start_date\n')
+latest_sdk_ver = json.loads(urllib.request.urlopen(
+    'https://api.github.com/repos/clamsproject/clams-python/tags?per_page=1'
+).read().decode('utf8'))[0]['name']
+lmjr, lmnr, _ = list(map(int, latest_sdk_ver.split('.')))
 for r in o.get_repos():
     if r.name.startswith('app-'):
         res = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/main/requirements.txt')
@@ -69,6 +73,7 @@ for r in o.get_repos():
         req = res.text
         # print(req)
         ver = 'UNKNOWN'
+        mjr = mnr = 0
         for line in req.split('\n'):
             # print(line)
             if 'clams-python' in line and not line.startswith('#'):
@@ -76,7 +81,8 @@ for r in o.get_repos():
                 #  print(r.name, line, ver_m)
                 if ver_m is not None:
                     ver = ver_m.group(0)
-                if '==1.' in line:
+                    mjr, mnr, _ = list(map(int, ver.split('.')))
+                if mjr >= lmjr and mnr >= lmnr:
                     if r.html_url in registered_repos:
                         status = AppStatus.REGISTERED
                     else:
