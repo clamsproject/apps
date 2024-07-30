@@ -1,0 +1,6 @@
+{
+  "time": "2024-07-30T01:06:00+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v6.1",
+  "releasenotes": "SDK update to fix warning view bugs\n\n"
+}
