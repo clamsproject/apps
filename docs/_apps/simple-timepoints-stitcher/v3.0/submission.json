@@ -1,0 +1,6 @@
+{
+  "time": "2024-08-06T12:25:05+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v3.0",
+  "releasenotes": "Now can filter overlapping time frames\n\n- via `allowOverlap` parameter (default is true to keep the backward compatibility)\n- the filtering algorithm (based on https://github.com/clamsproject/app-swt-detection/blob/5092274d1ead64f21e0e3c2bbb7aa3ad4db75cd4/modeling/stitch.py#L88-L104)\n    - sort collected positive TP sequences based on their mean scores, regardless of the labels\n    - loop through the sorted seqs, if a seq in the loop does not include any \"seen\" TP, mark the seq as \"final\" and mark all the underlying TPs as \"seen\", otherwise skip that one.\n    - return the \"final\" frames, re-sorted by the start TPs\n\n"
+}
