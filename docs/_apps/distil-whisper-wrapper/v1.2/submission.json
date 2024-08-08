@@ -1,0 +1,6 @@
+{
+  "time": "2024-08-08T15:48:34+00:00",
+  "submitter": "BenLambright",
+  "image": "ghcr.io/clamsproject/app-distil-whisper-wrapper:v1.2",
+  "releasenotes": "reverting back to HF pipeline using chunking transcription\n\n"
+}

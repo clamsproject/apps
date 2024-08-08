@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/distil-whisper-wrapper": {
+    "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
+    "latest_update": "2024-08-08T15:48:34+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "BenLambright"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "1192119703jzx"
+      ]
+    ]
+  },
   "http://apps.clams.ai/simple-timepoints-stitcher": {
     "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
     "latest_update": "2024-08-06T12:25:05+00:00",
@@ -126,20 +144,6 @@
       [
         "v1",
         "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/distil-whisper-wrapper": {
-    "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
-    "latest_update": "2024-07-22T21:52:47+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "1192119703jzx"
       ]
     ]
   },
