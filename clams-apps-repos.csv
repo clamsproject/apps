@@ -3,7 +3,7 @@ https://github.com/clamsproject/app-distil-whisper-wrapper,AppStatus.REGISTERED,
 https://github.com/clamsproject/app-simple-timepoints-stitcher,AppStatus.REGISTERED,1.3.1,main,2024-08-06 12:17:47+00:00,2024-04-01 01:34:24+00:00
 https://github.com/clamsproject/app-swt-detection,AppStatus.REGISTERED,1.3.1,main,2024-07-30 00:42:47+00:00,2023-09-21 12:39:30+00:00
 https://github.com/clamsproject/app-whisper-wrapper,AppStatus.REGISTERED,1.3.0,main,2024-07-22 21:22:28+00:00,2022-10-27 14:49:15+00:00
-https://github.com/clamsproject/app-dswt-reader,AppStatus.UPDATED,1.3.0,main,2024-08-13 02:30:25+00:00,2024-07-23 14:14:36+00:00
+https://github.com/clamsproject/app-dswt-reader,AppStatus.UPDATED,1.3.0,main,2024-08-13 02:34:31+00:00,2024-07-23 14:14:36+00:00
 https://github.com/clamsproject/app-gensim-tm-keywordextractor,AppStatus.OUTDATED,1.2.6,master,2024-07-25 15:46:59+00:00,2024-07-24 18:52:38+00:00
 https://github.com/clamsproject/app-tfidf-keywordextractor,AppStatus.OUTDATED,1.2.6,main,2024-07-19 14:04:01+00:00,2024-06-17 16:22:42+00:00
 https://github.com/clamsproject/app-faster-whisper-wrapper,AppStatus.OUTDATED,1.2.4,main,2024-07-17 18:24:27+00:00,2024-07-17 17:54:39+00:00
