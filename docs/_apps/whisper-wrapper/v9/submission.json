@@ -1,0 +1,6 @@
+{
+  "time": "2024-08-16T15:05:09+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v9",
+  "releasenotes": "fixed inability to handle concurrent requests\n\n"
+}
