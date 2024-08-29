@@ -1,0 +1,6 @@
+{
+  "time": "2024-08-29T22:13:54+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v10",
+  "releasenotes": "This version adds some delegation parameters to whisper.transcribe\n\n- `task`: delegate to `--task`\n- `initialPrompt`: delegate to `--initial-prompt`\n- `conditionOnPreviousText`: delegate to `--condition-on-previous-text`\n- `noSpeechThreshold`: delegate to `--no-speech-threshold`\n\n"
+}

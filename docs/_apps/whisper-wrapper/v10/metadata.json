@@ -1,0 +1,128 @@
+{
+  "name": "Whisper Wrapper",
+  "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
+  "app_version": "v10",
+  "mmif_version": "1.0.5",
+  "analyzer_version": "20231117",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/whisper-wrapper/v10",
+  "url": "https://github.com/clamsproject/app-whisper-wrapper",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Sentence"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "modelSize",
+      "description": "The size of the model to use. When `modelLang=en` is given, for non-`large` models, English-only models will be used instead of multilingual models for speed and accuracy. (For `large` models, English-only models are not available.) (also can be given as alias: tiny=t, base=b, small=s, medium=m, large=l, large-v2=l2, large-v3=l3)",
+      "type": "string",
+      "choices": [
+        "tiny",
+        true,
+        "base",
+        "b",
+        "small",
+        "s",
+        "medium",
+        "m",
+        "large",
+        "l",
+        "large-v2",
+        "l2",
+        "large-v3",
+        "l3"
+      ],
+      "default": "tiny",
+      "multivalued": false
+    },
+    {
+      "name": "modelLang",
+      "description": "Language of the model to use, accepts two- or three-letter ISO 639 language codes, however Whisper only supports a subset of languages. If the language is not supported, error will be raised.For the full list of supported languages, see https://github.com/openai/whisper/blob/20231117/whisper/tokenizer.py . In addition to the langauge code, two-letter region codes can be added to the language code, e.g. \"en-US\" for US English. Note that the region code is only for compatibility and recording purpose, and Whisper neither detects regional dialects, nor use the given one for transcription. When the langauge code is not given, Whisper will run in langauge detection mode, and will use first few seconds of the audio to detect the language.",
+      "type": "string",
+      "default": "",
+      "multivalued": false
+    },
+    {
+      "name": "task",
+      "description": "(from whisper CLI) whether to perform X->X speech recognition ('transcribe') or X->English translation ('translate')",
+      "type": "string",
+      "choices": [
+        "transcribe",
+        "translate"
+      ],
+      "default": "transcribe",
+      "multivalued": false
+    },
+    {
+      "name": "initialPrompt",
+      "description": "(from whisper CLI) optional text to provide as a prompt for the first window.",
+      "type": "string",
+      "default": "",
+      "multivalued": false
+    },
+    {
+      "name": "conditionOnPreviousText",
+      "description": "(from whisper CLI) if True, provide the previous output of the model as a prompt for the next window; disabling may make the text inconsistent across windows, but the model becomes less prone to getting stuck in a failure loop",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "noSpeechThreshold",
+      "description": "(from whisper CLI) if the probability of the <|nospeech|> token is higher than this value AND the decoding has failed due to `logprob_threshold`, consider the segment as silence",
+      "type": "number",
+      "default": 0.6,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
