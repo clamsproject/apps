@@ -26,8 +26,7 @@ date: 2024-02-07T21:18:36+00:00
 (**Note**: "*" as a property value means that the property is required but can be any value.)
 
 - [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 
 

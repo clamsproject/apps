@@ -34,12 +34,10 @@ date: 2024-02-09T12:28:02+00:00
 
 One of the following is required: [
 - [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 
 
@@ -57,7 +55,7 @@ One of the following is required: [
 
 
     > The size of the model to use. Can be "tiny", "base", "small", "medium", or "large".
-- `modelLang`: required
+- `modelLang`: optional, defaults to `""`
 
     - Type: string
     - Multivalued: False
@@ -80,21 +78,17 @@ One of the following is required: [
 (**Note**: Not all output annotations are always generated.)
 
 - [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1)
     - _timeUnit_ = "millisecond"
 
 - [http://mmif.clams.ai/vocabulary/Alignment/v1](http://mmif.clams.ai/vocabulary/Alignment/v1)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/Sentence](http://vocab.lappsgrid.org/Sentence)
-
- (any properties)
+(of any properties)
 

@@ -51,7 +51,7 @@ One of the following is required: [
 
 
     > The size of the model to use. When `modelLang=en` is given, for non-`large` models, English-only models will be used instead of multilingual models for speed and accuracy. (For `large` models, English-only models are not available.)
-- `modelLang`: required
+- `modelLang`: optional, defaults to `""`
 
     - Type: string
     - Multivalued: False

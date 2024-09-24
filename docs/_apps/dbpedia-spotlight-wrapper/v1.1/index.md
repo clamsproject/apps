@@ -28,8 +28,7 @@ date: 2023-07-25T01:22:48+00:00
 (**Note**: "*" as a property value means that the property is required but can be any value.)
 
 - [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 
 
@@ -81,6 +80,5 @@ date: 2023-07-25T01:22:48+00:00
 (**Note**: Not all output annotations are always generated.)
 
 - [http://vocab.lappsgrid.org/NamedEntity](http://vocab.lappsgrid.org/NamedEntity)
-
- (any properties)
+(of any properties)
 

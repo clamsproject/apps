@@ -28,19 +28,16 @@ date: 2023-07-24T20:01:10+00:00
 (**Note**: "*" as a property value means that the property is required but can be any value.)
 
 - [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1)
     - _frameType_ = "speech"
 
 - [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token)
-
- (any properties)
+(of any properties)
 
 
 
@@ -79,14 +76,12 @@ date: 2023-07-24T20:01:10+00:00
 (**Note**: Not all output annotations are always generated.)
 
 - [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1)
     - _frameType_ = "speech"
     - _timeUnit_ = "milliseconds"
 
 - [http://mmif.clams.ai/vocabulary/Alignment/v1](http://mmif.clams.ai/vocabulary/Alignment/v1)
-
- (any properties)
+(of any properties)
 
