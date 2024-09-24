@@ -5,16 +5,6 @@ import string
 import sys
 from pathlib import Path
 
-if len(sys.argv) > 1:
-    cwd = Path(sys.argv[1])
-    if not cwd.exists():
-        print(f'Path {cwd} does not exist.')
-        sys.exit(1)
-    out_f = open(cwd / 'index.md', 'w')
-else:
-    cwd = Path.cwd()
-    out_f = sys.stdout
-
 asterisk_note = '"*" as a property value means that the property is required but can be any value.'
 multivalued_note = "_Multivalued_ means the parameter can have one or more values."
 app_template = """
@@ -47,6 +37,14 @@ indentation = '    '
 
 
 def convert_to_markdown(app_metadata, submission_metadata):
+    # fill in some dummy values when submission_metadata isn't available
+    if len(submission_metadata) == 0:
+        submission_metadata = {
+            'submitter': 'n/a',
+            'time': 'n/a',
+            'image': 'n/a',
+            'releasenotes': 'n/a'
+        }
     markdown = io.StringIO()
 
     def markdown_link(url):
@@ -109,6 +107,8 @@ def convert_to_markdown(app_metadata, submission_metadata):
                     default_value = str(param_spec['default']).lower()
                 else:
                     default_value = 'true'
+            elif param_spec['type'] == 'string' and param_spec['default'] == '':
+                default_value = '""'
             else:
                 default_value = param_spec['default']
         else:
@@ -161,14 +161,22 @@ def convert_to_markdown(app_metadata, submission_metadata):
     return markdown
 
 
-def main(directory_w_metadata=None):
-    if directory_w_metadata is not None:
-        cwd = Path(directory_w_metadata)
-        out_f = open(cwd / 'index.md', 'w')
+def main(metadata_files=None):
+    if metadata_files is not None:
+        cwd = Path(metadata_files)
+        if not cwd.exists():
+            print(f'Path {cwd} does not exist.')
+            sys.exit(1)
+        elif cwd.is_dir():
+            app_metadata = json.load(open(cwd / 'metadata.json'))
+            out_f = open(cwd / 'index.md', 'w')
+        else:
+            app_metadata = json.load(open(cwd))
+            out_f = sys.stdout
     else:
         cwd = Path.cwd()
+        app_metadata = json.load(open(cwd / 'metadata.json'))
         out_f = sys.stdout
-    app_metadata = json.load(open(cwd / 'metadata.json'))
     submission_metadata = {}
     if (cwd / 'submission.json').exists():
         submission_metadata = json.load(open(cwd / 'submission.json'))
