@@ -29,12 +29,10 @@ date: 2023-06-14T00:42:26+00:00
 
 One of the following is required: [
 - [http://mmif.clams.ai/vocabulary/AudioDocument/v1](http://mmif.clams.ai/vocabulary/AudioDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 
 
@@ -60,17 +58,14 @@ One of the following is required: [
 (**Note**: Not all output annotations are always generated.)
 
 - [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1)
     - _timeUnit_ = "milliseconds"
 
 - [http://mmif.clams.ai/vocabulary/Alignment/v1](http://mmif.clams.ai/vocabulary/Alignment/v1)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token)
-
- (any properties)
+(of any properties)
 

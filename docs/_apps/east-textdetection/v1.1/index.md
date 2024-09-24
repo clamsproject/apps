@@ -27,19 +27,16 @@ date: 2023-07-26T19:06:10+00:00
 
 One of the following is required: [
 - [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/ImageDocument/v1](http://mmif.clams.ai/vocabulary/ImageDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 
 
 ]
 - [http://mmif.clams.ai/vocabulary/TimeFrame/v1](http://mmif.clams.ai/vocabulary/TimeFrame/v1)
-
- (any properties)
+(of any properties)
 
 
 
@@ -54,11 +51,11 @@ One of the following is required: [
 
 
     > Unit for time points in the output. Only works with VideoDocument input.
-- `frameType`: required
+- `frameType`: optional, defaults to `""`
 
     - Type: string
     - Multivalued: True
-    - Choices: **_``_**, `slate`, `chyron`, `rolling-credit`
+    - Choices: ``, `slate`, `chyron`, `rolling-credit`
 
 
     > Segments of video to run on. Only works with VideoDocument input and TimeFrame input. Empty value means run on the every frame types.

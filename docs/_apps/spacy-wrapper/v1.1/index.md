@@ -28,12 +28,10 @@ date: 2023-07-24T17:39:56+00:00
 (**Note**: "*" as a property value means that the property is required but can be any value.)
 
 - [http://mmif.clams.ai/vocabulary/TextDocument/v1](http://mmif.clams.ai/vocabulary/TextDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token)
-
- (any properties)
+(of any properties)
 
 
 
@@ -64,26 +62,20 @@ date: 2023-07-24T17:39:56+00:00
 (**Note**: Not all output annotations are always generated.)
 
 - [http://vocab.lappsgrid.org/Token](http://vocab.lappsgrid.org/Token)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/Token#pos](http://vocab.lappsgrid.org/Token#pos)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/Token#lemma](http://vocab.lappsgrid.org/Token#lemma)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/NounChunk](http://vocab.lappsgrid.org/NounChunk)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/Sentence](http://vocab.lappsgrid.org/Sentence)
-
- (any properties)
+(of any properties)
 
 - [http://vocab.lappsgrid.org/NamedEntity](http://vocab.lappsgrid.org/NamedEntity)
-
- (any properties)
+(of any properties)
 

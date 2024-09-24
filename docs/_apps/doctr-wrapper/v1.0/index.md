@@ -28,8 +28,7 @@ date: 2024-04-22T18:46:07+00:00
 (**Note**: "*" as a property value means that the property is required but can be any value.)
 
 - [http://mmif.clams.ai/vocabulary/VideoDocument/v1](http://mmif.clams.ai/vocabulary/VideoDocument/v1) (required)
-
- (any properties)
+(of any properties)
 
 - [http://mmif.clams.ai/vocabulary/TimeFrame/v5](http://mmif.clams.ai/vocabulary/TimeFrame/v5) (required)
     - _representatives_ = "?"
@@ -80,8 +79,7 @@ date: 2024-04-22T18:46:07+00:00
 
     > Translation of the recognized docTR "blocks" in the input images. `text` property stores the string value of newline-joined sentences.
 - [http://mmif.clams.ai/vocabulary/Alignment/v1](http://mmif.clams.ai/vocabulary/Alignment/v1)
-
- (any properties)
+(of any properties)
 
     > Alignments between 1) `TimePoint` <-> `TextDocument`, 2) `TimePoint` <-> `Token`/`Sentence`/`Paragraph`, 3) `BoundingBox` <-> `Token`/`Sentence`/`Paragraph`
 - [http://mmif.clams.ai/vocabulary/BoundingBox/v4](http://mmif.clams.ai/vocabulary/BoundingBox/v4)
