@@ -1,0 +1,6 @@
+{
+  "time": "2024-10-01T19:15:40+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v11",
+  "releasenotes": "- Now based on whisper 240930 version with support of `turbo` model\n- Beam search size is set to 5 for the decoder, following the `whisper` command's default\n- (temporarily) Disabled multiprocessing web app via gunicorn and fell back to flask built-in to work around CUDA memory issue\n\n"
+}
