@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
-    "latest_update": "2024-10-01T19:15:40+00:00",
+    "latest_update": "2024-10-16T16:03:25+00:00",
     "versions": [
+      [
+        "v12",
+        "keighrim"
+      ],
       [
         "v11",
         "keighrim"
