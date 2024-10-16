@@ -1,0 +1,6 @@
+{
+  "time": "2024-10-16T16:03:25+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v12",
+  "releasenotes": "added support for arm64 container image\n\n"
+}
