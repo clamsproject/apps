@@ -1,0 +1,186 @@
+{
+  "name": "Scenes-with-text Detection",
+  "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
+  "app_version": "v7.0",
+  "mmif_version": "1.0.5",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/swt-detection/v7.0",
+  "url": "https://github.com/clamsproject/app-swt-detection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimePoint/v4",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "labelset": [
+          "B",
+          "S",
+          "W",
+          "L",
+          "O",
+          "M",
+          "I",
+          "N",
+          "E",
+          "P",
+          "Y",
+          "K",
+          "G",
+          "T",
+          "F",
+          "C",
+          "R"
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "useClassifier",
+      "description": "Use the image classifier model to generate TimePoint annotations",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "tpModelName",
+      "description": "model name to use for classification, only applies when `useClassifier=true`",
+      "type": "string",
+      "choices": [
+        "convnext_lg",
+        "convnext_tiny"
+      ],
+      "default": "convnext_lg",
+      "multivalued": false
+    },
+    {
+      "name": "tpUsePosModel",
+      "description": "Use the model trained with positional features, only applies when `useClassifier=true`",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "tpStartAt",
+      "description": "Number of milliseconds into the video to start processing, only applies when `useClassifier=true`",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "tpStopAt",
+      "description": "Number of milliseconds into the video to stop processing, only applies when `useClassifier=true`",
+      "type": "integer",
+      "default": 9223372036854775807,
+      "multivalued": false
+    },
+    {
+      "name": "tpSampleRate",
+      "description": "Milliseconds between sampled frames, only applies when `useClassifier=true`",
+      "type": "integer",
+      "default": 1000,
+      "multivalued": false
+    },
+    {
+      "name": "useStitcher",
+      "description": "Use the stitcher after classifying the TimePoints",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "tfMinTPScore",
+      "description": "Minimum score for a TimePoint to be included in a TimeFrame, only applies when `useStitcher=true`",
+      "type": "number",
+      "default": 0.01,
+      "multivalued": false
+    },
+    {
+      "name": "tfMinTFScore",
+      "description": "Minimum score for a TimeFrame, only applies when `useStitcher=true`",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "tfMinTFDuration",
+      "description": "Minimum duration of a TimeFrame in milliseconds, only applies when `useStitcher=true`",
+      "type": "integer",
+      "default": 2000,
+      "multivalued": false
+    },
+    {
+      "name": "tfAllowOverlap",
+      "description": "Allow overlapping time frames, only applies when `useStitcher=true`",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "tfDynamicSceneLabels",
+      "description": "Labels that are considered dynamic scenes. For dynamic scenes, TimeFrame annotations contains multiple representative points to follow any changes in the scene. Only applies when `useStitcher=true`",
+      "type": "string",
+      "default": [
+        "credit",
+        "credits"
+      ],
+      "multivalued": true
+    },
+    {
+      "name": "tfLabelMap",
+      "description": "Mapping of a label in the input annotations to a new label. Must be formatted as IN_LABEL:OUT_LABEL (with a colon). To pass multiple mappings, use this parameter multiple times. By default, all the input labels are passed as is, including any negative labels (with default value being no remapping at all). However, when at least one label is remapped, all the other \"unset\" labels are discarded as a negative label. Only applies when `useStitcher=true`",
+      "type": "map",
+      "default": [
+        "B:bars",
+        "S:slate",
+        "I:chyron",
+        "N:chyron",
+        "Y:chyron",
+        "C:credits",
+        "R:credits",
+        "W:other_opening",
+        "L:other_opening",
+        "O:other_opening",
+        "M:other_opening",
+        "E:other_text",
+        "K:other_text",
+        "G:other_text",
+        "T:other_text",
+        "F:other_text"
+      ],
+      "multivalued": true
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}

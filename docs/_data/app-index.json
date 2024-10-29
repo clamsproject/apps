@@ -1,4 +1,66 @@
 {
+  "http://apps.clams.ai/swt-detection": {
+    "description": "Detects scenes with text, like slates, chyrons and credits.",
+    "latest_update": "2024-10-29T02:34:29+00:00",
+    "versions": [
+      [
+        "v7.0",
+        "keighrim"
+      ],
+      [
+        "v6.1",
+        "keighrim"
+      ],
+      [
+        "v6.0",
+        "keighrim"
+      ],
+      [
+        "v5.1",
+        "keighrim"
+      ],
+      [
+        "v5.0",
+        "marcverhagen"
+      ],
+      [
+        "v4.4",
+        "keighrim"
+      ],
+      [
+        "v4.3",
+        "keighrim"
+      ],
+      [
+        "v4.2",
+        "keighrim"
+      ],
+      [
+        "v4.1",
+        "keighrim"
+      ],
+      [
+        "v4.0",
+        "marcverhagen"
+      ],
+      [
+        "v3.0",
+        "marcverhagen"
+      ],
+      [
+        "v2.1",
+        "marcverhagen"
+      ],
+      [
+        "v2.0",
+        "marcverhagen"
+      ],
+      [
+        "v1.0",
+        "marcverhagen"
+      ]
+    ]
+  },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
     "latest_update": "2024-10-01T19:15:40+00:00",
@@ -98,64 +160,6 @@
       [
         "v1.0",
         "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/swt-detection": {
-    "description": "Detects scenes with text, like slates, chyrons and credits.",
-    "latest_update": "2024-07-30T01:06:00+00:00",
-    "versions": [
-      [
-        "v6.1",
-        "keighrim"
-      ],
-      [
-        "v6.0",
-        "keighrim"
-      ],
-      [
-        "v5.1",
-        "keighrim"
-      ],
-      [
-        "v5.0",
-        "marcverhagen"
-      ],
-      [
-        "v4.4",
-        "keighrim"
-      ],
-      [
-        "v4.3",
-        "keighrim"
-      ],
-      [
-        "v4.2",
-        "keighrim"
-      ],
-      [
-        "v4.1",
-        "keighrim"
-      ],
-      [
-        "v4.0",
-        "marcverhagen"
-      ],
-      [
-        "v3.0",
-        "marcverhagen"
-      ],
-      [
-        "v2.1",
-        "marcverhagen"
-      ],
-      [
-        "v2.0",
-        "marcverhagen"
-      ],
-      [
-        "v1.0",
-        "marcverhagen"
       ]
     ]
   },
