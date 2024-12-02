@@ -1,0 +1,6 @@
+{
+  "time": "2024-12-02T17:48:12+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v7.1",
+  "releasenotes": "Release with newly trained models:\n\n- training data is expanded with new annotations: https://github.com/clamsproject/aapb-annotations/pull/98 and https://github.com/clamsproject/aapb-annotations/pull/104 .\n- label `U` is added, total number of \"raw\" labels is now 18.\n- in additional to `convnext_lg` and `convnext_tiny`, `convnext_small`-based models are added. The default is now `convnext_small` model.\n\n"
+}
