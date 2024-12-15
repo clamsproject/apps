@@ -1,0 +1,6 @@
+{
+  "time": "2024-12-15T12:18:28+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v7.2",
+  "releasenotes": "Release to fix bugs...\n\n- fixed unable to disable tfLabelMapPreset by nopreset value\n- fixed some `tf-` parameters weren't recorded in the timepoint-only view\n\n"
+}
