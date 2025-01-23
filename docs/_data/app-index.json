@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/llama-captioner": {
+    "description": "Applies LLaMA 3.2 to video frames.",
+    "latest_update": "2025-01-23T15:43:59+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "kelleyl"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
     "latest_update": "2024-12-15T12:18:28+00:00",

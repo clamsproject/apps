@@ -1,0 +1,75 @@
+{
+  "name": "Llama Captioner",
+  "description": "Applies LLaMA 3.2 to video frames.",
+  "app_version": "v1.2",
+  "mmif_version": "1.0.5",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/llama-captioner/v1.2",
+  "url": "https://github.com/clamsproject/app-llama-captioner",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/ImageDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "frameInterval",
+      "description": "The interval at which to extract frames from the video if there are no timeframe annotations. Default is every 30 frames.",
+      "type": "integer",
+      "default": 300,
+      "multivalued": false
+    },
+    {
+      "name": "defaultPrompt",
+      "description": "default prompt to use for timeframes not specified in the promptMap. If set to `-`, timeframes not specified in the promptMap will be skipped.",
+      "type": "string",
+      "default": "Describe what is shown in this video frame. Analyze the purpose of this frame in the context of a news video. Transcribe any text present.",
+      "multivalued": false
+    },
+    {
+      "name": "promptMap",
+      "description": "mapping of labels of the input timeframe annotations to new prompts. Must be formatted as \"IN_LABEL:PROMPT\" (with a colon). To pass multiple mappings, use this parameter multiple times. By default, any timeframe labels not mapped to a prompt will be used with the defaultprompt. In order to skip timeframes with a particular label, pass `-` as the prompt value.in order to skip all timeframes not specified in the promptMap, set the defaultPromptparameter to `-`",
+      "type": "map",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "modelVersion",
+      "description": "Version of the LLaMA model to use.",
+      "type": "string",
+      "default": 3.2,
+      "multivalued": false
+    },
+    {
+      "name": "config",
+      "description": "Name of the config file to use.",
+      "type": "string",
+      "default": "config/default.yaml",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
