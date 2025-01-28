@@ -1,0 +1,6 @@
+{
+  "time": "2025-01-28T00:35:32+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v7.3",
+  "releasenotes": "minor bugfix in the second (`TimeFrame`) view metadata.\n\n"
+}
