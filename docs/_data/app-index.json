@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/llava-captioner": {
+    "description": "Applies llava to video frames.",
+    "latest_update": "2025-02-05T22:52:42+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "kelleyl"
+      ],
+      [
+        "v1.1",
+        "kelleyl"
+      ],
+      [
+        "v1.0",
+        "kelleyl"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits.",
     "latest_update": "2025-02-03T22:07:54+00:00",
@@ -240,20 +258,6 @@
       [
         "v1.0",
         "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/llava-captioner": {
-    "description": "Applies llava to video frames.",
-    "latest_update": "2024-05-23T19:38:32+00:00",
-    "versions": [
-      [
-        "v1.1",
-        "kelleyl"
-      ],
-      [
-        "v1.0",
-        "kelleyl"
       ]
     ]
   },
