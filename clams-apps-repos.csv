@@ -3,6 +3,7 @@ https://github.com/clamsproject/app-swt-detection,True,1.3.1,AppStatus.UPDATED,m
 https://github.com/clamsproject/app-whisper-wrapper,True,1.3.1,AppStatus.UPDATED,main,2024-10-16 15:58:55+00:00,2022-10-27 14:49:15+00:00
 https://github.com/clamsproject/app-transnet-wrapper,False,1.3.1,AppStatus.UPDATED,main,2024-10-16 03:21:46+00:00,2024-10-16 03:23:28+00:00
 https://github.com/clamsproject/app-simple-timepoints-stitcher,True,1.3.1,AppStatus.UPDATED,main,2024-08-06 12:17:47+00:00,2024-04-01 01:34:24+00:00
+https://github.com/clamsproject/app-tesseractocr-wrapper,True,1.2.5,AppStatus.OUTDATED,main,2025-02-06 20:50:37+00:00,2019-05-30 19:13:05+00:00
 https://github.com/clamsproject/app-llava-captioner,True,1.2.6,AppStatus.OUTDATED,main,2025-02-05 22:35:26+00:00,2024-05-21 14:51:24+00:00
 https://github.com/clamsproject/app-easyocr-wrapper,True,1.2.6,AppStatus.OUTDATED,main,2024-10-18 01:05:40+00:00,2023-07-24 19:12:12+00:00
 https://github.com/clamsproject/app-pyannotesd-wrapper,False,1.2.6,AppStatus.OUTDATED,master,2024-08-22 18:28:59+00:00,2024-08-22 17:05:33+00:00
@@ -31,7 +32,6 @@ https://github.com/clamsproject/app-fewshotclassifier,True,1.0.9,AppStatus.OUTDA
 https://github.com/clamsproject/app-barsdetection,True,1.0.9,AppStatus.OUTDATED,main,2023-07-31 23:28:11+00:00,2019-05-30 18:51:00+00:00
 https://github.com/clamsproject/app-fewshot-packaged,False,1.0.3,AppStatus.OUTDATED,main,2023-07-31 22:01:01+00:00,2023-07-31 21:02:02+00:00
 https://github.com/clamsproject/app-parseqocr-wrapper,True,1.0.9,AppStatus.OUTDATED,main,2023-07-25 23:56:57+00:00,2023-03-08 19:06:52+00:00
-https://github.com/clamsproject/app-tesseractocr-wrapper,True,1.0.9,AppStatus.OUTDATED,main,2023-07-25 19:12:08+00:00,2019-05-30 19:13:05+00:00
 https://github.com/clamsproject/app-chyron-detection,True,1.0.9,AppStatus.OUTDATED,main,2023-07-24 21:43:09+00:00,2023-06-13 06:42:08+00:00
 https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,True,1.0.9,AppStatus.OUTDATED,main,2023-07-24 19:13:14+00:00,2019-11-07 15:41:53+00:00
 https://github.com/clamsproject/app-pix2struct-docvqa-wrapper,False,UNKNOWN,AppStatus.OUTDATED,master,2023-07-24 14:29:22+00:00,2023-07-13 19:10:27+00:00
