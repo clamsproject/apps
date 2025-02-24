@@ -1,0 +1,6 @@
+{
+  "time": "2025-02-24T10:41:50+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v7.5",
+  "releasenotes": "Re-release of 7.4 with support for prebuilt image for arm64 architecture\n\n"
+}
