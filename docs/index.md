@@ -15,13 +15,30 @@ toc_sticky: true
 ## App Directory
 
 {% for app in site.data.app-index %}
-    {%- assign check = app[0] | split:'http://apps.clams.ai/' -%}
+    {% assign check = app[0] | split:'http://apps.clams.ai/' %}
     {% if check.size == 2 %}
-### {{ check[1] }}
-{{ app[1]["description"] }}
-        {% for version in app[1]["versions"] %}
-* [{{ version[0] }}]({{ check[1] }}/{{ version[0] }}) ([`@{{ version[1] }}`](https://github.com/{{ version[1] }}))
+        {% assign versions = app[1]["versions"] %}
+        {% capture numstr %} {{ versions.size }},3 {% endcapture %}
+        {% assign numstrs = numstr | split: "," %}
+        {% assign nums = "" | split: "" %}
+        {% for num in numstrs %}
+            {% assign cast = num | to_integer %}
+            {% assign nums = nums | push: cast %}
         {% endfor %}
+        {% assign to_display = nums | sort | first | to_i %}
+        {% assign end_loop = to_display | minus: 1 %}
+
+### {{ check[1] }}
+
+{{ app[1]["description"] }}
+
+        {% for i in (0..end_loop) %}
+* [{{ versions[i][0] }}]({{ check[1] }}/{{ versions[i][0] }}) ([`@{{ versions[i][1] }}`](https://github.com/{{ versions[i][1] }}))
+        {% endfor %}
+        {% if versions.size > to_display %}
+
+* [all {{ versions.size }} releases]({{ check[1] }})
+        {% endif %}
     {% else %}
 ### {{ app[0] }}
         {% for version in app[1] %}
