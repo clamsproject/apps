@@ -63,15 +63,19 @@ lmjr, lmnr, lpat = list(map(int, latest_sdk_ver.split('.')))
 sys.stdout.write(f'repo,in_appdir,sdk-in-use,sdk-status (latest: {latest_sdk_ver}),main_branch,last_commit,start_date\n')
 for r in o.get_repos():
     if r.name.startswith('app-'):
-        res = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/main/requirements.txt')
+        
+        branches = [b.name for b in r.get_branches()]
         if r.archived:
             mainb = 'N/A'
-        elif res.status_code >= 400:
-            res = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/master/requirements.txt')
+        elif 'main' in branches:
+            mainb = 'main'
+        elif 'master' in branches:
             mainb = 'master'
+        elif len(branches) == 1:
+            mainb = branches[0]
         else:
             mainb = 'main'
-        req = res.text
+        req = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/{mainb}/requirements.txt').text
         # print(req)
         ver = 'UNKNOWN'
         mjr = mnr = pat = 0
