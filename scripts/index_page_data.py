@@ -38,6 +38,7 @@ if shortid not in existing_index:
     existing_versions[shortid].add(app_version)
     existing_apps.append(metadata)
 elif app_version not in existing_versions[shortid]:
+    existing_index[shortid]['description'] = metadata['description']
     existing_index[shortid]['versions'].insert(0, (app_version, submission['submitter']))
     existing_index[shortid]['latest_update'] = datetime.datetime.fromisoformat(submission['time'])
     existing_versions[shortid].add(app_version)
