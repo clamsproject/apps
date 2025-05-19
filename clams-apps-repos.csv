@@ -9,7 +9,7 @@ https://github.com/clamsproject/app-spoken-lid,False,UNKNOWN,AppStatus.OUTDATED,
 https://github.com/clamsproject/app-llava-captioner,True,1.2.6,AppStatus.OUTDATED,main,2025-02-11 03:34:33+00:00,2024-05-21 14:51:24+00:00
 https://github.com/clamsproject/app-tesseractocr-wrapper,True,1.2.5,AppStatus.OUTDATED,main,2025-02-06 20:50:37+00:00,2019-05-30 19:13:05+00:00
 https://github.com/clamsproject/app-easyocr-wrapper,True,1.2.6,AppStatus.OUTDATED,main,2024-10-18 01:05:40+00:00,2023-07-24 19:12:12+00:00
-https://github.com/clamsproject/app-pyannotesd-wrapper,False,UNKNOWN,AppStatus.OUTDATED,init-impl,2024-08-22 18:28:59+00:00,2024-08-22 17:05:33+00:00
+https://github.com/clamsproject/app-pyannotesd-wrapper,False,1.2.6,AppStatus.OUTDATED,init-impl,2024-08-22 18:28:59+00:00,2024-08-22 17:05:33+00:00
 https://github.com/clamsproject/app-dswt-reader,False,1.3.0,AppStatus.OUTDATED,main,2024-08-16 01:44:53+00:00,2024-07-23 14:14:36+00:00
 https://github.com/clamsproject/app-distil-whisper-wrapper,True,1.3.0,AppStatus.OUTDATED,main,2024-08-08 15:11:11+00:00,2024-06-26 19:37:05+00:00
 https://github.com/clamsproject/app-tfidf-keywordextractor,True,1.2.6,AppStatus.OUTDATED,main,2024-07-19 14:04:01+00:00,2024-06-17 16:22:42+00:00
