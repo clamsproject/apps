@@ -1,0 +1,6 @@
+{
+  "time": "2025-05-23T01:46:09+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.2",
+  "releasenotes": "Minor update to support latest SDK\n\n- updated to the latext SDK, and hence added `cli.py` entry point\n- in various newly-generated annotation objects, all references to other annotation ID are now \"long\" form (`view_id:ann_id`) even when referring annotations within the same view\n- now only processes `TimeFrame` with `label` property (effectively ignores time frames from, for example, whisper-wrapper)\n- made model caching path inside the container consistent with other CLAMS apps (`/cache/doctr`)\n\n"
+}
