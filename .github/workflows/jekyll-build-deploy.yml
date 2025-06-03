@@ -2,6 +2,8 @@ name: Build Jekyll Site
 on:
   push:
     branches: ["main"]
+    paths:
+      - '_docs/**'    
 
   repository_dispatch:
     types: [appdir-update]
