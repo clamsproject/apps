@@ -1,0 +1,6 @@
+{
+  "time": "2025-06-24T14:20:12+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v7.6",
+  "releasenotes": "Made classification deterministic, meaning repeatedly running the app on the same video would result in the same `classifications` scores.\n\n"
+}
