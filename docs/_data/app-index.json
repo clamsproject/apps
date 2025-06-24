@@ -1,26 +1,12 @@
 {
-  "http://apps.clams.ai/doctr-wrapper": {
-    "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
-    "latest_update": "2025-05-23T01:46:09+00:00",
-    "versions": [
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2025-02-24T10:41:50+00:00",
+    "latest_update": "2025-06-24T14:20:12+00:00",
     "versions": [
+      [
+        "v7.6",
+        "keighrim"
+      ],
       [
         "v7.5",
         "keighrim"
@@ -96,6 +82,24 @@
       [
         "v1.0",
         "marcverhagen"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/doctr-wrapper": {
+    "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
+    "latest_update": "2025-05-23T01:46:09+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "keighrim"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "keighrim"
       ]
     ]
   },

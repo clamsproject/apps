@@ -4,6 +4,7 @@ classes: wide
 title: swt-detection
 ---
 Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the "TimePoint mode" and generates TimePoint annotations. When `useStitcher=True`, it runs in the "TimeFrame mode" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.
+- [v7.6](v7.6) ([`@keighrim`](https://github.com/keighrim))
 - [v7.5](v7.5) ([`@keighrim`](https://github.com/keighrim))
 - [v7.4](v7.4) ([`@keighrim`](https://github.com/keighrim))
 - [v7.3](v7.3) ([`@keighrim`](https://github.com/keighrim))
