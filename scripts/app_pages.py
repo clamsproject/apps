@@ -18,6 +18,8 @@ for app_uri, app_details in apps.items():
     f.write("layout: posts\n")
     f.write("classes: wide\n")
     f.write(f"title: {app_title}\n")
+    # this will effectively make these app-level index pages placed at the bottom of atom feed
+    f.write(f"date: 1970-01-01T00:00:00+00:00\n")
     f.write("---\n")
     f.write(f"{app_description}\n")
 

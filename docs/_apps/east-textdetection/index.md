@@ -2,6 +2,7 @@
 layout: posts
 classes: wide
 title: east-textdetection
+date: 1970-01-01T00:00:00+00:00
 ---
 OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.
 - [v1.2](v1.2) ([`@MrSqually`](https://github.com/MrSqually))

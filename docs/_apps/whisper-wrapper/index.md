@@ -2,6 +2,7 @@
 layout: posts
 classes: wide
 title: whisper-wrapper
+date: 1970-01-01T00:00:00+00:00
 ---
 A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.
 - [v12](v12) ([`@keighrim`](https://github.com/keighrim))

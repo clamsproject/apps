@@ -2,6 +2,7 @@
 layout: posts
 classes: wide
 title: spacy-wrapper
+date: 1970-01-01T00:00:00+00:00
 ---
 Apply spaCy NLP to all text documents in a MMIF file.
 - [v2.0](v2.0) ([`@keighrim`](https://github.com/keighrim))
