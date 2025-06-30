@@ -1,4 +1,62 @@
 {
+  "http://apps.clams.ai/whisper-wrapper": {
+    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
+    "latest_update": "2025-06-30T18:05:02+00:00",
+    "versions": [
+      [
+        "v13",
+        "Brendayy"
+      ],
+      [
+        "v12",
+        "keighrim"
+      ],
+      [
+        "v11",
+        "keighrim"
+      ],
+      [
+        "v10",
+        "keighrim"
+      ],
+      [
+        "v9",
+        "keighrim"
+      ],
+      [
+        "v8",
+        "keighrim"
+      ],
+      [
+        "v7",
+        "keighrim"
+      ],
+      [
+        "v6",
+        "keighrim"
+      ],
+      [
+        "v5",
+        "keighrim"
+      ],
+      [
+        "v4",
+        "keighrim"
+      ],
+      [
+        "v3",
+        "keighrim"
+      ],
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2025-06-24T14:20:12+00:00",
@@ -118,60 +176,6 @@
       [
         "v1.0",
         "kelleyl"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/whisper-wrapper": {
-    "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
-    "latest_update": "2024-10-16T16:03:25+00:00",
-    "versions": [
-      [
-        "v12",
-        "keighrim"
-      ],
-      [
-        "v11",
-        "keighrim"
-      ],
-      [
-        "v10",
-        "keighrim"
-      ],
-      [
-        "v9",
-        "keighrim"
-      ],
-      [
-        "v8",
-        "keighrim"
-      ],
-      [
-        "v7",
-        "keighrim"
-      ],
-      [
-        "v6",
-        "keighrim"
-      ],
-      [
-        "v5",
-        "keighrim"
-      ],
-      [
-        "v4",
-        "keighrim"
-      ],
-      [
-        "v3",
-        "keighrim"
-      ],
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
       ]
     ]
   },
