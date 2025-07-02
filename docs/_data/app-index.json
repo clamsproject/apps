@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/tesseract": {
+    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
+    "latest_update": "2025-07-02T02:52:55+00:00",
+    "versions": [
+      [
+        "v2.0",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/doctr-wrapper": {
     "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
     "latest_update": "2025-07-02T02:33:54+00:00",
