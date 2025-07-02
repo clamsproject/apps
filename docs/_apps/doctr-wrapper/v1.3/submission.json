@@ -1,0 +1,6 @@
+{
+  "time": "2025-07-02T02:33:54+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.3",
+  "releasenotes": "fixed critical bug that caused app crash\n\n"
+}
