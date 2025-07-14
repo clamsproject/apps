@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/heuristic-chyron-understanding": {
+    "description": "Prototype to convert chyron text from docTR/Tesseract/LLaVA MMIF outputinto a name and list of attributes.",
+    "latest_update": "2025-07-14T23:10:14+00:00",
+    "versions": [
+      [
+        "v0.2",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/tesseract": {
     "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
     "latest_update": "2025-07-02T02:52:55+00:00",
