@@ -1,0 +1,6 @@
+{
+  "time": "2025-07-14T23:10:14+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.2",
+  "releasenotes": "Initial release with naive line parsing and name normalization\n\n"
+}
