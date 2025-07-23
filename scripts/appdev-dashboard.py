@@ -65,40 +65,43 @@ for r in o.get_repos():
     if r.name.startswith('app-'):
         
         branches = [b.name for b in r.get_branches()]
-        if r.archived:
-            mainb = 'N/A'
-        elif 'main' in branches:
-            mainb = 'main'
-        elif 'master' in branches:
-            mainb = 'master'
-        elif len(branches) == 1:
-            mainb = branches[0]
-        else:
-            mainb = 'main'
-        req = requests.get(f'https://raw.githubusercontent.com/clamsproject/{r.name}/{mainb}/requirements.txt').text
-        # print(req)
         ver = 'UNKNOWN'
         mjr = mnr = pat = 0
         registered = False
-        for line in req.split('\n'):
-            # print(line)
-            if 'clams-python' in line and not line.startswith('#'):
-                ver_m = re.search(r'\d+\.\d+\.\d+$', line)
-                #  print(r.name, line, ver_m)
-                if ver_m is not None:
-                    ver = ver_m.group(0)
-                    mjr, mnr, pat = list(map(int, ver.split('.')))
-                if r.html_url in registered_repos:
-                    registered = True
-                if mjr >= lmjr and mnr >= lmnr and pat >= lpat:
-                    status = AppStatus.UPDATED
-                else:
-                    status = AppStatus.OUTDATED
+        status = AppStatus.UNKNOWN
         if r.archived:
+            mainb = 'N/A'
             status = AppStatus.DISCONTINUED
-
+        else:
+            if 'main' in branches:
+                mainb = 'main'
+            elif 'master' in branches:
+                mainb = 'master'
+            elif len(branches) == 1:
+                mainb = branches[0]
+            else:
+                mainb = 'main'
+            try:
+                contents = r.get_contents('requirements.txt', ref=mainb)
+                req = contents.decoded_content.decode('utf-8')
+            except Exception:
+                req = ''
+            # print(req)
+            for line in req.split('\n'):
+                # print(line)
+                if 'clams-python' in line and not line.startswith('#'):
+                    ver_m = re.search(r'\d+\.\d+\.\d+$', line)
+                    #  print(r.name, line, ver_m)
+                    if ver_m is not None:
+                        ver = ver_m.group(0)
+                        mjr, mnr, pat = list(map(int, ver.split('.')))
+                    if r.html_url in registered_repos:
+                        registered = True
+                    if mjr >= lmjr and mnr >= lmnr and pat >= lpat:
+                        status = AppStatus.UPDATED
+                    else:
+                        status = AppStatus.OUTDATED
         commits = r.get_commits()
-        
         if commits[0].commit.message == 'added GHA to auto add issues to apps GHP':
             most_relevant_commit = commits[1]
         else:
