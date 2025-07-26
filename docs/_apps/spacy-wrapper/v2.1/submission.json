@@ -1,0 +1,6 @@
+{
+  "time": "2025-07-26T21:02:46+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.1",
+  "releasenotes": "CLAMS SDK and spacy version bump\n\n"
+}
