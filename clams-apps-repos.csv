@@ -1,5 +1,6 @@
 repo,in_appdir,sdk-in-use,sdk-status (latest: 1.3.2),main_branch,last_commit,start_date
 https://github.com/clamsproject/app-spoken-lid,False,UNKNOWN,AppStatus.UNKNOWN,main,2025-07-10 21:57:42+00:00,2025-04-15 19:00:22+00:00
+https://github.com/clamsproject/app-spacy-wrapper,True,1.3.2,AppStatus.UPDATED,main,2025-07-26 13:00:12+00:00,2019-12-04 19:41:41+00:00
 https://github.com/clamsproject/app-llava-captioner,True,1.2.6,AppStatus.OUTDATED,main,2025-07-26 02:42:46+00:00,2024-05-21 14:51:24+00:00
 https://github.com/clamsproject/app-parakeet-wrapper,False,1.3.1,AppStatus.OUTDATED,main,2025-07-22 20:06:50+00:00,2025-07-20 14:00:07+00:00
 https://github.com/clamsproject/app-heuristic-chyron-understanding,False,1.3.1,AppStatus.OUTDATED,main,2025-07-14 23:08:38+00:00,2025-06-24 12:06:55+00:00
@@ -17,7 +18,6 @@ https://github.com/clamsproject/app-distil-whisper-wrapper,True,1.3.0,AppStatus.
 https://github.com/clamsproject/app-simple-timepoints-stitcher,True,1.3.1,AppStatus.OUTDATED,main,2024-08-06 12:17:47+00:00,2024-04-01 01:34:24+00:00
 https://github.com/clamsproject/app-tfidf-keywordextractor,True,1.2.6,AppStatus.OUTDATED,main,2024-07-19 14:04:01+00:00,2024-06-17 16:22:42+00:00
 https://github.com/clamsproject/app-faster-whisper-wrapper,False,1.2.4,AppStatus.OUTDATED,main,2024-07-17 18:24:27+00:00,2024-07-17 17:54:39+00:00
-https://github.com/clamsproject/app-spacy-wrapper,True,1.2.6,AppStatus.OUTDATED,main,2024-07-16 16:46:52+00:00,2019-12-04 19:41:41+00:00
 https://github.com/clamsproject/app-object-detection-wrapper,False,1.1.3,AppStatus.OUTDATED,main,2024-07-16 03:50:16+00:00,2024-07-16 03:48:24+00:00
 https://github.com/clamsproject/app-instructblip-captioner,False,1.2.4,AppStatus.OUTDATED,main,2024-07-14 03:47:48+00:00,2024-03-12 23:10:00+00:00
 https://github.com/clamsproject/app-bart-summarizer,False,1.2.5,AppStatus.OUTDATED,main,2024-07-11 16:52:04+00:00,2024-07-11 16:31:15+00:00
