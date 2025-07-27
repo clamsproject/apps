@@ -1,4 +1,30 @@
 {
+  "http://apps.clams.ai/spacy-wrapper": {
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "latest_update": "2025-07-26T21:02:46+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "marcverhagen"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2025-06-24T14:20:12+00:00",
@@ -234,28 +260,6 @@
       [
         "v1.0",
         "selenasong"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spacy-wrapper": {
-    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
-    "latest_update": "2024-07-16T16:49:38+00:00",
-    "versions": [
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "marcverhagen"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
       ]
     ]
   },
