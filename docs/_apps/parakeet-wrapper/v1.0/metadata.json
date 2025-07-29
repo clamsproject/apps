@@ -1,0 +1,82 @@
+{
+  "name": "Parakeet Wrapper",
+  "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
+  "app_version": "v1.0",
+  "mmif_version": "1.1.0",
+  "analyzer_version": "20250714",
+  "app_license": "Apache-2.0",
+  "analyzer_license": "cc-by-4.0",
+  "identifier": "http://apps.clams.ai/parakeet-wrapper/v1.0",
+  "url": "https://github.com/clamsproject/app-parakeet-wrapper",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v6"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Sentence"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "contextSize",
+      "description": "Local attention context size for the model. Can be any positive integer, or 0 to set global (full-context) attention. Larger context sizes may improve performance but require a lot more memory. For desktop CUDA device with 12GB VRAM, a context size of around 100 is recommended for full utilization of VRAM. Default is 96",
+      "type": "integer",
+      "default": 96,
+      "multivalued": false
+    },
+    {
+      "name": "modelSize",
+      "description": "Parakeet model size to use. Choices: 110m, 0.6b, 1.1b",
+      "type": "string",
+      "choices": [
+        "110m",
+        "0.6b",
+        "1.1b"
+      ],
+      "default": "0.6b",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}

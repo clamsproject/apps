@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/parakeet-wrapper": {
+    "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
+    "latest_update": "2025-07-29T14:54:18+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "shel-ho"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2025-07-28T15:43:20+00:00",
