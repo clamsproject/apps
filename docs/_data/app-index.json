@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/tesseract": {
+    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
+    "latest_update": "2025-09-05T18:11:26+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/parakeet-wrapper": {
     "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
     "latest_update": "2025-07-29T15:07:13+00:00",
