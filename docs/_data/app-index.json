@@ -1,4 +1,26 @@
 {
+  "http://apps.clams.ai/llava-captioner": {
+    "description": "Applies LLaVA v1.6 Mistral-7B to video frames for image captioning and text transcription.",
+    "latest_update": "2025-09-24T03:48:59+00:00",
+    "versions": [
+      [
+        "v1.3",
+        "kelleyl"
+      ],
+      [
+        "v1.2",
+        "kelleyl"
+      ],
+      [
+        "v1.1",
+        "kelleyl"
+      ],
+      [
+        "v1.0",
+        "kelleyl"
+      ]
+    ]
+  },
   "http://apps.clams.ai/tesseract": {
     "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
     "latest_update": "2025-09-05T18:11:26+00:00",
@@ -150,24 +172,6 @@
       [
         "v1.0",
         "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/llava-captioner": {
-    "description": "Applies LLaVA v1.6 Mistral-7B to video frames for image captioning.",
-    "latest_update": "2025-02-05T22:52:42+00:00",
-    "versions": [
-      [
-        "v1.2",
-        "kelleyl"
-      ],
-      [
-        "v1.1",
-        "kelleyl"
-      ],
-      [
-        "v1.0",
-        "kelleyl"
       ]
     ]
   },
