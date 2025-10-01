@@ -1,20 +1,150 @@
 {
+  "http://apps.clams.ai/tesseract": {
+    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
+    "latest_update": "2025-09-05T18:11:26+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/parakeet-wrapper": {
+    "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
+    "latest_update": "2025-07-29T15:07:13+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "shel-ho"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/swt-detection": {
+    "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
+    "latest_update": "2025-07-28T15:43:20+00:00",
+    "versions": [
+      [
+        "v7.7",
+        "keighrim"
+      ],
+      [
+        "v7.6",
+        "keighrim"
+      ],
+      [
+        "v7.5",
+        "keighrim"
+      ],
+      [
+        "v7.4",
+        "keighrim"
+      ],
+      [
+        "v7.3",
+        "keighrim"
+      ],
+      [
+        "v7.2",
+        "keighrim"
+      ],
+      [
+        "v7.1",
+        "keighrim"
+      ],
+      [
+        "v7.0",
+        "keighrim"
+      ],
+      [
+        "v6.1",
+        "keighrim"
+      ],
+      [
+        "v6.0",
+        "keighrim"
+      ],
+      [
+        "v5.1",
+        "keighrim"
+      ],
+      [
+        "v5.0",
+        "marcverhagen"
+      ],
+      [
+        "v4.4",
+        "keighrim"
+      ],
+      [
+        "v4.3",
+        "keighrim"
+      ],
+      [
+        "v4.2",
+        "keighrim"
+      ],
+      [
+        "v4.1",
+        "keighrim"
+      ],
+      [
+        "v4.0",
+        "marcverhagen"
+      ],
+      [
+        "v3.0",
+        "marcverhagen"
+      ],
+      [
+        "v2.1",
+        "marcverhagen"
+      ],
+      [
+        "v2.0",
+        "marcverhagen"
+      ],
+      [
+        "v1.0",
+        "marcverhagen"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/spacy-wrapper": {
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "latest_update": "2025-07-26T21:02:46+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "marcverhagen"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/heuristic-chyron-understanding": {
     "description": "Prototype to convert chyron text from docTR/Tesseract/LLaVA MMIF outputinto a name and list of attributes.",
     "latest_update": "2025-07-14T23:10:14+00:00",
     "versions": [
       [
         "v0.2",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/tesseract": {
-    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
-    "latest_update": "2025-07-02T02:52:55+00:00",
-    "versions": [
-      [
-        "v2.0",
         "keighrim"
       ]
     ]
@@ -99,92 +229,6 @@
       ]
     ]
   },
-  "http://apps.clams.ai/swt-detection": {
-    "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2025-06-24T14:20:12+00:00",
-    "versions": [
-      [
-        "v7.6",
-        "keighrim"
-      ],
-      [
-        "v7.5",
-        "keighrim"
-      ],
-      [
-        "v7.4",
-        "keighrim"
-      ],
-      [
-        "v7.3",
-        "keighrim"
-      ],
-      [
-        "v7.2",
-        "keighrim"
-      ],
-      [
-        "v7.1",
-        "keighrim"
-      ],
-      [
-        "v7.0",
-        "keighrim"
-      ],
-      [
-        "v6.1",
-        "keighrim"
-      ],
-      [
-        "v6.0",
-        "keighrim"
-      ],
-      [
-        "v5.1",
-        "keighrim"
-      ],
-      [
-        "v5.0",
-        "marcverhagen"
-      ],
-      [
-        "v4.4",
-        "keighrim"
-      ],
-      [
-        "v4.3",
-        "keighrim"
-      ],
-      [
-        "v4.2",
-        "keighrim"
-      ],
-      [
-        "v4.1",
-        "keighrim"
-      ],
-      [
-        "v4.0",
-        "marcverhagen"
-      ],
-      [
-        "v3.0",
-        "marcverhagen"
-      ],
-      [
-        "v2.1",
-        "marcverhagen"
-      ],
-      [
-        "v2.0",
-        "marcverhagen"
-      ],
-      [
-        "v1.0",
-        "marcverhagen"
-      ]
-    ]
-  },
   "http://apps.clams.ai/llava-captioner": {
     "description": "Applies LLaVA v1.6 Mistral-7B to video frames for image captioning.",
     "latest_update": "2025-02-05T22:52:42+00:00",
@@ -262,28 +306,6 @@
       [
         "v1.0",
         "selenasong"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spacy-wrapper": {
-    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
-    "latest_update": "2024-07-16T16:49:38+00:00",
-    "versions": [
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "marcverhagen"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
       ]
     ]
   },

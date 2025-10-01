@@ -1,0 +1,6 @@
+{
+  "time": "2025-07-28T15:43:20+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v7.7",
+  "releasenotes": "Updated to the latest clams SDK, annotation ID format changed to \"long-form\".\n\n"
+}
