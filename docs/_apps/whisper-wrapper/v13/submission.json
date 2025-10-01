@@ -1,0 +1,6 @@
+{
+  "time": "2025-06-30T18:05:02+00:00",
+  "submitter": "Brendayy",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v13",
+  "releasenotes": "Fixed .en suffix for whisper large and turbo models.* (closes #17)\nAdded validation for unsupported modelLang codes;\nUpdated wording in matadata.\n\n"
+}

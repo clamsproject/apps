@@ -1,0 +1,6 @@
+{
+  "time": "2025-07-02T02:52:55+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-tesseractocr-wrapper:v2.0",
+  "releasenotes": "Updated to Tesseract5, and output MMIF format matches other TR apps\n\n"
+}

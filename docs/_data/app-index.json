@@ -6,6 +6,10 @@
       [
         "v2.1",
         "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
       ]
     ]
   },
@@ -135,46 +139,46 @@
       ]
     ]
   },
-  "http://apps.clams.ai/doctr-wrapper": {
-    "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
-    "latest_update": "2025-05-23T01:46:09+00:00",
+  "http://apps.clams.ai/heuristic-chyron-understanding": {
+    "description": "Prototype to convert chyron text from docTR/Tesseract/LLaVA MMIF outputinto a name and list of attributes.",
+    "latest_update": "2025-07-14T23:10:14+00:00",
     "versions": [
       [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
+        "v0.2",
         "keighrim"
       ]
     ]
   },
-  "http://apps.clams.ai/llava-captioner": {
-    "description": "Applies LLaVA v1.6 Mistral-7B to video frames for image captioning.",
-    "latest_update": "2025-02-05T22:52:42+00:00",
+  "http://apps.clams.ai/doctr-wrapper": {
+    "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
+    "latest_update": "2025-07-02T02:33:54+00:00",
     "versions": [
       [
+        "v1.3",
+        "keighrim"
+      ],
+      [
         "v1.2",
-        "kelleyl"
+        "keighrim"
       ],
       [
         "v1.1",
-        "kelleyl"
+        "keighrim"
       ],
       [
         "v1.0",
-        "kelleyl"
+        "keighrim"
       ]
     ]
   },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
-    "latest_update": "2024-10-16T16:03:25+00:00",
+    "latest_update": "2025-06-30T18:05:02+00:00",
     "versions": [
+      [
+        "v13",
+        "Brendayy"
+      ],
       [
         "v12",
         "keighrim"
@@ -222,6 +226,24 @@
       [
         "v1",
         "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/llava-captioner": {
+    "description": "Applies LLaVA v1.6 Mistral-7B to video frames for image captioning.",
+    "latest_update": "2025-02-05T22:52:42+00:00",
+    "versions": [
+      [
+        "v1.2",
+        "kelleyl"
+      ],
+      [
+        "v1.1",
+        "kelleyl"
+      ],
+      [
+        "v1.0",
+        "kelleyl"
       ]
     ]
   },
