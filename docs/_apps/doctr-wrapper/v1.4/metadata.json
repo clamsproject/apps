@@ -1,0 +1,98 @@
+{
+  "name": "CLAMS docTR Wrapper",
+  "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
+  "app_version": "v1.4",
+  "mmif_version": "1.1.0",
+  "analyzer_version": "0.8.1",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/doctr-wrapper/v1.4",
+  "url": "https://github.com/clamsproject/app-doctr-wrapper",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v6",
+      "description": "The _labeled_ TimeFrame annotation that represents the video segment to be processed. When `representatives` property is present, the app will process videos still frames at the underlying time point annotations that are referred to by the `representatives` property. Otherwise, the app will process the middle frame of the video segment. Generic TimeFrames with no `label` property will not be processed.",
+      "properties": {
+        "representatives": "?",
+        "label": "*"
+      },
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "description": "Fully serialized text content of the recognized text in the input images. Serialization isdone by concatenating `text` values of `Paragraph` annotations with two newline characters.",
+      "properties": {
+        "@lang": "en"
+      }
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token",
+      "description": "Translation of the recognized docTR \"words\" in the input images. `text` and `word` properties store the string values of the recognized text. The duplication is for keepingbackward compatibility and consistency with `Paragraph` and `Sentence` annotations.",
+      "properties": {
+        "text": "*",
+        "word": "*"
+      }
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Sentence",
+      "description": "Translation of the recognized docTR \"lines\" in the input images. `text` property stores the string value of space-joined words.",
+      "properties": {
+        "text": "*"
+      }
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Paragraph",
+      "description": "Translation of the recognized docTR \"blocks\" in the input images. `text` property stores the string value of newline-joined sentences.",
+      "properties": {
+        "text": "*"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1",
+      "description": "Alignments between 1) `TimePoint` <-> `TextDocument`, 2) `TimePoint` <-> `Token`/`Sentence`/`Paragraph`, 3) `BoundingBox` <-> `Token`/`Sentence`/`Paragraph`"
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/BoundingBox/v5",
+      "description": "Bounding boxes of the detected text regions in the input images. No corresponding box for the entire image (`TextDocument`) region",
+      "properties": {
+        "label": "text"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "tfLabel",
+      "description": "The label of the TimeFrame annotation to be processed. By default (`[]`), all TimeFrame annotations will be processed, regardless of their `label` property values.",
+      "type": "string",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
