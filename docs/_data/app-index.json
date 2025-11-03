@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/smolvlm2-captioner": {
+    "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
+    "latest_update": "2025-11-03T18:55:20+00:00",
+    "versions": [
+      [
+        "v0.1",
+        "kelleyl"
+      ]
+    ]
+  },
   "http://apps.clams.ai/tesseract": {
     "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
     "latest_update": "2025-09-05T18:11:26+00:00",
