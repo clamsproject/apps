@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-05T19:58:01+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-spoken-lid:v0.1",
+  "releasenotes": "experimental release of spoken LID app prototype based on whisper\n\n"
+}
