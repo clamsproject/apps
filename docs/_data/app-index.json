@@ -1,32 +1,12 @@
 {
-  "http://apps.clams.ai/tesseract": {
-    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
-    "latest_update": "2025-09-05T18:11:26+00:00",
-    "versions": [
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/parakeet-wrapper": {
-    "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
-    "latest_update": "2025-07-29T15:07:13+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "shel-ho"
-      ]
-    ]
-  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2025-07-28T15:43:20+00:00",
+    "latest_update": "2025-11-05T02:04:38+00:00",
     "versions": [
+      [
+        "v8.0",
+        "keighrim"
+      ],
       [
         "v7.7",
         "keighrim"
@@ -110,6 +90,30 @@
       [
         "v1.0",
         "marcverhagen"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/tesseract": {
+    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
+    "latest_update": "2025-09-05T18:11:26+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/parakeet-wrapper": {
+    "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
+    "latest_update": "2025-07-29T15:07:13+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "shel-ho"
       ]
     ]
   },
