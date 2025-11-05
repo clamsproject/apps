@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/spoken-lid": {
+    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
+    "latest_update": "2025-11-05T19:58:01+00:00",
+    "versions": [
+      [
+        "v0.1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2025-11-05T02:04:38+00:00",
