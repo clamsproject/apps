@@ -5,6 +5,7 @@ title: whisper-wrapper
 date: 1970-01-01T00:00:00+00:00
 ---
 A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.
+- [v14](v14) ([`@keighrim`](https://github.com/keighrim))
 - [v13](v13) ([`@Brendayy`](https://github.com/Brendayy))
 - [v12](v12) ([`@keighrim`](https://github.com/keighrim))
 - [v11](v11) ([`@keighrim`](https://github.com/keighrim))

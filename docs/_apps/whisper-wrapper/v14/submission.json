@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-05T20:18:24+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v14",
+  "releasenotes": "Major update includes ...\n\n- `modelSize` parameter is now `model`\n- `modelLang` parameter is now `language`\n(above changes to match openai's CLI argument names)\n- fixed app crashing when word-level timestamping outputs hallucinations\n\n"
+}
