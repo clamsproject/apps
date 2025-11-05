@@ -1,58 +1,12 @@
 {
-  "http://apps.clams.ai/doctr-wrapper": {
-    "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
-    "latest_update": "2025-10-03T16:46:01+00:00",
-    "versions": [
-      [
-        "v1.4",
-        "keighrim"
-      ],
-      [
-        "v1.3",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/tesseract": {
-    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
-    "latest_update": "2025-09-05T18:11:26+00:00",
-    "versions": [
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/parakeet-wrapper": {
-    "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
-    "latest_update": "2025-07-29T15:07:13+00:00",
-    "versions": [
-      [
-        "v1.0",
-        "shel-ho"
-      ]
-    ]
-  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2025-07-28T15:43:20+00:00",
+    "latest_update": "2025-11-05T02:04:38+00:00",
     "versions": [
+      [
+        "v8.0",
+        "keighrim"
+      ],
       [
         "v7.7",
         "keighrim"
@@ -139,6 +93,30 @@
       ]
     ]
   },
+  "http://apps.clams.ai/tesseract": {
+    "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
+    "latest_update": "2025-09-05T18:11:26+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/parakeet-wrapper": {
+    "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
+    "latest_update": "2025-07-29T15:07:13+00:00",
+    "versions": [
+      [
+        "v1.0",
+        "shel-ho"
+      ]
+    ]
+  },
   "http://apps.clams.ai/spacy-wrapper": {
     "description": "Apply spaCy NLP to all text documents in a MMIF file.",
     "latest_update": "2025-07-26T21:02:46+00:00",
@@ -171,6 +149,28 @@
     "versions": [
       [
         "v0.2",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/doctr-wrapper": {
+    "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
+    "latest_update": "2025-07-02T02:33:54+00:00",
+    "versions": [
+      [
+        "v1.3",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "keighrim"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
         "keighrim"
       ]
     ]
