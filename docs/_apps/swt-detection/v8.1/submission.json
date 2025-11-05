@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-05T20:04:52+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v8.1",
+  "releasenotes": "fixed import errors and outdated metadata\n\n"
+}
