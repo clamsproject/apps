@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-06T00:30:34+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v8.2",
+  "releasenotes": "image processor comes with convnext models are now properly set to use the same loader as they are originally saved\n\n"
+}
