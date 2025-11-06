@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-06T00:37:40+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v15",
+  "releasenotes": "updated to whisper (2025 june ver)\n\n"
+}
