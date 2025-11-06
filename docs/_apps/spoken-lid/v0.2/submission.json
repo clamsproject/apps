@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-06T10:31:10+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-spoken-lid:v0.2",
+  "releasenotes": "updated to the new whisper (python dependecy compatibilty)\n\n"
+}
