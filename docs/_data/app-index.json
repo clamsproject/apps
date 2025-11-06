@@ -1,4 +1,18 @@
 {
+  "http://apps.clams.ai/spoken-lid": {
+    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
+    "latest_update": "2025-11-06T10:31:10+00:00",
+    "versions": [
+      [
+        "v0.2",
+        "keighrim"
+      ],
+      [
+        "v0.1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
     "latest_update": "2025-11-06T00:37:40+00:00",
@@ -164,16 +178,6 @@
       [
         "v1.0",
         "marcverhagen"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spoken-lid": {
-    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
-    "latest_update": "2025-11-05T19:58:01+00:00",
-    "versions": [
-      [
-        "v0.1",
-        "keighrim"
       ]
     ]
   },
