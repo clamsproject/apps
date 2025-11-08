@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-08T01:19:05+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v8.3",
+  "releasenotes": "This release includes a new parameter and a bugfix\n\n- `tpModelBatchSize` parameter is added to control memory usage for TP annotation\n- fixed bug when user provided `tfLabelMap` doesn't match TP's labelSet\n\n"
+}
