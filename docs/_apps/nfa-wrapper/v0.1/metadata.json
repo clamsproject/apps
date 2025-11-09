@@ -1,0 +1,82 @@
+{
+  "name": "CLAMS NFA Wrapper",
+  "description": "Wraps the [NVIDIA NeMo Forced Aligner tool](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html) to temporally align transcribed text with its audio source. ",
+  "app_version": "v0.1",
+  "mmif_version": "1.1.0",
+  "analyzer_version": "454fabc",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/nfa-wrapper/v0.1",
+  "url": "https://github.com/clamsproject/app-nfa-wrapper",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ],
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TextDocument/v1",
+      "description": "Text content transcribed from audio input with no existing annotations.",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Token/v1",
+      "description": "Token from original text split on whitespace. `text` property stores the string value of the token. `start` and `end` properties indicate position of token in entire text. `document` property identifies source text document."
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v6",
+      "description": "TimeFrame annotation representing the source audio segment corresponding to a given transcribed token, with `start` and `end` times given in milliseconds.",
+      "properties": {
+        "frameType": "speech",
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Alignment/v1",
+      "description": "Alignment between `Token` and `TimeFrame` annotations."
+    }
+  ],
+  "parameters": [
+    {
+      "name": "model",
+      "description": "NeMo ASR model to use. Choices: fc_hybrid, parakeet, conformer, fc_ctc. By default, the fc_hybrid model will be used.",
+      "type": "string",
+      "choices": [
+        "fc_hybrid",
+        "parakeet",
+        "conformer",
+        "fc_ctc"
+      ],
+      "default": "fc_hybrid",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
