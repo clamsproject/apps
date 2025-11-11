@@ -1,4 +1,22 @@
 {
+  "http://apps.clams.ai/spoken-lid": {
+    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
+    "latest_update": "2025-11-11T00:51:26+00:00",
+    "versions": [
+      [
+        "v0.3",
+        "keighrim"
+      ],
+      [
+        "v0.2",
+        "keighrim"
+      ],
+      [
+        "v0.1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/nfa-wrapper": {
     "description": "Wraps the [NVIDIA NeMo Forced Aligner tool](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html) to temporally align transcribed text with its audio source. ",
     "latest_update": "2025-11-09T18:36:09+00:00",
@@ -112,20 +130,6 @@
       [
         "v1.0",
         "marcverhagen"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spoken-lid": {
-    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
-    "latest_update": "2025-11-06T10:31:10+00:00",
-    "versions": [
-      [
-        "v0.2",
-        "keighrim"
-      ],
-      [
-        "v0.1",
-        "keighrim"
       ]
     ]
   },
