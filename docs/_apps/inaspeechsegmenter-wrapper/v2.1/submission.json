@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-14T01:22:11+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.1",
+  "releasenotes": "dependency version updates, fixes compat issue with new MMIF\n\n"
+}

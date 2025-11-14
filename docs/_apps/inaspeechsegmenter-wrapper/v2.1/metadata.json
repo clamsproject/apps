@@ -1,0 +1,75 @@
+{
+  "name": "inaSpeechSegmenter Wrapper",
+  "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
+  "app_version": "v2.1",
+  "mmif_version": "1.1.0",
+  "analyzer_version": "0.8.0",
+  "app_license": "MIT",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/inaspeechsegmenter-wrapper/v2.1",
+  "url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v6",
+      "description": "The INA semgmenter uses 5-way classification (['noEnergy', 'female', 'male', 'noise', 'music']) and this wrapper remaps the labels to ['silence', 'speech', 'noise', 'music'], by 1) renaming `noEnergy` to `silence` 2) collapsing `female` and `male` into `speech` (leaving additional `gender` property). Note that the time frame annotations do not exhaustively cover the input audio, but only the segments.",
+      "properties": {
+        "timeunit": "milliseconds",
+        "labelset": [
+          "silence",
+          "speech",
+          "noise",
+          "music"
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "minTFDuration",
+      "description": "minimum duration of a TimeFrame in milliseconds",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "silenceRatio",
+      "description": "percentage ratio (0-100) of audio energy to to determine silence, ratio to mean every of the input audio.",
+      "type": "integer",
+      "default": 3,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
