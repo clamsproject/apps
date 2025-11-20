@@ -1,0 +1,6 @@
+{
+  "time": "2025-11-20T08:01:02+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-tonedetection:v2.0",
+  "releasenotes": "What's new\n\n- updated to the latest SDK\n- replaced aubio to avoid installation quirks\n- removed `timeUnit` and `sampleSize` params\n- renamed `lengthThreshold` param to `minToneDuration`\n\n"
+}
