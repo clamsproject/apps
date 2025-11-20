@@ -1,4 +1,14 @@
 {
+  "http://apps.clams.ai/smolvlm2-captioner": {
+    "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
+    "latest_update": "2025-11-20T15:41:04+00:00",
+    "versions": [
+      [
+        "v0.1",
+        "kelleyl"
+      ]
+    ]
+  },
   "http://apps.clams.ai/tonedetection": {
     "description": "Detects spans of monotonic audio within an audio file",
     "latest_update": "2025-11-20T08:01:02+00:00",
