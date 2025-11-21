@@ -2,12 +2,12 @@
 layout: posts
 classes: wide
 title: "SmolVLM2 Captioner (v0.1)"
-date: 2025-11-20T15:41:04+00:00
+date: 2025-11-21T21:56:09+00:00
 ---
 ## About this version
 
 - Submitter: [kelleyl](https://github.com/kelleyl)
-- Submission Time: 2025-11-20T15:41:04+00:00
+- Submission Time: 2025-11-21T21:56:09+00:00
 - Prebuilt Container Image: [ghcr.io/clamsproject/app-smolvlm2-captioner:v0.1](https://github.com/clamsproject/app-smolvlm2-captioner/pkgs/container/app-smolvlm2-captioner/v0.1)
 - Release Notes
 
