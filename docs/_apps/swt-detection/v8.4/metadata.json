@@ -1,0 +1,197 @@
+{
+  "name": "Scenes-with-text Detection",
+  "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
+  "app_version": "v8.4",
+  "mmif_version": "1.1.0",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/swt-detection/v8.4",
+  "url": "https://github.com/clamsproject/app-swt-detection",
+  "input": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v6",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    },
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/TimePoint/v5",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "labelset": [
+          "B",
+          "CR",
+          "E",
+          "F",
+          "GLOTW",
+          "IN",
+          "KU",
+          "M",
+          "P",
+          "S",
+          "Y"
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "useClassifier",
+      "description": "Use the image classifier model to generate TimePoint annotations.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "tpModelName",
+      "description": "Model name to use for classification, only applies when `useClassifier=true`.",
+      "type": "string",
+      "choices": [
+        "convnextv2_large",
+        "convnextv2_tiny"
+      ],
+      "default": "convnextv2_tiny",
+      "multivalued": false
+    },
+    {
+      "name": "tpModelBatchSize",
+      "description": "Number of images to process in a batch for classification. Smaller batch sizes will use less memory but may be slower. The default value of 200 is set to be the safely maximum size for \"large\" model running on desktop-grade GPU (12GB VRAM). Only applies when `useClassifier=true`.",
+      "type": "integer",
+      "default": 200,
+      "multivalued": false
+    },
+    {
+      "name": "tpUsePosModel",
+      "description": "Use the model trained with positional features, only applies when `useClassifier=true`.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "tpStartAt",
+      "description": "Number of milliseconds into the video to start processing, only applies when `useClassifier=true`.",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "tpStopAt",
+      "description": "Number of milliseconds into the video to stop processing, only applies when `useClassifier=true`.",
+      "type": "integer",
+      "default": 9223372036854775807,
+      "multivalued": false
+    },
+    {
+      "name": "tpSampleRate",
+      "description": "Milliseconds between sampled frames, only applies when `useClassifier=true`.",
+      "type": "integer",
+      "default": 1000,
+      "multivalued": false
+    },
+    {
+      "name": "useStitcher",
+      "description": "Use the stitcher after classifying the TimePoints.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "tfMinTPScore",
+      "description": "Minimum score for a TimePoint to be included in a TimeFrame. A lower value will include more TimePoints in the TimeFrame (increasing recall in exchange for precision). Only applies when `useStitcher=true`.",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "tfMinTFScore",
+      "description": "Minimum score for a TimeFrame. A lower value will include more TimeFrames in the output (increasing recall in exchange for precision). Only applies when `useStitcher=true`",
+      "type": "number",
+      "default": 0.9,
+      "multivalued": false
+    },
+    {
+      "name": "tfMinTFDuration",
+      "description": "Minimum duration of a TimeFrame in milliseconds, only applies when `useStitcher=true`.",
+      "type": "integer",
+      "default": 5000,
+      "multivalued": false
+    },
+    {
+      "name": "tfAllowOverlap",
+      "description": "Allow overlapping time frames, only applies when `useStitcher=true`",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "tfDynamicSceneLabels",
+      "description": "Labels that are considered dynamic scenes. For dynamic scenes, TimeFrame annotations contains multiple representative points to follow any changes in the scene. Only applies when `useStitcher=true`",
+      "type": "string",
+      "default": [
+        "credit",
+        "credits"
+      ],
+      "multivalued": true
+    },
+    {
+      "name": "tfLabelMap",
+      "description": "(See also `tfLabelMapPreset`, set `tfLabelMapPreset=nopreset` to make sure that a preset does not override `tfLabelMap` when using this) Mapping of a label in the input TimePoint annotations to a new label of the stitched TimeFrame annotations. Must be formatted as IN_LABEL:OUT_LABEL (with a colon). To pass multiple mappings, use this parameter multiple times. When two+ TP labels are mapped to a TF  label, it essentially works as a \"binning\" operation. If no mapping is used, all the input labels are passed-through, meaning no change in both TP & TF labelsets. However, when at least one label is mapped, all the other \"unset\" labels are mapped to the negative label (`-`) and if `-` does not exist in the TF labelset, it is added automatically. Only applies when `useStitcher=true`.",
+      "type": "map",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "tfLabelMapPreset",
+      "description": "(See also `tfLabelMap`) Preset alias of a label mapping. If not `nopreset`, this parameter will override the `tfLabelMap` parameter. Available presets are:\n- `noprebin`: []\n- `nomap`: []\n- `strict`: ['`B`:`Bars`', '`S`:`Slate`', '`IN`:`Chyron-person`', '`CR`:`Credits`', '`M`:`Main`', '`O`:`Opening`', '`W`:`Opening`', '`Y`:`Chyron-other`', '`KU`:`Chyron-other`', '`L`:`Other-text`', '`G`:`Other-text`', '`F`:`Other-text`', '`E`:`Other-text`', '`T`:`Other-text`', '`P`:`-`', '`-`:`-`']\n- `simpler`: ['`B`:`Bars`', '`S`:`Slate`', '`IN`:`Chyron`', '`CR`:`Credits`', '`P`:`Neg`', '`-`:`Neg`']\n- `simple`: ['`B`:`Bars`', '`S`:`Slate`', '`IN`:`Chyron-person`', '`CR`:`Credits`', '`Y`:`Other-text`', '`KU`:`Other-text`', '`M`:`Other-text`', '`F`:`Other-text`', '`E`:`Other-text`', '`GLOTW`:`Other-text`', '`P`:`Neg`', '`-`:`Neg`']\n- `relaxed`: ['`B`:`Bars`', '`S`:`Slate`', '`Y`:`Chyron`', '`KU`:`Chyron`', '`IN`:`Chyron`', '`CR`:`Credits`', '`M`:`Other-text`', '`F`:`Other-text`', '`E`:`Other-text`', '`GLOTW`:`Other-text`', '`P`:`Neg`', '`-`:`Neg`']\n- `binary-bars`: ['`B`:`Bars`']\n- `binary-slate`: ['`S`:`Slate`']\n- `binary-chyron-strict`: ['`IN`:`Chyron-person`']\n- `binary-chyron-relaxed`: ['`Y`:`Chyron`', '`KU`:`Chyron`', '`IN`:`Chyron`']\n- `binary-credits`: ['`CR`:`Credits`']\n\n Only applies when `useStitcher=true`.",
+      "type": "string",
+      "choices": [
+        "noprebin",
+        "nomap",
+        "strict",
+        "simpler",
+        "simple",
+        "relaxed",
+        "binary-bars",
+        "binary-slate",
+        "binary-chyron-strict",
+        "binary-chyron-relaxed",
+        "binary-credits",
+        "collapse-close",
+        "collapse-close-reduce-difficulty",
+        "collapse-close-bin-lower-thirds",
+        "ignore-difficulties",
+        "nopreset"
+      ],
+      "default": "relaxed",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ],
+  "est_gpu_mem_min": 400,
+  "est_gpu_mem_typ": 2000
+}

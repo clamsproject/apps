@@ -1,86 +1,12 @@
 {
-  "http://apps.clams.ai/smolvlm2-captioner": {
-    "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
-    "latest_update": "2025-11-20T15:41:04+00:00",
-    "versions": [
-      [
-        "v0.1",
-        "kelleyl"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/tonedetection": {
-    "description": "Detects spans of monotonic audio within an audio file",
-    "latest_update": "2025-11-20T08:01:02+00:00",
-    "versions": [
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "MrSqually"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
-    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
-    "latest_update": "2025-11-14T01:22:11+00:00",
-    "versions": [
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/spoken-lid": {
-    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
-    "latest_update": "2025-11-11T00:51:26+00:00",
-    "versions": [
-      [
-        "v0.3",
-        "keighrim"
-      ],
-      [
-        "v0.2",
-        "keighrim"
-      ],
-      [
-        "v0.1",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/nfa-wrapper": {
-    "description": "Wraps the [NVIDIA NeMo Forced Aligner tool](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html) to temporally align transcribed text with its audio source. ",
-    "latest_update": "2025-11-09T18:36:09+00:00",
-    "versions": [
-      [
-        "v0.1",
-        "keighrim"
-      ]
-    ]
-  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2025-11-08T01:19:05+00:00",
+    "latest_update": "2025-12-14T01:08:09+00:00",
     "versions": [
+      [
+        "v8.4",
+        "keighrim"
+      ],
       [
         "v8.3",
         "keighrim"
@@ -180,6 +106,84 @@
       [
         "v1.0",
         "marcverhagen"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/smolvlm2-captioner": {
+    "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
+    "latest_update": "2025-11-20T15:41:04+00:00",
+    "versions": [
+      [
+        "v0.1",
+        "kelleyl"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/tonedetection": {
+    "description": "Detects spans of monotonic audio within an audio file",
+    "latest_update": "2025-11-20T08:01:02+00:00",
+    "versions": [
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "MrSqually"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
+    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
+    "latest_update": "2025-11-14T01:22:11+00:00",
+    "versions": [
+      [
+        "v2.1",
+        "keighrim"
+      ],
+      [
+        "v2.0",
+        "keighrim"
+      ],
+      [
+        "v1.2",
+        "keighrim"
+      ],
+      [
+        "v1.1",
+        "keighrim"
+      ],
+      [
+        "v1.0",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/spoken-lid": {
+    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
+    "latest_update": "2025-11-11T00:51:26+00:00",
+    "versions": [
+      [
+        "v0.3",
+        "keighrim"
+      ],
+      [
+        "v0.2",
+        "keighrim"
+      ],
+      [
+        "v0.1",
+        "keighrim"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/nfa-wrapper": {
+    "description": "Wraps the [NVIDIA NeMo Forced Aligner tool](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html) to temporally align transcribed text with its audio source. ",
+    "latest_update": "2025-11-09T18:36:09+00:00",
+    "versions": [
+      [
+        "v0.1",
+        "keighrim"
       ]
     ]
   },
