@@ -1,8 +1,12 @@
 {
   "http://apps.clams.ai/smolvlm2-captioner": {
     "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
-    "latest_update": "2026-01-28T03:14:45+00:00",
+    "latest_update": "2026-01-28T15:06:18+00:00",
     "versions": [
+      [
+        "v0.3",
+        "kelleyl"
+      ],
       [
         "v0.2",
         "kelleyl"
