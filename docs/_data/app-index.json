@@ -1,4 +1,26 @@
 {
+  "http://apps.clams.ai/pyscenedetect-wrapper": {
+    "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
+    "latest_update": "2026-02-10T04:17:11+00:00",
+    "versions": [
+      [
+        "v4",
+        "kelleyl"
+      ],
+      [
+        "v3",
+        "kelleyl"
+      ],
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
+      ]
+    ]
+  },
   "http://apps.clams.ai/smolvlm2-captioner": {
     "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
     "latest_update": "2026-01-28T15:06:18+00:00",
@@ -451,24 +473,6 @@
       ],
       [
         "v1.0",
-        "keighrim"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/pyscenedetect-wrapper": {
-    "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
-    "latest_update": "2024-03-11T17:42:55+00:00",
-    "versions": [
-      [
-        "v3",
-        "kelleyl"
-      ],
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
         "keighrim"
       ]
     ]
