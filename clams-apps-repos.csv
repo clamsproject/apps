@@ -36,7 +36,6 @@ https://github.com/clamsproject/app-boundingbox-concatenation,False,1.2.3,AppSta
 https://github.com/clamsproject/app-dbpedia-spotlight-wrapper,True,1.0.9,AppStatus.OUTDATED,main,2023-08-23 15:00:41+00:00,2023-05-31 21:27:29+00:00
 https://github.com/clamsproject/app-pix2struct-slates,False,1.0.9,AppStatus.OUTDATED,main,2023-08-22 16:45:44+00:00,2023-07-24 17:05:31+00:00
 https://github.com/clamsproject/app-pix2struct-chyrons,False,1.0.9,AppStatus.OUTDATED,main,2023-08-22 16:44:07+00:00,2023-07-24 17:25:15+00:00
-https://github.com/clamsproject/app-wav2vec-forced-aligner,False,1.0.9,AppStatus.OUTDATED,main,2023-08-18 14:09:09+00:00,2023-08-10 19:50:08+00:00
 https://github.com/clamsproject/app-fewshotclassifier,True,1.0.9,AppStatus.OUTDATED,main,2023-08-01 22:35:56+00:00,2023-06-07 16:00:38+00:00
 https://github.com/clamsproject/app-barsdetection,True,1.0.9,AppStatus.OUTDATED,main,2023-07-31 23:28:11+00:00,2019-05-30 18:51:00+00:00
 https://github.com/clamsproject/app-fewshot-packaged,False,1.0.3,AppStatus.OUTDATED,main,2023-07-31 22:01:01+00:00,2023-07-31 21:02:02+00:00
@@ -47,10 +46,8 @@ https://github.com/clamsproject/app-brandeis-acs-wrapper,True,1.0.9,AppStatus.OU
 https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper,True,1.0.9,AppStatus.OUTDATED,main,2023-07-24 05:24:23+00:00,2020-10-02 13:45:49+00:00
 https://github.com/clamsproject/app-slatedetection,True,1.0.9,AppStatus.OUTDATED,main,2023-07-24 04:45:55+00:00,2019-05-30 19:12:45+00:00
 https://github.com/clamsproject/app-clipsearch,False,1.0.7,AppStatus.OUTDATED,main,2023-07-20 19:50:12+00:00,2023-06-28 14:21:15+00:00
-https://github.com/clamsproject/app-dlib-facedetection-wrapper,False,UNKNOWN,AppStatus.OUTDATED,master,2023-06-08 12:04:00+00:00,2019-05-30 19:12:00+00:00
-https://github.com/clamsproject/app-insightface,False,0.5.1,AppStatus.OUTDATED,main,2023-01-17 05:47:05+00:00,2023-01-17 00:03:16+00:00
-https://github.com/clamsproject/app-fastpunct,False,0.5.0,AppStatus.OUTDATED,main,2022-06-18 16:14:56+00:00,2021-09-17 16:07:36+00:00
 https://github.com/clamsproject/app-demux,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2019-05-30 18:55:19+00:00
+https://github.com/clamsproject/app-dlib-facedetection-wrapper,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2019-05-30 19:12:00+00:00
 https://github.com/clamsproject/app-montreal-fa-wrapper,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2019-05-30 19:12:25+00:00
 https://github.com/clamsproject/app-nltk-sentencesplitter-wrapper,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2019-05-30 19:12:35+00:00
 https://github.com/clamsproject/app-tesseractocr-slatetext-wrapper,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2019-05-30 19:12:55+00:00
@@ -59,4 +56,7 @@ https://github.com/clamsproject/app-gentle-forced-aligner-wrapper,False,UNKNOWN,
 https://github.com/clamsproject/app-nlp-example,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2020-10-13 17:45:24+00:00
 https://github.com/clamsproject/app-mmif-prettifier,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2020-12-02 18:30:40+00:00
 https://github.com/clamsproject/app-slate-textdetection,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2021-05-11 15:14:26+00:00
+https://github.com/clamsproject/app-fastpunct,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2021-09-17 16:07:36+00:00
+https://github.com/clamsproject/app-insightface,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2023-01-17 00:03:16+00:00
 https://github.com/clamsproject/app-role-filler-binder-old,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2023-08-03 16:45:38+00:00
+https://github.com/clamsproject/app-wav2vec-forced-aligner,False,UNKNOWN,AppStatus.DISCONTINUED,N/A,N/A,2023-08-10 19:50:08+00:00
