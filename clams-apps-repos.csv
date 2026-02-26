@@ -1,8 +1,8 @@
 repo,in_appdir,sdk-in-use,sdk-status (latest: 1.4.0),main_branch,last_commit,start_date
 https://github.com/clamsproject/app-pyscenedetect-wrapper,True,1.4.0,AppStatus.UPDATED,main,2026-02-10 22:41:05+00:00,2019-08-21 01:24:46+00:00
 https://github.com/clamsproject/app-swt-detection,True,1.4.0,AppStatus.UPDATED,main,2025-12-13 21:04:49+00:00,2023-09-21 12:39:30+00:00
+https://github.com/clamsproject/app-smolvlm2-captioner,True,1.3.2,AppStatus.OUTDATED,main,2026-02-26 04:55:18+00:00,2025-02-25 04:56:09+00:00
 https://github.com/clamsproject/app-chapter-llama,False,1.3.3,AppStatus.OUTDATED,main,2026-02-12 01:14:21+00:00,2026-02-12 01:11:09+00:00
-https://github.com/clamsproject/app-smolvlm2-captioner,True,1.3.2,AppStatus.OUTDATED,main,2026-01-27 04:56:29+00:00,2025-02-25 04:56:09+00:00
 https://github.com/clamsproject/app-tonedetection,True,1.3.3,AppStatus.OUTDATED,main,2025-11-20 07:56:03+00:00,2023-03-25 23:18:49+00:00
 https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,True,1.3.3,AppStatus.OUTDATED,main,2025-11-14 01:12:52+00:00,2020-12-24 04:01:51+00:00
 https://github.com/clamsproject/app-spoken-lid,True,1.3.3,AppStatus.OUTDATED,main,2025-11-11 00:47:38+00:00,2025-04-15 19:00:22+00:00
