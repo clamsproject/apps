@@ -1,0 +1,6 @@
+{
+  "time": "2026-03-22T15:35:18+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v8.5",
+  "releasenotes": "New models with wider MLP classification head design\n\n"
+}
