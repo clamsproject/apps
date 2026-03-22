@@ -1,56 +1,12 @@
 {
-  "http://apps.clams.ai/smolvlm2-captioner": {
-    "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
-    "latest_update": "2026-02-27T20:09:36+00:00",
-    "versions": [
-      [
-        "v0.5",
-        "kelleyl"
-      ],
-      [
-        "v0.4",
-        "kelleyl"
-      ],
-      [
-        "v0.3",
-        "kelleyl"
-      ],
-      [
-        "v0.2",
-        "kelleyl"
-      ],
-      [
-        "v0.1",
-        "kelleyl"
-      ]
-    ]
-  },
-  "http://apps.clams.ai/pyscenedetect-wrapper": {
-    "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
-    "latest_update": "2026-02-10T04:17:11+00:00",
-    "versions": [
-      [
-        "v4",
-        "kelleyl"
-      ],
-      [
-        "v3",
-        "kelleyl"
-      ],
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
-    ]
-  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2025-12-14T01:08:09+00:00",
+    "latest_update": "2026-03-22T15:17:02+00:00",
     "versions": [
+      [
+        "v8.5",
+        "keighrim"
+      ],
       [
         "v8.4",
         "keighrim"
@@ -154,6 +110,54 @@
       [
         "v1.0",
         "marcverhagen"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/smolvlm2-captioner": {
+    "description": "Applies SmolVLM2-2.2B-Instruct multimodal model to video frames for image captioning.",
+    "latest_update": "2026-02-27T20:09:36+00:00",
+    "versions": [
+      [
+        "v0.5",
+        "kelleyl"
+      ],
+      [
+        "v0.4",
+        "kelleyl"
+      ],
+      [
+        "v0.3",
+        "kelleyl"
+      ],
+      [
+        "v0.2",
+        "kelleyl"
+      ],
+      [
+        "v0.1",
+        "kelleyl"
+      ]
+    ]
+  },
+  "http://apps.clams.ai/pyscenedetect-wrapper": {
+    "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
+    "latest_update": "2026-02-10T04:17:11+00:00",
+    "versions": [
+      [
+        "v4",
+        "kelleyl"
+      ],
+      [
+        "v3",
+        "kelleyl"
+      ],
+      [
+        "v2",
+        "keighrim"
+      ],
+      [
+        "v1",
+        "keighrim"
       ]
     ]
   },
