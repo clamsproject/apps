@@ -1,0 +1,91 @@
+{
+  "name": "Chapter-Llama",
+  "description": "A CLAMS wrapper for Chapter-Llama, a video chaptering system that uses LLMs (Llama-3.1-8B-Instruct with LoRA adapters) to partition long videos into chapters with timestamps and titles. It processes speech transcripts (ASR) as text input to the LLM.",
+  "app_version": "v0.1.0",
+  "mmif_version": "1.1.0",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/app-chapter-llama/v0.1.0",
+  "url": "https://github.com/clamsproject/app-chapter-llama",
+  "input": [
+    [
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/VideoDocument/v1",
+        "required": true
+      },
+      {
+        "@type": "http://mmif.clams.ai/vocabulary/AudioDocument/v1",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://mmif.clams.ai/vocabulary/Chapter/v6",
+      "properties": {
+        "timeUnit": "milliseconds"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "model",
+      "description": "Chapter-Llama LoRA model variant to use.",
+      "type": "string",
+      "choices": [
+        "asr-10k",
+        "asr-1k",
+        "captions_asr-10k",
+        "captions_asr-1k"
+      ],
+      "default": "asr-10k",
+      "multivalued": false
+    },
+    {
+      "name": "windowTokenSize",
+      "description": "Token size for each processing window. Longer videos are split into windows of this size.",
+      "type": "integer",
+      "default": 15000,
+      "multivalued": false
+    },
+    {
+      "name": "firstWindowOnly",
+      "description": "Process only the first window (for debugging).",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "quantization",
+      "description": "Quantization method to reduce GPU memory usage. '4bit' reduces ~75%, '8bit' reduces ~50%, 'none' uses full precision.",
+      "type": "string",
+      "choices": [
+        "4bit",
+        "8bit",
+        "none"
+      ],
+      "default": "4bit",
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    }
+  ]
+}
