@@ -1,0 +1,83 @@
+{
+  "name": "CLAMS wrapper for spaCy NLP",
+  "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+  "app_version": "v2.2",
+  "mmif_version": "1.2.0",
+  "analyzer_version": "3.8.*",
+  "app_license": "Apache 2.0",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/spacy-wrapper/v2.2",
+  "url": "https://github.com/clamsproject/app-spacy-wrapper",
+  "input": [
+    {
+      "@type": "http://clams.ai/vocabulary/type/TextDocument/v2",
+      "required": true
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token",
+      "required": false
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://vocab.lappsgrid.org/Token"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token#pos"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Token#lemma"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/NounChunk"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/Sentence"
+    },
+    {
+      "@type": "http://vocab.lappsgrid.org/NamedEntity"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "pretokenized",
+      "description": "Boolean parameter to set the app to use existing tokenization, if available, for text documents for NLP processing. Useful to process ASR documents, for example.",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "tfSamplingMode",
+      "description": "Sampling mode for TimeFrame annotations. Has no effect when the app does not process TimeFrames. \"representatives\" uses all representative timepoints if present, otherwise skips the TimeFrame. \"single\" uses the middle representative if present, otherwise extracts an image from the midpoint of the start/end interval (midpoint is calculated by floor division of the sum of start and end). \"all\" uses all target timepoints if present, otherwise extracts all images from the time interval.",
+      "type": "string",
+      "choices": [
+        "representatives",
+        "single",
+        "all"
+      ],
+      "default": "representatives",
+      "multivalued": false
+    }
+  ]
+}
