@@ -1,0 +1,6 @@
+{
+  "time": "2026-06-18T19:06:20+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.2",
+  "releasenotes": "bumped SDK to 1.7.0, spacy to 3.8\n\n"
+}
