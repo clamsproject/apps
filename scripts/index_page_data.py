@@ -8,6 +8,22 @@ app_index_fname = 'docs/_data/app-index.json'
 apps_fname = 'docs/_data/apps.json'
 
 
+def version_entry(metadata, submission):
+    """Build a single version record for the app-index.
+
+    Carries everything the main listing and per-app pages render inline
+    (submitter, submission time, prebuilt image tag, source repo URL) so
+    those pages don't need to open per-version metadata.
+    """
+    return {
+        'version': metadata['app_version'],
+        'submitter': submission['submitter'],
+        'time': submission['time'],
+        'image': submission['image'],
+        'repo_url': metadata['url'],
+    }
+
+
 def process_version(existing_index, existing_versions, existing_apps,
                      metadata, submission, submit_time):
     """Process a single app version and update indexes."""
@@ -20,7 +36,7 @@ def process_version(existing_index, existing_versions, existing_apps,
         existing_index[shortid] = {
             'description': metadata['description'],
             'latest_update': submit_time,
-            'versions': [(app_version, submission['submitter'])]
+            'versions': [version_entry(metadata, submission)]
         }
         existing_versions[shortid].add(app_version)
         existing_apps.append(metadata)
@@ -28,17 +44,14 @@ def process_version(existing_index, existing_versions, existing_apps,
         # New version of existing app
         existing_index[shortid]['description'] = metadata['description']
         existing_index[shortid]['versions'].insert(
-            0, (app_version, submission['submitter']))
+            0, version_entry(metadata, submission))
         existing_index[shortid]['latest_update'] = submit_time
         existing_versions[shortid].add(app_version)
         existing_apps.append(metadata)
 
 
-# Check if running in from-scratch mode
-from_scratch = not (Path(app_index_fname).exists() and
-                     Path(apps_fname).exists())
-
-if from_scratch:
+def rebuild_from_scratch():
+    """Rebuild the whole index from every version's metadata/submission."""
     print("Running in from-scratch mode: rebuilding from all versions")
     existing_index = {}
     existing_apps = []
@@ -69,11 +82,14 @@ if from_scratch:
         submission = json.load(open(submission_json_f))
         process_version(existing_index, existing_versions, existing_apps,
                         metadata, submission, submit_time)
-else:
-    # Incremental mode: process single new version
-    if len(sys.argv) > 1:
-        metadata_json_f = Path(sys.argv[1]) / 'metadata.json'
-        submission_json_f = Path(sys.argv[1]) / 'submission.json'
+    return existing_index, existing_apps
+
+
+def update_incremental(target_dir=None):
+    """Add a single new version to the existing index files."""
+    if target_dir is not None:
+        metadata_json_f = Path(target_dir) / 'metadata.json'
+        submission_json_f = Path(target_dir) / 'submission.json'
     else:
         metadata_json_f = Path('metadata.json')
         submission_json_f = Path('submission.json')
@@ -90,7 +106,7 @@ else:
     existing_versions = collections.defaultdict(set)
     for appname in existing_index:
         for version in existing_index[appname]['versions']:
-            existing_versions[appname].add(version[0])
+            existing_versions[appname].add(version['version'])
         existing_index[appname]['latest_update'] = \
             datetime.datetime.fromisoformat(
                 existing_index[appname]['latest_update'])
@@ -99,13 +115,35 @@ else:
     submit_time = datetime.datetime.fromisoformat(submission['time'])
     process_version(existing_index, existing_versions, existing_apps,
                     metadata, submission, submit_time)
+    return existing_index, existing_apps
 
-sorted_existing_index = {}
-for k, v in sorted(existing_index.items(), key=lambda item: item[1]['latest_update'], reverse=True):
-    v['latest_update'] = v['latest_update'].isoformat()
-    sorted_existing_index[k] = v
 
-with open(app_index_fname, 'w') as f:
-    json.dump(sorted_existing_index, f, indent=2)
-with open(apps_fname, 'w') as f:
-    json.dump(existing_apps, f)
+def write_index(existing_index, existing_apps):
+    sorted_existing_index = {}
+    for k, v in sorted(existing_index.items(),
+                       key=lambda item: item[1]['latest_update'],
+                       reverse=True):
+        lu = v['latest_update']
+        v['latest_update'] = lu.isoformat() if hasattr(lu, 'isoformat') else lu
+        sorted_existing_index[k] = v
+
+    with open(app_index_fname, 'w') as f:
+        json.dump(sorted_existing_index, f, indent=2)
+    with open(apps_fname, 'w') as f:
+        json.dump(existing_apps, f)
+
+
+def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    from_scratch = not (Path(app_index_fname).exists() and
+                        Path(apps_fname).exists())
+    if from_scratch:
+        existing_index, existing_apps = rebuild_from_scratch()
+    else:
+        existing_index, existing_apps = update_incremental(
+            argv[0] if argv else None)
+    write_index(existing_index, existing_apps)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,58 @@
+<!-- start custom footer snippets -->
+
+<!-- Clipboard copy buttons (see issue #247). The copy-btn elements carry
+     the text to copy in a data-clip attribute and are emitted by the main
+     listing (docs/index.md), the per-app pages (scripts/app_pages.py), and
+     the per-version detail pages (scripts/metadata_markdown.py). -->
+<style>
+  .copy-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0 0.2em;
+    font-size: 0.85em;
+    line-height: 1;
+    vertical-align: baseline;
+    opacity: 0.6;
+  }
+  .copy-btn:hover { opacity: 1; }
+</style>
+<script>
+  // navigator.clipboard exists only in a secure context (https or
+  // localhost) — not over plain http (e.g. serving on a LAN IP), so fall
+  // back to a hidden-textarea execCommand copy there.
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy') ? resolve() : reject();
+      } catch (err) {
+        reject(err);
+      } finally {
+        document.body.removeChild(ta);
+      }
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    e.preventDefault();
+    copyText(btn.getAttribute('data-clip')).then(function () {
+      var original = btn.innerHTML;
+      btn.innerHTML = '✅';  // check mark
+      setTimeout(function () { btn.innerHTML = original; }, 1200);
+    });
+  });
+</script>
+
+<!-- end custom footer snippets -->

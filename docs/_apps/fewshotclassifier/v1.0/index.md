@@ -8,7 +8,7 @@ date: 2023-08-01T22:57:12+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2023-08-01T22:57:12+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-fewshotclassifier:v1.0](https://github.com/clamsproject/app-fewshotclassifier/pkgs/container/app-fewshotclassifier/v1.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-fewshotclassifier:v1.0](https://github.com/clamsproject/app-fewshotclassifier/pkgs/container/app-fewshotclassifier/v1.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-fewshotclassifier:v1.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2023-08-01T22:57:12+00:00
 
 - App ID: [http://apps.clams.ai/fewshotclassifier/v1.0](http://apps.clams.ai/fewshotclassifier/v1.0)
 - App License: MIT
-- Source Repository: [https://github.com/clamsproject/app-fewshotclassifier](https://github.com/clamsproject/app-fewshotclassifier) ([source tree of the submitted version](https://github.com/clamsproject/app-fewshotclassifier/tree/v1.0))
+- Source Repository: [https://github.com/clamsproject/app-fewshotclassifier](https://github.com/clamsproject/app-fewshotclassifier) ([source tree of the submitted version](https://github.com/clamsproject/app-fewshotclassifier/tree/v1.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-fewshotclassifier/tree/v1.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 1.0
 - Analyzer License: MIT
 

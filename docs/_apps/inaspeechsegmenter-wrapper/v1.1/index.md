@@ -8,7 +8,7 @@ date: 2023-07-24T05:31:08+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2023-07-24T05:31:08+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1](https://github.com/clamsproject/app-inaspeechsegmenter-wrapper/pkgs/container/app-inaspeechsegmenter-wrapper/v1.1)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1](https://github.com/clamsproject/app-inaspeechsegmenter-wrapper/pkgs/container/app-inaspeechsegmenter-wrapper/v1.1)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2023-07-24T05:31:08+00:00
 
 - App ID: [http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.1](http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.1)
 - App License: MIT
-- Source Repository: [https://github.com/clamsproject/app-inaspeechsegmenter-wrapper](https://github.com/clamsproject/app-inaspeechsegmenter-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-inaspeechsegmenter-wrapper/tree/v1.1))
+- Source Repository: [https://github.com/clamsproject/app-inaspeechsegmenter-wrapper](https://github.com/clamsproject/app-inaspeechsegmenter-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-inaspeechsegmenter-wrapper/tree/v1.1)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-inaspeechsegmenter-wrapper/tree/v1.1" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 0.7.6
 - Analyzer License: MIT
 

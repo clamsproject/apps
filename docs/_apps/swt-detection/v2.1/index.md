@@ -8,7 +8,7 @@ date: 2024-01-25T20:44:45+00:00
 
 - Submitter: [marcverhagen](https://github.com/marcverhagen)
 - Submission Time: 2024-01-25T20:44:45+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-swt-detection:v2.1](https://github.com/clamsproject/app-swt-detection/pkgs/container/app-swt-detection/v2.1)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-swt-detection:v2.1](https://github.com/clamsproject/app-swt-detection/pkgs/container/app-swt-detection/v2.1)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-swt-detection:v2.1" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > Fixed fatal error in 2.0 and added timeUnit
@@ -19,7 +19,7 @@ date: 2024-01-25T20:44:45+00:00
 
 - App ID: [http://apps.clams.ai/swt-detection/v2.1](http://apps.clams.ai/swt-detection/v2.1)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-swt-detection](https://github.com/clamsproject/app-swt-detection) ([source tree of the submitted version](https://github.com/clamsproject/app-swt-detection/tree/v2.1))
+- Source Repository: [https://github.com/clamsproject/app-swt-detection](https://github.com/clamsproject/app-swt-detection) ([source tree of the submitted version](https://github.com/clamsproject/app-swt-detection/tree/v2.1)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-swt-detection/tree/v2.1" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

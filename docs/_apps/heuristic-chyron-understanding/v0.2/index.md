@@ -8,7 +8,7 @@ date: 2025-07-14T23:10:14+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2025-07-14T23:10:14+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.2](https://github.com/clamsproject/app-heuristic-chyron-understanding/pkgs/container/app-heuristic-chyron-understanding/v0.2)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.2](https://github.com/clamsproject/app-heuristic-chyron-understanding/pkgs/container/app-heuristic-chyron-understanding/v0.2)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.2" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > Initial release with naive line parsing and name normalization
@@ -19,7 +19,7 @@ date: 2025-07-14T23:10:14+00:00
 
 - App ID: [http://apps.clams.ai/heuristic-chyron-understanding/v0.2](http://apps.clams.ai/heuristic-chyron-understanding/v0.2)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-heuristic-chyron-understanding](https://github.com/clamsproject/app-heuristic-chyron-understanding) ([source tree of the submitted version](https://github.com/clamsproject/app-heuristic-chyron-understanding/tree/v0.2))
+- Source Repository: [https://github.com/clamsproject/app-heuristic-chyron-understanding](https://github.com/clamsproject/app-heuristic-chyron-understanding) ([source tree of the submitted version](https://github.com/clamsproject/app-heuristic-chyron-understanding/tree/v0.2)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-heuristic-chyron-understanding/tree/v0.2" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

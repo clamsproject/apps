@@ -8,7 +8,7 @@ date: 2024-07-19T14:07:21+00:00
 
 - Submitter: [selenasong](https://github.com/selenasong)
 - Submission Time: 2024-07-19T14:07:21+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-tfidf-keywordextractor:v1.0](https://github.com/clamsproject/app-tfidf-keywordextractor/pkgs/container/app-tfidf-keywordextractor/v1.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-tfidf-keywordextractor:v1.0](https://github.com/clamsproject/app-tfidf-keywordextractor/pkgs/container/app-tfidf-keywordextractor/v1.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-tfidf-keywordextractor:v1.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2024-07-19T14:07:21+00:00
 
 - App ID: [http://apps.clams.ai/tfidf-keywordextractor/v1.0](http://apps.clams.ai/tfidf-keywordextractor/v1.0)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-tfidf-keywordextractor](https://github.com/clamsproject/app-tfidf-keywordextractor) ([source tree of the submitted version](https://github.com/clamsproject/app-tfidf-keywordextractor/tree/v1.0))
+- Source Repository: [https://github.com/clamsproject/app-tfidf-keywordextractor](https://github.com/clamsproject/app-tfidf-keywordextractor) ([source tree of the submitted version](https://github.com/clamsproject/app-tfidf-keywordextractor/tree/v1.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-tfidf-keywordextractor/tree/v1.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

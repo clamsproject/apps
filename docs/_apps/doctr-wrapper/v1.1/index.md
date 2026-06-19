@@ -8,7 +8,7 @@ date: 2024-04-23T20:49:23+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2024-04-23T20:49:23+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-doctr-wrapper:v1.1](https://github.com/clamsproject/app-doctr-wrapper/pkgs/container/app-doctr-wrapper/v1.1)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-doctr-wrapper:v1.1](https://github.com/clamsproject/app-doctr-wrapper/pkgs/container/app-doctr-wrapper/v1.1)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-doctr-wrapper:v1.1" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > Minor update with various fixes  
@@ -22,7 +22,7 @@ date: 2024-04-23T20:49:23+00:00
 
 - App ID: [http://apps.clams.ai/doctr-wrapper/v1.1](http://apps.clams.ai/doctr-wrapper/v1.1)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-doctr-wrapper](https://github.com/clamsproject/app-doctr-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-doctr-wrapper/tree/v1.1))
+- Source Repository: [https://github.com/clamsproject/app-doctr-wrapper](https://github.com/clamsproject/app-doctr-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-doctr-wrapper/tree/v1.1)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-doctr-wrapper/tree/v1.1" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 0.8.1
 - Analyzer License: Apache 2.0
 

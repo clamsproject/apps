@@ -8,7 +8,7 @@ date: 2024-07-18T19:15:59+00:00
 
 - Submitter: [1192119703jzx](https://github.com/1192119703jzx)
 - Submission Time: 2024-07-18T19:15:59+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-distil-whisper-wrapper:v1.0](https://github.com/clamsproject/app-distil-whisper-wrapper/pkgs/container/app-distil-whisper-wrapper/v1.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-distil-whisper-wrapper:v1.0](https://github.com/clamsproject/app-distil-whisper-wrapper/pkgs/container/app-distil-whisper-wrapper/v1.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-distil-whisper-wrapper:v1.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2024-07-18T19:15:59+00:00
 
 - App ID: [http://apps.clams.ai/distil-whisper-wrapper/v1.0](http://apps.clams.ai/distil-whisper-wrapper/v1.0)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-distil-whisper-wrapper](https://github.com/clamsproject/app-distil-whisper-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-distil-whisper-wrapper/tree/v1.0))
+- Source Repository: [https://github.com/clamsproject/app-distil-whisper-wrapper](https://github.com/clamsproject/app-distil-whisper-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-distil-whisper-wrapper/tree/v1.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-distil-whisper-wrapper/tree/v1.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 1.0
 - Analyzer License: MIT
 

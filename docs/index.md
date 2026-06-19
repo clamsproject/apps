@@ -33,7 +33,9 @@ toc_sticky: true
 {{ app[1]["description"] }}
 
         {% for i in (0..end_loop) %}
-* [{{ versions[i][0] }}]({{ check[1] }}/{{ versions[i][0] }}) ([`@{{ versions[i][1] }}`](https://github.com/{{ versions[i][1] }}))
+            {% assign v = versions[i] %}
+            {% assign repo_name = v.repo_url | split: '/' | last %}
+* [{{ v.version }}]({{ check[1] }}/{{ v.version }}) ([`@{{ v.submitter }}`](https://github.com/{{ v.submitter }}), {{ v.time | date: "%Y-%m-%d" }}, [source]({{ v.repo_url }}/tree/{{ v.version }})<button class="copy-btn" data-clip="{{ v.repo_url }}/tree/{{ v.version }}" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>, [image]({{ v.repo_url }}/pkgs/container/{{ repo_name }}/{{ v.version }})<button class="copy-btn" data-clip="{{ v.image }}" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>)
         {% endfor %}
         {% if versions.size > to_display %}
 

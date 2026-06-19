@@ -8,7 +8,7 @@ date: 2025-02-05T22:52:42+00:00
 
 - Submitter: [kelleyl](https://github.com/kelleyl)
 - Submission Time: 2025-02-05T22:52:42+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-llava-captioner:v1.2](https://github.com/clamsproject/app-llava-captioner/pkgs/container/app-llava-captioner/v1.2)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-llava-captioner:v1.2](https://github.com/clamsproject/app-llava-captioner/pkgs/container/app-llava-captioner/v1.2)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-llava-captioner:v1.2" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2025-02-05T22:52:42+00:00
 
 - App ID: [http://apps.clams.ai/llava-captioner/v1.2](http://apps.clams.ai/llava-captioner/v1.2)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-llava-captioner](https://github.com/clamsproject/app-llava-captioner) ([source tree of the submitted version](https://github.com/clamsproject/app-llava-captioner/tree/v1.2))
+- Source Repository: [https://github.com/clamsproject/app-llava-captioner](https://github.com/clamsproject/app-llava-captioner) ([source tree of the submitted version](https://github.com/clamsproject/app-llava-captioner/tree/v1.2)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-llava-captioner/tree/v1.2" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs
