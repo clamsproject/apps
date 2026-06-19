@@ -9,7 +9,7 @@ toc_sticky: true
 
 ## How to use CLAMS apps 
 
-* Want to know how to use CLAMS apps? Check out [CLAMS App user manual](clamsapp).
+* Want to know how to use CLAMS apps? Check out [CLAMS App user manual](https://clams.ai/clams-python/clamsapp.html).
 * Want a human friendly views of MMIF JSON files? Visit [MMIF visualizer](https://github.com/clamsproject/mmif-visualizer) repository. 
 
 ## App Directory
