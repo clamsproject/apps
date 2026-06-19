@@ -40,3 +40,12 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 gem "webrick", "~> 1.8"
 
 gem "json", "~> 2.7"
+
+# Ruby 3.4 dropped these from the default gems; Jekyll 3.x still
+# requires them, so declare them explicitly for local builds on
+# modern Ruby (harmless on the CI-pinned Ruby 3.1.2).
+gem "erb"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"

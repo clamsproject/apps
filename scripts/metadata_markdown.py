@@ -14,7 +14,7 @@ app_template = """
 
 - App ID: [${identifier}](${identifier})
 - App License: ${app_license}
-- Source Repository: [${url}](${url}) ([source tree of the submitted version](${url}/tree/${app_version}))
+- Source Repository: [${url}](${url}) ([source tree of the submitted version](${url}/tree/${app_version})<button class="copy-btn" data-clip="${url}/tree/${app_version}" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 """
 
 submission_template = """
@@ -22,7 +22,7 @@ submission_template = """
 
 - Submitter: [${submitter}](https://github.com/${submitter})
 - Submission Time: ${time}
-- Prebuilt Container Image: [${image}](${image_webpage})
+- Prebuilt Container Image: [${image}](${image_webpage})<button class="copy-btn" data-clip="${image}" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 """
 
