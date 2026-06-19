@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: about
   - title: "User Manual"
-    url: clamsapp
+    url: "https://clams.ai/clams-python/clamsapp.html"
   - title: "MMIF viewer"
     url: "https://github.com/clamsproject/mmif-visualizer"
   # - title: "About"
