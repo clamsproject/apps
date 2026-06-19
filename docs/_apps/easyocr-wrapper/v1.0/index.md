@@ -8,7 +8,7 @@ date: 2024-01-25T18:44:59+00:00
 
 - Submitter: [snewman-aa](https://github.com/snewman-aa)
 - Submission Time: 2024-01-25T18:44:59+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-easyocr-wrapper:v1.0](https://github.com/clamsproject/app-easyocr-wrapper/pkgs/container/app-easyocr-wrapper/v1.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-easyocr-wrapper:v1.0](https://github.com/clamsproject/app-easyocr-wrapper/pkgs/container/app-easyocr-wrapper/v1.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-easyocr-wrapper:v1.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2024-01-25T18:44:59+00:00
 
 - App ID: [http://apps.clams.ai/easyocr-wrapper/v1.0](http://apps.clams.ai/easyocr-wrapper/v1.0)
 - App License: MIT
-- Source Repository: [https://github.com/clamsproject/app-easyocr-wrapper](https://github.com/clamsproject/app-easyocr-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-easyocr-wrapper/tree/v1.0))
+- Source Repository: [https://github.com/clamsproject/app-easyocr-wrapper](https://github.com/clamsproject/app-easyocr-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-easyocr-wrapper/tree/v1.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-easyocr-wrapper/tree/v1.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 1.7.0
 - Analyzer License: Apache 2.0
 

@@ -3,652 +3,1006 @@
     "description": "Apply spaCy NLP to all text documents in a MMIF file.",
     "latest_update": "2026-06-18T19:06:20+00:00",
     "versions": [
-      [
-        "v2.2",
-        "keighrim"
-      ],
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "marcverhagen"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
+      {
+        "version": "v2.2",
+        "submitter": "keighrim",
+        "time": "2026-06-18T19:06:20+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.2",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2025-07-26T21:02:46+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2024-07-16T16:49:38+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "marcverhagen",
+        "time": "2024-06-11T12:30:19+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-24T17:39:56+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-05-19T22:02:23+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2026-06-13T01:08:48+00:00",
     "versions": [
-      [
-        "v8.6",
-        "keighrim"
-      ],
-      [
-        "v8.5",
-        "keighrim"
-      ],
-      [
-        "v8.4",
-        "keighrim"
-      ],
-      [
-        "v8.3",
-        "keighrim"
-      ],
-      [
-        "v8.2",
-        "keighrim"
-      ],
-      [
-        "v8.1",
-        "keighrim"
-      ],
-      [
-        "v8.0",
-        "keighrim"
-      ],
-      [
-        "v7.7",
-        "keighrim"
-      ],
-      [
-        "v7.6",
-        "keighrim"
-      ],
-      [
-        "v7.5",
-        "keighrim"
-      ],
-      [
-        "v7.4",
-        "keighrim"
-      ],
-      [
-        "v7.3",
-        "keighrim"
-      ],
-      [
-        "v7.2",
-        "keighrim"
-      ],
-      [
-        "v7.1",
-        "keighrim"
-      ],
-      [
-        "v7.0",
-        "keighrim"
-      ],
-      [
-        "v6.1",
-        "keighrim"
-      ],
-      [
-        "v6.0",
-        "keighrim"
-      ],
-      [
-        "v5.1",
-        "keighrim"
-      ],
-      [
-        "v5.0",
-        "marcverhagen"
-      ],
-      [
-        "v4.4",
-        "keighrim"
-      ],
-      [
-        "v4.3",
-        "keighrim"
-      ],
-      [
-        "v4.2",
-        "keighrim"
-      ],
-      [
-        "v4.1",
-        "keighrim"
-      ],
-      [
-        "v4.0",
-        "marcverhagen"
-      ],
-      [
-        "v3.0",
-        "marcverhagen"
-      ],
-      [
-        "v2.1",
-        "marcverhagen"
-      ],
-      [
-        "v2.0",
-        "marcverhagen"
-      ],
-      [
-        "v1.0",
-        "marcverhagen"
-      ]
+      {
+        "version": "v8.6",
+        "submitter": "keighrim",
+        "time": "2026-06-13T01:08:48+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.6",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v8.5",
+        "submitter": "keighrim",
+        "time": "2026-03-22T15:35:18+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.5",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v8.4",
+        "submitter": "keighrim",
+        "time": "2025-12-14T01:08:09+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.4",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v8.3",
+        "submitter": "keighrim",
+        "time": "2025-11-08T01:19:05+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.3",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v8.2",
+        "submitter": "keighrim",
+        "time": "2025-11-06T00:30:34+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.2",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v8.1",
+        "submitter": "keighrim",
+        "time": "2025-11-05T20:04:52+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.1",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v8.0",
+        "submitter": "keighrim",
+        "time": "2025-11-05T02:04:38+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.7",
+        "submitter": "keighrim",
+        "time": "2025-07-28T15:43:20+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.7",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.6",
+        "submitter": "keighrim",
+        "time": "2025-06-24T14:20:12+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.6",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.5",
+        "submitter": "keighrim",
+        "time": "2025-02-24T10:41:50+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.5",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.4",
+        "submitter": "keighrim",
+        "time": "2025-02-03T22:07:54+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.4",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.3",
+        "submitter": "keighrim",
+        "time": "2025-01-28T00:35:32+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.3",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.2",
+        "submitter": "keighrim",
+        "time": "2024-12-15T12:18:28+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.2",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.1",
+        "submitter": "keighrim",
+        "time": "2024-12-02T17:48:12+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.1",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v7.0",
+        "submitter": "keighrim",
+        "time": "2024-11-04T22:00:05+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v7.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v6.1",
+        "submitter": "keighrim",
+        "time": "2024-07-30T01:06:00+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v6.1",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v6.0",
+        "submitter": "keighrim",
+        "time": "2024-07-25T16:11:42+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v6.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v5.1",
+        "submitter": "keighrim",
+        "time": "2024-06-28T02:03:53+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v5.1",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v5.0",
+        "submitter": "marcverhagen",
+        "time": "2024-05-22T14:32:58+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v5.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v4.4",
+        "submitter": "keighrim",
+        "time": "2024-04-12T15:25:19+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v4.4",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v4.3",
+        "submitter": "keighrim",
+        "time": "2024-04-11T21:49:21+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v4.3",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v4.2",
+        "submitter": "keighrim",
+        "time": "2024-03-11T16:26:00+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v4.2",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v4.1",
+        "submitter": "keighrim",
+        "time": "2024-03-07T03:29:41+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v4.1",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v4.0",
+        "submitter": "marcverhagen",
+        "time": "2024-02-29T17:24:13+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v4.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v3.0",
+        "submitter": "marcverhagen",
+        "time": "2024-02-07T21:18:36+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v3.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v2.1",
+        "submitter": "marcverhagen",
+        "time": "2024-01-25T20:44:45+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "marcverhagen",
+        "time": "2024-01-16T17:15:09+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "marcverhagen",
+        "time": "2023-11-22T15:13:53+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      }
     ]
   },
   "http://apps.clams.ai/smolvlm2-captioner": {
     "description": "Applies the SmolVLM2-2.2B-Instruct multimodal model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Each invocation runs a single `prompt` against the TimeFrames selected by `tfLabels`; to apply different prompts to different label subsets (e.g. one prompt for slates, another for chyrons), run the app once per (`prompt`, `tfLabels`) combination. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. This app ships only the 2.2B-Instruct variant -- the largest and most general-purpose model in the SmolVLM2 family. The smaller (256M and 500M) SmolVLM2 releases are post-trained specifically for video-QA tasks and we do not expect them to generalize well, given their size.",
     "latest_update": "2026-06-01T20:28:09+00:00",
     "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ],
-      [
-        "v0.5",
-        "kelleyl"
-      ],
-      [
-        "v0.4",
-        "kelleyl"
-      ],
-      [
-        "v0.3",
-        "kelleyl"
-      ],
-      [
-        "v0.2",
-        "kelleyl"
-      ],
-      [
-        "v0.1",
-        "kelleyl"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2026-06-01T20:28:09+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.5",
+        "submitter": "kelleyl",
+        "time": "2026-02-27T20:09:36+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.4",
+        "submitter": "kelleyl",
+        "time": "2026-02-26T05:05:42+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.4",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.3",
+        "submitter": "kelleyl",
+        "time": "2026-01-28T15:06:18+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.3",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.2",
+        "submitter": "kelleyl",
+        "time": "2026-01-28T03:14:45+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "kelleyl",
+        "time": "2025-11-20T15:41:04+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      }
     ]
   },
   "http://apps.clams.ai/pyscenedetect-wrapper": {
     "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
     "latest_update": "2026-02-10T04:17:11+00:00",
     "versions": [
-      [
-        "v4",
-        "kelleyl"
-      ],
-      [
-        "v3",
-        "kelleyl"
-      ],
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
+      {
+        "version": "v4",
+        "submitter": "kelleyl",
+        "time": "2026-02-10T04:17:11+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v4",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      },
+      {
+        "version": "v3",
+        "submitter": "kelleyl",
+        "time": "2024-03-11T17:42:55+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v3",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      },
+      {
+        "version": "v2",
+        "submitter": "keighrim",
+        "time": "2023-07-24T07:50:09+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v2",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-06-16T06:50:24+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/tonedetection": {
     "description": "Detects spans of monotonic audio within an audio file",
     "latest_update": "2025-11-20T08:01:02+00:00",
     "versions": [
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "MrSqually"
-      ]
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2025-11-20T08:01:02+00:00",
+        "image": "ghcr.io/clamsproject/app-tonedetection:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-tonedetection"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "MrSqually",
+        "time": "2023-07-24T17:50:36+00:00",
+        "image": "ghcr.io/clamsproject/app-tonedetection:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-tonedetection"
+      }
     ]
   },
   "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
     "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
     "latest_update": "2025-11-14T01:22:11+00:00",
     "versions": [
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2025-11-14T01:22:11+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2024-05-07T03:45:14+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "keighrim",
+        "time": "2024-05-06T17:53:34+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-24T05:31:08+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-06-20T02:49:35+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/spoken-lid": {
     "description": "Chunk-level language ID over audio based on OpenAI Whisper",
     "latest_update": "2025-11-11T00:51:26+00:00",
     "versions": [
-      [
-        "v0.3",
-        "keighrim"
-      ],
-      [
-        "v0.2",
-        "keighrim"
-      ],
-      [
-        "v0.1",
-        "keighrim"
-      ]
+      {
+        "version": "v0.3",
+        "submitter": "keighrim",
+        "time": "2025-11-11T00:51:26+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.3",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.2",
+        "submitter": "keighrim",
+        "time": "2025-11-06T10:31:10+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2025-11-05T19:58:01+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      }
     ]
   },
   "http://apps.clams.ai/nfa-wrapper": {
     "description": "Wraps the [NVIDIA NeMo Forced Aligner tool](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html) to temporally align transcribed text with its audio source. ",
     "latest_update": "2025-11-09T18:36:09+00:00",
     "versions": [
-      [
-        "v0.1",
-        "keighrim"
-      ]
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2025-11-09T18:36:09+00:00",
+        "image": "ghcr.io/clamsproject/app-nfa-wrapper:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-nfa-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
     "latest_update": "2025-11-06T00:37:40+00:00",
     "versions": [
-      [
-        "v15",
-        "keighrim"
-      ],
-      [
-        "v14",
-        "keighrim"
-      ],
-      [
-        "v13",
-        "Brendayy"
-      ],
-      [
-        "v12",
-        "keighrim"
-      ],
-      [
-        "v11",
-        "keighrim"
-      ],
-      [
-        "v10",
-        "keighrim"
-      ],
-      [
-        "v9",
-        "keighrim"
-      ],
-      [
-        "v8",
-        "keighrim"
-      ],
-      [
-        "v7",
-        "keighrim"
-      ],
-      [
-        "v6",
-        "keighrim"
-      ],
-      [
-        "v5",
-        "keighrim"
-      ],
-      [
-        "v4",
-        "keighrim"
-      ],
-      [
-        "v3",
-        "keighrim"
-      ],
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
+      {
+        "version": "v15",
+        "submitter": "keighrim",
+        "time": "2025-11-06T00:37:40+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v15",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v14",
+        "submitter": "keighrim",
+        "time": "2025-11-05T20:18:24+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v14",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v13",
+        "submitter": "Brendayy",
+        "time": "2025-06-30T18:05:02+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v13",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v12",
+        "submitter": "keighrim",
+        "time": "2024-10-16T16:03:25+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v12",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v11",
+        "submitter": "keighrim",
+        "time": "2024-10-01T19:15:40+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v11",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v10",
+        "submitter": "keighrim",
+        "time": "2024-08-29T22:13:54+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v10",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v9",
+        "submitter": "keighrim",
+        "time": "2024-08-16T15:05:09+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v9",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v8",
+        "submitter": "keighrim",
+        "time": "2024-07-22T21:53:49+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v8",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v7",
+        "submitter": "keighrim",
+        "time": "2024-06-24T20:24:22+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v7",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v6",
+        "submitter": "keighrim",
+        "time": "2024-02-12T19:47:39+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v6",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v5",
+        "submitter": "keighrim",
+        "time": "2024-02-09T12:28:02+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v5",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v4",
+        "submitter": "keighrim",
+        "time": "2024-01-24T05:40:09+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v4",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v3",
+        "submitter": "keighrim",
+        "time": "2023-07-24T07:38:43+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v3",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v2",
+        "submitter": "keighrim",
+        "time": "2023-06-01T23:46:46+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v2",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-06-01T14:15:29+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/doctr-wrapper": {
     "description": "CLAMS app wraps the [docTR, End-to-End OCR model](https://pypi.org/project/python-doctr). The model can detect text regions in the input image and recognize text in the regions (via parseq OCR model, only English is support at the moment). The text-localized regions are organized hierarchically by the model into \"pages\" > \"blocks\" > \"lines\" > \"words\", and this CLAMS app translates them into `TextDocument`, `Paragraphs`, `Sentence`, and `Token` annotations to represent recognized text contents. See descriptions for I/O types below  for details on how annotations are aligned to each other.",
     "latest_update": "2025-10-03T16:46:01+00:00",
     "versions": [
-      [
-        "v1.4",
-        "keighrim"
-      ],
-      [
-        "v1.3",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.4",
+        "submitter": "keighrim",
+        "time": "2025-10-03T16:46:01+00:00",
+        "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.4",
+        "repo_url": "https://github.com/clamsproject/app-doctr-wrapper"
+      },
+      {
+        "version": "v1.3",
+        "submitter": "keighrim",
+        "time": "2025-07-02T02:33:54+00:00",
+        "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.3",
+        "repo_url": "https://github.com/clamsproject/app-doctr-wrapper"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "keighrim",
+        "time": "2025-05-23T01:46:09+00:00",
+        "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-doctr-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2024-04-23T20:49:23+00:00",
+        "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-doctr-wrapper"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2024-04-22T18:46:07+00:00",
+        "image": "ghcr.io/clamsproject/app-doctr-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-doctr-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/tesseract": {
     "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results. Currenly only support English language.",
     "latest_update": "2025-09-05T18:11:26+00:00",
     "versions": [
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ]
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2025-09-05T18:11:26+00:00",
+        "image": "ghcr.io/clamsproject/app-tesseractocr-wrapper:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-tesseractocr-wrapper"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2025-07-02T02:52:55+00:00",
+        "image": "ghcr.io/clamsproject/app-tesseractocr-wrapper:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-tesseractocr-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/parakeet-wrapper": {
     "description": "A CLAMS wrapper for NVIDIA NeMo Parakeet ASR models available on huggingface-hub with support for punctuation, capitalization, and word-level timestamping.",
     "latest_update": "2025-07-29T15:07:13+00:00",
     "versions": [
-      [
-        "v1.0",
-        "shel-ho"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "shel-ho",
+        "time": "2025-07-29T15:07:13+00:00",
+        "image": "ghcr.io/clamsproject/app-parakeet-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-parakeet-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/heuristic-chyron-understanding": {
     "description": "Prototype to convert chyron text from docTR/Tesseract/LLaVA MMIF outputinto a name and list of attributes.",
     "latest_update": "2025-07-14T23:10:14+00:00",
     "versions": [
-      [
-        "v0.2",
-        "keighrim"
-      ]
+      {
+        "version": "v0.2",
+        "submitter": "keighrim",
+        "time": "2025-07-14T23:10:14+00:00",
+        "image": "ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-heuristic-chyron-understanding"
+      }
     ]
   },
   "http://apps.clams.ai/llava-captioner": {
     "description": "Applies LLaVA v1.6 Mistral-7B to video frames for image captioning.",
     "latest_update": "2025-02-05T22:52:42+00:00",
     "versions": [
-      [
-        "v1.2",
-        "kelleyl"
-      ],
-      [
-        "v1.1",
-        "kelleyl"
-      ],
-      [
-        "v1.0",
-        "kelleyl"
-      ]
+      {
+        "version": "v1.2",
+        "submitter": "kelleyl",
+        "time": "2025-02-05T22:52:42+00:00",
+        "image": "ghcr.io/clamsproject/app-llava-captioner:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-llava-captioner"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "kelleyl",
+        "time": "2024-05-23T19:38:32+00:00",
+        "image": "ghcr.io/clamsproject/app-llava-captioner:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-llava-captioner"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "kelleyl",
+        "time": "2024-05-23T19:26:17+00:00",
+        "image": "ghcr.io/clamsproject/app-llava-captioner:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-llava-captioner"
+      }
     ]
   },
   "http://apps.clams.ai/distil-whisper-wrapper": {
     "description": "The wrapper of Distil-Whisper, avaliable models: distil-large-v3, distil-large-v2, distil-medium.en, distil-small.en. The default model is distil-small.en.",
     "latest_update": "2024-08-08T15:48:34+00:00",
     "versions": [
-      [
-        "v1.2",
-        "BenLambright"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "1192119703jzx"
-      ]
+      {
+        "version": "v1.2",
+        "submitter": "BenLambright",
+        "time": "2024-08-08T15:48:34+00:00",
+        "image": "ghcr.io/clamsproject/app-distil-whisper-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-distil-whisper-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2024-07-22T21:52:47+00:00",
+        "image": "ghcr.io/clamsproject/app-distil-whisper-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-distil-whisper-wrapper"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "1192119703jzx",
+        "time": "2024-07-18T19:15:59+00:00",
+        "image": "ghcr.io/clamsproject/app-distil-whisper-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-distil-whisper-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/simple-timepoints-stitcher": {
     "description": "Stitches a sequence of `TimePoint` annotations into a sequence of `TimeFrame` annotations, performing simple smoothing of short peaks of positive labels.",
     "latest_update": "2024-08-06T12:25:05+00:00",
     "versions": [
-      [
-        "v3.0",
-        "keighrim"
-      ],
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.3",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v3.0",
+        "submitter": "keighrim",
+        "time": "2024-08-06T12:25:05+00:00",
+        "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v3.0",
+        "repo_url": "https://github.com/clamsproject/app-simple-timepoints-stitcher"
+      },
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2024-06-26T14:40:00+00:00",
+        "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-simple-timepoints-stitcher"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2024-05-06T16:13:55+00:00",
+        "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-simple-timepoints-stitcher"
+      },
+      {
+        "version": "v1.3",
+        "submitter": "keighrim",
+        "time": "2024-04-21T22:40:34+00:00",
+        "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v1.3",
+        "repo_url": "https://github.com/clamsproject/app-simple-timepoints-stitcher"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "keighrim",
+        "time": "2024-04-12T15:54:40+00:00",
+        "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-simple-timepoints-stitcher"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2024-04-02T20:20:44+00:00",
+        "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-simple-timepoints-stitcher"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2024-04-01T11:53:34+00:00",
+        "image": "ghcr.io/clamsproject/app-simple-timepoints-stitcher:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-simple-timepoints-stitcher"
+      }
     ]
   },
   "http://apps.clams.ai/tfidf-keywordextractor": {
     "description": "extract keywords of a text document according to TF-IDF values. IDF values and all features come from related pickle files in the current directory.App can either take a simple text document or take a MMIF file generated from the text slicer app.",
     "latest_update": "2024-07-19T14:07:21+00:00",
     "versions": [
-      [
-        "v1.0",
-        "selenasong"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "selenasong",
+        "time": "2024-07-19T14:07:21+00:00",
+        "image": "ghcr.io/clamsproject/app-tfidf-keywordextractor:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-tfidf-keywordextractor"
+      }
     ]
   },
   "http://apps.clams.ai/text-slicer": {
     "description": "Slice text snippets from a provided text document given time frames",
     "latest_update": "2024-07-02T01:30:06+00:00",
     "versions": [
-      [
-        "v1.0",
-        "bohJiang12"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "bohJiang12",
+        "time": "2024-07-02T01:30:06+00:00",
+        "image": "ghcr.io/clamsproject/app-text-slicer:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-text-slicer"
+      }
     ]
   },
   "http://apps.clams.ai/east-textdetection": {
     "description": "OpenCV-based text localization app that used EAST text detection model. Please visit the source code repository for full documentation.",
     "latest_update": "2024-06-24T13:52:29+00:00",
     "versions": [
-      [
-        "v1.2",
-        "MrSqually"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.2",
+        "submitter": "MrSqually",
+        "time": "2024-06-24T13:52:29+00:00",
+        "image": "ghcr.io/clamsproject/app-east-textdetection:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-east-textdetection"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-26T19:06:10+00:00",
+        "image": "ghcr.io/clamsproject/app-east-textdetection:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-east-textdetection"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-07-24T07:53:28+00:00",
+        "image": "ghcr.io/clamsproject/app-east-textdetection:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-east-textdetection"
+      }
     ]
   },
   "http://apps.clams.ai/easyocr-wrapper": {
     "description": "Using EasyOCR to extract text from timeframes",
     "latest_update": "2024-01-30T19:59:06+00:00",
     "versions": [
-      [
-        "v1.1",
-        "snewman-aa"
-      ],
-      [
-        "v1.0",
-        "snewman-aa"
-      ]
+      {
+        "version": "v1.1",
+        "submitter": "snewman-aa",
+        "time": "2024-01-30T19:59:06+00:00",
+        "image": "ghcr.io/clamsproject/app-easyocr-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-easyocr-wrapper"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "snewman-aa",
+        "time": "2024-01-25T18:44:59+00:00",
+        "image": "ghcr.io/clamsproject/app-easyocr-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-easyocr-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/dbpedia-spotlight-wrapper": {
     "description": "Apply named entity linking to all text documents in a MMIF file.",
     "latest_update": "2023-08-24T15:51:13+00:00",
     "versions": [
-      [
-        "v1.2",
-        "wricketts"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "wricketts"
-      ]
+      {
+        "version": "v1.2",
+        "submitter": "wricketts",
+        "time": "2023-08-24T15:51:13+00:00",
+        "image": "ghcr.io/clamsproject/app-dbpedia-spotlight-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-dbpedia-spotlight-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-25T01:22:48+00:00",
+        "image": "ghcr.io/clamsproject/app-dbpedia-spotlight-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-dbpedia-spotlight-wrapper"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "wricketts",
+        "time": "2023-07-24T17:07:36+00:00",
+        "image": "ghcr.io/clamsproject/app-dbpedia-spotlight-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-dbpedia-spotlight-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/slatedetection": {
     "description": "This tool detects slates.",
     "latest_update": "2023-08-03T17:56:59+00:00",
     "versions": [
-      [
-        "v2.1",
-        "keighrim"
-      ],
-      [
-        "v2.0",
-        "keighrim"
-      ],
-      [
-        "v1.2",
-        "keighrim"
-      ],
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "kelleyl"
-      ]
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2023-08-03T17:56:59+00:00",
+        "image": "ghcr.io/clamsproject/app-slatedetection:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-slatedetection"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2023-07-20T15:07:44+00:00",
+        "image": "ghcr.io/clamsproject/app-slatedetection:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-slatedetection"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "keighrim",
+        "time": "2023-06-17T11:25:34+00:00",
+        "image": "ghcr.io/clamsproject/app-slatedetection:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-slatedetection"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-06-16T18:36:06+00:00",
+        "image": "ghcr.io/clamsproject/app-slatedetection:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-slatedetection"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "kelleyl",
+        "time": "2023-06-15T03:53:26+00:00",
+        "image": "ghcr.io/clamsproject/app-slatedetection:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-slatedetection"
+      }
     ]
   },
   "http://apps.clams.ai/fewshotclassifier": {
     "description": "This tool uses a vision model to classify video segments. Currenly supports \"chyron\" frame type.",
     "latest_update": "2023-08-01T22:57:12+00:00",
     "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-08-01T22:57:12+00:00",
+        "image": "ghcr.io/clamsproject/app-fewshotclassifier:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-fewshotclassifier"
+      }
     ]
   },
   "http://apps.clams.ai/barsdetection": {
     "description": "This tool detects SMPTE color bars.",
     "latest_update": "2023-07-31T23:31:12+00:00",
     "versions": [
-      [
-        "v1.1",
-        "keighrim"
-      ],
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-31T23:31:12+00:00",
+        "image": "ghcr.io/clamsproject/app-barsdetection:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-barsdetection"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-07-26T00:07:49+00:00",
+        "image": "ghcr.io/clamsproject/app-barsdetection:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-barsdetection"
+      }
     ]
   },
   "http://apps.clams.ai/parseqocr-wrapper": {
     "description": "This tool applies Parseq OCR to a video or image and generates text boxes and OCR results.",
     "latest_update": "2023-07-26T00:04:08+00:00",
     "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-07-26T00:04:08+00:00",
+        "image": "ghcr.io/clamsproject/app-parseqocr-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-parseqocr-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/tesseractocr-wrapper": {
     "description": "This tool applies Tesseract OCR to a video or image and generates text boxes and OCR results.",
     "latest_update": "2023-07-26T00:03:43+00:00",
     "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-07-26T00:03:43+00:00",
+        "image": "ghcr.io/clamsproject/app-tesseractocr-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-tesseractocr-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/chyron-detection": {
     "description": "This tool detects chyrons, generates time segments.",
     "latest_update": "2023-07-24T21:50:08+00:00",
     "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-07-24T21:50:08+00:00",
+        "image": "ghcr.io/clamsproject/app-chyron-detection:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-chyron-detection"
+      }
     ]
   },
   "http://apps.clams.ai/gentle-forced-aligner-wrapper": {
     "description": "This CLAMS app aligns transcript and audio track using Gentle. Gentle is a robust yet lenient forced aligner built on Kaldi.This app only works when Gentle is already installed locally.Unfortunately, Gentle is not distributed as a Python package distribution.To get Gentle installation instruction, see https://lowerquality.com/gentle/ Make sure install Gentle from the git commit specified in ``analyzer_version`` in this metadata.",
     "latest_update": "2023-07-24T20:01:10+00:00",
     "versions": [
-      [
-        "v1.0",
-        "keighrim"
-      ]
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-07-24T20:01:10+00:00",
+        "image": "ghcr.io/clamsproject/app-gentle-forced-aligner-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-gentle-forced-aligner-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/brandeis-acs-wrapper": {
     "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
     "latest_update": "2023-07-24T05:42:05+00:00",
     "versions": [
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
+      {
+        "version": "v2",
+        "submitter": "keighrim",
+        "time": "2023-07-24T05:42:05+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v2",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-06-06T00:30:33+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      }
     ]
   },
   "http://apps.clams.ai/aapb-pua-kaldi-wrapper": {
     "description": "A CLAMS wrapper for Kaldi-based ASR software originally developed by PopUpArchive and hipstas, and later updated by Kyeongmin Rim at Brandeis University. Wrapped software can be found at https://github.com/brandeis-llc/aapb-pua-kaldi-docker . ",
     "latest_update": "2023-06-14T00:42:26+00:00",
     "versions": [
-      [
-        "v2",
-        "keighrim"
-      ],
-      [
-        "v1",
-        "keighrim"
-      ]
+      {
+        "version": "v2",
+        "submitter": "keighrim",
+        "time": "2023-06-14T00:42:26+00:00",
+        "image": "ghcr.io/clamsproject/app-aapb-pua-kaldi-wrapper:v2",
+        "repo_url": "https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-05-21T01:20:38+00:00",
+        "image": "ghcr.io/clamsproject/app-aapb-pua-kaldi-wrapper",
+        "repo_url": "https://github.com/clamsproject/app-aapb-pua-kaldi-wrapper"
+      }
     ]
   }
 }

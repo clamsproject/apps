@@ -8,7 +8,7 @@ date: 2025-11-08T01:19:05+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2025-11-08T01:19:05+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-swt-detection:v8.3](https://github.com/clamsproject/app-swt-detection/pkgs/container/app-swt-detection/v8.3)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-swt-detection:v8.3](https://github.com/clamsproject/app-swt-detection/pkgs/container/app-swt-detection/v8.3)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-swt-detection:v8.3" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > This release includes a new parameter and a bugfix  
@@ -21,7 +21,7 @@ date: 2025-11-08T01:19:05+00:00
 
 - App ID: [http://apps.clams.ai/swt-detection/v8.3](http://apps.clams.ai/swt-detection/v8.3)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-swt-detection](https://github.com/clamsproject/app-swt-detection) ([source tree of the submitted version](https://github.com/clamsproject/app-swt-detection/tree/v8.3))
+- Source Repository: [https://github.com/clamsproject/app-swt-detection](https://github.com/clamsproject/app-swt-detection) ([source tree of the submitted version](https://github.com/clamsproject/app-swt-detection/tree/v8.3)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-swt-detection/tree/v8.3" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

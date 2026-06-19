@@ -8,7 +8,7 @@ date: 2024-03-11T17:42:55+00:00
 
 - Submitter: [kelleyl](https://github.com/kelleyl)
 - Submission Time: 2024-03-11T17:42:55+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-pyscenedetect-wrapper:v3](https://github.com/clamsproject/app-pyscenedetect-wrapper/pkgs/container/app-pyscenedetect-wrapper/v3)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-pyscenedetect-wrapper:v3](https://github.com/clamsproject/app-pyscenedetect-wrapper/pkgs/container/app-pyscenedetect-wrapper/v3)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-pyscenedetect-wrapper:v3" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > sdk version updates
@@ -19,7 +19,7 @@ date: 2024-03-11T17:42:55+00:00
 
 - App ID: [http://apps.clams.ai/pyscenedetect-wrapper/v3](http://apps.clams.ai/pyscenedetect-wrapper/v3)
 - App License: Apache2
-- Source Repository: [https://github.com/clamsproject/app-pyscenedetect-wrapper](https://github.com/clamsproject/app-pyscenedetect-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-pyscenedetect-wrapper/tree/v3))
+- Source Repository: [https://github.com/clamsproject/app-pyscenedetect-wrapper](https://github.com/clamsproject/app-pyscenedetect-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-pyscenedetect-wrapper/tree/v3)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-pyscenedetect-wrapper/tree/v3" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 0.6.1
 - Analyzer License: BSD-3
 

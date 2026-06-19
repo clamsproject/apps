@@ -8,7 +8,7 @@ date: 2023-08-24T15:51:13+00:00
 
 - Submitter: [wricketts](https://github.com/wricketts)
 - Submission Time: 2023-08-24T15:51:13+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-dbpedia-spotlight-wrapper:v1.2](https://github.com/clamsproject/app-dbpedia-spotlight-wrapper/pkgs/container/app-dbpedia-spotlight-wrapper/v1.2)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-dbpedia-spotlight-wrapper:v1.2](https://github.com/clamsproject/app-dbpedia-spotlight-wrapper/pkgs/container/app-dbpedia-spotlight-wrapper/v1.2)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-dbpedia-spotlight-wrapper:v1.2" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2023-08-24T15:51:13+00:00
 
 - App ID: [http://apps.clams.ai/dbpedia-spotlight-wrapper/v1.2](http://apps.clams.ai/dbpedia-spotlight-wrapper/v1.2)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-dbpedia-spotlight-wrapper](https://github.com/clamsproject/app-dbpedia-spotlight-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-dbpedia-spotlight-wrapper/tree/v1.2))
+- Source Repository: [https://github.com/clamsproject/app-dbpedia-spotlight-wrapper](https://github.com/clamsproject/app-dbpedia-spotlight-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-dbpedia-spotlight-wrapper/tree/v1.2)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-dbpedia-spotlight-wrapper/tree/v1.2" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: daf5309
 - Analyzer License: Apache 2.0
 

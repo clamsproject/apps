@@ -8,7 +8,7 @@ date: 2024-05-22T14:32:58+00:00
 
 - Submitter: [marcverhagen](https://github.com/marcverhagen)
 - Submission Time: 2024-05-22T14:32:58+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-swt-detection:v5.0](https://github.com/clamsproject/app-swt-detection/pkgs/container/app-swt-detection/v5.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-swt-detection:v5.0](https://github.com/clamsproject/app-swt-detection/pkgs/container/app-swt-detection/v5.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-swt-detection:v5.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > This release adds a script to run a server-less app from the command line, adds and fixes parameters, and updates dependencies.  
@@ -26,7 +26,7 @@ date: 2024-05-22T14:32:58+00:00
 
 - App ID: [http://apps.clams.ai/swt-detection/v5.0](http://apps.clams.ai/swt-detection/v5.0)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-swt-detection](https://github.com/clamsproject/app-swt-detection) ([source tree of the submitted version](https://github.com/clamsproject/app-swt-detection/tree/v5.0))
+- Source Repository: [https://github.com/clamsproject/app-swt-detection](https://github.com/clamsproject/app-swt-detection) ([source tree of the submitted version](https://github.com/clamsproject/app-swt-detection/tree/v5.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-swt-detection/tree/v5.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

@@ -8,7 +8,7 @@ date: 2024-06-26T14:40:00+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2024-06-26T14:40:00+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.1](https://github.com/clamsproject/app-simple-timepoints-stitcher/pkgs/container/app-simple-timepoints-stitcher/v2.1)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.1](https://github.com/clamsproject/app-simple-timepoints-stitcher/pkgs/container/app-simple-timepoints-stitcher/v2.1)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-simple-timepoints-stitcher:v2.1" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > Minor release with updated SDK version and updated label mapping for compatibility with RFB and newer SWT.
@@ -19,7 +19,7 @@ date: 2024-06-26T14:40:00+00:00
 
 - App ID: [http://apps.clams.ai/simple-timepoints-stitcher/v2.1](http://apps.clams.ai/simple-timepoints-stitcher/v2.1)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-simple-timepoints-stitcher](https://github.com/clamsproject/app-simple-timepoints-stitcher) ([source tree of the submitted version](https://github.com/clamsproject/app-simple-timepoints-stitcher/tree/v2.1))
+- Source Repository: [https://github.com/clamsproject/app-simple-timepoints-stitcher](https://github.com/clamsproject/app-simple-timepoints-stitcher) ([source tree of the submitted version](https://github.com/clamsproject/app-simple-timepoints-stitcher/tree/v2.1)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-simple-timepoints-stitcher/tree/v2.1" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

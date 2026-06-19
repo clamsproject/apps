@@ -8,7 +8,7 @@ date: 2024-07-02T01:30:06+00:00
 
 - Submitter: [bohJiang12](https://github.com/bohJiang12)
 - Submission Time: 2024-07-02T01:30:06+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-text-slicer:v1.0](https://github.com/clamsproject/app-text-slicer/pkgs/container/app-text-slicer/v1.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-text-slicer:v1.0](https://github.com/clamsproject/app-text-slicer/pkgs/container/app-text-slicer/v1.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-text-slicer:v1.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > first version of text-slicer
@@ -19,7 +19,7 @@ date: 2024-07-02T01:30:06+00:00
 
 - App ID: [http://apps.clams.ai/text-slicer/v1.0](http://apps.clams.ai/text-slicer/v1.0)
 - App License: Apache2
-- Source Repository: [https://github.com/clamsproject/app-text-slicer](https://github.com/clamsproject/app-text-slicer) ([source tree of the submitted version](https://github.com/clamsproject/app-text-slicer/tree/v1.0))
+- Source Repository: [https://github.com/clamsproject/app-text-slicer](https://github.com/clamsproject/app-text-slicer) ([source tree of the submitted version](https://github.com/clamsproject/app-text-slicer/tree/v1.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-text-slicer/tree/v1.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

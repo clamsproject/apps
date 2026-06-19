@@ -8,7 +8,7 @@ date: 2023-07-20T15:07:44+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2023-07-20T15:07:44+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-slatedetection:v2.0](https://github.com/clamsproject/app-slatedetection/pkgs/container/app-slatedetection/v2.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-slatedetection:v2.0](https://github.com/clamsproject/app-slatedetection/pkgs/container/app-slatedetection/v2.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-slatedetection:v2.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2023-07-20T15:07:44+00:00
 
 - App ID: [http://apps.clams.ai/slatedetection/v2.0](http://apps.clams.ai/slatedetection/v2.0)
 - App License: MIT
-- Source Repository: [https://github.com/clamsproject/app-slatedetection](https://github.com/clamsproject/app-slatedetection) ([source tree of the submitted version](https://github.com/clamsproject/app-slatedetection/tree/v2.0))
+- Source Repository: [https://github.com/clamsproject/app-slatedetection](https://github.com/clamsproject/app-slatedetection) ([source tree of the submitted version](https://github.com/clamsproject/app-slatedetection/tree/v2.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-slatedetection/tree/v2.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

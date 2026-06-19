@@ -8,7 +8,7 @@ date: 2023-05-19T22:02:23+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2023-05-19T22:02:23+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-spacy-wrapper:v1](https://github.com/clamsproject/app-spacy-wrapper/pkgs/container/app-spacy-wrapper/v1)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-spacy-wrapper:v1](https://github.com/clamsproject/app-spacy-wrapper/pkgs/container/app-spacy-wrapper/v1)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-spacy-wrapper:v1" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2023-05-19T22:02:23+00:00
 
 - App ID: [http://apps.clams.ai/spacy-wrapper/v1](http://apps.clams.ai/spacy-wrapper/v1)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-spacy-wrapper](https://github.com/clamsproject/app-spacy-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-spacy-wrapper/tree/v1))
+- Source Repository: [https://github.com/clamsproject/app-spacy-wrapper](https://github.com/clamsproject/app-spacy-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-spacy-wrapper/tree/v1)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-spacy-wrapper/tree/v1" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 3.1.2
 - Analyzer License: MIT
 

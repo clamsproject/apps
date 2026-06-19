@@ -8,7 +8,7 @@ date: 2024-06-11T12:30:19+00:00
 
 - Submitter: [marcverhagen](https://github.com/marcverhagen)
 - Submission Time: 2024-06-11T12:30:19+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-spacy-wrapper:v1.2](https://github.com/clamsproject/app-spacy-wrapper/pkgs/container/app-spacy-wrapper/v1.2)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-spacy-wrapper:v1.2](https://github.com/clamsproject/app-spacy-wrapper/pkgs/container/app-spacy-wrapper/v1.2)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-spacy-wrapper:v1.2" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > Bumping Python SDK version, bug fixes and documentation updates  
@@ -23,7 +23,7 @@ date: 2024-06-11T12:30:19+00:00
 
 - App ID: [http://apps.clams.ai/spacy-wrapper/v1.2](http://apps.clams.ai/spacy-wrapper/v1.2)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-spacy-wrapper](https://github.com/clamsproject/app-spacy-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-spacy-wrapper/tree/v1.2))
+- Source Repository: [https://github.com/clamsproject/app-spacy-wrapper](https://github.com/clamsproject/app-spacy-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-spacy-wrapper/tree/v1.2)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-spacy-wrapper/tree/v1.2" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 3.6
 - Analyzer License: MIT
 

@@ -8,7 +8,7 @@ date: 2025-11-06T00:37:40+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2025-11-06T00:37:40+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-whisper-wrapper:v15](https://github.com/clamsproject/app-whisper-wrapper/pkgs/container/app-whisper-wrapper/v15)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-whisper-wrapper:v15](https://github.com/clamsproject/app-whisper-wrapper/pkgs/container/app-whisper-wrapper/v15)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-whisper-wrapper:v15" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     > updated to whisper (2025 june ver)
@@ -19,7 +19,7 @@ date: 2025-11-06T00:37:40+00:00
 
 - App ID: [http://apps.clams.ai/whisper-wrapper/v15](http://apps.clams.ai/whisper-wrapper/v15)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-whisper-wrapper](https://github.com/clamsproject/app-whisper-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-whisper-wrapper/tree/v15))
+- Source Repository: [https://github.com/clamsproject/app-whisper-wrapper](https://github.com/clamsproject/app-whisper-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-whisper-wrapper/tree/v15)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-whisper-wrapper/tree/v15" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 20250625
 - Analyzer License: MIT
 

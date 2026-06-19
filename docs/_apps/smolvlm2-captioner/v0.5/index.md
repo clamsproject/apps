@@ -8,7 +8,7 @@ date: 2026-02-27T20:09:36+00:00
 
 - Submitter: [kelleyl](https://github.com/kelleyl)
 - Submission Time: 2026-02-27T20:09:36+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5](https://github.com/clamsproject/app-smolvlm2-captioner/pkgs/container/app-smolvlm2-captioner/v0.5)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5](https://github.com/clamsproject/app-smolvlm2-captioner/pkgs/container/app-smolvlm2-captioner/v0.5)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2026-02-27T20:09:36+00:00
 
 - App ID: [http://apps.clams.ai/smolvlm2-captioner/v0.5](http://apps.clams.ai/smolvlm2-captioner/v0.5)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-smolvlm2-captioner](https://github.com/clamsproject/app-smolvlm2-captioner) ([source tree of the submitted version](https://github.com/clamsproject/app-smolvlm2-captioner/tree/v0.5))
+- Source Repository: [https://github.com/clamsproject/app-smolvlm2-captioner](https://github.com/clamsproject/app-smolvlm2-captioner) ([source tree of the submitted version](https://github.com/clamsproject/app-smolvlm2-captioner/tree/v0.5)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-smolvlm2-captioner/tree/v0.5" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 
 
 #### Inputs

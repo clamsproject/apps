@@ -8,7 +8,7 @@ date: 2025-11-11T00:51:26+00:00
 
 - Submitter: [keighrim](https://github.com/keighrim)
 - Submission Time: 2025-11-11T00:51:26+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-spoken-lid:v0.3](https://github.com/clamsproject/app-spoken-lid/pkgs/container/app-spoken-lid/v0.3)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-spoken-lid:v0.3](https://github.com/clamsproject/app-spoken-lid/pkgs/container/app-spoken-lid/v0.3)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-spoken-lid:v0.3" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2025-11-11T00:51:26+00:00
 
 - App ID: [http://apps.clams.ai/spoken-lid/v0.3](http://apps.clams.ai/spoken-lid/v0.3)
 - App License: Apache 2.0
-- Source Repository: [https://github.com/clamsproject/app-spoken-lid](https://github.com/clamsproject/app-spoken-lid) ([source tree of the submitted version](https://github.com/clamsproject/app-spoken-lid/tree/v0.3))
+- Source Repository: [https://github.com/clamsproject/app-spoken-lid](https://github.com/clamsproject/app-spoken-lid) ([source tree of the submitted version](https://github.com/clamsproject/app-spoken-lid/tree/v0.3)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-spoken-lid/tree/v0.3" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: v20250625
 - Analyzer License: MIT
 

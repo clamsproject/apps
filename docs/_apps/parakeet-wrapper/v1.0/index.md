@@ -8,7 +8,7 @@ date: 2025-07-29T15:07:13+00:00
 
 - Submitter: [shel-ho](https://github.com/shel-ho)
 - Submission Time: 2025-07-29T15:07:13+00:00
-- Prebuilt Container Image: [ghcr.io/clamsproject/app-parakeet-wrapper:v1.0](https://github.com/clamsproject/app-parakeet-wrapper/pkgs/container/app-parakeet-wrapper/v1.0)
+- Prebuilt Container Image: [ghcr.io/clamsproject/app-parakeet-wrapper:v1.0](https://github.com/clamsproject/app-parakeet-wrapper/pkgs/container/app-parakeet-wrapper/v1.0)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-parakeet-wrapper:v1.0" title="Copy image tag" aria-label="Copy image tag">&#128203;</button>
 - Release Notes
 
     (no notes provided by the developer)
@@ -19,7 +19,7 @@ date: 2025-07-29T15:07:13+00:00
 
 - App ID: [http://apps.clams.ai/parakeet-wrapper/v1.0](http://apps.clams.ai/parakeet-wrapper/v1.0)
 - App License: Apache-2.0
-- Source Repository: [https://github.com/clamsproject/app-parakeet-wrapper](https://github.com/clamsproject/app-parakeet-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-parakeet-wrapper/tree/v1.0))
+- Source Repository: [https://github.com/clamsproject/app-parakeet-wrapper](https://github.com/clamsproject/app-parakeet-wrapper) ([source tree of the submitted version](https://github.com/clamsproject/app-parakeet-wrapper/tree/v1.0)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-parakeet-wrapper/tree/v1.0" title="Copy source URL" aria-label="Copy source URL">&#128203;</button>)
 - Analyzer Version: 20250714
 - Analyzer License: cc-by-4.0
 
