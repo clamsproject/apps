@@ -1,0 +1,6 @@
+{
+  "time": "2026-06-20T00:43:06+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v8.7",
+  "releasenotes": "bumped SDK to 1.7.1 to fix mkv bug\n\n"
+}
