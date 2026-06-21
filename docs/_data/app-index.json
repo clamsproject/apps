@@ -1,4 +1,45 @@
 {
+  "http://apps.clams.ai/pyscenedetect-wrapper": {
+    "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
+    "latest_update": "2026-06-21T23:16:52+00:00",
+    "versions": [
+      {
+        "version": "v5",
+        "submitter": "keighrim",
+        "time": "2026-06-21T23:16:52+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v5",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      },
+      {
+        "version": "v4",
+        "submitter": "kelleyl",
+        "time": "2026-02-10T04:17:11+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v4",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      },
+      {
+        "version": "v3",
+        "submitter": "kelleyl",
+        "time": "2024-03-11T17:42:55+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v3",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      },
+      {
+        "version": "v2",
+        "submitter": "keighrim",
+        "time": "2023-07-24T07:50:09+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v2",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-06-16T06:50:24+00:00",
+        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
+      }
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2026-06-20T00:43:06+00:00",
@@ -419,40 +460,6 @@
         "time": "2025-11-20T15:41:04+00:00",
         "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.1",
         "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      }
-    ]
-  },
-  "http://apps.clams.ai/pyscenedetect-wrapper": {
-    "description": "CLAMS app wraps PySceneDetect and performs shot boundary detection on input videos",
-    "latest_update": "2026-02-10T04:17:11+00:00",
-    "versions": [
-      {
-        "version": "v4",
-        "submitter": "kelleyl",
-        "time": "2026-02-10T04:17:11+00:00",
-        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v4",
-        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
-      },
-      {
-        "version": "v3",
-        "submitter": "kelleyl",
-        "time": "2024-03-11T17:42:55+00:00",
-        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v3",
-        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
-      },
-      {
-        "version": "v2",
-        "submitter": "keighrim",
-        "time": "2023-07-24T07:50:09+00:00",
-        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v2",
-        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
-      },
-      {
-        "version": "v1",
-        "submitter": "keighrim",
-        "time": "2023-06-16T06:50:24+00:00",
-        "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v1",
-        "repo_url": "https://github.com/clamsproject/app-pyscenedetect-wrapper"
       }
     ]
   },
