@@ -1,0 +1,6 @@
+{
+  "time": "2026-06-21T23:16:52+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-pyscenedetect-wrapper:v5",
+  "releasenotes": "Update scenedetect version (to 0.7) and clams SDK version (to 1.7.1)\n\n"
+}
