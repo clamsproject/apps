@@ -1,4 +1,24 @@
 {
+  "http://apps.clams.ai/nfa-wrapper": {
+    "description": "Wraps the [NVIDIA NeMo Forced Aligner tool](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html) to temporally align transcribed text with its audio source. ",
+    "latest_update": "2026-06-22T19:56:15+00:00",
+    "versions": [
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2026-06-22T19:56:15+00:00",
+        "image": "ghcr.io/clamsproject/app-nfa-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-nfa-wrapper"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2025-11-09T18:36:09+00:00",
+        "image": "ghcr.io/clamsproject/app-nfa-wrapper:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-nfa-wrapper"
+      }
+    ]
+  },
   "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
     "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
     "latest_update": "2026-06-22T00:41:02+00:00",
@@ -555,19 +575,6 @@
         "time": "2025-11-05T19:58:01+00:00",
         "image": "ghcr.io/clamsproject/app-spoken-lid:v0.1",
         "repo_url": "https://github.com/clamsproject/app-spoken-lid"
-      }
-    ]
-  },
-  "http://apps.clams.ai/nfa-wrapper": {
-    "description": "Wraps the [NVIDIA NeMo Forced Aligner tool](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/tools/nemo_forced_aligner.html) to temporally align transcribed text with its audio source. ",
-    "latest_update": "2025-11-09T18:36:09+00:00",
-    "versions": [
-      {
-        "version": "v0.1",
-        "submitter": "keighrim",
-        "time": "2025-11-09T18:36:09+00:00",
-        "image": "ghcr.io/clamsproject/app-nfa-wrapper:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-nfa-wrapper"
       }
     ]
   },
