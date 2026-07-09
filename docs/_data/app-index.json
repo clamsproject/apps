@@ -1,4 +1,59 @@
 {
+  "http://apps.clams.ai/smolvlm2-captioner": {
+    "description": "Applies the SmolVLM2-2.2B-Instruct multimodal model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Each invocation runs a single `prompt` against the TimeFrames selected by `tfLabels`; to apply different prompts to different label subsets (e.g. one prompt for slates, another for chyrons), run the app once per (`prompt`, `tfLabels`) combination. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. This app ships only the 2.2B-Instruct variant -- the largest and most general-purpose model in the SmolVLM2 family. The smaller (256M and 500M) SmolVLM2 releases are post-trained specifically for video-QA tasks and we do not expect them to generalize well, given their size.",
+    "latest_update": "2026-07-09T21:15:23+00:00",
+    "versions": [
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2026-07-09T21:15:23+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2026-06-01T20:28:09+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.5",
+        "submitter": "kelleyl",
+        "time": "2026-02-27T20:09:36+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.4",
+        "submitter": "kelleyl",
+        "time": "2026-02-26T05:05:42+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.4",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.3",
+        "submitter": "kelleyl",
+        "time": "2026-01-28T15:06:18+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.3",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.2",
+        "submitter": "kelleyl",
+        "time": "2026-01-28T03:14:45+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "kelleyl",
+        "time": "2025-11-20T15:41:04+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      }
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2026-07-09T19:17:53+00:00",
@@ -487,54 +542,6 @@
         "time": "2023-05-19T22:02:23+00:00",
         "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1",
         "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      }
-    ]
-  },
-  "http://apps.clams.ai/smolvlm2-captioner": {
-    "description": "Applies the SmolVLM2-2.2B-Instruct multimodal model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Each invocation runs a single `prompt` against the TimeFrames selected by `tfLabels`; to apply different prompts to different label subsets (e.g. one prompt for slates, another for chyrons), run the app once per (`prompt`, `tfLabels`) combination. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. This app ships only the 2.2B-Instruct variant -- the largest and most general-purpose model in the SmolVLM2 family. The smaller (256M and 500M) SmolVLM2 releases are post-trained specifically for video-QA tasks and we do not expect them to generalize well, given their size.",
-    "latest_update": "2026-06-01T20:28:09+00:00",
-    "versions": [
-      {
-        "version": "v1.0",
-        "submitter": "keighrim",
-        "time": "2026-06-01T20:28:09+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.0",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.5",
-        "submitter": "kelleyl",
-        "time": "2026-02-27T20:09:36+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.4",
-        "submitter": "kelleyl",
-        "time": "2026-02-26T05:05:42+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.4",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.3",
-        "submitter": "kelleyl",
-        "time": "2026-01-28T15:06:18+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.3",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.2",
-        "submitter": "kelleyl",
-        "time": "2026-01-28T03:14:45+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.2",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.1",
-        "submitter": "kelleyl",
-        "time": "2025-11-20T15:41:04+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
       }
     ]
   },
