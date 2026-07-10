@@ -1,4 +1,17 @@
 {
+  "http://apps.clams.ai/qwen35-timeframe-captioner": {
+    "description": "Applies a Qwen3.5 vision-language model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. A `model` runtime parameter selects the Qwen3.5 variant (default `Qwen/Qwen3.5-2B`); larger variants need substantially more VRAM (see metadata.py for the GPU/VRAM sketch). Qwen3.5 is a reasoning model -- this app runs it for captions and strips any `<think>` reasoning block from the output.",
+    "latest_update": "2026-07-10T00:56:26+00:00",
+    "versions": [
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2026-07-10T00:56:26+00:00",
+        "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-qwen35-timeframe-captioner"
+      }
+    ]
+  },
   "http://apps.clams.ai/smolvlm2-captioner": {
     "description": "Applies the SmolVLM2-2.2B-Instruct multimodal model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Each invocation runs a single `prompt` against the TimeFrames selected by `tfLabels`; to apply different prompts to different label subsets (e.g. one prompt for slates, another for chyrons), run the app once per (`prompt`, `tfLabels`) combination. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. This app ships only the 2.2B-Instruct variant -- the largest and most general-purpose model in the SmolVLM2 family. The smaller (256M and 500M) SmolVLM2 releases are post-trained specifically for video-QA tasks and we do not expect them to generalize well, given their size.",
     "latest_update": "2026-07-09T22:58:37+00:00",
