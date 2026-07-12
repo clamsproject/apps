@@ -1,0 +1,6 @@
+{
+  "time": "2026-07-12T22:43:09+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-tonedetection:v2.1",
+  "releasenotes": "updated to the latest SDK\n\n"
+}
