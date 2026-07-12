@@ -1,4 +1,59 @@
 {
+  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
+    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
+    "latest_update": "2026-07-12T22:51:25+00:00",
+    "versions": [
+      {
+        "version": "v2.3",
+        "submitter": "keighrim",
+        "time": "2026-07-12T22:51:25+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.3",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v2.2",
+        "submitter": "keighrim",
+        "time": "2026-06-22T00:41:02+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.2",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2025-11-14T01:22:11+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2024-05-07T03:45:14+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "keighrim",
+        "time": "2024-05-06T17:53:34+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-24T05:31:08+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-06-20T02:49:35+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      }
+    ]
+  },
   "http://apps.clams.ai/tonedetection": {
     "description": "Detects spans of monotonic audio within an audio file",
     "latest_update": "2026-07-12T22:43:09+00:00",
@@ -388,54 +443,6 @@
         "time": "2025-11-09T18:36:09+00:00",
         "image": "ghcr.io/clamsproject/app-nfa-wrapper:v0.1",
         "repo_url": "https://github.com/clamsproject/app-nfa-wrapper"
-      }
-    ]
-  },
-  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
-    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
-    "latest_update": "2026-06-22T00:41:02+00:00",
-    "versions": [
-      {
-        "version": "v2.2",
-        "submitter": "keighrim",
-        "time": "2026-06-22T00:41:02+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.2",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v2.1",
-        "submitter": "keighrim",
-        "time": "2025-11-14T01:22:11+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.1",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v2.0",
-        "submitter": "keighrim",
-        "time": "2024-05-07T03:45:14+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.0",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v1.2",
-        "submitter": "keighrim",
-        "time": "2024-05-06T17:53:34+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.2",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v1.1",
-        "submitter": "keighrim",
-        "time": "2023-07-24T05:31:08+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v1.0",
-        "submitter": "keighrim",
-        "time": "2023-06-20T02:49:35+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.0",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
       }
     ]
   },
