@@ -1,4 +1,38 @@
 {
+  "http://apps.clams.ai/spoken-lid": {
+    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
+    "latest_update": "2026-07-12T22:39:02+00:00",
+    "versions": [
+      {
+        "version": "v0.4",
+        "submitter": "keighrim",
+        "time": "2026-07-12T22:39:02+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.4",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.3",
+        "submitter": "keighrim",
+        "time": "2025-11-11T00:51:26+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.3",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.2",
+        "submitter": "keighrim",
+        "time": "2025-11-06T10:31:10+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2025-11-05T19:58:01+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      }
+    ]
+  },
   "http://apps.clams.ai/brandeis-acs-wrapper": {
     "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
     "latest_update": "2026-07-12T22:29:38+00:00",
@@ -602,33 +636,6 @@
         "time": "2023-07-24T17:50:36+00:00",
         "image": "ghcr.io/clamsproject/app-tonedetection:v1.0",
         "repo_url": "https://github.com/clamsproject/app-tonedetection"
-      }
-    ]
-  },
-  "http://apps.clams.ai/spoken-lid": {
-    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
-    "latest_update": "2025-11-11T00:51:26+00:00",
-    "versions": [
-      {
-        "version": "v0.3",
-        "submitter": "keighrim",
-        "time": "2025-11-11T00:51:26+00:00",
-        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.3",
-        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
-      },
-      {
-        "version": "v0.2",
-        "submitter": "keighrim",
-        "time": "2025-11-06T10:31:10+00:00",
-        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.2",
-        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
-      },
-      {
-        "version": "v0.1",
-        "submitter": "keighrim",
-        "time": "2025-11-05T19:58:01+00:00",
-        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
       }
     ]
   },
