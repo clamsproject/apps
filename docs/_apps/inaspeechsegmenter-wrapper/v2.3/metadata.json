@@ -1,0 +1,87 @@
+{
+  "name": "inaSpeechSegmenter Wrapper",
+  "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
+  "app_version": "v2.3",
+  "mmif_version": "1.2.0",
+  "analyzer_version": "0.8.0",
+  "app_license": "MIT",
+  "analyzer_license": "MIT",
+  "identifier": "http://apps.clams.ai/inaspeechsegmenter-wrapper/v2.3",
+  "url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper",
+  "input": [
+    [
+      {
+        "@type": "http://clams.ai/vocabulary/type/AudioDocument/v2",
+        "required": true
+      },
+      {
+        "@type": "http://clams.ai/vocabulary/type/VideoDocument/v2",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://clams.ai/vocabulary/type/TimeFrame/v6",
+      "description": "The INA semgmenter uses 5-way classification (['noEnergy', 'female', 'male', 'noise', 'music']) and this wrapper remaps the labels to ['silence', 'speech', 'noise', 'music'], by 1) renaming `noEnergy` to `silence` 2) collapsing `female` and `male` into `speech` (leaving additional `gender` property). Note that the time frame annotations do not exhaustively cover the input audio, but only the segments.",
+      "properties": {
+        "timeunit": "milliseconds",
+        "labelset": [
+          "silence",
+          "speech",
+          "noise",
+          "music"
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "minTFDuration",
+      "description": "minimum duration of a TimeFrame in milliseconds",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "silenceRatio",
+      "description": "percentage ratio (0-100) of audio energy to to determine silence, ratio to mean every of the input audio.",
+      "type": "integer",
+      "default": 3,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "tfSamplingMode",
+      "description": "Sampling mode for TimeFrame annotations. Has no effect when the app does not process TimeFrames. \"representatives\" uses all representative timepoints if present, otherwise skips the TimeFrame. \"single\" uses the middle representative if present, otherwise extracts an image from the midpoint of the start/end interval (midpoint is calculated by floor division of the sum of start and end). \"all\" uses all target timepoints if present, otherwise extracts all images from the time interval.",
+      "type": "string",
+      "choices": [
+        "representatives",
+        "single",
+        "all"
+      ],
+      "default": "representatives",
+      "multivalued": false
+    }
+  ]
+}

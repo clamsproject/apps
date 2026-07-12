@@ -1,0 +1,6 @@
+{
+  "time": "2026-07-12T22:51:25+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.3",
+  "releasenotes": "updated to the latest SDK\n\n"
+}
