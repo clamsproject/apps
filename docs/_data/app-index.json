@@ -1,4 +1,31 @@
 {
+  "http://apps.clams.ai/brandeis-acs-wrapper": {
+    "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
+    "latest_update": "2026-07-12T22:29:38+00:00",
+    "versions": [
+      {
+        "version": "v3",
+        "submitter": "keighrim",
+        "time": "2026-07-12T22:29:38+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v3",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      },
+      {
+        "version": "v2",
+        "submitter": "keighrim",
+        "time": "2023-07-24T05:42:05+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v2",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-06-06T00:30:33+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      }
+    ]
+  },
   "http://apps.clams.ai/qwen35-timeframe-captioner": {
     "description": "Applies a Qwen3.5 vision-language model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. A `model` runtime parameter selects the Qwen3.5 variant (default `Qwen/Qwen3.5-2B`); larger variants need substantially more VRAM (see metadata.py for the GPU/VRAM sketch). Qwen3.5 is a reasoning model -- this app runs it for captions and strips any `<think>` reasoning block from the output.",
     "latest_update": "2026-07-10T00:56:26+00:00",
@@ -1024,26 +1051,6 @@
         "time": "2023-07-24T20:01:10+00:00",
         "image": "ghcr.io/clamsproject/app-gentle-forced-aligner-wrapper:v1.0",
         "repo_url": "https://github.com/clamsproject/app-gentle-forced-aligner-wrapper"
-      }
-    ]
-  },
-  "http://apps.clams.ai/brandeis-acs-wrapper": {
-    "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
-    "latest_update": "2023-07-24T05:42:05+00:00",
-    "versions": [
-      {
-        "version": "v2",
-        "submitter": "keighrim",
-        "time": "2023-07-24T05:42:05+00:00",
-        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v2",
-        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
-      },
-      {
-        "version": "v1",
-        "submitter": "keighrim",
-        "time": "2023-06-06T00:30:33+00:00",
-        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v1",
-        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
       }
     ]
   },
