@@ -1,0 +1,64 @@
+{
+  "name": "Brandeis ACS Wrapper",
+  "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
+  "app_version": "v3",
+  "mmif_version": "1.2.0",
+  "analyzer_version": "1.11",
+  "app_license": "Apache2.0",
+  "analyzer_license": "Apache2.0",
+  "identifier": "http://apps.clams.ai/brandeis-acs-wrapper/v3",
+  "url": "https://github.com/clamsproject/app-brandeis-acs-wrapper",
+  "input": [
+    {
+      "@type": "http://clams.ai/vocabulary/type/AudioDocument/v2",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://clams.ai/vocabulary/type/TimeFrame/v6",
+      "properties": {
+        "timeunit": "milliseconds",
+        "labelset": [
+          "speech",
+          "non-speech"
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "tfSamplingMode",
+      "description": "Sampling mode for TimeFrame annotations. Has no effect when the app does not process TimeFrames. \"representatives\" uses all representative timepoints if present, otherwise skips the TimeFrame. \"single\" uses the middle representative if present, otherwise extracts an image from the midpoint of the start/end interval (midpoint is calculated by floor division of the sum of start and end). \"all\" uses all target timepoints if present, otherwise extracts all images from the time interval.",
+      "type": "string",
+      "choices": [
+        "representatives",
+        "single",
+        "all"
+      ],
+      "default": "representatives",
+      "multivalued": false
+    }
+  ]
+}

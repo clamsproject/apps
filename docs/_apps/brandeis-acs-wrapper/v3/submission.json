@@ -1,0 +1,6 @@
+{
+  "time": "2026-07-12T22:29:38+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v3",
+  "releasenotes": "updated to the latest SDK\n\n"
+}
