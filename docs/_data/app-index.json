@@ -1,219 +1,15 @@
 {
-  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
-    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
-    "latest_update": "2026-07-12T22:51:25+00:00",
-    "versions": [
-      {
-        "version": "v2.3",
-        "submitter": "keighrim",
-        "time": "2026-07-12T22:51:25+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.3",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v2.2",
-        "submitter": "keighrim",
-        "time": "2026-06-22T00:41:02+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.2",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v2.1",
-        "submitter": "keighrim",
-        "time": "2025-11-14T01:22:11+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.1",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v2.0",
-        "submitter": "keighrim",
-        "time": "2024-05-07T03:45:14+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.0",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v1.2",
-        "submitter": "keighrim",
-        "time": "2024-05-06T17:53:34+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.2",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v1.1",
-        "submitter": "keighrim",
-        "time": "2023-07-24T05:31:08+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      },
-      {
-        "version": "v1.0",
-        "submitter": "keighrim",
-        "time": "2023-06-20T02:49:35+00:00",
-        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.0",
-        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
-      }
-    ]
-  },
-  "http://apps.clams.ai/tonedetection": {
-    "description": "Detects spans of monotonic audio within an audio file",
-    "latest_update": "2026-07-12T22:43:09+00:00",
-    "versions": [
-      {
-        "version": "v2.1",
-        "submitter": "keighrim",
-        "time": "2026-07-12T22:43:09+00:00",
-        "image": "ghcr.io/clamsproject/app-tonedetection:v2.1",
-        "repo_url": "https://github.com/clamsproject/app-tonedetection"
-      },
-      {
-        "version": "v2.0",
-        "submitter": "keighrim",
-        "time": "2025-11-20T08:01:02+00:00",
-        "image": "ghcr.io/clamsproject/app-tonedetection:v2.0",
-        "repo_url": "https://github.com/clamsproject/app-tonedetection"
-      },
-      {
-        "version": "v1.0",
-        "submitter": "MrSqually",
-        "time": "2023-07-24T17:50:36+00:00",
-        "image": "ghcr.io/clamsproject/app-tonedetection:v1.0",
-        "repo_url": "https://github.com/clamsproject/app-tonedetection"
-      }
-    ]
-  },
-  "http://apps.clams.ai/spoken-lid": {
-    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
-    "latest_update": "2026-07-12T22:39:02+00:00",
-    "versions": [
-      {
-        "version": "v0.4",
-        "submitter": "keighrim",
-        "time": "2026-07-12T22:39:02+00:00",
-        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.4",
-        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
-      },
-      {
-        "version": "v0.3",
-        "submitter": "keighrim",
-        "time": "2025-11-11T00:51:26+00:00",
-        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.3",
-        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
-      },
-      {
-        "version": "v0.2",
-        "submitter": "keighrim",
-        "time": "2025-11-06T10:31:10+00:00",
-        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.2",
-        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
-      },
-      {
-        "version": "v0.1",
-        "submitter": "keighrim",
-        "time": "2025-11-05T19:58:01+00:00",
-        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
-      }
-    ]
-  },
-  "http://apps.clams.ai/brandeis-acs-wrapper": {
-    "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
-    "latest_update": "2026-07-12T22:29:38+00:00",
-    "versions": [
-      {
-        "version": "v3",
-        "submitter": "keighrim",
-        "time": "2026-07-12T22:29:38+00:00",
-        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v3",
-        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
-      },
-      {
-        "version": "v2",
-        "submitter": "keighrim",
-        "time": "2023-07-24T05:42:05+00:00",
-        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v2",
-        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
-      },
-      {
-        "version": "v1",
-        "submitter": "keighrim",
-        "time": "2023-06-06T00:30:33+00:00",
-        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v1",
-        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
-      }
-    ]
-  },
-  "http://apps.clams.ai/qwen35-timeframe-captioner": {
-    "description": "Applies a Qwen3.5 vision-language model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. A `model` runtime parameter selects the Qwen3.5 variant (default `Qwen/Qwen3.5-2B`); larger variants need substantially more VRAM (see metadata.py for the GPU/VRAM sketch). Qwen3.5 is a reasoning model -- this app runs it for captions and strips any `<think>` reasoning block from the output.",
-    "latest_update": "2026-07-10T00:56:26+00:00",
-    "versions": [
-      {
-        "version": "v0.1",
-        "submitter": "keighrim",
-        "time": "2026-07-10T00:56:26+00:00",
-        "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-qwen35-timeframe-captioner"
-      }
-    ]
-  },
-  "http://apps.clams.ai/smolvlm2-captioner": {
-    "description": "Applies the SmolVLM2-2.2B-Instruct multimodal model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Each invocation runs a single `prompt` against the TimeFrames selected by `tfLabels`; to apply different prompts to different label subsets (e.g. one prompt for slates, another for chyrons), run the app once per (`prompt`, `tfLabels`) combination. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. This app ships only the 2.2B-Instruct variant -- the largest and most general-purpose model in the SmolVLM2 family. The smaller (256M and 500M) SmolVLM2 releases are post-trained specifically for video-QA tasks and we do not expect them to generalize well, given their size.",
-    "latest_update": "2026-07-09T22:58:37+00:00",
-    "versions": [
-      {
-        "version": "v1.1",
-        "submitter": "keighrim",
-        "time": "2026-07-09T22:58:37+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.1",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v1.0",
-        "submitter": "keighrim",
-        "time": "2026-06-01T20:28:09+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.0",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.5",
-        "submitter": "kelleyl",
-        "time": "2026-02-27T20:09:36+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.4",
-        "submitter": "kelleyl",
-        "time": "2026-02-26T05:05:42+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.4",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.3",
-        "submitter": "kelleyl",
-        "time": "2026-01-28T15:06:18+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.3",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.2",
-        "submitter": "kelleyl",
-        "time": "2026-01-28T03:14:45+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.2",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      },
-      {
-        "version": "v0.1",
-        "submitter": "kelleyl",
-        "time": "2025-11-20T15:41:04+00:00",
-        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
-      }
-    ]
-  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2026-07-09T19:17:53+00:00",
+    "latest_update": "2026-07-16T04:12:10+00:00",
     "versions": [
+      {
+        "version": "v8.9",
+        "submitter": "keighrim",
+        "time": "2026-07-16T04:12:10+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v8.9",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
       {
         "version": "v8.8",
         "submitter": "keighrim",
@@ -423,6 +219,217 @@
         "time": "2023-11-22T15:13:53+00:00",
         "image": "ghcr.io/clamsproject/app-swt-detection:v1.0",
         "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      }
+    ]
+  },
+  "http://apps.clams.ai/inaspeechsegmenter-wrapper": {
+    "description": "inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be found at https://github.com/ina-foss/inaSpeechSegmenter .",
+    "latest_update": "2026-07-12T22:51:25+00:00",
+    "versions": [
+      {
+        "version": "v2.3",
+        "submitter": "keighrim",
+        "time": "2026-07-12T22:51:25+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.3",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v2.2",
+        "submitter": "keighrim",
+        "time": "2026-06-22T00:41:02+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.2",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2025-11-14T01:22:11+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2024-05-07T03:45:14+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "keighrim",
+        "time": "2024-05-06T17:53:34+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-24T05:31:08+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2023-06-20T02:49:35+00:00",
+        "image": "ghcr.io/clamsproject/app-inaspeechsegmenter-wrapper:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-inaspeechsegmenter-wrapper"
+      }
+    ]
+  },
+  "http://apps.clams.ai/tonedetection": {
+    "description": "Detects spans of monotonic audio within an audio file",
+    "latest_update": "2026-07-12T22:43:09+00:00",
+    "versions": [
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2026-07-12T22:43:09+00:00",
+        "image": "ghcr.io/clamsproject/app-tonedetection:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-tonedetection"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2025-11-20T08:01:02+00:00",
+        "image": "ghcr.io/clamsproject/app-tonedetection:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-tonedetection"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "MrSqually",
+        "time": "2023-07-24T17:50:36+00:00",
+        "image": "ghcr.io/clamsproject/app-tonedetection:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-tonedetection"
+      }
+    ]
+  },
+  "http://apps.clams.ai/spoken-lid": {
+    "description": "Chunk-level language ID over audio based on OpenAI Whisper",
+    "latest_update": "2026-07-12T22:39:02+00:00",
+    "versions": [
+      {
+        "version": "v0.4",
+        "submitter": "keighrim",
+        "time": "2026-07-12T22:39:02+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.4",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.3",
+        "submitter": "keighrim",
+        "time": "2025-11-11T00:51:26+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.3",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.2",
+        "submitter": "keighrim",
+        "time": "2025-11-06T10:31:10+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2025-11-05T19:58:01+00:00",
+        "image": "ghcr.io/clamsproject/app-spoken-lid:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-spoken-lid"
+      }
+    ]
+  },
+  "http://apps.clams.ai/brandeis-acs-wrapper": {
+    "description": "Brandeis Acoustic Classification & Segmentation (ACS) is a audio segmentation tool developed at Brandeis Lab for Linguistics and Computation. The original software can be found at https://github.com/brandeis-llc/acoustic-classification-segmentation .",
+    "latest_update": "2026-07-12T22:29:38+00:00",
+    "versions": [
+      {
+        "version": "v3",
+        "submitter": "keighrim",
+        "time": "2026-07-12T22:29:38+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v3",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      },
+      {
+        "version": "v2",
+        "submitter": "keighrim",
+        "time": "2023-07-24T05:42:05+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v2",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-06-06T00:30:33+00:00",
+        "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
+      }
+    ]
+  },
+  "http://apps.clams.ai/qwen35-timeframe-captioner": {
+    "description": "Applies a Qwen3.5 vision-language model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. A `model` runtime parameter selects the Qwen3.5 variant (default `Qwen/Qwen3.5-2B`); larger variants need substantially more VRAM (see metadata.py for the GPU/VRAM sketch). Qwen3.5 is a reasoning model -- this app runs it for captions and strips any `<think>` reasoning block from the output.",
+    "latest_update": "2026-07-10T00:56:26+00:00",
+    "versions": [
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2026-07-10T00:56:26+00:00",
+        "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-qwen35-timeframe-captioner"
+      }
+    ]
+  },
+  "http://apps.clams.ai/smolvlm2-captioner": {
+    "description": "Applies the SmolVLM2-2.2B-Instruct multimodal model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Each invocation runs a single `prompt` against the TimeFrames selected by `tfLabels`; to apply different prompts to different label subsets (e.g. one prompt for slates, another for chyrons), run the app once per (`prompt`, `tfLabels`) combination. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. This app ships only the 2.2B-Instruct variant -- the largest and most general-purpose model in the SmolVLM2 family. The smaller (256M and 500M) SmolVLM2 releases are post-trained specifically for video-QA tasks and we do not expect them to generalize well, given their size.",
+    "latest_update": "2026-07-09T22:58:37+00:00",
+    "versions": [
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2026-07-09T22:58:37+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v1.0",
+        "submitter": "keighrim",
+        "time": "2026-06-01T20:28:09+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v1.0",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.5",
+        "submitter": "kelleyl",
+        "time": "2026-02-27T20:09:36+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.5",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.4",
+        "submitter": "kelleyl",
+        "time": "2026-02-26T05:05:42+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.4",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.3",
+        "submitter": "kelleyl",
+        "time": "2026-01-28T15:06:18+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.3",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.2",
+        "submitter": "kelleyl",
+        "time": "2026-01-28T03:14:45+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "kelleyl",
+        "time": "2025-11-20T15:41:04+00:00",
+        "image": "ghcr.io/clamsproject/app-smolvlm2-captioner:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-smolvlm2-captioner"
       }
     ]
   },

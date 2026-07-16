@@ -1,0 +1,6 @@
+{
+  "time": "2026-07-16T04:12:10+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v8.9",
+  "releasenotes": "fixed out-of-index crash caused by PosEnc bug, full fix (and retrain) is planned for next major release\n\n"
+}
