@@ -1,8 +1,15 @@
 {
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2026-07-16T04:12:10+00:00",
+    "latest_update": "2026-08-09T23:32:49+00:00",
     "versions": [
+      {
+        "version": "v9.0",
+        "submitter": "keighrim",
+        "time": "2026-08-09T23:32:49+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v9.0",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
       {
         "version": "v8.9",
         "submitter": "keighrim",
