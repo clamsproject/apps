@@ -1,0 +1,6 @@
+{
+  "time": "2026-08-09T23:32:49+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v9.0",
+  "releasenotes": "Major release with ...\n\n* Fixed positional encoding; this fix should boost _slate_ detection performance\n* added `tfDynamicSceneLabels` parameter that controls the granularity of representatives of dynamic scenes\n\n"
+}
