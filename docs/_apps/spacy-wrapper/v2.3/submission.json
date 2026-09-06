@@ -1,0 +1,6 @@
+{
+  "time": "2026-09-06T19:46:57+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.3",
+  "releasenotes": "Updated to CLAMS SDK\n\n- New update on the SDK will handle empty view issue as reported in https://github.com/clamsproject/app-spacy-wrapper/issues/35\n\n"
+}
