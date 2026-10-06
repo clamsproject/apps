@@ -1,5 +1,5 @@
-repo,in_appdir,sdk-in-use,sdk-status (latest: 1.7.4),main_branch,last_commit,start_date
-https://github.com/clamsproject/app-spacy-wrapper,True,1.7.4,AppStatus.UPDATED,main,2026-09-06 19:41:24+00:00,2019-12-04 19:41:41+00:00
+repo,in_appdir,sdk-in-use,sdk-status (latest: 1.8.0),main_branch,last_commit,start_date
+https://github.com/clamsproject/app-spacy-wrapper,True,1.7.4,AppStatus.OUTDATED,main,2026-09-06 19:41:24+00:00,2019-12-04 19:41:41+00:00
 https://github.com/clamsproject/app-swt-detection,True,1.7.3,AppStatus.OUTDATED,main,2026-08-09 22:41:01+00:00,2023-09-21 12:39:30+00:00
 https://github.com/clamsproject/app-inaspeechsegmenter-wrapper,True,1.7.3,AppStatus.OUTDATED,main,2026-07-12 22:44:26+00:00,2020-12-24 04:01:51+00:00
 https://github.com/clamsproject/app-pyscenedetect-wrapper,True,1.7.3,AppStatus.OUTDATED,main,2026-07-12 22:40:53+00:00,2019-08-21 01:24:46+00:00
