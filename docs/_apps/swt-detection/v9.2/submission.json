@@ -1,0 +1,6 @@
+{
+  "time": "2026-10-06T13:36:27+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v9.2",
+  "releasenotes": "v9.2 is re-release of 9.1 from the right git commit\n\n(below copied from 9.1 release notes)\n- `tfLabelPoolingOp`, a new optional parameter to control how to pool image classification scores when stitching time points. See documentation for full documentation\n- updated to the SDK version that supports better handling of broken video files\n\n"
+}
