@@ -1,63 +1,15 @@
 {
-  "http://apps.clams.ai/spacy-wrapper": {
-    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
-    "latest_update": "2026-09-06T19:46:57+00:00",
-    "versions": [
-      {
-        "version": "v2.3",
-        "submitter": "keighrim",
-        "time": "2026-09-06T19:46:57+00:00",
-        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.3",
-        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      },
-      {
-        "version": "v2.2",
-        "submitter": "keighrim",
-        "time": "2026-06-18T19:06:20+00:00",
-        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.2",
-        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      },
-      {
-        "version": "v2.1",
-        "submitter": "keighrim",
-        "time": "2025-07-26T21:02:46+00:00",
-        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.1",
-        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      },
-      {
-        "version": "v2.0",
-        "submitter": "keighrim",
-        "time": "2024-07-16T16:49:38+00:00",
-        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.0",
-        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      },
-      {
-        "version": "v1.2",
-        "submitter": "marcverhagen",
-        "time": "2024-06-11T12:30:19+00:00",
-        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1.2",
-        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      },
-      {
-        "version": "v1.1",
-        "submitter": "keighrim",
-        "time": "2023-07-24T17:39:56+00:00",
-        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1.1",
-        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      },
-      {
-        "version": "v1",
-        "submitter": "keighrim",
-        "time": "2023-05-19T22:02:23+00:00",
-        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1",
-        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
-      }
-    ]
-  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
-    "latest_update": "2026-08-09T23:32:49+00:00",
+    "latest_update": "2026-10-06T10:27:35+00:00",
     "versions": [
+      {
+        "version": "v9.1",
+        "submitter": "keighrim",
+        "time": "2026-10-06T10:27:35+00:00",
+        "image": "ghcr.io/clamsproject/app-swt-detection:v9.1",
+        "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      },
       {
         "version": "v9.0",
         "submitter": "keighrim",
@@ -281,6 +233,61 @@
         "time": "2023-11-22T15:13:53+00:00",
         "image": "ghcr.io/clamsproject/app-swt-detection:v1.0",
         "repo_url": "https://github.com/clamsproject/app-swt-detection"
+      }
+    ]
+  },
+  "http://apps.clams.ai/spacy-wrapper": {
+    "description": "Apply spaCy NLP to all text documents in a MMIF file.",
+    "latest_update": "2026-09-06T19:46:57+00:00",
+    "versions": [
+      {
+        "version": "v2.3",
+        "submitter": "keighrim",
+        "time": "2026-09-06T19:46:57+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.3",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v2.2",
+        "submitter": "keighrim",
+        "time": "2026-06-18T19:06:20+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.2",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v2.1",
+        "submitter": "keighrim",
+        "time": "2025-07-26T21:02:46+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.1",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v2.0",
+        "submitter": "keighrim",
+        "time": "2024-07-16T16:49:38+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v2.0",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v1.2",
+        "submitter": "marcverhagen",
+        "time": "2024-06-11T12:30:19+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1.2",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v1.1",
+        "submitter": "keighrim",
+        "time": "2023-07-24T17:39:56+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1.1",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
+      },
+      {
+        "version": "v1",
+        "submitter": "keighrim",
+        "time": "2023-05-19T22:02:23+00:00",
+        "image": "ghcr.io/clamsproject/app-spacy-wrapper:v1",
+        "repo_url": "https://github.com/clamsproject/app-spacy-wrapper"
       }
     ]
   },
