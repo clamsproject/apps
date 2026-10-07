@@ -1,0 +1,6 @@
+{
+  "time": "2026-10-07T22:13:24+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v0.2",
+  "releasenotes": "updates for changes in new SDK, adding `maxImagesPerPrompt` and `imagesPerPromptMode` parameters\n\n"
+}
