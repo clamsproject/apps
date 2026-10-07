@@ -1,4 +1,24 @@
 {
+  "http://apps.clams.ai/qwen35-timeframe-captioner": {
+    "description": "Applies a Qwen3.5 vision-language model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Captioning is composite: the frames sampled from a TF are fed to the model in a single prompt and yield one caption. When `maxImagesPerPrompt` is set, a TF with more frames than the cap is split into several prompts and yields one caption per prompt, all aligned to that TF. A `model` runtime parameter selects the Qwen3.5 variant (default `Qwen/Qwen3.5-2B`); larger variants need substantially more VRAM (see metadata.py for the GPU/VRAM sketch). Qwen3.5 is a reasoning model -- this app runs it for captions and strips any `<think>` reasoning block from the output.",
+    "latest_update": "2026-10-07T22:13:24+00:00",
+    "versions": [
+      {
+        "version": "v0.2",
+        "submitter": "keighrim",
+        "time": "2026-10-07T22:13:24+00:00",
+        "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-qwen35-timeframe-captioner"
+      },
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2026-07-10T00:56:26+00:00",
+        "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-qwen35-timeframe-captioner"
+      }
+    ]
+  },
   "http://apps.clams.ai/swt-detection": {
     "description": "Detects scenes with text, like slates, chyrons and credits. This app can run in three modes, depending on `useClassifier`, `useStitcher` parameters. When `useClassifier=True`, it runs in the \"TimePoint mode\" and generates TimePoint annotations. When `useStitcher=True`, it runs in the \"TimeFrame mode\" and generates TimeFrame annotations based on existing TimePoint annotations -- if no TimePoint is found, it produces an error. By default, it runs in the 'both' mode and first generates TimePoint annotations and then TimeFrame annotations on them.",
     "latest_update": "2026-10-06T13:36:27+00:00",
@@ -438,19 +458,6 @@
         "time": "2023-06-06T00:30:33+00:00",
         "image": "ghcr.io/clamsproject/app-brandeis-acs-wrapper:v1",
         "repo_url": "https://github.com/clamsproject/app-brandeis-acs-wrapper"
-      }
-    ]
-  },
-  "http://apps.clams.ai/qwen35-timeframe-captioner": {
-    "description": "Applies a Qwen3.5 vision-language model to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description. Per-TimeFrame captioning is composite: every frame sampled from a TF is fed to the model in a single prompt and yields one caption per TF. A `model` runtime parameter selects the Qwen3.5 variant (default `Qwen/Qwen3.5-2B`); larger variants need substantially more VRAM (see metadata.py for the GPU/VRAM sketch). Qwen3.5 is a reasoning model -- this app runs it for captions and strips any `<think>` reasoning block from the output.",
-    "latest_update": "2026-07-10T00:56:26+00:00",
-    "versions": [
-      {
-        "version": "v0.1",
-        "submitter": "keighrim",
-        "time": "2026-07-10T00:56:26+00:00",
-        "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-qwen35-timeframe-captioner"
       }
     ]
   },
