@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-01T19:20:15+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-swt-detection:v10.0",
+  "releasenotes": "`tfLabelPoolingOp` now default to \"sum\"\n\n"
+}
