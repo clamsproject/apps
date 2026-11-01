@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-01T21:07:14+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-qwen35-timeframe-captioner:v1.0",
+  "releasenotes": "first non zero version!\n\n- updated to new SDK with bugfixes\n- add `tfLabelIgnore` parameter to set time frame labels to ignore (negative list of `tflabel`)\n\n"
+}
