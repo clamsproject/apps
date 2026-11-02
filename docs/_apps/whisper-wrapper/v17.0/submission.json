@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-01T23:56:45+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-wrapper:v17.0",
+  "releasenotes": "replaced old `frameType` prop name with `label`; standard name for newer SDK\n\n"
+}
