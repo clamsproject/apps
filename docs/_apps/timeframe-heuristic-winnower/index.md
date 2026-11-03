@@ -1,0 +1,8 @@
+---
+layout: posts
+classes: wide
+title: timeframe-heuristic-winnower
+date: 1970-01-01T00:00:00+00:00
+---
+Selects segment boundaries by agreement across upstream views. Every view in the input MMIF that carries time-anchored annotations is a source of candidate boundary events (a view whose TimeFrames declare different `labelsetUri` values is one source per value): the endpoints of its Sentence annotations when it has any, otherwise the endpoints of its TimeFrame annotations (word-level frames aligned to Tokens are skipped). Events are widened into a window of `windowMs`, and a boundary is a point where at least the share `minAgreementRatio` of the sources agree. Among boundaries closer than `minSeparationMs`, the best-corroborated set is selected exactly by dynamic programming. Output is one `segment` TimeFrame per interval between consecutive boundaries. The method needs no model and no GPU. The JCDL 2026 paper (https://doi.org/10.1145/3805696.3846037) used these defaults with `minAgreementRatio=0.8` over five sources (whisper-wrapper, pyannotesd-wrapper, pyscenedetect-wrapper, inaspeechsegmenter-wrapper, swt-detection).
+- [v0.1](v0.1) ([`@keighrim`](https://github.com/keighrim), 2026-11-03, [source](https://github.com/clamsproject/app-timeframe-heuristic-winnower/tree/v0.1)<button class="copy-btn" data-clip="https://github.com/clamsproject/app-timeframe-heuristic-winnower/tree/v0.1" title="Copy source URL" aria-label="Copy source URL">📋</button>, [image](https://github.com/clamsproject/app-timeframe-heuristic-winnower/pkgs/container/app-timeframe-heuristic-winnower/v0.1)<button class="copy-btn" data-clip="ghcr.io/clamsproject/app-timeframe-heuristic-winnower:v0.1" title="Copy image tag" aria-label="Copy image tag">📋</button>)

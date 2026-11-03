@@ -1,0 +1,113 @@
+{
+  "name": "TimeFrame Heuristic Winnower",
+  "description": "Selects segment boundaries by agreement across upstream views. Every view in the input MMIF that carries time-anchored annotations is a source of candidate boundary events (a view whose TimeFrames declare different `labelsetUri` values is one source per value): the endpoints of its Sentence annotations when it has any, otherwise the endpoints of its TimeFrame annotations (word-level frames aligned to Tokens are skipped). Events are widened into a window of `windowMs`, and a boundary is a point where at least the share `minAgreementRatio` of the sources agree. Among boundaries closer than `minSeparationMs`, the best-corroborated set is selected exactly by dynamic programming. Output is one `segment` TimeFrame per interval between consecutive boundaries. The method needs no model and no GPU. The JCDL 2026 paper (https://doi.org/10.1145/3805696.3846037) used these defaults with `minAgreementRatio=0.8` over five sources (whisper-wrapper, pyannotesd-wrapper, pyscenedetect-wrapper, inaspeechsegmenter-wrapper, swt-detection).",
+  "app_version": "v0.1",
+  "mmif_version": "1.2.0",
+  "app_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/timeframe-heuristic-winnower/v0.1",
+  "url": "https://github.com/clamsproject/app-timeframe-heuristic-winnower",
+  "input": [
+    [
+      {
+        "@type": "http://clams.ai/vocabulary/type/TimeFrame/v6",
+        "description": "Time-anchored annotations from any upstream app. Each view that contains them is one voting source. Each TimeFrame must have a `document`, on the annotation or at view level. Filter by label with `tfLabels` and `tfLabelIgnore`.",
+        "required": true
+      },
+      {
+        "@type": "http://clams.ai/vocabulary/type/Sentence/v1",
+        "description": "Sentence annotations whose `targets` are Tokens aligned to TimeFrames (as produced by ASR apps such as whisper-wrapper). When a view has Sentences, their endpoints are used as that view's events instead of its TimeFrames.",
+        "required": true
+      }
+    ],
+    {
+      "@type": "http://clams.ai/vocabulary/type/Token/v1",
+      "required": false
+    },
+    {
+      "@type": "http://clams.ai/vocabulary/type/Alignment/v1",
+      "required": false
+    }
+  ],
+  "output": [
+    {
+      "@type": "http://clams.ai/vocabulary/type/TimeFrame/v6",
+      "description": "One TimeFrame per segment between consecutive selected boundaries, tiling each document that the input TimeFrames refer to. Each carries the `document` of those TimeFrames. Start and end are integer milliseconds.",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "label": "segment"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "windowMs",
+      "description": "W: width in milliseconds of the window each candidate event is widened into before sources are compared.",
+      "type": "integer",
+      "default": 5000,
+      "multivalued": false
+    },
+    {
+      "name": "minAgreementRatio",
+      "description": "Share of the voting sources of a document that must agree for a point to become a candidate boundary, in (0, 1]. The minimum number of sources K is this share of the number of sources, rounded up and at least 1: with the default, one of two sources, two of three, or three of five. When K is 1, the app warns that the boundaries are not corroborated.",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "minSeparationMs",
+      "description": "M: minimum distance in milliseconds between two selected boundaries, and from the start and the end of the recording. Encodes the shortest admissible segment. 0 disables the constraint.",
+      "type": "integer",
+      "default": 20000,
+      "multivalued": false
+    },
+    {
+      "name": "tfLabels",
+      "description": "Label(s) of input TimeFrame annotations to use as candidate events. By default (`[]`) every TimeFrame is used regardless of label. When set, TimeFrames without a label are not used. Sentence-derived events are not affected.",
+      "type": "string",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "tfLabelIgnore",
+      "description": "Label(s) of input TimeFrame annotations to leave out, applied after `tfLabels`. The default leaves out this app's own `segment` output, and setting this parameter replaces the default. TimeFrames without a label are never dropped by this list. Sentence-derived events are not affected.",
+      "type": "string",
+      "default": [
+        "segment"
+      ],
+      "multivalued": true
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "tfSamplingMode",
+      "description": "Sampling mode for TimeFrame annotations. Has no effect when the app does not process TimeFrames. \"representatives\" uses all representative timepoints if present, otherwise skips the TimeFrame. \"single\" uses the middle representative if present, otherwise extracts an image from the midpoint of the start/end interval (midpoint is calculated by floor division of the sum of start and end). \"all\" uses all target timepoints if present, otherwise extracts all images from the time interval.",
+      "type": "string",
+      "choices": [
+        "representatives",
+        "single",
+        "all"
+      ],
+      "default": "representatives",
+      "multivalued": false
+    }
+  ]
+}

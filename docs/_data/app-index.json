@@ -1,4 +1,17 @@
 {
+  "http://apps.clams.ai/timeframe-heuristic-winnower": {
+    "description": "Selects segment boundaries by agreement across upstream views. Every view in the input MMIF that carries time-anchored annotations is a source of candidate boundary events (a view whose TimeFrames declare different `labelsetUri` values is one source per value): the endpoints of its Sentence annotations when it has any, otherwise the endpoints of its TimeFrame annotations (word-level frames aligned to Tokens are skipped). Events are widened into a window of `windowMs`, and a boundary is a point where at least the share `minAgreementRatio` of the sources agree. Among boundaries closer than `minSeparationMs`, the best-corroborated set is selected exactly by dynamic programming. Output is one `segment` TimeFrame per interval between consecutive boundaries. The method needs no model and no GPU. The JCDL 2026 paper (https://doi.org/10.1145/3805696.3846037) used these defaults with `minAgreementRatio=0.8` over five sources (whisper-wrapper, pyannotesd-wrapper, pyscenedetect-wrapper, inaspeechsegmenter-wrapper, swt-detection).",
+    "latest_update": "2026-11-03T18:16:34+00:00",
+    "versions": [
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2026-11-03T18:16:34+00:00",
+        "image": "ghcr.io/clamsproject/app-timeframe-heuristic-winnower:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-timeframe-heuristic-winnower"
+      }
+    ]
+  },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
     "latest_update": "2026-11-01T23:56:45+00:00",
