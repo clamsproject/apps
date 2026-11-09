@@ -1,34 +1,15 @@
 {
-  "http://apps.clams.ai/gemma4-timeframe-captioner": {
-    "description": "Applies a Gemma 4 vision-language model, run with llama.cpp from a GGUF file, to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description (experimental llama.cpp backend). Captioning is composite: the frames sampled from a TF are fed to the model in a single prompt and yield one caption. When `maxImagesPerPrompt` is set, a TF with more frames than the cap is split into several prompts and yields one caption per prompt, all aligned to that TF. A `model` runtime parameter selects the Gemma 4 size and quantization (default `ggml-org/gemma-4-E4B-it-GGUF:Q8_0`); see metadata.py for the GPU memory each needs. The app runs its own llama-server process and needs the `llama-server` executable (included in the container image).",
-    "latest_update": "2026-11-09T01:34:04+00:00",
-    "versions": [
-      {
-        "version": "v0.1",
-        "submitter": "keighrim",
-        "time": "2026-11-09T01:34:04+00:00",
-        "image": "ghcr.io/clamsproject/app-gemma4-timeframe-captioner:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-gemma4-timeframe-captioner"
-      }
-    ]
-  },
-  "http://apps.clams.ai/timeframe-heuristic-winnower": {
-    "description": "Selects segment boundaries by agreement across upstream views. Every view in the input MMIF that carries time-anchored annotations is a source of candidate boundary events (a view whose TimeFrames declare different `labelsetUri` values is one source per value): the endpoints of its Sentence annotations when it has any, otherwise the endpoints of its TimeFrame annotations (word-level frames aligned to Tokens are skipped). Events are widened into a window of `windowMs`, and a boundary is a point where at least the share `minAgreementRatio` of the sources agree. Among boundaries closer than `minSeparationMs`, the best-corroborated set is selected exactly by dynamic programming. Output is one `segment` TimeFrame per interval between consecutive boundaries. The method needs no model and no GPU. The JCDL 2026 paper (https://doi.org/10.1145/3805696.3846037) used these defaults with `minAgreementRatio=0.8` over five sources (whisper-wrapper, pyannotesd-wrapper, pyscenedetect-wrapper, inaspeechsegmenter-wrapper, swt-detection).",
-    "latest_update": "2026-11-03T18:16:34+00:00",
-    "versions": [
-      {
-        "version": "v0.1",
-        "submitter": "keighrim",
-        "time": "2026-11-03T18:16:34+00:00",
-        "image": "ghcr.io/clamsproject/app-timeframe-heuristic-winnower:v0.1",
-        "repo_url": "https://github.com/clamsproject/app-timeframe-heuristic-winnower"
-      }
-    ]
-  },
   "http://apps.clams.ai/whisper-wrapper": {
     "description": "A CLAMS wrapper for Whisper-based ASR software originally developed by OpenAI.",
-    "latest_update": "2026-11-01T23:56:45+00:00",
+    "latest_update": "2026-11-09T02:35:19+00:00",
     "versions": [
+      {
+        "version": "v18.0",
+        "submitter": "keighrim",
+        "time": "2026-11-09T02:35:19+00:00",
+        "image": "ghcr.io/clamsproject/app-whisper-wrapper:v18.0",
+        "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      },
       {
         "version": "v17.0",
         "submitter": "keighrim",
@@ -147,6 +128,32 @@
         "time": "2023-06-01T14:15:29+00:00",
         "image": "ghcr.io/clamsproject/app-whisper-wrapper:v1",
         "repo_url": "https://github.com/clamsproject/app-whisper-wrapper"
+      }
+    ]
+  },
+  "http://apps.clams.ai/gemma4-timeframe-captioner": {
+    "description": "Applies a Gemma 4 vision-language model, run with llama.cpp from a GGUF file, to video frames selected by input TimeFrame annotations for prompt-driven captioning / scene description (experimental llama.cpp backend). Captioning is composite: the frames sampled from a TF are fed to the model in a single prompt and yield one caption. When `maxImagesPerPrompt` is set, a TF with more frames than the cap is split into several prompts and yields one caption per prompt, all aligned to that TF. A `model` runtime parameter selects the Gemma 4 size and quantization (default `ggml-org/gemma-4-E4B-it-GGUF:Q8_0`); see metadata.py for the GPU memory each needs. The app runs its own llama-server process and needs the `llama-server` executable (included in the container image).",
+    "latest_update": "2026-11-09T01:34:04+00:00",
+    "versions": [
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2026-11-09T01:34:04+00:00",
+        "image": "ghcr.io/clamsproject/app-gemma4-timeframe-captioner:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-gemma4-timeframe-captioner"
+      }
+    ]
+  },
+  "http://apps.clams.ai/timeframe-heuristic-winnower": {
+    "description": "Selects segment boundaries by agreement across upstream views. Every view in the input MMIF that carries time-anchored annotations is a source of candidate boundary events (a view whose TimeFrames declare different `labelsetUri` values is one source per value): the endpoints of its Sentence annotations when it has any, otherwise the endpoints of its TimeFrame annotations (word-level frames aligned to Tokens are skipped). Events are widened into a window of `windowMs`, and a boundary is a point where at least the share `minAgreementRatio` of the sources agree. Among boundaries closer than `minSeparationMs`, the best-corroborated set is selected exactly by dynamic programming. Output is one `segment` TimeFrame per interval between consecutive boundaries. The method needs no model and no GPU. The JCDL 2026 paper (https://doi.org/10.1145/3805696.3846037) used these defaults with `minAgreementRatio=0.8` over five sources (whisper-wrapper, pyannotesd-wrapper, pyscenedetect-wrapper, inaspeechsegmenter-wrapper, swt-detection).",
+    "latest_update": "2026-11-03T18:16:34+00:00",
+    "versions": [
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2026-11-03T18:16:34+00:00",
+        "image": "ghcr.io/clamsproject/app-timeframe-heuristic-winnower:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-timeframe-heuristic-winnower"
       }
     ]
   },
