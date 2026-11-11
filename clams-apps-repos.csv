@@ -1,5 +1,5 @@
 repo,in_appdir,sdk-in-use,sdk-status (latest: 1.9.0),main_branch,last_commit,start_date
-https://github.com/clamsproject/app-firered-spoken-lid,True,1.9.0,AppStatus.UPDATED,main,2026-11-10 02:53:04+00:00,2026-11-10 02:54:05+00:00
+https://github.com/clamsproject/app-firered-spoken-lid,True,1.9.0,AppStatus.UPDATED,main,2026-11-11 01:11:44+00:00,2026-11-10 02:54:05+00:00
 https://github.com/clamsproject/app-whisper-spoken-lid,True,1.9.0,AppStatus.UPDATED,main,2026-11-09 02:33:27+00:00,2026-11-09 02:42:22+00:00
 https://github.com/clamsproject/app-whisper-wrapper,True,1.9.0,AppStatus.UPDATED,main,2026-11-09 02:26:57+00:00,2022-10-27 14:49:15+00:00
 https://github.com/clamsproject/app-gemma4-timeframe-captioner,True,1.9.0,AppStatus.UPDATED,main,2026-11-09 01:14:13+00:00,2026-11-09 01:27:58+00:00
