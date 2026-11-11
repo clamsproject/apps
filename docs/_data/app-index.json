@@ -1,4 +1,17 @@
 {
+  "http://apps.clams.ai/mms-spoken-lid": {
+    "description": "Spoken language identification over fixed-length windows of an audio track, using the MMS language identification models. Consecutive windows with the same language can be merged into one TimeFrame.",
+    "latest_update": "2026-11-11T22:23:34+00:00",
+    "versions": [
+      {
+        "version": "v0.1",
+        "submitter": "keighrim",
+        "time": "2026-11-11T22:23:34+00:00",
+        "image": "ghcr.io/clamsproject/app-mms-spoken-lid:v0.1",
+        "repo_url": "https://github.com/clamsproject/app-mms-spoken-lid"
+      }
+    ]
+  },
   "http://apps.clams.ai/whisper-spoken-lid": {
     "description": "Spoken language identification over fixed-length windows of an audio track, using the language detection of OpenAI Whisper. Consecutive windows with the same language can be merged into one TimeFrame.",
     "latest_update": "2026-11-11T15:14:58+00:00",
