@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-11T15:14:58+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-whisper-spoken-lid:v2.0",
+  "releasenotes": "Changes in parameter, can run in custom label model\n\n* mergeWindow: renamed to `tfMerge`\n* labelMap: restric output labels to certain language (can be used to turn the app into binary ot ternary classifier)\n* minLabelScore: when using a smaller set of labelMap, adjust minimal score to be \"positive\" (default is 0.5 which is always absolute majority under binary labels)\n\n"
+}
