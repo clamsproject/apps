@@ -1,0 +1,117 @@
+{
+  "name": "FireRed Spoken LID",
+  "description": "Spoken language identification over fixed-length windows of an audio track, using FireRedLID, the language identification model of FireRedASR2S. Consecutive windows with the same language can be merged into one TimeFrame.",
+  "app_version": "v0.2",
+  "mmif_version": "1.2.0",
+  "analyzer_versions": {
+    "FireRedTeam/FireRedLID": "1bb4d285c8456429385d9c0810300df4297bc11b"
+  },
+  "app_license": "Apache 2.0",
+  "analyzer_license": "Apache 2.0",
+  "identifier": "http://apps.clams.ai/firered-spoken-lid/v0.2",
+  "url": "https://github.com/clamsproject/app-firered-spoken-lid",
+  "input": [
+    [
+      {
+        "@type": "http://clams.ai/vocabulary/type/AudioDocument/v2",
+        "required": true
+      },
+      {
+        "@type": "http://clams.ai/vocabulary/type/VideoDocument/v2",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://clams.ai/vocabulary/type/TimeFrame/v6",
+      "description": "Each TimeFrame covers consecutive windows that FireRedLID labels with the language `label`, or `other`. Language labels are canonicalized to BCP 47 tags, and `labelMap` can reduce them; see README.md in the app repository for details. `labelset` lists all labels the view can have. `scores` lists, in time order, the FireRedLID score of `label` in each of those windows, one float in [0, 1] per window. Window i starts at `start` + i * `windowMs`; the last window ends at `end` and can be shorter. The scores are not calibrated.",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "document": "*",
+        "labelset": "*",
+        "label": "*",
+        "scores": "*"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "windowMs",
+      "description": "Window length in milliseconds.",
+      "type": "integer",
+      "default": 10000,
+      "multivalued": false
+    },
+    {
+      "name": "minLastWindowMs",
+      "description": "Shortest final window to keep, in milliseconds. 0 keeps any final window.",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "tfMerge",
+      "description": "Join consecutive windows with the same label into one TimeFrame. When false, each window becomes its own TimeFrame, with one score.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "labelMap",
+      "description": "Labels to keep, as \"IN:OUT\" (rename IN to OUT) or \"IN\" (keep IN as it is). Other labels become \"-\". Empty keeps every label of the model. See README.md in the app repository for how the label is chosen.",
+      "type": "string",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "minLabelScore",
+      "description": "Minimum score for a label from labelMap to be kept; a window whose best mapped label scores less becomes \"-\". Only applies with labelMap.",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "batchSize",
+      "description": "Number of windows passed to the model at once.",
+      "type": "integer",
+      "default": 1,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "tfSamplingMode",
+      "description": "Sampling mode for TimeFrame annotations. Has no effect when the app does not process TimeFrames. \"representatives\" uses all representative timepoints if present, otherwise skips the TimeFrame. \"single\" uses the middle representative if present, otherwise extracts an image from the midpoint of the start/end interval (midpoint is calculated by floor division of the sum of start and end). \"all\" uses all target timepoints if present, otherwise extracts all images from the time interval.",
+      "type": "string",
+      "choices": [
+        "representatives",
+        "single",
+        "all"
+      ],
+      "default": "representatives",
+      "multivalued": false
+    }
+  ],
+  "est_gpu_mem_min": 4500,
+  "est_gpu_mem_typ": 4500
+}
