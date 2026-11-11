@@ -1,8 +1,15 @@
 {
   "http://apps.clams.ai/firered-spoken-lid": {
     "description": "Spoken language identification over fixed-length windows of an audio track, using FireRedLID, the language identification model of FireRedASR2S. Consecutive windows with the same language can be merged into one TimeFrame.",
-    "latest_update": "2026-11-10T02:59:58+00:00",
+    "latest_update": "2026-11-11T01:16:54+00:00",
     "versions": [
+      {
+        "version": "v0.2",
+        "submitter": "keighrim",
+        "time": "2026-11-11T01:16:54+00:00",
+        "image": "ghcr.io/clamsproject/app-firered-spoken-lid:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-firered-spoken-lid"
+      },
       {
         "version": "v0.1",
         "submitter": "keighrim",

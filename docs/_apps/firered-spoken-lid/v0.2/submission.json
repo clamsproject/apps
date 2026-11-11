@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-11T01:16:54+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-firered-spoken-lid:v0.2",
+  "releasenotes": "added control over label space\n\n"
+}
