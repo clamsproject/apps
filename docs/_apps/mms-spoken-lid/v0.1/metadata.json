@@ -1,0 +1,137 @@
+{
+  "name": "MMS Spoken LID",
+  "description": "Spoken language identification over fixed-length windows of an audio track, using the MMS language identification models. Consecutive windows with the same language can be merged into one TimeFrame.",
+  "app_version": "v0.1",
+  "mmif_version": "1.2.0",
+  "analyzer_versions": {
+    "facebook/mms-lid-126": "53da6e311f3ce48f324fe335924216187e3109a4",
+    "facebook/mms-lid-256": "edc73fd00996e671dfc59d16436a29b12b10588a",
+    "facebook/mms-lid-512": "e537f7f8d3d7f1058a14d4f73dbffc69ec52fc8e",
+    "facebook/mms-lid-1024": "6216408c37833201358b509224b019312577dd70",
+    "facebook/mms-lid-2048": "44f27d589b0c9351ccf3e900fbf0c6aaca06e24c",
+    "facebook/mms-lid-4017": "6adb04d61a52e5989b0e65f0d59d4755d81a94e3"
+  },
+  "app_license": "Apache 2.0",
+  "analyzer_license": "CC-BY-NC-4.0",
+  "identifier": "http://apps.clams.ai/mms-spoken-lid/v0.1",
+  "url": "https://github.com/clamsproject/app-mms-spoken-lid",
+  "input": [
+    [
+      {
+        "@type": "http://clams.ai/vocabulary/type/AudioDocument/v2",
+        "required": true
+      },
+      {
+        "@type": "http://clams.ai/vocabulary/type/VideoDocument/v2",
+        "required": true
+      }
+    ]
+  ],
+  "output": [
+    {
+      "@type": "http://clams.ai/vocabulary/type/TimeFrame/v6",
+      "description": "Each TimeFrame covers consecutive windows that MMS labels with the language `label`. Language labels are canonicalized to BCP 47 tags, and `labelMap` can reduce them; see README.md in the app repository for details. `labelset` lists all labels the view can have. `scores` lists, in time order, the MMS probability of `label` in each of those windows, one float in [0, 1] per window. Window i starts at `start` + i * `windowMs`; the last window ends at `end` and can be shorter. The probabilities are not calibrated.",
+      "properties": {
+        "timeUnit": "milliseconds",
+        "document": "*",
+        "labelset": "*",
+        "label": "*",
+        "scores": "*"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "model",
+      "description": "MMS LID model, by the number of languages it labels.",
+      "type": "string",
+      "choices": [
+        "facebook/mms-lid-126",
+        "facebook/mms-lid-256",
+        "facebook/mms-lid-512",
+        "facebook/mms-lid-1024",
+        "facebook/mms-lid-2048",
+        "facebook/mms-lid-4017"
+      ],
+      "default": "facebook/mms-lid-4017",
+      "multivalued": false
+    },
+    {
+      "name": "windowMs",
+      "description": "Window length in milliseconds.",
+      "type": "integer",
+      "default": 10000,
+      "multivalued": false
+    },
+    {
+      "name": "minLastWindowMs",
+      "description": "Shortest final window to keep, in milliseconds. 0 keeps any final window.",
+      "type": "integer",
+      "default": 0,
+      "multivalued": false
+    },
+    {
+      "name": "tfMerge",
+      "description": "Join consecutive windows with the same label into one TimeFrame. When false, each window becomes its own TimeFrame, with one score.",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "labelMap",
+      "description": "Labels to keep, as \"IN:OUT\" (rename IN to OUT) or \"IN\" (keep IN as it is). Other labels become \"-\". Empty keeps every label of the model. See README.md in the app repository for how the label is chosen.",
+      "type": "string",
+      "default": [],
+      "multivalued": true
+    },
+    {
+      "name": "minLabelScore",
+      "description": "Minimum score for a label from labelMap to be kept; a window whose best mapped label scores less becomes \"-\". Only applies with labelMap.",
+      "type": "number",
+      "default": 0.5,
+      "multivalued": false
+    },
+    {
+      "name": "batchSize",
+      "description": "Number of windows passed to the model at once.",
+      "type": "integer",
+      "default": 1,
+      "multivalued": false
+    },
+    {
+      "name": "pretty",
+      "description": "The JSON body of the HTTP response will be re-formatted with 2-space indentation",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "runningTime",
+      "description": "The running time of the app will be recorded in the view metadata",
+      "type": "boolean",
+      "default": true,
+      "multivalued": false
+    },
+    {
+      "name": "hwFetch",
+      "description": "The hardware information (architecture, GPU and vRAM) will be recorded in the view metadata",
+      "type": "boolean",
+      "default": false,
+      "multivalued": false
+    },
+    {
+      "name": "tfSamplingMode",
+      "description": "Sampling mode for TimeFrame annotations. Has no effect when the app does not process TimeFrames. \"representatives\" uses all representative timepoints if present, otherwise skips the TimeFrame. \"single\" uses the middle representative if present, otherwise extracts an image from the midpoint of the start/end interval (midpoint is calculated by floor division of the sum of start and end). \"all\" uses all target timepoints if present, otherwise extracts all images from the time interval.",
+      "type": "string",
+      "choices": [
+        "representatives",
+        "single",
+        "all"
+      ],
+      "default": "representatives",
+      "multivalued": false
+    }
+  ],
+  "est_gpu_mem_min": 5000,
+  "est_gpu_mem_typ": 5000
+}

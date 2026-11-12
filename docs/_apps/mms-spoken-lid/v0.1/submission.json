@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-11T22:23:34+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-mms-spoken-lid:v0.1",
+  "releasenotes": "first experimental release, copying params from other sLID apps\n\n"
+}
