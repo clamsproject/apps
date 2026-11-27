@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-27T22:03:43+00:00",
+  "submitter": "keighrim",
+  "image": "ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.3",
+  "releasenotes": "Compatible with latest TextDocument shape with `origins`\n\n"
+}

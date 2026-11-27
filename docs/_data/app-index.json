@@ -1,4 +1,24 @@
 {
+  "http://apps.clams.ai/heuristic-chyron-understanding": {
+    "description": "Prototype to convert chyron text from OCR output (e.g., docTR, Tesseract or a VLM captioner) into a name and list of attributes, with line-based heuristics.",
+    "latest_update": "2026-11-27T22:03:43+00:00",
+    "versions": [
+      {
+        "version": "v0.3",
+        "submitter": "keighrim",
+        "time": "2026-11-27T22:03:43+00:00",
+        "image": "ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.3",
+        "repo_url": "https://github.com/clamsproject/app-heuristic-chyron-understanding"
+      },
+      {
+        "version": "v0.2",
+        "submitter": "keighrim",
+        "time": "2025-07-14T23:10:14+00:00",
+        "image": "ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.2",
+        "repo_url": "https://github.com/clamsproject/app-heuristic-chyron-understanding"
+      }
+    ]
+  },
   "http://apps.clams.ai/mms-spoken-lid": {
     "description": "Spoken language identification over fixed-length windows of an audio track, using the MMS language identification models. Consecutive windows with the same language can be merged into one TimeFrame.",
     "latest_update": "2026-11-11T22:23:34+00:00",
@@ -873,19 +893,6 @@
         "time": "2025-07-29T15:07:13+00:00",
         "image": "ghcr.io/clamsproject/app-parakeet-wrapper:v1.0",
         "repo_url": "https://github.com/clamsproject/app-parakeet-wrapper"
-      }
-    ]
-  },
-  "http://apps.clams.ai/heuristic-chyron-understanding": {
-    "description": "Prototype to convert chyron text from docTR/Tesseract/LLaVA MMIF outputinto a name and list of attributes.",
-    "latest_update": "2025-07-14T23:10:14+00:00",
-    "versions": [
-      {
-        "version": "v0.2",
-        "submitter": "keighrim",
-        "time": "2025-07-14T23:10:14+00:00",
-        "image": "ghcr.io/clamsproject/app-heuristic-chyron-understanding:v0.2",
-        "repo_url": "https://github.com/clamsproject/app-heuristic-chyron-understanding"
       }
     ]
   },
